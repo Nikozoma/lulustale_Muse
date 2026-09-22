@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#11100f" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="/pwa/lulus-tale-192.png" />
+    <title>Lulu's Tale — Day 1 Demo</title>
+  </head>
+  <body>
+    <main id="app">
+      <section id="title-screen" class="title-screen" aria-label="Lulu's Tale title screen" hidden aria-hidden="true">
+        <div class="title-art-frame">
+          <img class="title-screen-art" src="/assets/ui/lulus-tale-title-screen.png" alt="Lulu's Tale nighttime neighborhood title artwork" />
+          <button id="title-play-button" class="title-play-hitbox" type="button" aria-label="Play Lulu's Tale"><span class="sr-only">Play</span></button>
+        </div>
+        <button id="title-exit-button" class="title-exit-button" type="button">Exit</button>
+      </section>
+
+      <canvas id="game" width="640" height="360" aria-label="Lulu's Tale playable demo"></canvas>
+      <button id="objective-marker" class="objective-marker" type="button" aria-label="Interact with current objective" hidden><span aria-hidden="true">❕</span></button>
+
+      <section id="orientation-gate" class="lifecycle-screen" aria-live="polite" data-mode="portrait">
+        <div class="lifecycle-art-frame">
+          <img id="lifecycle-art" class="lifecycle-art" src="/assets/ui/lifecycle/portrait-gate.jpg" alt="Lulu's Tale: turn phone sideways to play" />
+          <button id="gate-button" class="fullscreen-entry-hitbox" type="button" hidden aria-label="Enter fullscreen">
+            <span class="sr-only">Enter Fullscreen</span>
+          </button>
+          <p id="lifecycle-instruction" class="sr-only">Turn phone sideways to play.</p>
+        </div>
+      </section>
+
+      <section id="quest-tracker" aria-label="Active quest">
+        <button id="quest-tracker-open" class="quest-tracker-main" type="button">
+          <span id="quest-tracker-title">Fries and Feathers</span>
+          <span id="quest-tracker-objective">Check the fridge.</span>
+        </button>
+        <button id="quest-tracker-minimize" class="quest-tracker-minimize" type="button" aria-label="Minimize quest tracker">➖</button>
+      </section>
+
+      <section id="hud" aria-live="polite">
+        <div id="objective" hidden></div>
+        <div id="quest-message"></div>
+      </section>
+
+      <div id="top-actions" class="control-row">
+        <button id="menu-button" type="button">☰ Menu</button>
+        <div id="world-action-shell" class="world-action-shell">
+          <button id="world-action-toggle" type="button" aria-expanded="false">Actions ▾</button>
+          <div id="world-action-menu" class="world-action-menu" hidden aria-label="Nearby actions">
+            <button type="button" data-world-action="use">Use</button>
+            <button type="button" data-world-action="chat">Chat</button>
+            <button type="button" data-world-action="pickup">Pick Up</button>
+            <button id="brutus-action-entry" type="button" data-open-companion>Brutus</button>
+            <div id="companion-action-menu" class="companion-action-menu" hidden aria-label="Brutus actions">
+              <button type="button" data-companion-back>← Back</button>
+              <div class="companion-action-heading">Brutus</div>
+              <button type="button" data-companion-action="pet">Pet</button>
+              <button type="button" data-companion-action="feed">Feed</button>
+              <button type="button" data-companion-action="sit">Sit / Stay</button>
+              <button type="button" data-companion-action="follow">Follow</button>
+              <button type="button" data-companion-action="lay">Lie Down</button>
+              <button type="button" data-companion-action="fetch">Fetch</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="world-chat-bubble" class="world-chat-bubble" hidden aria-live="polite"></div>
+
+      <div id="screen-fade" class="screen-fade" hidden aria-hidden="true"></div>
+
+      <div id="companion-actions" class="control-row">
+        <button id="pet-button" type="button" hidden>Pet</button>
+        <button id="feed-button" type="button" hidden>Feed</button>
+        <button id="command-button" type="button" hidden>Stay</button>
+      </div>
+
+      <section id="main-menu" class="menu-overlay" hidden aria-label="Game menu">
+        <div class="menu-shell">
+          <header class="menu-header">
+            <div>
+              <div class="menu-kicker">Lulu's Tale</div>
+              <h2>Game Menu</h2>
+            </div>
+            <button id="menu-close" class="menu-close" type="button" aria-label="Close menu">❌</button>
+          </header>
+          <nav id="menu-tabs" class="menu-tabs" aria-label="Game menu sections">
+            <button type="button" data-menu-page="status">Status</button>
+            <button type="button" data-menu-page="equipment">Equipment</button>
+            <button type="button" data-menu-page="inventory">Inventory</button>
+            <button type="button" data-menu-page="quest">Quest</button>
+            <button type="button" data-menu-page="map">Map</button>
+            <button type="button" data-menu-page="save">Save / Load</button>
+            <button type="button" data-menu-page="debug">Debug</button>
+          </nav>
+          <div id="menu-content" class="menu-content"></div>
+          <footer class="menu-footer">
+            <button id="menu-exit-button" class="danger-action menu-exit-button" type="button">Exit</button>
+          </footer>
+        </div>
+      </section>
+
+      <input id="backup-load-input" type="file" accept=".lulusave,application/json" hidden />
+
+      <section id="dialogue-panel" class="story-panel" hidden aria-live="polite">
+        <div class="story-card">
+          <div id="dialogue-speaker" class="story-speaker"></div>
+          <div id="dialogue-text" class="story-text"></div>
+          <div id="dialogue-choices" class="story-choices"></div>
+        </div>
+      </section>
+
+      <section id="minigame-panel" class="story-panel" hidden aria-live="polite">
+        <div class="story-card minigame-card">
+          <div class="story-speaker">SECURE THE BAG</div>
+          <div id="minigame-text" class="story-text">Match the bird's lunge direction.</div>
+          <div id="minigame-arrows" class="minigame-arrows">
+            <button type="button" data-direction="up">↑</button>
+            <button type="button" data-direction="left">←</button>
+            <button type="button" data-direction="down">↓</button>
+            <button type="button" data-direction="right">→</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="battle-panel" class="battle-overlay" hidden aria-label="Turn-based battle">
+        <div class="battle-shell">
+          <header class="battle-header">
+            <div class="battle-heading">
+              <div id="battle-location" class="battle-kicker">Overworld · Night</div>
+              <h2 id="battle-turn">Lulu's Turn</h2>
+            </div>
+            <div id="battle-round" class="battle-round">Round 1</div>
+          </header>
+
+          <div id="battle-scene" class="battle-scene" data-theme="night">
+            <div id="battle-backdrop" class="battle-backdrop" aria-hidden="true"></div>
+            <div class="battle-scene-shade" aria-hidden="true"></div>
+            <div class="battle-ground" aria-hidden="true"></div>
+            <div class="battle-party battle-player-party" aria-label="Lulu's party">
+              <div id="battle-player-combatant" class="battle-combatant battle-player-combatant">
+                <div class="battle-sprite battle-lulu-sprite" aria-label="Lulu"></div>
+                <span id="battle-player-damage" class="battle-damage-number" hidden></span>
+              </div>
+              <div class="battle-player-status">
+                <strong>Lulu</strong>
+                <div id="battle-player-hp" class="battle-hp-label">HP 20 / 20</div>
+                <div class="battle-hp-track"><div id="battle-player-hp-fill" class="battle-hp-fill"></div></div>
+              </div>
+            </div>
+            <div id="battle-enemies" class="battle-party battle-enemy-party" aria-label="Enemies"></div>
+          </div>
+
+          <div class="battle-console">
+            <div id="battle-log" class="battle-message" aria-live="polite"></div>
+            <div class="battle-menu-region">
+              <div id="battle-command-panel" class="battle-command-panel">
+                <button id="battle-attack" type="button">Attack</button>
+                <button id="battle-defend" type="button">Defend</button>
+                <button id="battle-item" type="button">Item</button>
+              </div>
+              <div id="battle-submenu" class="battle-submenu" hidden></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="status" aria-live="polite">Loading authoritative assets…</div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
