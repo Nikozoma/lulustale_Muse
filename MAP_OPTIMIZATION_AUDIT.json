@@ -1,0 +1,31 @@
+{
+  "variant": "enlarged",
+  "overworldDimensionsTiles": [
+    96,
+    68
+  ],
+  "mapAssetStorageBefore": {
+    "fileCount": 3657,
+    "sizeBytes": 133664620
+  },
+  "mapAssetStorageAfter": {
+    "fileCount": 40,
+    "sizeBytes": 16061092
+  },
+  "fileCountReduction": 3617,
+  "sizeReductionBytes": 117603528,
+  "uniqueRuntimeMapImages": 10,
+  "runtimeMapImagesByteIdentical": true,
+  "semanticAndVisualJsonByteIdentical": true,
+  "nonMapPublicAssetCount": 697,
+  "nonMapPublicAssetsByteIdentical": true,
+  "runtimeSourceFilesByteIdentical": true,
+  "removedMapOnlyPaths": [
+    "public/assets/maps/home/pack",
+    "public/assets/maps/charles/pack",
+    "source_assets",
+    "scripts/resize_overworld_96x68.py",
+    "scripts/validate_overworld_96x68.py",
+    "src/game/overworldScale.test.ts"
+  ]
+}
