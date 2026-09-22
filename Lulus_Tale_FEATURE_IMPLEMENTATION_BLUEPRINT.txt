@@ -1,0 +1,1494 @@
+LULU'S TALE — CODEX-READY FEATURE IMPLEMENTATION BLUEPRINT
+===========================================================
+
+Document status
+---------------
+
+Planning and implementation handoff.
+This file defines what Codex should build, in what order, and how each batch is
+accepted. It is intentionally not a request to implement every system in one
+pass.
+
+Primary goal
+------------
+
+Turn the current playable proof of concept into a modular, data-driven,
+mobile-first JRPG demo foundation without breaking the finished maps or the
+current playable flow while systems are being migrated.
+
+The first content vertical slice is the Home -> Charles Jr. -> fries/bird ->
+manual night -> bird gang demo quest described in:
+
+- Lulus_Tale_DEMO_QUESTLINE_ENHANCED_DRAFT.txt
+
+NON-NEGOTIABLE PRODUCT DECISIONS
+================================
+
+1. Platform and presentation
+----------------------------
+
+- TypeScript + Vite + Canvas 2D web game.
+- Mobile-phone-first and landscape-first.
+- Progressive Web App target, later suitable for an Android wrapper.
+- Touch is the primary input. Keyboard support may remain for development.
+- World rendering stays pixel-sharp; do not enable image smoothing.
+- Use responsive viewport scaling and safe-area insets.
+- Do not present desktop-control instructions in normal player-facing UI.
+
+2. Interaction UX
+-----------------
+
+- No permanent Interact button.
+- No floating "Press E" or desktop prompt.
+- Only the current objective's active "!" marker is shown.
+- The "!" marker is the tap target.
+- A tap only succeeds while Lulu is within interaction range.
+- Menus, dialogue, battles, and minigames use large touch targets.
+
+3. Map authority
+----------------
+
+- Home: 28 x 43 tiles.
+- Charles: 39 x 33 tiles.
+- Overworld: 96 x 68 tiles.
+- Tile size: 32 x 32 pixels.
+- Semantic JSON owns collision, walkability, markers, transitions, and gameplay
+  meaning.
+- Visual companion JSON owns artwork, crops, placement order, and foreground.
+- Never infer collision from visual pixels.
+- Do not revert maps to old dimensions or old layouts.
+- Preserve the completed tree and building walk-behind foreground systems.
+
+4. Time model
+-------------
+
+- There is no real-time day/night clock.
+- Exploration has no phase timer.
+- The bed is the only normal phase-advance hub.
+- Daytime bed choices: Sleep Until Tomorrow, Stay Up Tonight, Cancel.
+- Nighttime bed choices: Sleep Until Morning, Cancel.
+- Sleeping advances the day and provides recovery.
+- Staying up enters night without advancing a timer.
+- Night ends only through an explicit event such as using the bed.
+
+5. Combat model
+---------------
+
+- Final combat is turn-based, not action combat.
+- Battles are normally triggered by quests/events, not random encounters.
+- The current sword-cone bird fight is prototype behavior to be removed only
+  after the first turn-based vertical slice is working.
+
+6. Content model
+----------------
+
+- Quests, dialogue, items, enemies, battles, minigames, NPCs, conditions, and
+  event sequences should be data-driven where practical.
+- Content data may select registered behavior; it must not contain arbitrary
+  executable JavaScript.
+- New quests should normally require content definitions and map markers, not
+  edits to the central game loop.
+
+7. Scope discipline
+-------------------
+
+- Migrate incrementally.
+- Keep the current demo working after every batch.
+- Prove each framework with one real demo example.
+- Do not build party management, crafting, procedural maps, random encounters,
+  a large economy, or a relationship simulation during the demo foundation.
+- Do not add placeholder art, fake content, or temporary gameplay stand-ins.
+
+CURRENT IMPLEMENTATION BASELINE
+===============================
+
+What is already useful
+----------------------
+
+- Semantic map normalization and collision grid.
+- Three-map registry and transitions.
+- Visual companion placement system.
+- Foreground rendering after Lulu/entities.
+- Dynamic building-occlusion alpha and tree canopies.
+- Phase-aware day/night visual companions for Home, Charles Jr., and Overworld,
+  with shared semantic maps and no double-applied night tint.
+- Camera, player movement, touch movement, and responsive landscape gate.
+- Real Lulu, dog, cashier, bird, map, and environment assets.
+- Current-objective "!" marker interaction direction.
+- Unit tests and a successful Vite production build.
+
+What is currently prototype architecture
+----------------------------------------
+
+- src/main.ts is approximately 824 lines and owns loading, state, input,
+  quest scripting, timing, transitions, combat, and the animation loop.
+- src/game/quest.ts is a hard-coded single-quest state machine with one union of
+  stages and quest-specific booleans.
+- src/game/combat.ts implements real-time sword-cone hits against three birds.
+- Day/night is represented by a quest boolean rather than a reusable phase
+  manager.
+- There is no versioned save repository, global event runner, content registry,
+  dialogue engine, inventory database, menu mode, or reusable quest engine.
+- The current page has mobile/landscape behavior but no installable PWA manifest
+  or service worker yet.
+
+Migration rule
+--------------
+
+Do not delete the old quest or action-combat path first. Build the replacement,
+move one real demo segment onto it, verify parity, then remove the superseded
+path and its tests in the same batch.
+
+TARGET PROJECT STRUCTURE
+========================
+
+Use this as a direction, not as permission for one giant refactor.
+
+src/
+  main.ts                         thin bootstrap only
+  game/
+    app/
+      GameRuntime.ts              composes services and runs update/render
+      GameState.ts                serializable authoritative state types
+      createInitialState.ts
+    core/
+      GameMode.ts                 exclusive mode/state transitions
+      GameStore.ts                controlled state reads/updates
+      GameEventBus.ts             typed domain-event publication
+      Id.ts                       shared stable ID aliases if useful
+    content/
+      ContentRegistry.ts          validates and exposes all definitions
+      conditions.ts               condition types/evaluator
+      actions.ts                  action types
+      validateContent.ts          cross-reference validator
+    events/
+      EventRunner.ts              ordered action queue
+      ActionHandlers.ts           registered engine-side action handlers
+    interactions/
+      InteractionRouter.ts
+      InteractionRegistry.ts
+    time/
+      PhaseManager.ts
+      BedInteraction.ts
+    save/
+      SaveRepository.ts
+      LocalStorageSaveRepository.ts
+      SaveMigrations.ts
+    dialogue/
+      DialogueEngine.ts
+      DialogueTypes.ts
+    quests/
+      QuestEngine.ts
+      QuestTypes.ts
+      QuestSelectors.ts
+      QuestValidation.ts
+    inventory/
+      Inventory.ts
+      ItemTypes.ts
+    minigames/
+      MinigameRuntime.ts
+      MinigameTypes.ts
+    battle/
+      BattleRuntime.ts
+      BattleTypes.ts
+      TurnResolver.ts
+      EnemyAi.ts
+    npcs/
+      NpcRuntime.ts
+      NpcTypes.ts
+    cutscenes/
+      CutsceneRuntime.ts
+    ui/
+      UiController.ts
+      ObjectivePresenter.ts
+      menu components/controllers
+    existing focused modules remain where they are until migrated
+  content/
+    items/
+    dialogue/
+    quests/
+    enemies/
+    battles/
+    minigames/
+    npcs/
+
+public/
+  manifest.webmanifest
+  icons/                          real final project icons only
+
+Do not move map JSON or map assets merely to match this sketch. The active root
+map and visual-companion loading contract should stay stable unless a dedicated
+migration is approved and tested.
+
+AUTHORITATIVE RUNTIME STATE
+===========================
+
+Use one serializable GameState as the source of gameplay truth. Canvas images,
+DOM nodes, timers, callbacks, input pointers, and service instances are runtime
+objects and must not be stored in the save snapshot.
+
+Recommended minimum shape
+-------------------------
+
+GameState
+  schemaVersion: number
+  buildContentVersion: string
+  mode: GameMode
+  world:
+    mapId: MapId
+    playerPosition: { x, y }
+    playerFacing: Facing
+    returnPoint?: { mapId, x, y }
+  calendar:
+    day: number
+    phase: "day" | "night"
+    stayedUpLastNight: boolean
+    restedLastSleep: boolean
+  player:
+    hp, maxHp
+    energy, maxEnergy
+    insanity
+    perception
+    equipment
+    learnedSkillIds
+  flags: Record<FlagId, boolean>
+  variables: Record<VariableId, number | string>
+  inventory: Record<ItemId, number>
+  quests: Record<QuestId, QuestRuntimeState>
+  completedEventIds: string[]
+  activeDialogue?: DialogueRuntimeState
+  activeMinigame?: MinigameRuntimeState
+  activeBattle?: BattleRuntimeState
+  settings: player-owned settings only
+
+State rules
+-----------
+
+- All persistent IDs are stable, lowercase, namespaced strings, for example
+  quest.demo_fries_and_feathers and item.charles_fries.
+- Never use display text as an ID.
+- Do not save derived objective text, marker positions, loaded definitions, or
+  image references. Recompute them from definitions and runtime IDs.
+- State updates should go through services/reducers with unit tests; avoid
+  unrelated direct mutation from UI code.
+- Emit typed domain events after successful state changes.
+- Persist only at safe boundaries: completed interaction, stage transition,
+  battle result, phase change, map transition, and explicit save.
+
+GAME MODE MANAGER
+=================
+
+Recommended modes
+-----------------
+
+- world
+- dialogue
+- menu
+- quest_log
+- inventory
+- cutscene
+- minigame
+- battle
+- transition
+- pause
+- save_load
+- debug
+
+Rules
+-----
+
+- Exactly one primary mode receives gameplay input.
+- World simulation and player movement run only in world mode unless a
+  cutscene explicitly owns actor movement.
+- Pointer input must be consumed once by the active mode.
+- Mode transitions are validated. Battle cannot silently open on top of a menu.
+- Use a small return-mode field only where needed; avoid a pile of independent
+  booleans such as isDialogueOpen + isMenuOpen + isFighting.
+- Changing mode is an engine action and is visible in debug output.
+
+Acceptance checks
+-----------------
+
+- Movement is locked in every non-world mode.
+- Opening/closing the quest log returns to the exact prior safe mode.
+- Two modal modes cannot process the same tap.
+- Loading a save always restores to world mode or another explicitly supported
+  safe mode; never restore halfway through an animation callback.
+
+GLOBAL CONDITIONS, FLAGS, AND VARIABLES
+=======================================
+
+Condition definitions
+---------------------
+
+Support a closed discriminated union such as:
+
+- all / any / not
+- flag_equals
+- variable_compare
+- has_item
+- item_quantity_compare
+- quest_status
+- quest_stage_is
+- objective_status
+- map_is
+- phase_is
+- day_compare
+- insanity_compare
+- perception_compare
+- minigame_result_is
+- battle_result_is
+
+Comparison operators
+--------------------
+
+- equals
+- not_equals
+- greater_than
+- greater_or_equal
+- less_than
+- less_or_equal
+
+Condition rules
+---------------
+
+- Conditions are pure and have no side effects.
+- Unknown condition types or IDs fail validation before play.
+- Runtime evaluation failure is reported in debug mode and treated as false.
+- Content conditions may be nested, but validation should reject unreasonable
+  recursion depth.
+
+EVENT RUNNER
+============
+
+Purpose
+-------
+
+The EventRunner is the bridge between content and engine systems. Quest stages,
+dialogue choices, markers, battles, minigames, beds, and cutscenes enqueue the
+same typed actions instead of calling one another directly.
+
+Minimum action union
+--------------------
+
+- show_dialogue
+- start_quest
+- set_quest_stage
+- complete_objective
+- complete_quest
+- fail_quest
+- set_flag
+- clear_flag
+- set_variable
+- increment_variable
+- give_item
+- take_item
+- equip_item
+- start_minigame
+- start_battle
+- change_map
+- teleport_player
+- set_phase
+- advance_day
+- recover_player
+- adjust_insanity
+- adjust_perception
+- spawn_npc
+- despawn_npc
+- start_cutscene
+- show_notification
+- wait
+- fade_screen
+- complete_event
+- autosave
+
+Execution contract
+------------------
+
+1. Validate the full action list and referenced IDs before enqueueing.
+2. Execute one action at a time in authored order.
+3. Synchronous actions complete immediately.
+4. Blocking actions return a typed completion promise/result; they do not hide
+   arbitrary setTimeout chains inside content.
+5. Pause the queue for dialogue, minigame, battle, or transition results.
+6. Resume exactly once with a typed result event.
+7. Stop and report a structured error on invalid action; never continue with
+   half-applied quest advancement.
+8. Guard against action loops and duplicate event completion.
+9. Event IDs marked once-only are persisted.
+
+Recommended safeguards
+----------------------
+
+- Maximum actions per uninterrupted run, for example 100.
+- Re-entry guard per event ID.
+- An AbortController or equivalent cancellation token for load/restart.
+- Debug trace containing event ID, action index, action type, and result.
+
+INTERACTION AND MARKER ROUTING
+==============================
+
+Interaction definition
+----------------------
+
+An interactable binds a stable interaction ID to:
+
+- mapId
+- one semantic marker ID or a registered entity/object ID
+- activation conditions
+- priority
+- event ID or dialogue ID
+- optional quest/objective ownership
+- optional interaction radius override
+
+Routing order
+-------------
+
+1. Ignore taps outside world mode.
+2. Resolve the current objective's active target.
+3. Confirm the tapped "!" marker is that target.
+4. Confirm Lulu is in range.
+5. Re-evaluate activation conditions.
+6. Consume the tap.
+7. Enqueue the interaction event.
+
+Do not show every possible interactable marker. Optional ambient interactions
+may be discoverable through direct tapping later, but the demo's guidance marker
+remains current-objective-only.
+
+DYNAMIC QUEST ENGINE — REQUIRED DESIGN
+======================================
+
+Why a dedicated engine is required
+----------------------------------
+
+The current quest is one TypeScript union plus quest-specific booleans. That is
+adequate for a prototype but makes every new quest a central-code change. The
+replacement must let a content author add or revise a quest chain through
+validated definitions, dialogue, actions, and semantic markers.
+
+Quest definition
+----------------
+
+QuestDefinition
+  id: QuestId
+  version: number
+  title: string
+  summary: string
+  category: "main" | "side" | "daily" | "hidden"
+  prerequisites: Condition[]
+  startActions: Action[]
+  initialStageId: StageId
+  stages: QuestStageDefinition[]
+  completionActions: Action[]
+  failureActions?: Action[]
+  repeatability?: RepeatabilityDefinition
+  tags?: string[]
+
+QuestStageDefinition
+  id: StageId
+  journalText: string
+  onEnter?: Action[]
+  objectives: ObjectiveDefinition[]
+  listeners: QuestEventListener[]
+  transitions: StageTransition[]
+  onExit?: Action[]
+
+ObjectiveDefinition
+  id: ObjectiveId
+  text: string
+  optional?: boolean
+  hiddenUntil?: Condition[]
+  markerTarget?: MarkerTarget
+  completionConditions?: Condition[]
+  completionMode?: "automatic" | "event"
+  progress?: ProgressDefinition
+
+QuestEventListener
+  eventType: DomainEventType
+  conditions?: Condition[]
+  once?: boolean
+  priority?: number
+  actions: Action[]
+
+StageTransition
+  id: string
+  conditions: Condition[]
+  toStageId?: StageId
+  completeQuest?: boolean
+  failQuest?: boolean
+  priority: number
+
+Quest runtime state
+-------------------
+
+QuestRuntimeState
+  status: "inactive" | "active" | "completed" | "failed"
+  definitionVersion: number
+  currentStageId?: StageId
+  objectiveStates: Record<ObjectiveId, ObjectiveRuntimeState>
+  localFlags: Record<string, boolean>
+  localVariables: Record<string, number | string>
+  consumedListenerIds: string[]
+  branchId?: string
+  startedDay?: number
+  completedDay?: number
+
+ObjectiveRuntimeState
+  status: "hidden" | "active" | "completed" | "failed"
+  progress?: number
+  target?: number
+
+Domain events the quest engine consumes
+---------------------------------------
+
+- interaction_completed
+- dialogue_choice_selected
+- marker_entered
+- map_entered
+- map_exited
+- item_added
+- item_removed
+- phase_changed
+- day_advanced
+- minigame_completed
+- battle_completed
+- npc_interacted
+- flag_changed
+- variable_changed
+- cutscene_completed
+- quest_started
+- objective_completed
+
+Evaluation algorithm
+--------------------
+
+1. Publish a typed domain event after the originating state change succeeds.
+2. Select active quests only.
+3. Select listeners on each current stage matching that event type.
+4. Sort by explicit priority and stable definition order.
+5. Skip consumed once-only listeners.
+6. Evaluate all listener conditions against the latest state.
+7. Enqueue matched listener actions serially.
+8. Re-evaluate objective completion after relevant state changes.
+9. Re-evaluate stage transitions after the action queue settles.
+10. Take at most one transition per evaluation cycle.
+11. Run onExit, change stage, reset stage-scoped objective state, then run
+    onEnter.
+12. Emit quest/objective update events for UI and autosave.
+
+Branching rules
+---------------
+
+- Branches are explicit transitions, never inferred from dialogue text.
+- If multiple transitions pass, highest priority wins; equal-priority ambiguity
+  is a validation error.
+- Branches may converge on a later shared stage.
+- A minigame should normally produce success, partial, or fail and then converge
+  after recording consequences.
+- Failure should not make the save unwinnable unless the quest explicitly owns a
+  designed failure ending.
+- Optional objectives never block a stage unless a transition says they do.
+
+Quest chains
+------------
+
+- A quest may start another quest through an action.
+- Prerequisites may reference completed quests and global flags.
+- Do not directly nest mutable QuestRuntimeState inside another quest.
+- The demo may use one parent quest with acts as stages, or a short chain of
+  main + night quests. Recommended: two quests for clean bed branching:
+  quest.demo_fries_and_feathers_day
+  quest.demo_birds_after_dark
+
+Repeatable/dynamic quests
+-------------------------
+
+Design the schema now, implement repeatability after the demo main quest works.
+
+RepeatabilityDefinition may later support:
+
+- never
+- once_per_day
+- once_per_phase
+- cooldown_days
+- unlimited
+- event-pool selection with weight and conditions
+
+Each repeatable instance needs an instance ID and completion history. Do not
+copy/paste new hard-coded quest functions for daily incidents.
+
+Content versioning and save migration
+-------------------------------------
+
+- Every quest definition has a version.
+- Saves store definitionVersion and current stable stage/objective IDs.
+- Renaming/removing a live ID requires an explicit migration table.
+- If a quest cannot migrate, keep it active at the closest safe stage and show a
+  developer diagnostic; do not silently mark it complete.
+- Validate save schema separately from content definition schema.
+
+Quest validation requirements
+------------------------------
+
+Before the game starts, reject:
+
+- duplicate quest, stage, objective, listener, or transition IDs
+- missing initial stages
+- missing transition targets
+- referenced item/dialogue/event/battle/minigame/map IDs that do not exist
+- marker targets missing from the required semantic map
+- ambiguous equal-priority transitions
+- unreachable stages, except explicitly tagged debug/legacy stages
+- a stage with no possible exit unless it is terminal
+- once-only listener IDs reused in the same quest
+- conditions/actions with unknown discriminants
+- cycles that can transition without waiting for an external event
+
+Quest authoring workflow
+------------------------
+
+To add a quest after the engine exists:
+
+1. Choose stable namespaced IDs.
+2. Add or verify semantic markers on maps.
+3. Define items/dialogue/NPCs/battles/minigames used by the quest.
+4. Write the quest definition.
+5. Run content validation.
+6. Run a quest-definition test that walks each designed branch through domain
+   events without rendering.
+7. Verify objective text and one-active-marker behavior.
+8. Verify save/load at every stage boundary.
+9. User performs the actual mobile gameplay pass.
+
+Small illustrative definition fragment
+--------------------------------------
+
+This example demonstrates structure; the enhanced quest draft owns final names
+and wording.
+
+  {
+    id: "quest.demo_fries_and_feathers_day",
+    version: 1,
+    initialStageId: "check_fridge",
+    stages: [
+      {
+        id: "check_fridge",
+        journalText: "Find something to eat.",
+        objectives: [
+          {
+            id: "inspect_fridge",
+            text: "Check the fridge.",
+            markerTarget: {
+              mapId: "Home",
+              markerId: "fridge_interaction"
+            },
+            completionMode: "event"
+          }
+        ],
+        listeners: [
+          {
+            id: "fridge_checked",
+            eventType: "interaction_completed",
+            conditions: [
+              { type: "event_id_is", value: "interaction.home.fridge" }
+            ],
+            once: true,
+            actions: [
+              { type: "give_item", itemId: "item.dog_food", quantity: 1 },
+              { type: "complete_objective", objectiveId: "inspect_fridge" }
+            ]
+          }
+        ],
+        transitions: [
+          {
+            id: "to_feed_dog",
+            conditions: [
+              { type: "objective_status", objectiveId: "inspect_fridge", status: "completed" }
+            ],
+            toStageId: "feed_dog",
+            priority: 10
+          }
+        ]
+      }
+    ]
+  }
+
+DIALOGUE FRAMEWORK
+==================
+
+Dialogue definition minimum
+---------------------------
+
+- dialogue ID and version
+- nodes keyed by stable node ID
+- speaker ID or narrator
+- one or more short text pages
+- optional portrait/expression reference using real assets
+- choices
+- choice visibility conditions
+- choice enabled conditions and disabled reason
+- actions on node enter, choice select, and dialogue complete
+- next node or completion
+
+Rules
+-----
+
+- Text does not directly mutate game state.
+- Choices enqueue registered actions.
+- Dialogue locks world movement.
+- Tapping advances text/pages with a debounce so one tap cannot skip two pages.
+- The UI must handle mobile safe areas, large Next/choice targets, text scaling,
+  and portrait orientation blocking.
+- Day/night, quest, item, and perception variants use conditions.
+- Keep the first implementation text-only if no suitable portrait art exists;
+  do not invent placeholder portraits.
+
+OBJECTIVE UI AND QUEST LOG
+==========================
+
+Demo HUD
+--------
+
+- Show one concise current objective.
+- Show objective-updated and completed notifications briefly.
+- Show only the selected objective's active "!" marker.
+- Do not cover the movement side of the screen or important center action.
+
+Quest log
+---------
+
+- Active and completed sections.
+- Quest title, summary, active objective, optional completed objectives.
+- Large touch rows and a clear close/back action.
+- Opening the log changes game mode and locks movement.
+- Hidden quests/objectives stay hidden.
+
+INVENTORY, ITEMS, AND EQUIPMENT
+===============================
+
+Item definition minimum
+-----------------------
+
+- stable ID
+- display name
+- description
+- category: key, consumable, food, equipment, collectible, weird
+- stackable and max stack
+- battle usability
+- overworld usability
+- use actions/effect ID
+- quest-locked removal rule if applicable
+- real icon reference only when one exists
+
+Inventory rules
+---------------
+
+- Quantities cannot be negative or exceed max stack.
+- Giving/removing items emits typed events.
+- Key quest items cannot be discarded.
+- Content validation catches unknown item IDs.
+- No UI should depend on quest-specific booleans such as hasFries.
+
+Demo equipment
+--------------
+
+- Start with one weapon slot.
+- The "bush sword" can be a real quest/equipment item using the existing real
+  sword/pickup presentation already present in the project.
+- Equipping may be automatic for the tutorial, but it must use the equipment
+  system and be visible in battle state.
+
+MANUAL DAY/NIGHT AND BED HUB
+============================
+
+Calendar state
+--------------
+
+- day starts at 1
+- phase is day or night
+- no elapsed-time field controls phase
+- optional consequence flags record whether Lulu stayed up and whether she
+  rested
+
+Day bed flow
+------------
+
+1. Enter bed interaction.
+2. Show Sleep Until Tomorrow / Stay Up Tonight / Cancel.
+3. Sleep Until Tomorrow:
+   - run sleep transition
+   - increment day
+   - set phase day
+   - recover configured HP/energy
+   - reduce insanity using one registered rule
+   - publish day_advanced and phase_changed
+   - return Lulu to the safe Home wake position
+4. Stay Up Tonight:
+   - set stayed-up flag
+   - set phase night
+   - do not increment day
+   - publish phase_changed
+   - run eligible first-night events
+5. Cancel: no state change.
+
+Night bed flow
+--------------
+
+1. Show Sleep Until Morning / Cancel.
+2. Sleep Until Morning runs the same safe day-advance transaction.
+
+Important behavior
+------------------
+
+- Bed options can be conditioned by cutscenes/battles, but exploration itself
+  is never timed.
+- A quest may recommend staying up; it must not silently override the player's
+  selected bed option.
+- Demo night content can remain available on a later night if the player sleeps.
+- Phase change controls visuals/NPC/event availability through conditions.
+
+SAVE/LOAD FOR A MOBILE PWA
+==========================
+
+Repository contract
+-------------------
+
+Define SaveRepository so storage can change without changing gameplay systems:
+
+- listSlots
+- readSlot
+- writeSlot
+- deleteSlot
+- readAutosave
+- writeAutosave
+- exportSave (later/optional)
+- importSave (later/optional)
+
+Demo storage choice
+-------------------
+
+- Use versioned JSON in localStorage for the first demo because state is small
+  and writes are synchronous per key.
+- Keep storage behind the repository interface so IndexedDB can replace it if
+  content size or platform behavior requires it.
+- Maintain one autosave and at least one explicit save slot.
+- Write to a temporary key, parse/verify it, then promote it to the active key.
+- Keep the previous valid snapshot as a backup key.
+
+Save envelope
+-------------
+
+SaveEnvelope
+  schemaVersion
+  gameVersion
+  contentVersion
+  savedAtIso
+  slotId
+  checksum or deterministic integrity hash if practical
+  state
+
+Load rules
+----------
+
+- Parse and validate before replacing current state.
+- Run ordered migrations one version at a time.
+- Reject future unsupported schema versions with a clear message.
+- Resolve missing content IDs through explicit migrations, not guesses.
+- Restore only at a safe mode boundary.
+- Loading/restarting cancels active event queues and stale async completions.
+
+PWA resilience
+--------------
+
+- Request persistent storage through navigator.storage.persist() only after a
+  user gesture and handle denial without breaking play.
+- Autosave at phase, quest-stage, battle-result, and map-transition boundaries;
+  do not write every animation frame.
+- Never require network access to load an existing local save.
+
+MINIGAME FRAMEWORK
+==================
+
+Runtime contract
+----------------
+
+- start from an EventRunner action
+- switch to minigame mode
+- own input while active
+- return a typed result: success, partial, fail, cancel if allowed
+- include score/progress and definition ID
+- publish minigame_completed
+- resume the paused event queue once
+
+First real minigame
+-------------------
+
+Implement the bird fry-defense challenge as the vertical slice:
+
+- mobile tap/reaction mechanic
+- short fixed encounter duration, not a world/day timer
+- clear large touch target and progress feedback
+- success, partial, and fail outcomes
+- all three outcomes keep the quest completable
+- deterministic unit-testable scoring separate from DOM/canvas presentation
+
+TURN-BASED BATTLE FRAMEWORK
+===========================
+
+Battle definition
+-----------------
+
+- battle ID
+- enemy formation IDs and positions
+- allowed flee rule
+- intro/outro event IDs
+- victory actions
+- defeat actions
+- reward definition
+- music/background references only when real assets exist
+
+Battle runtime state
+--------------------
+
+- definition ID
+- phase: intro, command, resolving, victory, defeat, exit
+- round number
+- combatants with current HP, effects, and turn data
+- command selection
+- ordered action queue
+- return point and source event ID
+- deterministic random seed if randomness is used
+
+First command set
+-----------------
+
+- Attack
+- Guard
+- Item
+- Skill (may initially contain one real skill)
+
+Flee may be omitted from the first mandatory bird battle. Do not show a disabled
+placeholder command.
+
+Turn resolution
+---------------
+
+1. Accept one valid player command.
+2. Lock command input.
+3. Resolve target and cost.
+4. Apply effect and publish battle log entry.
+5. Resolve status durations/defeats.
+6. Select enemy action through registered AI.
+7. Resolve enemy action.
+8. Check victory/defeat.
+9. Advance round and return to command phase.
+
+Rules
+-----
+
+- Battle math is pure/testable and separate from animation timing.
+- UI animation may delay presentation but cannot change the computed result.
+- Items use the shared inventory.
+- Skills and enemies are definitions, not switch statements in main.ts.
+- Victory/defeat returns a typed result to the EventRunner.
+- The first demo defeat should restore a safe pre-battle checkpoint or present a
+  deliberate retry flow; it must not corrupt quest progress.
+- Remove the action sword fight only after bird battle parity is verified.
+
+NPC AND CUTSCENE SYSTEMS
+========================
+
+NPC definitions
+---------------
+
+- stable ID, display name, map, marker/position, real sprite reference
+- facing and optional idle/movement behavior
+- visibility conditions
+- interaction/dialogue ID
+- day/night variants
+- quest/perception variants
+
+Cutscene command minimum
+------------------------
+
+- lock/unlock world control
+- dialogue
+- actor spawn/despawn
+- actor move/facing
+- camera focus/reset
+- wait
+- fade
+- start battle/minigame
+- event actions
+
+Keep cutscenes short and interrupt-safe. A load/restart must cancel a running
+sequence. Do not implement a cinematic timeline editor for the demo.
+
+INSANITY, PERCEPTION, AND COMPOSURE
+===================================
+
+Foundation behavior
+-------------------
+
+- insanity and perception are numeric player state with clamped ranges
+- thresholds are named definitions, not scattered magic numbers
+- sleeping reduces insanity according to one central rule
+- high insanity unlocks unusual perception, dialogue, and skills
+- high insanity creates tradeoffs and social friction, not blanket content locks
+- perception visibility is condition-driven
+
+Demo use
+--------
+
+- Introduce the concept through the night guide and atmosphere.
+- At most one simple perception check or visual cue is needed in the first demo.
+- Do not build the full social-composure minigame until dialogue, conditions,
+  minigames, and save/load are stable.
+
+MENU AND MOBILE UI FRAMEWORK
+============================
+
+Recommended presentation
+------------------------
+
+- Keep the world on Canvas.
+- Use semantic HTML overlays for menus/dialogue where practical; they are easier
+  to size, focus, and make accessible on phones.
+- Use CSS env(safe-area-inset-*) around edge UI.
+- Minimum touch target: 44 CSS pixels, preferably larger for primary actions.
+- Do not rely on hover.
+- Respect pointercancel and multi-touch; movement pointer must not activate UI.
+- Avoid text smaller than 16 CSS pixels after viewport scaling.
+
+First menu set
+--------------
+
+- Resume
+- Quest Log
+- Inventory
+- Save
+- Settings (only controls that actually exist)
+
+Add equipment/status views when their data exists. Do not expose empty screens.
+
+PWA INSTALLABILITY FOUNDATION
+=============================
+
+Current gap
+-----------
+
+The project is mobile-web styled but is not yet an installable PWA.
+
+Required implementation
+-----------------------
+
+- real manifest.webmanifest with app name, short name, start URL, standalone
+  display, theme/background colors, and landscape orientation
+- real correctly sized icons; stop and request assets if suitable icons do not
+  exist
+- service worker or Vite-compatible PWA setup that caches the app shell and
+  versioned production assets
+- offline launch after one successful online load
+- update strategy that does not mix old code with new content data
+- clear recovery path if a cache update fails
+
+Do not add fake icons or silently generate final branding art.
+
+DEBUG AND CONTENT TOOLING
+=========================
+
+Extend the existing debug surface with:
+
+- mode, map, player tile, day, phase
+- active event/action index
+- active quests/stages/objectives
+- flags/variables search
+- inventory grant/remove
+- teleport to registered spawn/marker
+- set phase through PhaseManager
+- start quest/stage through QuestEngine
+- start dialogue/minigame/battle by validated ID
+- save/load/reset controls
+- collision and semantic markers
+- foreground occlusion zone display
+
+Debug actions must call the same public services as gameplay. Do not mutate save
+state behind system invariants.
+
+IMPLEMENTATION BATCHES FOR CODEX
+================================
+
+General instruction for every batch
+-----------------------------------
+
+Before editing:
+
+- inspect AGENTS.md and the current project
+- run npm test and npm run build
+- preserve unrelated/user changes
+- list the precise files planned
+
+After editing:
+
+- add focused tests
+- run npm test and npm run build
+- report changed files, validation, known issues, assumptions, and git status
+- do not claim manual phone playtesting
+- do not add placeholders
+
+BATCH 0 — Fresh baseline and stale-reference audit
+--------------------------------------------------
+
+Scope:
+
+- Confirm current map dimensions, six day and six night Overworld visual
+  placements, 21 day/night tree canopies, four day/night building foregrounds,
+  and 96 shared building walk-behind tiles.
+- Confirm current tests/build.
+- Identify stale docs/code assumptions without changing gameplay.
+- Record that GitHub/older workspaces may be behind this package.
+
+Acceptance:
+
+- No feature implementation.
+- Baseline report names current hard-coded quest/action combat paths.
+- Current project remains byte/functionally stable.
+
+BATCH 1 — Runtime state, modes, and thin bootstrap
+--------------------------------------------------
+
+Implement:
+
+- GameState type and createInitialState
+- GameStore or equivalent controlled state owner
+- GameMode transition service
+- GameRuntime composition shell
+- move orchestration out of main.ts incrementally
+- debug display for mode
+
+Preserve:
+
+- current quest flow
+- current input and rendering
+- current maps/foreground
+
+Acceptance:
+
+- main.ts is meaningfully thinner but still simple bootstrap code.
+- movement is accepted only in world mode.
+- mode transition tests cover invalid overlap and safe return.
+- existing tests/build pass.
+
+BATCH 2 — Calendar, bed flow, and save foundation
+-------------------------------------------------
+
+Implement:
+
+- PhaseManager with day/night and no clock
+- bed choice UI and registered phase actions
+- versioned SaveEnvelope, repository, validation, migration scaffold
+- autosave boundaries
+- current quest's night boolean reads from calendar during migration
+
+Acceptance:
+
+- waiting/exploring never changes phase.
+- Stay Up changes day -> night without incrementing day.
+- sleeping at day or night advances to next day and returns phase to day.
+- save/load round-trips map, position, calendar, and current legacy quest state.
+- corrupt/future saves fail safely.
+
+BATCH 3 — Conditions, flags, event runner, interaction router
+-------------------------------------------------------------
+
+Implement:
+
+- typed flags/variables service
+- pure condition evaluator
+- action union and EventRunner
+- first action handlers
+- marker/interaction definitions and router
+- event trace in debug mode
+
+First real migration:
+
+- Home fridge -> dog food -> dog -> exit uses events/actions while preserving
+  existing player-facing behavior.
+
+Acceptance:
+
+- ordered actions execute once.
+- dialogue/minigame/battle actions can pause/resume through typed results even if
+  those systems are not yet all active.
+- invalid references are caught by validation.
+- only the active objective marker accepts taps in range.
+
+BATCH 4 — Dialogue and dynamic quest engine
+-------------------------------------------
+
+Implement:
+
+- dialogue definitions/runtime/UI
+- QuestDefinition and QuestRuntimeState
+- quest event listeners, objectives, branching, transitions
+- content registry and cross-reference validator
+- objective HUD and basic quest log
+- save migration for quest runtime data
+
+First real migration:
+
+- Rebuild the daytime Home -> Charles Jr. -> fries acquisition sequence from
+  content definitions.
+
+Acceptance:
+
+- adding a test quest requires no edit to main.ts or QuestEngine.
+- branching priority/ambiguity validation works.
+- active objective marker is definition-driven.
+- save/load at every migrated stage works.
+- legacy flow remains only for unmigrated stages.
+
+BATCH 5 — Items, inventory, equipment, and menu shell
+-----------------------------------------------------
+
+Implement:
+
+- item registry
+- inventory invariants and item actions
+- one weapon slot
+- mobile menu shell, inventory, and quest log
+- dog food, fries, clue/feather, and bush sword as real definitions
+
+Acceptance:
+
+- quest conditions use inventory quantities, not hasItem booleans.
+- key items cannot be discarded.
+- menu locks world input and returns safely.
+- inventory persists.
+
+BATCH 6 — Minigame framework and fry-defense branch
+----------------------------------------------------
+
+Implement:
+
+- minigame runtime and typed results
+- mobile reaction/tapping fry-defense minigame
+- success/partial/fail branch actions
+- quest convergence and result persistence
+
+Acceptance:
+
+- scoring logic unit tests cover boundary values.
+- one tap cannot affect movement and minigame simultaneously.
+- every result keeps the demo completable.
+- result is restored correctly after autosave/load at the next safe boundary.
+
+BATCH 7 — Turn-based battle vertical slice
+-------------------------------------------
+
+Implement:
+
+- battle definitions and runtime
+- player/enemy combatants
+- Attack, Guard, Item, and one real Skill if supported by content
+- three-bird tutorial formation
+- simple deterministic enemy AI
+- victory, defeat/retry, rewards, and return-point flow
+- mobile battle UI
+
+Acceptance:
+
+- pure battle tests cover turn order, damage, guard, item use, victory, defeat,
+  and invalid commands.
+- battle pauses world input.
+- victory emits one battle_completed event and advances quest once.
+- defeat retry restores a valid checkpoint.
+- only after parity, remove sword-cone action combat and obsolete tests/code.
+
+BATCH 8 — Enhanced demo quest full migration
+--------------------------------------------
+
+Implement from Lulus_Tale_DEMO_QUESTLINE_ENHANCED_DRAFT.txt:
+
+- daytime bird incident
+- branch convergence and clue
+- manual bed choice
+- first-night quest availability
+- night guide
+- bush sword/equipment step
+- bird gang cutscene and turn-based battle
+- return home, sleep, Day 2 teaser/end state
+
+Acceptance:
+
+- no demo stage switch remains in main.ts.
+- quest content passes reference validation.
+- automated event-driven tests cover all minigame branches, sleep choice, stay-up
+  choice, battle victory, battle retry, and final completion.
+- save/load works at every act boundary.
+- user performs mobile gameplay and writing review.
+
+BATCH 9 — PWA/installability and demo polish
+--------------------------------------------
+
+Implement:
+
+- manifest, real icons, offline caching, update policy
+- settings that actually exist
+- accessibility/focus polish
+- mobile performance profiling
+- final stale prototype removal
+
+Acceptance:
+
+- production build launches offline after first load.
+- landscape standalone launch works on supported mobile browser/device.
+- no old quest/action-combat code or assets remain referenced.
+- no fake icons/assets.
+
+BATCH 10 — Lulu-specific systems after demo stability
+-----------------------------------------------------
+
+Only after the full demo quest is stable:
+
+- perception/insanity thresholds and content hooks
+- social composure minigame
+- repeatable/daily quest instances
+- NPC schedules
+- additional skills/status effects/rewards
+- additional locations and questlines
+
+TEST STRATEGY
+=============
+
+Unit tests
+----------
+
+- mode transitions
+- condition evaluator
+- inventory invariants
+- phase/bed transactions
+- save validation/migrations
+- event ordering, pause/resume, loop guard
+- quest objective/branch/transition evaluation
+- minigame scoring
+- battle turn resolution and AI
+
+Content validation tests
+------------------------
+
+- unique IDs and reference integrity
+- map/marker existence
+- reachable quest stages
+- no ambiguous transitions
+- item/dialogue/battle/minigame references
+- save migration mappings for renamed IDs
+
+Integration tests
+-----------------
+
+Drive systems through typed events without browser navigation:
+
+- fridge -> dog -> exit
+- Charles order -> fries
+- each fry-defense result
+- recover/investigate -> home
+- sleep versus stay up
+- night guide -> weapon -> battle
+- victory -> return home -> sleep -> complete
+- save/load at each stage boundary
+
+Map regression tests
+--------------------
+
+Keep existing coverage and add assertions whenever gameplay markers change:
+
+- dimensions and palettes
+- transition reachability
+- 21 tree canopies/semantic trees
+- four building foregrounds and 96 released tiles
+- lower building collision remains solid
+- foreground assets exist and normal composite stays exact
+
+Manual user testing
+-------------------
+
+The user performs hands-on phone testing. Provide a short checklist per batch:
+
+- landscape start and viewport fit
+- touch movement and marker tap range
+- menu/dialogue touch target comfort
+- save after browser/app restart
+- building/tree visibility while walking behind them
+- quest pacing and objective clarity
+- minigame feel
+- battle readability and tap accuracy
+
+PERFORMANCE AND RELIABILITY RULES
+=================================
+
+- Keep the 60 FPS world loop free of JSON parsing, storage writes, and content
+  validation.
+- Normalize/validate definitions once at startup.
+- Cache marker lookups and content registries.
+- Avoid per-frame full-map scans already solved during map-context creation.
+- Do not recreate large arrays/objects in renderer hot paths without need.
+- Pause or reduce nonessential world updates behind modal modes.
+- Handle pointercancel, blur, visibilitychange, and orientation changes safely.
+- Service worker updates must version code and content together.
+- Log structured developer errors; show concise player-safe recovery messages.
+
+DEFERRED FEATURES — DO NOT ADD DURING DEMO FOUNDATION
+=====================================================
+
+- party/member system
+- random encounter tables
+- large skill trees
+- crafting
+- broad buy/sell economy
+- procedural quest text
+- procedural maps
+- multiplayer/cloud sync
+- achievements/records
+- relationship simulation
+- complex NPC schedules
+- multiple equipment loadouts
+- full audio mixer without real audio assets
+- a general-purpose visual quest editor
+
+DEFINITION OF DEMO-FEATURE READY
+================================
+
+The feature foundation is ready when:
+
+- all three finished maps and foreground effects remain intact
+- the game is installable/offline-capable with real PWA assets
+- day/night changes only through the bed/event system
+- GameMode cleanly owns input
+- saves are versioned, validated, and recoverable
+- dialogue, quests, events, items, minigames, and battles are data-driven
+- the enhanced demo quest contains no stage switch in main.ts
+- all designed quest branches converge safely
+- the bird gang uses turn-based battle
+- active objective text and one "!" marker stay synchronized
+- unit, content, integration, and production-build checks pass
+- the user completes a mobile gameplay/writing review
+- no placeholder assets, fake content, mock systems, or temporary stand-ins ship
+
+CODEX HANDOFF PROMPT
+====================
+
+Recommended prompt for each new implementation session:
+
+"Use Lulus_Tale_FEATURE_IMPLEMENTATION_BLUEPRINT.txt as the design authority.
+Implement only Batch [NUMBER]. First inspect AGENTS.md and the current project,
+then run the baseline tests/build. Preserve the finished maps, semantic/visual
+separation, tree/building foreground behavior, mobile current-objective marker
+UX, and current playable flow. Do not implement later batches, add placeholders,
+or rewrite unrelated systems. Add focused tests, run npm test and npm run build,
+and report changed files, validation, known issues, assumptions, git status, and
+the next recommended batch."
+
+END OF BLUEPRINT
+================
