@@ -1,0 +1,34 @@
+TECHNICAL TARGET
+
+Target platform:
+- Mobile-first web game.
+- Installable PWA.
+- Landscape-oriented.
+- Later Android APK wrapper remains possible, but is not required for the first demo.
+
+Recommended stack:
+- Vanilla HTML/CSS/JavaScript with Canvas2D is preferred for the proof-of-concept unless a project scaffold already exists.
+- Avoid Phaser/Pixi/heavy libraries unless there is a clear reason.
+- Keep the project simple, readable, and easy for Codex/future contributors to modify.
+
+Rendering:
+- Top-down 2D world.
+- Player-centered camera.
+- Use real project assets for core foundation visuals.
+- Use a logical/virtual resolution and scale to device screen.
+- Keep camera zoom/render scaling separate from map tile size.
+
+Core map scale:
+- Home uses 28 x 43 tiles.
+- Tile size is 32 game-world pixels.
+- World size is 896 x 1376 game-world pixels.
+- Mobile landscape viewport may show only a portion of the vertical home map at once.
+
+Architecture guidance:
+- Use scenes/maps rather than one giant hardcoded script.
+- Keep quest state separate from rendering.
+- Keep input mapping separate from game actions.
+- Keep collision separate from visibility/fade zones.
+- Keep dialogue state separate from random screen taps.
+- Keep UI scale values centralized and adjustable.
+- Keep asset manifest/sprite slicing data explicit and easy to revise.
