@@ -1,0 +1,163 @@
+{
+  "package": "Lulu_Overworld_Full_v1",
+  "frame_cell": [
+    96,
+    96
+  ],
+  "row_order": [
+    "Down",
+    "Down-Left",
+    "Left",
+    "Up-Left",
+    "Up",
+    "Up-Right",
+    "Right",
+    "Down-Right"
+  ],
+  "foot_anchor": [
+    48,
+    88
+  ],
+  "normal_last_opaque_row": 87,
+  "format": "PNG RGBA",
+  "baseline": "Lulu_Representative_Idle_v1_1",
+  "animations": {
+    "idle": {
+      "sheet": "sheets/Lulu_idle.png",
+      "frames_per_direction": 4,
+      "directions": 8,
+      "sheet_size": [
+        384,
+        768
+      ],
+      "grounded_frames_zero_based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "intended_use": "Subtle neutral standing loop."
+    },
+    "walk": {
+      "sheet": "sheets/Lulu_walk.png",
+      "frames_per_direction": 4,
+      "directions": 8,
+      "sheet_size": [
+        384,
+        768
+      ],
+      "grounded_frames_zero_based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "intended_use": "Normal overworld movement step cycle."
+    },
+    "run": {
+      "sheet": "sheets/Lulu_run.png",
+      "frames_per_direction": 4,
+      "directions": 8,
+      "sheet_size": [
+        384,
+        768
+      ],
+      "grounded_frames_zero_based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "intended_use": "Energetic faster overworld movement cycle."
+    },
+    "jump": {
+      "sheet": "sheets/Lulu_jump.png",
+      "frames_per_direction": 4,
+      "directions": 8,
+      "sheet_size": [
+        384,
+        768
+      ],
+      "grounded_frames_zero_based": [
+        0,
+        3
+      ],
+      "intended_use": "Anticipation, airborne, apex, and landing."
+    },
+    "dash": {
+      "sheet": "sheets/Lulu_dash.png",
+      "frames_per_direction": 4,
+      "directions": 8,
+      "sheet_size": [
+        384,
+        768
+      ],
+      "grounded_frames_zero_based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "intended_use": "Low quick burst distinct from run."
+    },
+    "sit": {
+      "sheet": "sheets/Lulu_sit.png",
+      "frames_per_direction": 2,
+      "directions": 8,
+      "sheet_size": [
+        192,
+        768
+      ],
+      "grounded_frames_zero_based": [
+        0,
+        1
+      ],
+      "intended_use": "Intentional seated overworld loop."
+    },
+    "pet_dog": {
+      "sheet": "sheets/Lulu_pet_dog.png",
+      "frames_per_direction": 4,
+      "directions": 8,
+      "sheet_size": [
+        384,
+        768
+      ],
+      "grounded_frames_zero_based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "intended_use": "Kneel/reach petting interaction; Brutus is not included."
+    },
+    "knocked_down": {
+      "sheet": "sheets/Lulu_knocked_down.png",
+      "frames_per_direction": 2,
+      "directions": 8,
+      "sheet_size": [
+        192,
+        768
+      ],
+      "grounded_frames_zero_based": [
+        0,
+        1
+      ],
+      "intended_use": "Non-graphic fallen overworld state."
+    },
+    "hit": {
+      "sheet": "sheets/Lulu_hit.png",
+      "frames_per_direction": 3,
+      "directions": 8,
+      "sheet_size": [
+        288,
+        768
+      ],
+      "grounded_frames_zero_based": [
+        0,
+        1,
+        2
+      ],
+      "intended_use": "Grounded damage/recoil reaction."
+    }
+  }
+}
