@@ -1,0 +1,1808 @@
+{
+  "schema": "lulus-character-project",
+  "version": 1,
+  "id": "pedestrian_04",
+  "displayName": "Pedestrian 04 — Elder Resident",
+  "characterClass": "humanoid",
+  "identity": {
+    "canonicalApproval": "approved",
+    "locked": true,
+    "notes": [
+      "Pedestrian 04 — Elder Resident"
+    ],
+    "paletteReferences": []
+  },
+  "production": {
+    "status": "runtime_ready",
+    "revision": 1,
+    "warnings": []
+  },
+  "presentation": {
+    "nativeCell": {
+      "width": 96,
+      "height": 96
+    },
+    "renderScales": {
+      "overworld": 1,
+      "home": 1,
+      "charles_jr": 1,
+      "battle": 1
+    },
+    "resampling": "none"
+  },
+  "collisionProfileId": "npc_standard",
+  "sources": [
+    {
+      "id": "pedestrian_04_manifest_v1",
+      "role": "metadata",
+      "path": "public/assets/characters/npcs/MANIFEST.json",
+      "sha256": "23d1f6652c859cb3be136afb55cf201165877b8cf4f2f9ec7fb4fb43d993d248",
+      "immutable": true,
+      "approval": "approved"
+    },
+    {
+      "id": "pedestrian_04_original_package",
+      "role": "reference",
+      "path": "NPC_Overworld_Batch_v1.zip",
+      "sha256": "79df1a96dc2f3130a30084aa692bc5edb2fac8c67d03941cfc52285164943ef4",
+      "immutable": true,
+      "approval": "unreviewed",
+      "notes": "Original package referenced by the active baseline checksums but unavailable in the project.",
+      "missing": true
+    },
+    {
+      "id": "pedestrian_04_idle",
+      "role": "sheet",
+      "path": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+      "sha256": "e3d8d15036d63f1582b41468cb15a7f3dde8557a04c63879cd84c74fa1d3710a",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Subtle background-resident idle."
+    },
+    {
+      "id": "pedestrian_04_walk",
+      "role": "sheet",
+      "path": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+      "sha256": "c8be75018977f8490e91cdbffb04a68c94e199b5f00f858aa9d225dd35ac19c9",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Efficient readable background-resident walk."
+    }
+  ],
+  "actions": {
+    "idle": {
+      "id": "idle",
+      "displayName": "Idle",
+      "category": "idle",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 1
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+      "runtimeHref": "/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 26,
+                "width": 29,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 27,
+                "width": 29,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 26,
+                "width": 30,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 27,
+                "width": 30,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 26,
+                "width": 29,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 27,
+                "width": 29,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 26,
+                "width": 30,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 27,
+                "width": 30,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            }
+          ]
+        }
+      }
+    },
+    "walk": {
+      "id": "walk",
+      "displayName": "Walk",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 72,
+      "runtimeSheet": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+      "runtimeHref": "/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 26,
+                "width": 29,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 27,
+                "width": 29,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 26,
+                "width": 29,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 27,
+                "width": 29,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 26,
+                "width": 30,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 27,
+                "width": 30,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 26,
+                "width": 30,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 27,
+                "width": 30,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 26,
+                "width": 29,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 27,
+                "width": 29,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 26,
+                "width": 29,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 27,
+                "width": 29,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 26,
+                "width": 28,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 27,
+                "width": 28,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 26,
+                "width": 30,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 27,
+                "width": 30,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 26,
+                "width": 30,
+                "height": 62
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/npcs/pedestrians/variant_04/sheets/Pedestrian_04_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 27,
+                "width": 30,
+                "height": 61
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "portraits": [],
+  "runtime": {
+    "manifestPath": "public/assets/characters/v2/pedestrian_04/MANIFEST.json",
+    "generatedAssetDirectory": "public/assets/characters/generated/pedestrian_04/sheets",
+    "legacyPackage": "NPC_Overworld_Batch_v1"
+  },
+  "updatedAt": "2026-07-25T08:06:44.499Z"
+}
