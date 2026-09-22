@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lulu's Tale Map Studio</title>
+  <link rel="stylesheet" href="src/editor.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <strong>Lulu’s Tale Map Studio</strong>
+      <span>active runtime authoring</span>
+    </div>
+    <label>Map
+      <select id="projectSelect"></select>
+    </label>
+    <button id="newProject">New Map Project</button>
+    <button id="reloadProject">Reload</button>
+    <button id="saveProject" class="primary">Save Project</button>
+    <button id="validateProject">Validate</button>
+    <button id="stageProject">Stage</button>
+    <button id="publishProject" class="publish">Publish Runtime</button>
+    <span class="divider"></span>
+    <button id="undoButton" title="Undo (Ctrl+Z)">Undo</button>
+    <button id="redoButton" title="Redo (Ctrl+Y)">Redo</button>
+    <label>Phase
+      <select id="phaseSelect">
+        <option value="day">Day</option>
+        <option value="night">Night</option>
+      </select>
+    </label>
+    <label>Compare
+      <select id="compareMode">
+        <option value="single">Single</option>
+        <option value="split">Split</option>
+        <option value="wipe">Wipe</option>
+        <option value="blink">Blink</option>
+        <option value="difference">Difference</option>
+      </select>
+    </label>
+    <label id="comparePositionLabel">Wipe
+      <input id="comparePosition" type="range" min="0" max="1" step="0.01" value="0.5">
+    </label>
+    <label>Snap
+      <select id="snapSelect">
+        <option value="32">32px</option>
+        <option value="16">16px</option>
+        <option value="8">8px</option>
+        <option value="4" selected>4px</option>
+        <option value="0">Off</option>
+      </select>
+    </label>
+    <button id="oneToOne">1:1</button>
+    <button id="fitMap">Fit</button>
+  </header>
+
+  <main class="studio">
+    <aside class="leftbar">
+      <section>
+        <h2>Tools</h2>
+        <div id="toolButtons" class="tool-grid">
+          <button data-tool="select" class="active">Select</button>
+          <button data-tool="pan">Pan</button>
+          <button data-tool="rect">Region Rect</button>
+          <button data-tool="polygon">Region Polygon</button>
+          <button data-tool="point">Point</button>
+          <button data-tool="collision-open">Open Collision</button>
+          <button data-tool="collision-blocked">Block Collision</button>
+          <button data-tool="raster-brush">Pixel Brush</button>
+          <button data-tool="raster-eraser">Pixel Eraser</button>
+          <button data-tool="eyedropper">Eyedropper</button>
+          <button data-tool="clone">Clone</button>
+          <button data-tool="asset-stamp">Asset Stamp</button>
+          <button data-tool="mask-add">Mask Add</button>
+          <button data-tool="mask-remove">Mask Remove</button>
+          <button data-tool="raster-select">Raster Select</button>
+          <button data-tool="raster-polygon">Raster Polygon</button>
+        </div>
+        <div class="three">
+          <label>Brush<input id="brushSize" type="number" min="1" max="256" value="16"></label>
+          <label>Color<input id="brushColor" type="color" value="#ffffff"></label>
+          <label>Alpha<input id="brushAlpha" type="number" min="0.05" max="1" step="0.05" value="1"></label>
+        </div>
+        <p class="hint">Clone: Alt-click source, then paint. Mask edits apply the same alpha to linked Day/Night foregrounds.</p>
+      </section>
+
+      <section>
+        <h2>Visibility</h2>
+        <label class="check"><input id="showGrid" type="checkbox" checked> 32px grid</label>
+        <label class="check"><input id="showCollision" type="checkbox"> 4px collision</label>
+        <label class="check"><input id="showSemantics" type="checkbox" checked> semantic geometry</label>
+        <label class="check"><input id="showForegroundTriggers" type="checkbox"> foreground triggers</label>
+        <label class="check"><input id="showRepairs" type="checkbox" checked> repair annotations</label>
+        <label class="check"><input id="showLulu" type="checkbox"> real Lulu preview</label>
+      </section>
+
+      <section>
+        <h2>Semantic Layer</h2>
+        <select id="semanticCollection"></select>
+        <input id="recordSearch" type="search" placeholder="Filter IDs">
+        <div id="recordList" class="record-list"></div>
+        <button id="newRecordId">Generate Safe ID</button>
+      </section>
+
+      <section>
+        <h2>Art Layers</h2>
+        <div id="artLayerList" class="layer-list"></div>
+        <div class="button-row">
+          <button id="addArtLayer">Add Real Layer</button>
+          <button id="saveRaster">Save Raster Draft</button>
+          <button id="discardRaster">Discard Raster Changes</button>
+        </div>
+        <label>External real PNG path
+          <input id="externalImagePath" type="text" placeholder="project-relative .png">
+        </label>
+        <button id="linkExternalImage">Link / Reload PNG</button>
+      </section>
+
+      <section>
+        <h2>Real Asset Stamp</h2>
+        <input id="assetSearch" type="search" placeholder="Search approved project assets">
+        <select id="assetSelect"></select>
+        <div class="four">
+          <label>X<input id="assetCropX" type="number" min="0" value="0"></label>
+          <label>Y<input id="assetCropY" type="number" min="0" value="0"></label>
+          <label>W<input id="assetCropW" type="number" min="1" value="32"></label>
+          <label>H<input id="assetCropH" type="number" min="1" value="32"></label>
+        </div>
+        <canvas id="assetPreview" width="240" height="160"></canvas>
+        <p class="hint" id="assetInfo">No asset selected.</p>
+      </section>
+    </aside>
+
+    <section class="viewport-shell">
+      <canvas id="mapCanvas"></canvas>
+      <div class="canvas-hud">
+        <span id="coordinateHud">px 0,0 · tile 0,0</span>
+        <span id="zoomHud">100%</span>
+        <span id="selectionHud">No selection</span>
+      </div>
+    </section>
+
+    <aside class="rightbar">
+      <section>
+        <h2>Selection Inspector</h2>
+        <label>ID<input id="recordId" type="text"></label>
+        <div class="four geometry-fields">
+          <label>X<input id="geometryX" type="number"></label>
+          <label>Y<input id="geometryY" type="number"></label>
+          <label>W<input id="geometryW" type="number"></label>
+          <label>H<input id="geometryH" type="number"></label>
+        </div>
+        <label>Complete record JSON
+          <textarea id="recordJson" rows="13" spellcheck="false"></textarea>
+        </label>
+        <div class="button-row">
+          <button id="applyRecord" class="primary">Apply</button>
+          <button id="duplicateRecord">Duplicate</button>
+          <button id="deleteRecord" class="danger">Delete</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Raster Selection</h2>
+        <div class="four">
+          <label>ΔX<input id="rasterDeltaX" type="number" value="0"></label>
+          <label>ΔY<input id="rasterDeltaY" type="number" value="0"></label>
+          <label>Scale X<input id="rasterScaleX" type="number" min="0.1" step="0.1" value="1"></label>
+          <label>Scale Y<input id="rasterScaleY" type="number" min="0.1" step="0.1" value="1"></label>
+        </div>
+        <button id="transformRasterSelection">Move / Transform Selection</button>
+      </section>
+
+      <section>
+        <h2>Foreground Component</h2>
+        <label>Layer<select id="foregroundLayer"></select></label>
+        <label>Component<select id="foregroundComponent"></select></label>
+        <label>Occlusion opacity
+          <input id="foregroundOpacity" type="number" min="0" max="1" step="0.05">
+        </label>
+        <label>Trigger / component JSON
+          <textarea id="foregroundJson" rows="9" spellcheck="false"></textarea>
+        </label>
+        <div class="button-row">
+          <button id="applyForeground">Apply</button>
+          <button id="bboxFromSelection">BBox from Raster Selection</button>
+          <button id="addForegroundComponent">Add from JSON + Selection</button>
+          <button id="deleteForegroundComponent" class="danger">Delete Component</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Repair Annotation</h2>
+        <label>Category
+          <select id="repairCategory">
+            <option>foreground mask</option>
+            <option>foreground trigger</option>
+            <option>semantic alignment</option>
+            <option>collision fit</option>
+            <option>door/transition/spawn</option>
+            <option>art detail density</option>
+            <option>night art</option>
+            <option>day/night geometry</option>
+            <option>seam/edge transition</option>
+            <option>baked-art content</option>
+          </select>
+        </label>
+        <label>Status
+          <select id="repairStatus">
+            <option value="open">Open</option>
+            <option value="in_progress">In progress</option>
+            <option value="ready_for_review">Ready for review</option>
+            <option value="approved">Approved</option>
+          </select>
+        </label>
+        <label>Notes<textarea id="repairNotes" rows="4"></textarea></label>
+        <button id="addRepair">Add from Current Selection</button>
+        <div id="repairList" class="record-list"></div>
+      </section>
+
+      <section id="calibrationPanel">
+        <h2>Overworld Calibration Gate</h2>
+        <p>Representative area: tiles x=16–43, y=16–43 around Charles Jr.</p>
+        <label class="check"><input id="calibrationApproved" type="checkbox"> User approved raster, mask, staging, and runtime preview</label>
+        <p class="warning">Publishing remains blocked until approval is saved.</p>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="statusbar">
+    <span id="statusText">Starting Map Studio…</span>
+    <span id="dirtyText">Clean</span>
+    <button id="clearStatus">Clear</button>
+  </footer>
+
+  <dialog id="publishDialog">
+    <h2>Publish active runtime bundle?</h2>
+    <p>This creates a complete backup, verifies source hashes, stages the bundle, and atomically replaces only active runtime targets.</p>
+    <pre id="publishSummary"></pre>
+    <div class="button-row">
+      <button id="cancelPublish">Cancel</button>
+      <button id="confirmPublish" class="publish">Publish</button>
+    </div>
+  </dialog>
+
+  <dialog id="newProjectDialog">
+    <h2>Create map project from real sources</h2>
+    <p>All paths are project-relative. Day, dedicated Night, and semantic JSON are required; no sample content is generated.</p>
+    <label>Map ID<input id="newMapId" type="text" pattern="[a-z][a-z0-9_]*"></label>
+    <label>Display name<input id="newMapName" type="text"></label>
+    <label>Day full-map PNG<input id="newDayAsset" type="text"></label>
+    <label>Night full-map PNG<input id="newNightAsset" type="text"></label>
+    <label>Semantic JSON<input id="newSemanticPath" type="text"></label>
+    <div class="button-row">
+      <button id="cancelNewProject">Cancel</button>
+      <button id="confirmNewProject" class="primary">Create Project</button>
+    </div>
+  </dialog>
+
+  <dialog id="artLayerDialog">
+    <h2>Add real linked art layer</h2>
+    <label>Layer ID<input id="newLayerId" type="text" pattern="[a-z][a-z0-9_]*"></label>
+    <label>Kind
+      <select id="newLayerKind">
+        <option value="detail">Detail</option>
+        <option value="foreground">Foreground</option>
+        <option value="reference">Locked reference</option>
+      </select>
+    </label>
+    <label>Day full-map PNG<input id="newLayerDay" type="text"></label>
+    <label>Night full-map PNG<input id="newLayerNight" type="text"></label>
+    <label>Z-index<input id="newLayerZ" type="number"></label>
+    <label>Foreground occlusion opacity<input id="newLayerOpacity" type="number" min="0" max="1" step="0.05"></label>
+    <p class="hint">Runtime detail/foreground layers require explicit Day and Night PNGs. Foreground alpha must match exactly.</p>
+    <div class="button-row">
+      <button id="cancelArtLayer">Cancel</button>
+      <button id="confirmArtLayer" class="primary">Add Layer</button>
+    </div>
+  </dialog>
+
+  <script type="module" src="dist/editor.js"></script>
+</body>
+</html>
