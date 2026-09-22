@@ -1,0 +1,29 @@
+CONTROLS AND INPUT
+
+Core control model:
+- Left side of screen = movement.
+- Right side of screen = aim/attack direction, reserved in Pass 1 and used in Pass 2.
+- Tap on nearby interactable = interaction.
+- Multi-touch support is required.
+
+Movement:
+- Left-side touch/drag controls movement.
+- Movement is omnidirectional, not grid-locked.
+- Movement direction controls facing when no right-side aim/attack input is active.
+- Joystick distance can control movement speed.
+
+Right-side input:
+- Reserved for aim/attack in Pass 2.
+- In Pass 1, it can be stubbed/inert and should not render a combat joystick during daytime.
+- Architecture must allow Pass 2 to add sword swing direction without refactoring the whole input system.
+
+Tap interaction:
+- Tapping an interactable object/NPC should interact only if Lulu is close enough.
+- Tap interaction must not accidentally trigger attacks.
+- During battle mode later, interaction taps may be disabled.
+
+Touch handling:
+- Use Pointer Events or Touch Events with proper touch ID tracking.
+- Prevent left movement and right input from interfering.
+- Set touch-action: none on game container/canvas.
+- Prevent pull-to-refresh/double-tap zoom/text-selection behavior inside game area.
