@@ -1,0 +1,130 @@
+LULU'S TALE — MAP CHANGE MANIFEST
+
+Worker number: Unassigned / user-directed studio pass
+Job: MAP DESIGN + MAP RULES + ASSETS — full three-map overhaul
+Maps edited: Home, Charles, Overworld
+
+FILES CHANGED
+- Home.json
+- Home.visual.json
+- Charles.json
+- Charles.visual.json
+- Overworld.json
+- Overworld.visual.json
+- public/assets/maps/home/**
+- public/assets/maps/charles/**
+- public/assets/maps/overworld/**
+- MAP_CHANGE_MANIFEST.txt
+
+SUMMARY
+- Replaced the active visual presentation of all three maps with the newly approved real asset-pack artwork.
+- Updated active map dimensions to the new artwork grids:
+  - Home: 28 x 43 tiles
+  - Charles: 39 x 33 tiles
+  - Overworld: 48 x 34 tiles
+- Created/updated all three visual companion files.
+- Performed a best-effort semantic overhaul aligned to the new artwork so the project is not left with obsolete map geometry.
+- Preserved the complete uploaded asset packs inside public/assets/maps for later Tile Tool refinement and foreground extraction.
+
+SEMANTIC / GAMEPLAY CHANGES
+Home
+- Rebuilt map dimensions and four semantic layers for the 28x43 approved interior.
+- Added bedroom, main living/kitchen/dining floor geometry, walls, furniture/appliance collision, and front-entry geometry.
+- Repositioned required gameplay markers including player spawn, bed interaction, fridge interaction, dog spawn/interaction, entrance/exit, save point, room/kitchen/seating markers.
+- Verified a walkable route from spawn to bed, fridge, dog interactions, and exit.
+
+Charles
+- Rebuilt map dimensions and four semantic layers for the 39x33 approved restaurant interior.
+- Added restaurant floor shape, walls, cashier counter/kitchen collision, booth/table seating collision, side fixtures, and entrance geometry.
+- Repositioned player spawn, entrance/exit, cashier spawn, order interaction, NPC spawns, seating/walkable markers.
+- Verified a walkable route from spawn to order interaction and exit.
+
+Overworld
+- Rebuilt map dimensions and four semantic layers for the 48x34 approved red-roof Charles Jr. overworld.
+- Added road/sidewalk/parking/grass semantic ground zones, Charles Jr. footprint, three apartment footprints, central fence/hedge blocker, parcel hedges, representative trees, dirt-field fence, transitions, player spawn, and NPC/bird spawns.
+- Preserved an intentional top connector around the central blocker strip.
+- Verified a walkable route from the apartment-side player spawn to Charles Jr. and the Home transition.
+
+VISUAL / ASSET CHANGES
+- Home.visual.json uses the exact approved 28x43 Home reconstruction.
+- Charles.visual.json uses the exact approved 39x33 Charles Jr. reconstruction.
+- Overworld.visual.json uses the exact approved 48x34 red-roof Charles Jr. Overworld reconstruction.
+- Active exact map images are placed as single full-map visual placements on the visual objects layer so semantic fallback art is covered while player/entities remain drawn above the map.
+- Complete uploaded packs are retained under public/assets/maps for future tile-by-tile edits, object extraction, and foreground overlays.
+
+ASSETS USED
+Overworld
+- Source: O.W.T.A.1.UpD(1).zip
+- 1632 real 32x32 positional tiles
+- Exact 48x34 row-major reconstruction
+- Added derived tile_manifest.json with row/column placement metadata
+- Active image: public/assets/maps/overworld/overworld_red_roof_48x34.png
+
+Home
+- Source: home_interior_asset_pack.zip
+- 1204 real 32x32 full-grid positional tiles
+- 1062 exact unique tiles in the uploaded pack
+- Active image: public/assets/maps/home/home_interior_28x43.png
+
+Charles
+- Source: charles_jr_interior_asset_pack.zip
+- 1287 real 32x32 tiles
+- Active image: public/assets/maps/charles/charles_interior_39x33.png
+
+VALIDATION PERFORMED
+PASS
+- Parsed Home.json, Charles.json, Overworld.json and all three visual JSON files.
+- Confirmed every semantic layer matches each map's declared width/height.
+- Confirmed all semantic IDs used by layers exist in the maps' palettes.
+- Confirmed active maps remain at project root.
+- Confirmed map IDs/display names remain Home, Charles, Overworld.
+- Confirmed each map has a player_spawn and that the spawn tile is walkable.
+- Custom collision/path checks passed:
+  - Home spawn -> bed/fridge/dog/exit
+  - Charles spawn -> order/exit
+  - Overworld spawn -> Home/Charles transitions
+- Tile Tool v1.6 loaded all three maps and visual companions successfully.
+- Tile Tool dry-run visual validation passed for Home, Charles, and Overworld with 0 warnings.
+- TypeScript check passed: tsc --noEmit.
+- Exact-image equality checks passed for all three active visual map images against their approved/reconstructed pack sources.
+- Verified Home full-grid pack tiles: 1204 files, all 32x32.
+- Verified Charles pack tiles: 1287 files, all 32x32.
+- Verified Overworld pack tiles: 1632 files, all 32x32, exact approved-map reconstruction.
+
+NOT COMPLETED / LIMITATIONS
+- No full gameplay playthrough was performed.
+- Vitest and Vite build could not start in this Linux container because the supplied node_modules is missing the Linux Rollup optional native package @rollup/rollup-linux-x64-gnu. TypeScript still passed.
+
+KNOWN ISSUES / FOLLOW-UP
+- Semantic collision and marker placement are best-effort passes inferred from the approved artwork and current gameplay marker requirements. They should be reviewed in Combined View and adjusted during gameplay testing.
+- The exact-map asset packs are flat scene reconstructions. Tree canopies and other overhangs are not yet separated into transparent foreground assets, so player-behind-tree perspective still needs a later foreground extraction pass for selected tiles.
+- Home and Charles multi-tile furniture are context-specific scene slices rather than fully modular authored tilesets; the complete packs are retained for exact reconstruction and future editing.
+- The active visuals currently use one exact full-map placement per map for fidelity and runtime simplicity, while the underlying real 32x32 packs remain available in public/assets/maps.
+
+COMMANDS RUN
+- Unzipped the source project and the three uploaded asset packs.
+- Inspected map/tool/runtime schemas and current gameplay marker/collision behavior.
+- Reconstructed and exact-compared the Overworld 48x34 image from its 1632 tiles.
+- Copied real asset packs into public/assets/maps.
+- Generated updated semantic and visual JSON files.
+- Ran custom JSON/schema/ID/collision/path validation.
+- Ran Tile Tool API map-load and visual dry-run validation.
+- Ran TypeScript no-emit check.
+- Attempted Vitest and Vite build; both blocked by missing Linux Rollup optional dependency in supplied node_modules.
+- Removed generated clutter: tools/backups, tools/map-editor/reports, node_modules/.vite.
+
+ASSUMPTIONS
+- The latest approved 48x34 red-roof Overworld image is the visual authority for Overworld.
+- The uploaded Home and Charles Jr. packs' exact reconstruction images are the visual authorities for those interiors.
+- Existing quest marker IDs and collision ID behavior remain the gameplay contract.
+- Best-effort semantic alignment is preferable to leaving old-size semantics in place, per explicit user permission.
+
+GIT STATUS NOTE
+- The source project already contained many pre-existing uncommitted changes before this map pass, including source/tool files and asset note files.
+- This pass did not modify engine, server, deployment, or Git configuration/history.
+- Pre-existing uncommitted changes were preserved rather than reset or cleaned.
+
+PLACEHOLDER CONFIRMATION
+- No fake assets, placeholder assets, colored-box stand-ins, mock content, invented art, or temporary substitute art were added.
+- No map renames were performed.
+- No new engine/server/deploy/Git changes were made by this pass.
