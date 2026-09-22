@@ -1,0 +1,44 @@
+CODEX MODE AND WORKFLOW RULES
+
+Every Codex prompt should specify the recommended Codex mode.
+
+Recommended use:
+- Medium:
+  - focused repo audits,
+  - documentation updates,
+  - small focused fixes,
+  - small bug fixes with clear causes.
+
+- High:
+  - asset/map verification,
+  - fresh project setup,
+  - normal implementation batches,
+  - home foundation implementation,
+  - PWA setup plus game scaffold,
+  - input/camera/dialogue/map/quest implementation.
+
+- Extra High:
+  - major architecture refactors,
+  - difficult debugging after failed builds,
+  - unclear or tangled repo state,
+  - fragile systems where mistakes would be expensive,
+  - multi-system fixes after Codex reports issues.
+
+Recommended first Codex mode:
+High.
+
+Recommended first prompt:
+Pass 0 — Asset and semantic map verification only.
+
+Reason:
+The restart must verify exact real asset files, frame sizes, tile sizes, and semantic map data before any gameplay implementation. The previous failed attempt wasted credits by allowing a working placeholder/blockout demo instead of proving real assets and exact layout first.
+
+Prompt workflow:
+- Give Codex one bounded prompt at a time.
+- Do not ask Codex to build future passes in advance.
+- Do not ask Codex to perform full in-game playtesting.
+- User manually tests gameplay on phone.
+- After Codex finishes, review its actual output before writing the next prompt.
+- Preserve working state.
+- Avoid unrelated changes.
+- Ask Codex to report changed files, commands run, tests/builds, validation, issues, next step, and git status.
