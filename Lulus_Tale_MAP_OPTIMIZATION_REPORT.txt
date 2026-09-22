@@ -1,0 +1,327 @@
+LULU'S TALE — TWO-VARIANT MAP OPTIMIZATION REPORT
+==================================================
+
+Date: 2026-07-12
+Status: COMPLETE — BOTH INDEPENDENT PROJECTS BUILD AND VALIDATE
+
+
+SUMMARY
+-------
+
+Two independent optimized playable project trees were created:
+
+1. Lulus_Tale_Optimized_Original_Overworld/
+   - Uses the approved original 48 x 34 Overworld.
+
+2. Lulus_Tale_Optimized_Enlarged_Overworld/
+   - Uses the approved enlarged 96 x 68 Overworld.
+
+The optimization was restricted to map assets, map-only manifests, map-only
+tests, and generated map build output. No player, character, NPC, animal,
+enemy, quest, item, UI, dialogue, combat, audio, music, or other non-map asset
+was removed, modified, reorganized, compressed, or deduplicated.
+
+
+MAP ASSET AUDIT
+---------------
+
+The runtime does not load individual map tile PNGs.
+
+src/main.ts discovers the six visual companions and collects their placement
+assetPath values. The current renderer loads ten unique completed PNG images:
+
+- Home day full-map image
+- Home night full-map image
+- Charles Jr. day full-map image
+- Charles Jr. night full-map image
+- Overworld day walk-behind base
+- Overworld day building foreground
+- Overworld day tree foreground
+- Overworld night walk-behind base
+- Overworld night building foreground
+- Overworld night tree foreground
+
+The thousands of Home, Charles Jr., and original Overworld tile PNGs, labeled
+atlases, reconstruction maps, CSV manifests, preview images, and uploaded
+source ZIPs were reconstruction/source material only. None of their paths
+appeared in a visual companion or runtime loader request.
+
+
+OPTIMIZATION METHOD
+-------------------
+
+The simplest reliable method was used:
+
+- Keep all ten completed runtime PNGs byte-for-byte unchanged.
+- Keep the existing full-map visual-placement renderer unchanged.
+- Keep semantic JSON and all six day/night visual companions byte-for-byte
+  unchanged.
+- Exclude confirmed reconstruction-only tile directories and map source packs
+  from each optimized playable project.
+- Rebuild dist/ from the optimized public map tree.
+- Add a compact map_runtime_manifest.json recording the ten real runtime images,
+  dimensions, and SHA-256 hashes.
+
+No new texture atlas was created. Creating atlases from tile files that are
+never loaded would add manifests, crop logic, and rendering risk without
+reducing the existing ten runtime image requests.
+
+No PNG was resampled, recolored, recompressed, or deduplicated. Therefore the
+optimization cannot introduce atlas seams, scaling blur, crop drift, alpha
+changes, or color changes.
+
+
+OUTPUT 1 — ORIGINAL 48 x 34 OVERWORLD
+-------------------------------------
+
+Location:
+- Lulus_Tale_Optimized_Original_Overworld/
+
+Map asset storage scope measured:
+- public/assets/maps/**/*
+- source_assets/**/* (all files in this source project were map-source files)
+
+Before:
+- 5,255 files
+- 96,778,983 bytes (92.30 MiB)
+
+After:
+- 40 files
+- 14,461,053 bytes (13.79 MiB)
+
+Reduction:
+- 5,215 files removed/excluded (99.24%)
+- 82,317,930 bytes removed (78.50 MiB; 85.06%)
+
+Runtime-required images:
+- 10 before
+- 10 after
+- All ten are byte-identical to the approved original project.
+
+Removed/excluded map-only paths:
+- public/assets/maps/home/pack/
+- public/assets/maps/charles/pack/
+- public/assets/maps/overworld/tiles/
+- public/assets/maps/overworld/tile_manifest.json
+- source_assets/
+
+The original Overworld remains 48 x 34 at 32 x 32 pixels per tile. Its day,
+night, building foreground, tree foreground, semantics, collision, markers,
+spawns, doors, and transitions were not converted to the enlarged variant.
+
+
+OUTPUT 2 — ENLARGED 96 x 68 OVERWORLD
+--------------------------------------
+
+Location:
+- Lulus_Tale_Optimized_Enlarged_Overworld/
+
+Map asset storage scope measured:
+- public/assets/maps/**/*
+- source_assets/**/* (all files in this source project were map-source files)
+
+Before:
+- 3,657 files
+- 133,664,620 bytes (127.47 MiB)
+
+After:
+- 40 files
+- 16,061,092 bytes (15.32 MiB)
+
+Reduction:
+- 3,617 files removed/excluded (98.91%)
+- 117,603,528 bytes removed (112.16 MiB; 87.99%)
+
+Runtime-required images:
+- 10 before
+- 10 after
+- All ten are byte-identical to the approved enlarged project.
+
+Removed/excluded map-only paths:
+- public/assets/maps/home/pack/
+- public/assets/maps/charles/pack/
+- source_assets/
+- scripts/resize_overworld_96x68.py
+- scripts/validate_overworld_96x68.py
+- src/game/overworldScale.test.ts
+
+The two removed scripts and exact-scale fixture test depended on the excluded
+map reconstruction/source package. Runtime code and gameplay tests remain.
+
+The enlarged Overworld remains 96 x 68 at 32 x 32 pixels per tile. It was not
+resized, redesigned, resampled, or mixed with the original configuration.
+
+
+MAP-RELATED CHANGED FILES
+-------------------------
+
+Both variants:
+- public/assets/maps/night/night_map_manifest.json
+  - Removed references/hashes for excluded reconstruction ZIPs and preview
+    copies; active runtime assets and hashes remain.
+- public/assets/maps/night/README_NIGHT_MAPS.txt
+  - Documents source-pack exclusion in the optimized playable copy.
+- src/game/nightMaps.test.ts
+  - Verifies source-only night ZIPs are excluded while active night images and
+    manifests remain valid.
+- public/assets/maps/map_runtime_manifest.json (new)
+- MAP_OPTIMIZATION_AUDIT.json (new)
+- MAP_OPTIMIZATION_VALIDATION.json (new)
+- dist/ (clean production rebuild)
+
+Enlarged variant only:
+- public/assets/maps/overworld/overworld_96x68_manifest.json
+  - Removed reconstruction-pack/reference-snapshot entries while retaining
+    active day/night asset records.
+
+No map semantic file or visual companion changed.
+No map loader or renderer change was necessary.
+
+
+GENERATED ATLASES / MANIFESTS
+-----------------------------
+
+Generated atlases:
+- None.
+
+Generated manifests:
+- public/assets/maps/map_runtime_manifest.json in each project
+- MAP_OPTIMIZATION_AUDIT.json in each project
+- MAP_OPTIMIZATION_VALIDATION.json in each project
+
+Existing Home/Charles reconstruction atlases were excluded with their pack
+directories because they were not runtime assets.
+
+
+COMMANDS RUN
+------------
+
+- Library resolution/materialization of the exact approved night-enabled
+  48 x 34 project
+- Python map-only optimization and audit script
+- npm dependency preparation using the matching package-lock dependency tree
+- npm test in each project
+- npm run build in each project
+- Python PNG/JSON/crop/hash/alpha/dist/non-map validation in each project
+- Local HTTP serving checks for each production dist/
+- ZIP integrity and SHA-256 checks during final packaging
+- Targeted rg/find/du/hash inspection for runtime map references and source
+  pack classification
+
+
+TESTS / BUILDS
+--------------
+
+Original 48 x 34 project:
+- PASS — 15 test files
+- PASS — 68 tests
+- PASS — TypeScript no-emit check
+- PASS — Vite production build
+- PASS — 24 modules transformed
+- PASS — 286 focused optimization assertions
+
+Enlarged 96 x 68 project:
+- PASS — 15 test files
+- PASS — 68 tests
+- PASS — TypeScript no-emit check
+- PASS — Vite production build
+- PASS — 24 modules transformed
+- PASS — 286 focused optimization assertions
+
+
+VALIDATION RESULTS
+------------------
+
+PASS — Exact Overworld variant dimensions: 48 x 34 and 96 x 68.
+PASS — Home remains 28 x 43 in both projects.
+PASS — Charles Jr. remains 39 x 33 in both projects.
+PASS — All maps retain 32 x 32 engine tiles.
+PASS — Semantic and visual JSON files are byte-identical to each variant's
+       approved input project.
+PASS — All ten runtime map PNGs are byte-identical to each input project.
+PASS — All visual placement paths exist.
+PASS — All crops are inside source images and match 32px draw dimensions.
+PASS — All visual placements remain inside map bounds.
+PASS — Production dist/ contains byte-identical copies of every runtime map
+       image.
+PASS — Day/night building alpha masks remain identical.
+PASS — Day/night tree alpha masks remain identical.
+PASS — Foreground PNG transparency remains present.
+PASS — Walk-behind tests pass for day and night.
+PASS — Collision, semantic, marker, spawn, door, and transition tests pass.
+PASS — No removed source-pack path remains in an active manifest.
+PASS — Both production shells and the correct active Overworld PNG served over
+       local HTTP with status 200.
+PASS — 697 non-map public assets remain present and byte-for-byte unchanged in
+       each project.
+PASS — Non-map/runtime source files remain byte-for-byte unchanged.
+
+Because runtime PNGs and visual crop JSON were not changed, this pass cannot
+introduce new seams, blur, transparency drift, or crop artifacts.
+
+
+KNOWN ISSUES / RISKS
+--------------------
+
+- Runtime map request count remains ten because it was already using completed
+  full-map PNGs rather than the thousands of source tiles.
+- The current loader eagerly loads all day/night visual companions. The 96 x 68
+  variant therefore has higher decoded-image memory use than the 48 x 34
+  variant. Changing that behavior would be a separate loader/lifecycle change,
+  not required for safe removal of redundant map packs.
+- Historical map reports remain as historical documentation and may mention
+  source packs that are intentionally absent from these optimized playable
+  copies. Active manifests and the new audit files are authoritative.
+
+
+MANUAL BROWSER / MOBILE TESTS STILL NEEDED
+------------------------------------------
+
+For each project:
+
+1. Launch on the target mobile browser/PWA wrapper.
+2. Enter Home, Charles Jr., and the Overworld during day.
+3. Switch with the bed and repeat during night.
+4. Walk behind all Overworld building foreground zones.
+5. Walk around representative foreground trees.
+6. Use Home and Charles Jr. doors in both directions.
+7. Confirm spawn positions and objective markers visually.
+8. Check camera edges and pixel sharpness at the device's native scale.
+9. Watch the browser console/network panel for missing map requests.
+10. Compare memory/startup behavior between the 48 x 34 and 96 x 68 builds.
+
+Automated gameplay navigation was not performed, in accordance with the
+project's gameplay-testing rule.
+
+
+NON-MAP ASSET CONFIRMATION
+--------------------------
+
+Each project contains 697 non-map public assets. Path-by-path SHA-256 manifests
+were compared against that variant's source project, and every path and hash
+matched exactly.
+
+No non-map asset was removed, changed, renamed, moved, optimized, compressed,
+or deduplicated.
+
+
+PLACEHOLDER CONFIRMATION
+------------------------
+
+No placeholders, fake assets, mock data, stub implementations, generated art,
+replacement art, or temporary stand-ins were added.
+
+
+GIT STATUS
+----------
+
+Neither optimized output directory is a Git repository. No branch, commit,
+tag, push, or pull request was created.
+
+
+SUGGESTED NEXT STEP
+-------------------
+
+Run the focused mobile checklist above. If the enlarged build shows memory
+pressure on the minimum target phone, the next map-only optimization should be
+lazy loading/unloading of visual images by active map and day/night phase.
