@@ -1,0 +1,758 @@
+{
+  "$schema": "../../schema/map-semantics.schema.json",
+  "schema_version": "1.0.0",
+  "map_id": "home",
+  "coordinate_system": {
+    "origin": "top_left",
+    "x_direction": "right",
+    "y_direction": "down",
+    "units": "pixels_with_tile_companions",
+    "rectangle_rule": "left/top inclusive; right/bottom exclusive"
+  },
+  "map_dimensions": {
+    "tiles": {
+      "width": 28,
+      "height": 43
+    },
+    "pixels": {
+      "width": 896,
+      "height": 1376
+    },
+    "tile_size_px": 32,
+    "world_scale": 1
+  },
+  "day_night_contract": "shared_geometry",
+  "movement_resolution": {
+    "rule": "walkable_regions union, minus blocked_regions, then passable_overrides",
+    "tile_grid_companion": "collision_grid.json",
+    "runtime_note": "Vector regions are authoritative; the grid is a deterministic 32px implementation companion."
+  },
+  "walkable_regions": [
+    {
+      "id": "walk_main_room",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 18,
+        "width": 24,
+        "height": 20
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 576,
+        "width": 768,
+        "height": 640
+      },
+      "surface": "wood_floor"
+    },
+    {
+      "id": "walk_bedroom",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 13,
+        "y": 2,
+        "width": 12,
+        "height": 12
+      },
+      "pixel_rect": {
+        "x": 416,
+        "y": 64,
+        "width": 384,
+        "height": 384
+      },
+      "surface": "wood_floor"
+    },
+    {
+      "id": "walk_bedroom_connector",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 14,
+        "y": 13,
+        "width": 3,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 448,
+        "y": 416,
+        "width": 96,
+        "height": 160
+      },
+      "surface": "wood_floor"
+    },
+    {
+      "id": "walk_bottom_sliding_door_floor",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 12,
+        "y": 38,
+        "width": 4,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 384,
+        "y": 1216,
+        "width": 128,
+        "height": 96
+      },
+      "surface": "wood_floor"
+    },
+    {
+      "id": "walk_top_left_entry",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 5,
+        "y": 16,
+        "width": 3,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 160,
+        "y": 512,
+        "width": 96,
+        "height": 96
+      },
+      "surface": "threshold"
+    }
+  ],
+  "blocked_regions": [
+    {
+      "id": "bed",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 17,
+        "y": 5,
+        "width": 4,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 544,
+        "y": 160,
+        "width": 128,
+        "height": 224
+      },
+      "category": "furniture",
+      "object_id": "object_bed"
+    },
+    {
+      "id": "nightstand",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 15,
+        "y": 4,
+        "width": 2,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 480,
+        "y": 128,
+        "width": 64,
+        "height": 96
+      },
+      "category": "furniture"
+    },
+    {
+      "id": "bedroom_bookcase",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 23,
+        "y": 4,
+        "width": 3,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 736,
+        "y": 128,
+        "width": 96,
+        "height": 224
+      },
+      "category": "furniture"
+    },
+    {
+      "id": "living_sofa",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 23,
+        "width": 4,
+        "height": 8
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 736,
+        "width": 128,
+        "height": 256
+      },
+      "category": "furniture"
+    },
+    {
+      "id": "living_coffee_table",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 6,
+        "y": 24,
+        "width": 2,
+        "height": 6
+      },
+      "pixel_rect": {
+        "x": 192,
+        "y": 768,
+        "width": 64,
+        "height": 192
+      },
+      "category": "furniture"
+    },
+    {
+      "id": "central_shelf",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 10,
+        "y": 18,
+        "width": 3,
+        "height": 9
+      },
+      "pixel_rect": {
+        "x": 320,
+        "y": 576,
+        "width": 96,
+        "height": 288
+      },
+      "category": "furniture"
+    },
+    {
+      "id": "kitchen_counter",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 17,
+        "y": 16,
+        "width": 9,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 544,
+        "y": 512,
+        "width": 288,
+        "height": 160
+      },
+      "category": "counter"
+    },
+    {
+      "id": "kitchen_appliances",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 20,
+        "y": 21,
+        "width": 6,
+        "height": 6
+      },
+      "pixel_rect": {
+        "x": 640,
+        "y": 672,
+        "width": 192,
+        "height": 192
+      },
+      "category": "appliance",
+      "object_id": "object_refrigerator"
+    },
+    {
+      "id": "kitchen_lower_cabinets",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 17,
+        "y": 21,
+        "width": 3,
+        "height": 6
+      },
+      "pixel_rect": {
+        "x": 544,
+        "y": 672,
+        "width": 96,
+        "height": 192
+      },
+      "category": "counter"
+    },
+    {
+      "id": "right_pantry",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 23,
+        "y": 28,
+        "width": 3,
+        "height": 9
+      },
+      "pixel_rect": {
+        "x": 736,
+        "y": 896,
+        "width": 96,
+        "height": 288
+      },
+      "category": "furniture"
+    },
+    {
+      "id": "dining_set",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 11,
+        "y": 31,
+        "width": 8,
+        "height": 6
+      },
+      "pixel_rect": {
+        "x": 352,
+        "y": 992,
+        "width": 256,
+        "height": 192
+      },
+      "category": "furniture"
+    },
+    {
+      "id": "dog_bed",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 35,
+        "width": 3,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 1120,
+        "width": 96,
+        "height": 96
+      },
+      "category": "pet_furniture"
+    },
+    {
+      "id": "entry_left_plant",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 4,
+        "y": 39,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 128,
+        "y": 1248,
+        "width": 64,
+        "height": 64
+      },
+      "category": "plant"
+    },
+    {
+      "id": "entry_right_plant",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 23,
+        "y": 39,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 736,
+        "y": 1248,
+        "width": 64,
+        "height": 64
+      },
+      "category": "plant"
+    }
+  ],
+  "passable_overrides": [
+    {
+      "id": "bedroom_connector_clear",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 14,
+        "y": 13,
+        "width": 3,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 448,
+        "y": 416,
+        "width": 96,
+        "height": 160
+      },
+      "purpose": "corridor"
+    },
+    {
+      "id": "bottom_sliding_door_floor_clear",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 12,
+        "y": 38,
+        "width": 4,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 384,
+        "y": 1216,
+        "width": 128,
+        "height": 96
+      },
+      "purpose": "walkable_sliding_door_floor"
+    },
+    {
+      "id": "top_left_entry_clear",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 5,
+        "y": 16,
+        "width": 3,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 160,
+        "y": 512,
+        "width": 96,
+        "height": 96
+      },
+      "purpose": "door_threshold"
+    }
+  ],
+  "structures": [
+    {
+      "id": "structure_home_shell",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 1,
+        "width": 25,
+        "height": 40
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 32,
+        "width": 800,
+        "height": 1280
+      },
+      "name": "Lulu's home interior",
+      "entry_door_id": "door_home_exit"
+    }
+  ],
+  "objects": [
+    {
+      "id": "object_bed",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 17,
+        "y": 5,
+        "width": 4,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 544,
+        "y": 160,
+        "width": 128,
+        "height": 224
+      },
+      "category": "bed",
+      "interaction_id": "interaction_bed"
+    },
+    {
+      "id": "object_refrigerator",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 23,
+        "y": 22,
+        "width": 3,
+        "height": 6
+      },
+      "pixel_rect": {
+        "x": 736,
+        "y": 704,
+        "width": 96,
+        "height": 192
+      },
+      "category": "appliance",
+      "interaction_id": "interaction_refrigerator"
+    },
+    {
+      "id": "object_sofa",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 23,
+        "width": 4,
+        "height": 8
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 736,
+        "width": 128,
+        "height": 256
+      },
+      "category": "sofa"
+    },
+    {
+      "id": "object_dining_set",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 11,
+        "y": 31,
+        "width": 8,
+        "height": 6
+      },
+      "pixel_rect": {
+        "x": 352,
+        "y": 992,
+        "width": 256,
+        "height": 192
+      },
+      "category": "dining"
+    }
+  ],
+  "doors": [
+    {
+      "id": "door_home_exit",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 5,
+        "y": 17,
+        "width": 3,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 160,
+        "y": 544,
+        "width": 96,
+        "height": 64
+      },
+      "structure_id": "structure_home_shell",
+      "clear_width_px": 96,
+      "transition_id": "transition_home_to_overworld"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "transition_home_to_overworld",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 5,
+        "y": 17,
+        "width": 3,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 160,
+        "y": 544,
+        "width": 96,
+        "height": 64
+      },
+      "target_map": "overworld",
+      "target_transition_id": "transition_overworld_to_home",
+      "target_spawn_id": "spawn_overworld_from_home",
+      "activation": "player_enter"
+    }
+  ],
+  "spawns": [
+    {
+      "id": "spawn_home_entry",
+      "tile_point": {
+        "x": 6.5,
+        "y": 19.5
+      },
+      "pixel_point": {
+        "x": 208,
+        "y": 624
+      },
+      "kind": "player",
+      "facing": "south",
+      "source_transition_id": "transition_overworld_to_home"
+    },
+    {
+      "id": "spawn_home_player_default",
+      "tile_point": {
+        "x": 16.5,
+        "y": 9.5
+      },
+      "pixel_point": {
+        "x": 528,
+        "y": 304
+      },
+      "kind": "player",
+      "facing": "east"
+    }
+  ],
+  "npc_spawn_markers": [
+    {
+      "id": "npc_anchor_home_companion",
+      "tile_point": {
+        "x": 11.5,
+        "y": 34.5
+      },
+      "pixel_point": {
+        "x": 368,
+        "y": 1104
+      },
+      "kind": "companion_anchor",
+      "enabled_by_default": false,
+      "facing": "south",
+      "note": "Placement anchor only; no companion behavior authored."
+    }
+  ],
+  "interactions": [
+    {
+      "id": "interaction_bed",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 16,
+        "y": 8,
+        "width": 1,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 512,
+        "y": 256,
+        "width": 32,
+        "height": 96
+      },
+      "target_object_id": "object_bed",
+      "action": "bed",
+      "approach": "adjacent",
+      "facing": "east"
+    },
+    {
+      "id": "interaction_refrigerator",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 23,
+        "y": 27,
+        "width": 2,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 736,
+        "y": 864,
+        "width": 64,
+        "height": 32
+      },
+      "target_object_id": "object_refrigerator",
+      "action": "refrigerator",
+      "approach": "adjacent",
+      "facing": "north"
+    }
+  ],
+  "event_regions": [],
+  "foreground_occlusion_regions": [
+    {
+      "id": "high_foreground::alpha_component_01",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 543,
+        "y": 520,
+        "width": 303,
+        "height": 149
+      },
+      "trigger_tile_rect": {
+        "x": 16,
+        "y": 16,
+        "width": 11,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 512,
+        "y": 512,
+        "width": 352,
+        "height": 160
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_02",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 64,
+        "y": 735,
+        "width": 109,
+        "height": 276
+      },
+      "trigger_tile_rect": {
+        "x": 2,
+        "y": 22,
+        "width": 4,
+        "height": 10
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 64,
+        "y": 704,
+        "width": 128,
+        "height": 320
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_03",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 336,
+        "y": 574,
+        "width": 79,
+        "height": 271
+      },
+      "trigger_tile_rect": {
+        "x": 10,
+        "y": 17,
+        "width": 3,
+        "height": 10
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 320,
+        "y": 544,
+        "width": 96,
+        "height": 320
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_04",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 31,
+        "y": 438,
+        "width": 422,
+        "height": 47
+      },
+      "trigger_tile_rect": {
+        "x": 0,
+        "y": 13,
+        "width": 15,
+        "height": 3
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 0,
+        "y": 416,
+        "width": 480,
+        "height": 96
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_05",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 528,
+        "y": 440,
+        "width": 329,
+        "height": 45
+      },
+      "trigger_tile_rect": {
+        "x": 16,
+        "y": 13,
+        "width": 11,
+        "height": 3
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 512,
+        "y": 416,
+        "width": 352,
+        "height": 96
+      }
+    }
+  ],
+  "notes": [
+    "The top-left exterior door and bedroom connector are explicit passable overrides aligned to visible openings; the bottom sliding door is not an Overworld transition.",
+    "The sofa and coffee table use separate obstruction regions so the surrounding rug remains walkable.",
+    "The refrigerator interaction is placed on the reachable floor band directly in front of the appliance."
+  ]
+}
