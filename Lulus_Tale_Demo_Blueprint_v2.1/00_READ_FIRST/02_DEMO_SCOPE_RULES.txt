@@ -1,0 +1,69 @@
+DEMO SCOPE RULES — v2.1 FOUNDATION RESTART
+
+Build the proof-of-concept, not the full game.
+
+Current implementation scope:
+Build the indoor home foundation only until the user manually confirms it works well on phone.
+
+Required for the home foundation:
+- Mobile-first landscape PWA.
+- Top-down web-based 2D game.
+- Responsive virtual viewport.
+- Player-centered camera.
+- Dual-zone mobile controls.
+- Tap-to-interact.
+- Dialogue boxes with Next-button-only progression.
+- Proximity-gated interactions.
+- Home semantic map import.
+- Real Lulu/player sprite and directional animation.
+- Real home/interior/furniture assets from project asset packs.
+- Real dog asset.
+- Bed, fridge, dog bowl/dog interaction, exit door, room collision/walkable layout.
+- Tiny Day 1 home tutorial quest chain.
+
+Required home tutorial loop:
+1. Lulu starts near/at bed.
+2. Player learns movement.
+3. Objective sends Lulu to fridge.
+4. Player interacts with fridge.
+5. Lulu obtains dog food.
+6. Objective sends Lulu to dog/dog bowl.
+7. Player feeds dog / uses dog bowl.
+8. Dog reacts.
+9. Objective points to exit door, but exterior transition may remain disabled/deferred until the foundation is approved.
+
+Strict no-placeholder rule:
+- Do not use colored boxes/shapes as runtime replacements for Lulu, dog, bed, fridge, doors, home tiles, core furniture, interactables, or map layout.
+- Do not improvise rooms, objects, or stairs not in the semantic map.
+- Do not use fake home geometry.
+- If a required real asset or map object cannot be located/sliced/implemented, stop and report the exact blocker.
+
+Allowed temporary debug aids:
+- Debug overlays, coordinate labels, collision outlines, and dev-only markers are allowed only if clearly marked as debug and not used as shipped/core art.
+- Semantic colors in the Tilemap Builder are allowed because they are layout data, not final runtime art.
+
+Do not build yet unless explicitly requested:
+- Full overworld.
+- Charles Jr. map/interior.
+- Bird theft/chase/fries recovery.
+- Pass 2 night content.
+- Full open-world neighborhood.
+- Fred Meyer or 7-Eleven content.
+- Real-time or automatically advancing 24-hour clock.
+- Day/night timers or fixed phase-length settings.
+- Full NPC schedules.
+- Full shop economy.
+- Full inventory UI.
+- Full save/load system.
+- Full insanity power tree.
+- Cars/traffic system.
+- Complex stealth.
+- Complex combat.
+- Final art/audio.
+- Android APK wrapper.
+
+Design principle:
+Every feature in the foundation should either prove asset loading/scaling, prove the home layout/collision, teach a core interaction, or establish the tone of Lulu's Tale.
+
+Time-system rule:
+Day and night are manual phases controlled from Lulu's bed. Daytime bed use offers "sleep until next day" or "stay up into night"; nighttime bed use advances to the next day. Exploration is never placed on a clock.
