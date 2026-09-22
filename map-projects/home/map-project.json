@@ -1,0 +1,102 @@
+{
+  "$schema": "../tools/map-editor/schema/map-project.schema.json",
+  "format": "lulus_map_project_v1",
+  "version": "1.0.0",
+  "mapId": "home",
+  "displayName": "Home",
+  "dimensions": {
+    "widthTiles": 28,
+    "heightTiles": 43,
+    "widthPx": 896,
+    "heightPx": 1376,
+    "tileSizePx": 32,
+    "collisionCellSizePx": 4
+  },
+  "runtime": {
+    "semantic": "public/data/maps/home/semantic.json",
+    "collision": "public/data/maps/home/collision_grid.json",
+    "dayVisual": "public/data/maps/home/visual_day.json",
+    "nightVisual": "public/data/maps/home/visual_night.json",
+    "assetRoot": "public/assets/maps/native/home"
+  },
+  "art": {
+    "day": {
+      "layers": [
+        {
+          "id": "base",
+          "kind": "base",
+          "path": "public/assets/maps/native/home/day_base.png",
+          "runtimeAsset": "production/home/day_base.png",
+          "locked": false,
+          "visible": true,
+          "zIndex": 0
+        },
+        {
+          "id": "high_foreground",
+          "kind": "foreground",
+          "path": "public/assets/maps/native/home/high_foreground_day.png",
+          "runtimeAsset": "production/home/high_foreground_day.png",
+          "foregroundLayerId": "high_foreground",
+          "locked": false,
+          "visible": true,
+          "sharedAlpha": true,
+          "phase": "day",
+          "zIndex": 200
+        }
+      ]
+    },
+    "night": {
+      "layers": [
+        {
+          "id": "base",
+          "kind": "base",
+          "path": "public/assets/maps/native/home/night_base.png",
+          "runtimeAsset": "production/home/night_base.png",
+          "locked": false,
+          "visible": true,
+          "zIndex": 0
+        },
+        {
+          "id": "high_foreground",
+          "kind": "foreground",
+          "path": "public/assets/maps/native/home/high_foreground_night.png",
+          "runtimeAsset": "production/home/high_foreground_night.png",
+          "foregroundLayerId": "high_foreground",
+          "locked": false,
+          "visible": true,
+          "sharedAlpha": true,
+          "phase": "night",
+          "zIndex": 200
+        }
+      ]
+    }
+  },
+  "sourceHashes": {
+    "public/data/maps/home/semantic.json": "2f63fee1706468201e59d42cda9cc6c7912ffbb89dd7796ee687f4716ec28252",
+    "public/data/maps/home/collision_grid.json": "2660933112c485466eb61639ad7fbd932270149ec10c5695dab15334215cb8f3",
+    "public/data/maps/home/visual_day.json": "6d0d7ce4beb49ebeb1b62b62e101590560d48827f736b6d6c6106577b621e48b",
+    "public/data/maps/home/visual_night.json": "0215fcdce0f253b23b9e1d01881dbda817cc518aff084affefc89c617386f851",
+    "public/assets/maps/native/home/day_base.png": "ccad95ed6ccc4a7bab6a1ab0aef7606eeb9567ae4af19acf1e6bbfc123a8cc40",
+    "public/assets/maps/native/home/high_foreground_day.png": "dd39dad3a1462164010e730a5597a5d2018c14cd9439ae042aeaa24ba2cfe9df",
+    "public/assets/maps/native/home/night_base.png": "f63b67d172ef615c8633f6ab1102a1eae2a51f738fb6860720f5d03d5d0cac49",
+    "public/assets/maps/native/home/high_foreground_night.png": "1f8f3f85a6501968732a1765464535709047beabd3d590764737272671bb4cfb"
+  },
+  "lastExportHashes": {
+    "public/data/maps/home/semantic.json": "2f63fee1706468201e59d42cda9cc6c7912ffbb89dd7796ee687f4716ec28252",
+    "public/data/maps/home/collision_grid.json": "2660933112c485466eb61639ad7fbd932270149ec10c5695dab15334215cb8f3",
+    "public/data/maps/home/visual_day.json": "6d0d7ce4beb49ebeb1b62b62e101590560d48827f736b6d6c6106577b621e48b",
+    "public/data/maps/home/visual_night.json": "0215fcdce0f253b23b9e1d01881dbda817cc518aff084affefc89c617386f851",
+    "RUNTIME_AUTHORITY_MANIFEST.json": "c34ac808715160f61205a5ecbfcc11ead5e7d04413bfa4de8aed8e8fd8a57141"
+  },
+  "auditSources": [
+    "map-projects/audits/index.json"
+  ],
+  "repairAnnotations": [],
+  "approval": {
+    "calibrationAreaApproved": true,
+    "approvedAt": null
+  },
+  "lastPublishedAt": "2026-07-25T07:54:30.735Z",
+  "baselineMigrationPublishedAt": "2026-07-25T07:54:30.735Z",
+  "savedAt": "2026-07-25T10:32:49.017Z"
+}
