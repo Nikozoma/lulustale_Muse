@@ -1,0 +1,2820 @@
+{
+  "schema": "lulus-character-runtime",
+  "version": 2,
+  "id": "bird_lookout",
+  "displayName": "Bird Lookout",
+  "characterClass": "bird",
+  "species": "Dark-eyed junco",
+  "status": "runtime_ready",
+  "collisionProfileId": "bird_visual",
+  "renderScales": {
+    "overworld": 1,
+    "home": 1,
+    "charles_jr": 1,
+    "battle": 1
+  },
+  "actions": {
+    "idle": {
+      "id": "idle",
+      "category": "idle",
+      "playback": "loop",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 4,
+      "loop": [
+        0,
+        3
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    },
+    "hop": {
+      "id": "hop",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 4,
+      "loop": [
+        0,
+        3
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 32,
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    },
+    "fly": {
+      "id": "fly",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 4,
+      "loop": [
+        0,
+        3
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 64,
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    },
+    "takeoff": {
+      "id": "takeoff",
+      "category": "transition",
+      "playback": "once",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 3,
+      "loop": [
+        0,
+        2
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    },
+    "land": {
+      "id": "land",
+      "category": "transition",
+      "playback": "once",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 3,
+      "loop": [
+        0,
+        2
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": false,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    },
+    "alert_call": {
+      "id": "alert_call",
+      "category": "interaction",
+      "playback": "loop",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 3,
+      "loop": [
+        0,
+        2
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    }
+  },
+  "sourceProject": {
+    "path": "character-production/projects/bird_lookout/project.json",
+    "revision": 1
+  }
+}
