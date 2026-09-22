@@ -1,0 +1,284 @@
+LULU'S TALE — OVERWORLD 96x68 IMPLEMENTATION REPORT
+====================================================
+
+Date: 2026-07-12
+Status: IMPLEMENTED; AUTOMATED VALIDATION AND PRODUCTION BUILD PASS
+
+
+SUMMARY
+-------
+
+The approved Overworld was enlarged from 48 x 34 to 96 x 68 normal game
+tiles. The engine tile size remains 32 x 32 pixels. No camera zoom, player
+scale, movement scale, per-map scale, or engine tile-size workaround was used.
+
+Day and night base art, building foregrounds, tree foregrounds, visual
+companions, semantic layers, markers, transitions, manifests, documentation,
+tests, and source tile packs now agree on 96 x 68 tiles / 3072 x 2176 pixels.
+
+The visual enlargement is exact nearest-neighbor 2x sampling. Every original
+pixel becomes a 2 x 2 pixel block, preserving the approved composition,
+landmarks, proportions, style, and day/night alignment.
+
+
+SEMANTIC AND MARKER RESULT
+--------------------------
+
+Ground, structures, and objects were expanded so every original semantic cell
+became an exact 2 x 2 block. This preserves roads, sidewalks, parking, grass,
+building footprints, bushes, hedges, fences, trees, and event-use areas.
+
+Point markers remain singular rather than becoming four duplicate triggers.
+They use the lower-right 32 x 32 cell of the corresponding enlarged 2 x 2
+block. Final Overworld marker coordinates are:
+
+- player_door: 67,37
+- transition_to_home: 67,39
+- player_spawn: 67,41
+- charles_jr_door: 29,39
+- transition_to_charles_jr: 29,41
+- npc_spawn: 23,49 and 85,49
+
+All markers are in bounds and have no structure/object collision. Home and
+Charles Jr. return behavior continues to use these existing marker IDs, so no
+interior-map compatibility edit was required.
+
+
+FOREGROUND RESULT
+-----------------
+
+- Four building walk-behind zones were scaled with the art and semantics.
+- The original upper two rows now occupy four 32 x 32 rows, as required by the
+  physical 2x enlargement.
+- Released walk-behind collision area increased from 96 to 384 semantic tiles.
+- Apartment replacement ground remains grass.
+- Charles Jr. replacement ground remains parking-lot asphalt.
+- Building sections remain opaque normally and fade to 42% only while Lulu's
+  feet are inside the matching zone.
+- The day and night building alpha masks remain identical.
+- The day and night tree alpha masks remain identical.
+- The 21 original semantic trees are now 21 connected 2 x 2 regions: 84 solid
+  tree tiles total.
+- The 21 individual canopy assets and the full-map tree overlay were enlarged
+  and remain aligned at foreground order 100.
+- At full opacity, base plus building foreground reproduces the approved day
+  or night 96 x 68 source pixel-for-pixel.
+
+
+CHANGED FILES
+-------------
+
+Core map files:
+- Overworld.json
+- Overworld.visual.json
+- Overworld.night.visual.json
+
+Active day assets:
+- public/assets/maps/overworld/overworld_red_roof_96x68.png
+- public/assets/maps/overworld/overworld_walkbehind_base_96x68.png
+- public/assets/maps/overworld/foreground/overworld_building_upper_foreground_96x68.png
+- public/assets/maps/overworld/foreground/overworld_tree_canopy_foreground_96x68.png
+- public/assets/maps/overworld/foreground/tree_canopies_96x68/*.png (21 files)
+
+Active night assets:
+- public/assets/maps/night/overworld/overworld_walkbehind_base_96x68_night.png
+- public/assets/maps/night/overworld/foreground/overworld_building_upper_foreground_96x68_night.png
+- public/assets/maps/night/overworld/foreground/overworld_tree_canopy_foreground_96x68_night.png
+- source_assets/night_map_references/overworld_night_approved_reference_96x68.png
+
+Manifests and asset documentation:
+- public/assets/maps/overworld/overworld_96x68_manifest.json
+- public/assets/maps/overworld/foreground/building_foreground_manifest.json
+- public/assets/maps/overworld/foreground/tree_canopy_manifest.json
+- public/assets/maps/night/night_map_manifest.json
+- public/assets/maps/night/README_NIGHT_MAPS.txt
+- public/assets/maps/overworld/foreground/README_BUILDING_FOREGROUND.txt
+- public/assets/maps/overworld/foreground/README_TREE_FOREGROUND.txt
+
+Reproducible source/provenance:
+- source_assets/overworld_48x34_reference/ (immutable semantic, visual,
+  manifest, image, and per-tree source snapshot)
+- source_assets/overworld_96x68_tile_packs/Overworld.Day.96x68.asset_pack.zip
+- source_assets/overworld_96x68_tile_packs/Overworld.Night.96x68.asset_pack.zip
+
+Each day/night asset pack contains three full 3072 x 2176 layers and 19,584
+normal 32 x 32 PNG tiles: 6,528 base, 6,528 building-foreground, and 6,528
+tree-foreground tiles. Each pack includes tile_manifest.csv, hashes, package
+metadata, and a README.
+
+Migration and validation:
+- scripts/resize_overworld_96x68.py
+- scripts/validate_overworld_96x68.py
+- src/game/overworldScale.test.ts
+- src/game/mapRegistry.test.ts
+- src/game/visual.test.ts
+- src/game/buildingForeground.test.ts
+- src/game/treeForeground.test.ts
+- src/game/nightMaps.test.ts
+
+Current design documentation:
+- Lulus_Tale_Demo_Blueprint_v2.1/02_MAP_LAYOUTS/00_MAP_LAYOUT_REFERENCE.txt
+- Lulus_Tale_Demo_Blueprint_v2.1/02_MAP_LAYOUTS/01_OVERWORLD_LAYOUT_RULES.txt
+- Lulus_Tale_FEATURE_IMPLEMENTATION_BLUEPRINT.txt
+
+Generated build output:
+- dist/
+
+Removed from the public PWA bundle:
+- superseded 48 x 34 Overworld day base/reference PNGs
+- superseded 48 x 34 day building/tree foreground PNGs
+- superseded 48 x 34 night base/building/tree PNGs
+- superseded public 48 x 34 tile directory/manifests
+- superseded 48 x 34 individual public canopy directory
+
+Those authoritative inputs were preserved under
+source_assets/overworld_48x34_reference/ before public cleanup.
+
+
+COMMANDS RUN
+------------
+
+- python scripts/resize_overworld_96x68.py
+- npm test
+- npm run build
+- python scripts/validate_overworld_96x68.py
+- sha256sum / cmp checks for unchanged Home and Charles files
+- npm run dev (attempted focused browser-server check; see Blockers)
+- targeted rg, JSON, PNG, ZIP, dimension, alpha-mask, collision, and hash
+  inspection commands
+
+
+TESTS / BUILDS / CHECKS
+-----------------------
+
+PASS — npm test
+- 16 test files passed
+- 74 tests passed
+- 0 failed
+
+PASS — npm run build
+- TypeScript no-emit check passed
+- Vite production build passed
+- 24 modules transformed
+
+PASS — scripts/validate_overworld_96x68.py
+- 83,420 assertions passed
+- all six active Overworld runtime layers exactly reconstruct from their
+  32 x 32 source-pack tiles
+
+PASS — Home and Charles preservation check
+- Home.json, Home.visual.json, Home.night.visual.json, Charles.json,
+  Charles.visual.json, and Charles.night.visual.json remained byte-for-byte
+  unchanged.
+
+
+VALIDATION RESULTS
+------------------
+
+PASS — JSON parsing for semantic, visual, and manifest files.
+PASS — Overworld semantic and day/night visual dimensions are 96 x 68.
+PASS — active day/night images are 3072 x 2176.
+PASS — all active visual asset paths exist.
+PASS — every visual crop is inside its source image.
+PASS — every crop size equals its 32px-tile draw size.
+PASS — every placement remains inside the map.
+PASS — day and night base art are exact nearest-neighbor 2x enlargements.
+PASS — day and night building/tree overlays are exact 2x enlargements.
+PASS — day/night foreground alpha masks align exactly.
+PASS — day/night opaque base/building composites match approved references.
+PASS — ground, structures, and objects are exact 2 x 2 semantic expansions.
+PASS — markers are singular, in bounds, and unblocked.
+PASS — player spawn is unblocked.
+PASS — both Overworld entrance/transition pairs are unblocked.
+PASS — Home/Charles return-transition lookup IDs remain compatible.
+PASS — 384 enlarged building walk-behind tiles are open and lower rows solid.
+PASS — all 21 tree regions retain collision and foreground coverage.
+PASS — active and source-pack hashes match their manifests.
+PASS — original uploaded night source ZIPs remain unchanged.
+PASS — no real-time day/night logic change was made.
+
+
+KNOWN ISSUES / RISKS
+--------------------
+
+- No automated data, unit-test, or build issue remains.
+- The exact 2x art enlargement intentionally produces larger pixel blocks; it
+  is not a redraw and therefore preserves the approved composition exactly.
+- A marker cannot sit at the exact doubled center of an old tile because that
+  point lies on a new tile boundary. Singular markers use the lower-right
+  candidate, a 16-pixel offset from that boundary, and are verified open.
+- The game currently preloads day and night visual companions. Enlarged full-
+  map PNGs increase decoded image memory on mobile even though compressed PNG
+  sizes are moderate. This existing loader behavior was not rewritten because
+  the request prohibited unrelated engine changes. Test on the minimum target
+  phone; lazy phase/map loading is the logical optimization if memory pressure
+  appears.
+
+
+BLOCKERS
+--------
+
+The sandbox could not start the Vite dev server because Node's
+uv_interface_addresses call is blocked by the environment. Production build,
+unit tests, static asset loading contracts, and focused validators all pass,
+but an interactive browser/mobile playthrough was not claimed or performed.
+
+
+ASSUMPTIONS
+-----------
+
+- “Each old tile becomes a 2 x 2 block” means exact nearest-neighbor art
+  enlargement plus exact 2 x 2 semantic expansion at the unchanged 32px engine
+  tile size.
+- Point markers should remain one interaction/spawn each, not four duplicated
+  markers, so each was placed at (2x+1, 2y+1).
+- Home and Charles Jr. should remain byte-identical because their existing
+  transition code resolves the Overworld marker IDs rather than hard-coded
+  Overworld coordinates.
+- Historical reports describing the former 48 x 34 implementation remain
+  historical records; this report and the current blueprint files are the new
+  active authority.
+
+
+MANUAL BROWSER / MOBILE CHECKLIST
+---------------------------------
+
+1. Enter the 96 x 68 Overworld during day and confirm the camera can reach all
+   four edges without showing outside-map space.
+2. Exit Home during day and night; confirm Lulu appears at the apartment path.
+3. Enter Charles Jr., exit again, and confirm Lulu returns at its front path.
+4. Walk behind all three apartment roofs and Charles Jr.; verify grass/asphalt,
+   collision, and the 42% local transparency effect.
+5. Walk around representative trees at all map edges; verify trunks remain
+   blocked and Lulu passes visually behind canopies.
+6. Switch phase using the bed and verify the night base and both night
+   foreground layers replace the day versions without an extra blanket tint.
+7. Confirm both NPC/bird spawn regions remain reachable.
+8. On the minimum supported phone, watch startup time, tab reload behavior,
+   memory pressure, and PWA resume behavior with both visual phases present.
+
+
+GIT STATUS
+----------
+
+This project directory is not a Git repository, so no git status, branch,
+commit, push, or pull request exists.
+
+
+PLACEHOLDER CONFIRMATION
+------------------------
+
+No placeholder assets, fake assets, fake data, mock implementations, stub
+content, temporary stand-ins, generated replacement art, or invented map data
+were added. All visual outputs are deterministic transformations of approved
+real project assets, and all semantic outputs derive from the approved real
+48 x 34 Overworld data.
+
+
+SUGGESTED NEXT STEP
+-------------------
+
+Perform the eight focused mobile/browser checks above. If the minimum target
+phone shows memory pressure, implement lazy visual loading by active map and
+phase before beginning broader gameplay/quest work; otherwise the Overworld
+data and assets are ready for the next gameplay pass.
