@@ -1,0 +1,3244 @@
+{
+  "schema": "lulus-character-project",
+  "version": 1,
+  "id": "charles_jr_employee",
+  "displayName": "Charles Jr. Employee",
+  "characterClass": "humanoid",
+  "identity": {
+    "canonicalApproval": "approved",
+    "locked": true,
+    "notes": [],
+    "paletteReferences": []
+  },
+  "production": {
+    "status": "runtime_ready",
+    "revision": 1,
+    "warnings": [
+      "Active employee sheets supersede the four malformed combined worker reference boards; those boards remain reference-only."
+    ]
+  },
+  "presentation": {
+    "nativeCell": {
+      "width": 96,
+      "height": 96
+    },
+    "renderScales": {
+      "overworld": 1,
+      "home": 1,
+      "charles_jr": 1,
+      "battle": 1
+    },
+    "resampling": "none"
+  },
+  "collisionProfileId": "npc_standard",
+  "sources": [
+    {
+      "id": "charles_jr_employee_manifest_v1",
+      "role": "metadata",
+      "path": "public/assets/characters/npcs/MANIFEST.json",
+      "sha256": "23d1f6652c859cb3be136afb55cf201165877b8cf4f2f9ec7fb4fb43d993d248",
+      "immutable": true,
+      "approval": "approved"
+    },
+    {
+      "id": "charles_jr_employee_original_package",
+      "role": "reference",
+      "path": "NPC_Overworld_Batch_v1.zip",
+      "sha256": "79df1a96dc2f3130a30084aa692bc5edb2fac8c67d03941cfc52285164943ef4",
+      "immutable": true,
+      "approval": "unreviewed",
+      "notes": "Original package referenced by the active baseline checksums but unavailable in the project.",
+      "missing": true
+    },
+    {
+      "id": "charles_jr_employee_idle",
+      "role": "sheet",
+      "path": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+      "sha256": "bac857589046a1b09596100f66bc0b6709deb3de9c3c4b22db3f196c7015bb05",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Subtle worker standing loop."
+    },
+    {
+      "id": "charles_jr_employee_walk",
+      "role": "sheet",
+      "path": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+      "sha256": "0aa9d011e00e6612462781d22134ffd44106ffd652b1fef11ab970d55d1e7b95",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Practical employee overworld walk."
+    },
+    {
+      "id": "charles_jr_employee_serve_gesture",
+      "role": "sheet",
+      "path": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+      "sha256": "f59683b795c0b91b8d305ce318e4379f1567c745809ed6098946cf225d82c618",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Brief counter-service/hand-off gesture."
+    },
+    {
+      "id": "historical_worker_1",
+      "role": "reference",
+      "path": "public/assets/character-assets/references/not_runtime_ready/cjr_workers/01_worker_female_1_combined_idle_walk.png",
+      "sha256": "c2f31313ecdef6009901d0f1fb3924866c5cee0a90fc06863ff4ba5eb94174eb",
+      "immutable": true,
+      "approval": "rejected",
+      "notes": "Malformed combined idle/walk reference; never runtime-export automatically."
+    },
+    {
+      "id": "historical_worker_2",
+      "role": "reference",
+      "path": "public/assets/character-assets/references/not_runtime_ready/cjr_workers/02_worker_male_1_combined_idle_walk.png",
+      "sha256": "43a996286b4bdafccd05e24f764f138a26975f9ad3b97c74aacf6edaf7882775",
+      "immutable": true,
+      "approval": "rejected",
+      "notes": "Malformed combined idle/walk reference; never runtime-export automatically."
+    },
+    {
+      "id": "historical_worker_3",
+      "role": "reference",
+      "path": "public/assets/character-assets/references/not_runtime_ready/cjr_workers/03_worker_female_2_combined_idle_walk.png",
+      "sha256": "0a6a794bbb5f4d5398861ea9f3fbade9a7f0151b759814732f1471724b8e3348",
+      "immutable": true,
+      "approval": "rejected",
+      "notes": "Malformed combined idle/walk reference; never runtime-export automatically."
+    },
+    {
+      "id": "historical_worker_4",
+      "role": "reference",
+      "path": "public/assets/character-assets/references/not_runtime_ready/cjr_workers/04_worker_male_2_combined_idle_walk.png",
+      "sha256": "f3937e51ac8efe074b85db422168f26a2002446405b18d8de2d264d6d663c8b4",
+      "immutable": true,
+      "approval": "rejected",
+      "notes": "Malformed combined idle/walk reference; never runtime-export automatically."
+    }
+  ],
+  "actions": {
+    "idle": {
+      "id": "idle",
+      "displayName": "Idle",
+      "category": "idle",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+      "runtimeHref": "/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "walk": {
+      "id": "walk",
+      "displayName": "Walk",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 72,
+      "runtimeSheet": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+      "runtimeHref": "/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 25,
+                "width": 30,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 29,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 29,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 27,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 27,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 25,
+                "width": 31,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 24,
+                "width": 36,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 25,
+                "width": 36,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 24,
+                "width": 36,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 25,
+                "width": 36,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 24,
+                "width": 32,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 25,
+                "width": 32,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 24,
+                "width": 32,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 25,
+                "width": 32,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 24,
+                "width": 34,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 25,
+                "width": 34,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 29,
+                "y": 24,
+                "width": 34,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_walk.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 125,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 29,
+                "y": 25,
+                "width": 34,
+                "height": 63
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serve_gesture": {
+      "id": "serve_gesture",
+      "displayName": "Serve Gesture",
+      "category": "interaction",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 2
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+      "runtimeHref": "/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 23,
+                "y": 24,
+                "width": 37,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 38,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 37,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 38,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 38,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 24,
+                "width": 39,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 31,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 24,
+                "width": 38,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 23,
+                "y": 24,
+                "width": 39,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/npcs/charles_jr_employee/sheets/Charles_Jr_Employee_serve_gesture.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 24,
+                "width": 30,
+                "height": 64
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "portraits": [],
+  "runtime": {
+    "manifestPath": "public/assets/characters/v2/charles_jr_employee/MANIFEST.json",
+    "generatedAssetDirectory": "public/assets/characters/generated/charles_jr_employee/sheets",
+    "legacyPackage": "NPC_Overworld_Batch_v1"
+  },
+  "updatedAt": "2026-07-25T08:06:44.489Z"
+}
