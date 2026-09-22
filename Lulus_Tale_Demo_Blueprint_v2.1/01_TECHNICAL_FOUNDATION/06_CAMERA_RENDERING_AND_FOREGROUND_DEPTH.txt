@@ -1,0 +1,30 @@
+CAMERA, RENDERING, AND FOREGROUND DEPTH
+
+Camera:
+- Top-down scrolling camera.
+- Camera centers on Lulu.
+- Camera is constrained at map edges.
+- Smooth enough for mobile readability.
+
+Draw order:
+1. background/base layer
+2. mid-depth objects
+3. player/entities
+4. foreground objects where needed
+5. UI
+
+Foreground visibility:
+- Large objects that can hide Lulu must not fully obscure the player.
+- Use either split foreground/background layers or fade-on-overlap.
+- Collision bounds and visibility/fade bounds must be separate.
+
+Demo proof:
+- At least one bush, tree, sign, or building-edge object should demonstrate visibility handling if feasible.
+- Good candidates:
+  - bush near fries recovery spot,
+  - tree near overworld route,
+  - exterior sign/building overhang.
+
+Do not overbuild:
+- A simple opacity fade is enough for the demo.
+- Full y-sorted depth rendering can be improved later.
