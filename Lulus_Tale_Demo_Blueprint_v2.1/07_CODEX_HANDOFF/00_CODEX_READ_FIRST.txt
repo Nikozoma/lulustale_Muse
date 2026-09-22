@@ -1,0 +1,50 @@
+CODEX READ FIRST — DEMO BLUEPRINT v2.1
+
+You are building the Lulu's Tale proof-of-concept demo, not the full game.
+
+Current implementation milestone:
+INDOOR HOME FOUNDATION ONLY.
+
+Use this v2.1 demo blueprint as the focused source of truth.
+
+Important companion references:
+- Home.json
+- Asset folders/files in project root
+
+Current core implementation goal:
+First verify assets and semantic map data. Then build a mobile-first, landscape-oriented PWA foundation covering only:
+- responsive viewport,
+- player movement,
+- camera,
+- home map import/render,
+- real Lulu sprite animation,
+- real home/interior assets,
+- real dog asset,
+- proximity interactions,
+- fridge -> Dog Food,
+- dog/dog bowl feeding,
+- exit-door foundation-complete point.
+
+Do NOT build yet:
+- overworld,
+- Charles Jr.,
+- bird chase/fries recovery,
+- Pass 2/night/sword/combat,
+- real-time day/night clock (the approved design uses manual bed-triggered phases),
+- APK wrapper.
+
+Critical rule:
+No placeholders for core home/foundation assets or map layout.
+If a required real asset or required map object cannot be located, sliced, animated, scaled, or implemented, stop and report the exact blocker.
+
+Expected report:
+- Summary
+- Changed files
+- Commands run
+- Tests/builds run
+- Validation results
+- Asset usage / asset manifest status
+- Semantic map status
+- Risks/known issues
+- Suggested next step
+- Git status
