@@ -1,0 +1,29 @@
+INTERACTION PROXIMITY RULES
+
+Events and NPC/object interactions require Lulu to be close enough.
+
+Core rule:
+The player may tap an NPC/object/event target, but it only activates if Lulu is within that target's interaction radius.
+
+Required interactables:
+- Fridge
+- Dog Bowl or Dog
+- Charles Jr. cashier counter/order point
+- Fries object during recovery
+- Bed
+- Window during night interruption
+- Sword bush during Pass 2
+- Entrance/exit transition zones
+
+Interaction object structure:
+- id
+- position or bounds
+- interactionRadius or interactionBounds
+- enabled condition
+- prompt text
+- onInteract handler
+
+Player feedback:
+- When Lulu is near an interactable, show a small prompt such as "Tap to interact".
+- If the player taps from too far away, do nothing.
+- Do not allow long-distance interaction.
