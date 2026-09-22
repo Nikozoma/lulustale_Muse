@@ -1,0 +1,4700 @@
+{
+  "schema": "lulus-character-project",
+  "version": 1,
+  "id": "ambient_robin",
+  "displayName": "Ambient American Robin",
+  "characterClass": "bird",
+  "species": "American robin",
+  "identity": {
+    "canonicalApproval": "approved",
+    "locked": true,
+    "notes": [
+      "Reusable neutral neighborhood ambient bird."
+    ],
+    "paletteReferences": []
+  },
+  "production": {
+    "status": "runtime_ready",
+    "revision": 1,
+    "warnings": [
+      "Legacy vertical pose offsets describe art already positioned inside the active sheet cells; migrated runtime visual offsets remain zero to preserve current presentation."
+    ]
+  },
+  "presentation": {
+    "nativeCell": {
+      "width": 96,
+      "height": 96
+    },
+    "renderScales": {
+      "overworld": 1,
+      "home": 1,
+      "charles_jr": 1,
+      "battle": 1
+    },
+    "resampling": "none"
+  },
+  "collisionProfileId": "bird_visual",
+  "sources": [
+    {
+      "id": "ambient_robin_manifest_v1",
+      "role": "metadata",
+      "path": "public/assets/characters/birds/MANIFEST.json",
+      "sha256": "e6cf705951094cc55c7cbfc32df6d5e8e692a86fdbce15e27d117908253d978c",
+      "immutable": true,
+      "approval": "approved"
+    },
+    {
+      "id": "ambient_robin_attachment_metadata",
+      "role": "metadata",
+      "path": "public/assets/characters/birds/INTERACTION_AND_ATTACHMENT_METADATA.json",
+      "sha256": "a1b7c6694623b2627a9ecae20d6d49e84dba8900f458282721089a82fca92c87",
+      "immutable": true,
+      "approval": "approved"
+    },
+    {
+      "id": "ambient_robin_preview",
+      "role": "reference",
+      "path": "public/assets/characters/birds/05_american_robin_preview.png",
+      "sha256": null,
+      "immutable": true,
+      "approval": "unreviewed",
+      "notes": "Preview referenced by the active bird manifest but unavailable in the project.",
+      "missing": true
+    },
+    {
+      "id": "ambient_robin_idle",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+      "sha256": "b951f0b991d8d8a412b7f3fe12e1ce8fda0ca3279139d3b0abd87941e20cfd3a",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Efficient neutral neighborhood idle."
+    },
+    {
+      "id": "ambient_robin_hop",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+      "sha256": "ccfafeb5dc5132f3a9a6d92453c97bb4bb9970867b2386a49165a5b0f09b5c99",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Ordinary robin ground hop."
+    },
+    {
+      "id": "ambient_robin_fly",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+      "sha256": "f007ed0ced624874b7ba940c821a25b366725517640a0225db77f535b5413e89",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Natural alternating robin flight."
+    },
+    {
+      "id": "ambient_robin_takeoff",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+      "sha256": "765471e5248e3f72154706afa1766a052b3e7d82109d71fa1798258533e6059a",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Ground-to-air transition."
+    },
+    {
+      "id": "ambient_robin_land",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+      "sha256": "448ea12f900bec746a07f55bb1e0c96596bd11f403c93dd0394968103227eaca",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Air-to-ground transition."
+    }
+  ],
+  "actions": {
+    "idle": {
+      "id": "idle",
+      "displayName": "Idle",
+      "category": "idle",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 1
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+      "runtimeHref": "/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 59,
+                "width": 16,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 59,
+                "width": 16,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 40,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 40,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 59,
+                "width": 14,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 59,
+                "width": 14,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 59,
+                "width": 28,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 59,
+                "width": 28,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 59,
+                "width": 40,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 59,
+                "width": 39,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            }
+          ]
+        }
+      }
+    },
+    "hop": {
+      "id": "hop",
+      "displayName": "Hop",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 32,
+      "runtimeSheet": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+      "runtimeHref": "/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 59,
+                "width": 16,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 52,
+                "width": 25,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 46,
+                "width": 25,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 52,
+                "width": 25,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 52,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 46,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 52,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 40,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 52,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 46,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 52,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 52,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 46,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 52,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 59,
+                "width": 14,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 52,
+                "width": 17,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 46,
+                "width": 17,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 52,
+                "width": 17,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 59,
+                "width": 28,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 52,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 46,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 52,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 59,
+                "width": 40,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 52,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 46,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 52,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 52,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 46,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 52,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "fly": {
+      "id": "fly",
+      "displayName": "Fly",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 64,
+      "runtimeSheet": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+      "runtimeHref": "/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 21,
+                "width": 49,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 19,
+                "width": 69,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 21,
+                "width": 49,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 19,
+                "width": 69,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 21,
+                "width": 54,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 19,
+                "y": 19,
+                "width": 59,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 21,
+                "width": 54,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 19,
+                "y": 19,
+                "width": 59,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 21,
+                "width": 61,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 19,
+                "width": 58,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 21,
+                "width": 61,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 19,
+                "width": 58,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 21,
+                "width": 50,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 19,
+                "width": 57,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 21,
+                "width": 50,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 19,
+                "width": 57,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 22,
+                "width": 52,
+                "height": 47
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 12,
+                "y": 20,
+                "width": 74,
+                "height": 47
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 22,
+                "width": 52,
+                "height": 47
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 12,
+                "y": 20,
+                "width": 74,
+                "height": 47
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 21,
+                "width": 56,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 19,
+                "width": 44,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 21,
+                "width": 56,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 19,
+                "width": 44,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 21,
+                "width": 60,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 19,
+                "width": 60,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 21,
+                "width": 60,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 19,
+                "width": 60,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 21,
+                "width": 53,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 19,
+                "width": 68,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 21,
+                "width": 53,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 19,
+                "width": 68,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "takeoff": {
+      "id": "takeoff",
+      "displayName": "Takeoff",
+      "category": "transition",
+      "playback": "once",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 2
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+      "runtimeHref": "/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 59,
+                "width": 16,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 49,
+                "width": 25,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 21,
+                "width": 49,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 49,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 21,
+                "width": 54,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 40,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 49,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 21,
+                "width": 61,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 49,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 21,
+                "width": 50,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 59,
+                "width": 14,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 49,
+                "width": 17,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 22,
+                "width": 52,
+                "height": 47
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 59,
+                "width": 28,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 49,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 21,
+                "width": 56,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 59,
+                "width": 40,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 49,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 21,
+                "width": 60,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 49,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 21,
+                "width": 53,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            }
+          ]
+        }
+      }
+    },
+    "land": {
+      "id": "land",
+      "displayName": "Land",
+      "category": "transition",
+      "playback": "once",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 2
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+      "runtimeHref": "/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 21,
+                "width": 69,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 49,
+                "width": 25,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 59,
+                "width": 16,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 19,
+                "y": 21,
+                "width": 59,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 49,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 21,
+                "width": 58,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 49,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 40,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 21,
+                "width": 57,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 49,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 12,
+                "y": 22,
+                "width": 74,
+                "height": 47
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 49,
+                "width": 17,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 59,
+                "width": 14,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 21,
+                "width": 44,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 49,
+                "width": 38,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 59,
+                "width": 28,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 21,
+                "width": 60,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 49,
+                "width": 48,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 59,
+                "width": 40,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 21,
+                "width": 68,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 49,
+                "width": 45,
+                "height": 31
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/ambient_robin/sheets/ambient_robin_land.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 59,
+                "width": 29,
+                "height": 29
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "portraits": [],
+  "runtime": {
+    "manifestPath": "public/assets/characters/v2/ambient_robin/MANIFEST.json",
+    "generatedAssetDirectory": "public/assets/characters/generated/ambient_robin/sheets",
+    "legacyPackage": "Bird_Overworld_Assets_Full_v1"
+  },
+  "updatedAt": "2026-07-25T08:06:44.515Z"
+}
