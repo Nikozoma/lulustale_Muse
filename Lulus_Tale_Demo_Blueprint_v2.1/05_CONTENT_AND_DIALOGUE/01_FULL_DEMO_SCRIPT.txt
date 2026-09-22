@@ -1,0 +1,43 @@
+FULL DEMO SCRIPT — v2.1 FOUNDATION-FIRST VERSION
+
+CURRENT IMPLEMENTATION SCRIPT: HOME FOUNDATION ONLY
+
+WAKE / START
+Lulu: "Alright. New day. Same apartment. Suspiciously same dog."
+System: "Use the left side of the screen to move."
+Objective: "Move around Lulu's room."
+
+MOVEMENT CONFIRMED
+System: "Tap nearby things to interact."
+Objective: "Go to the fridge."
+
+FRIDGE INTERACTION
+Prompt: "Check fridge?"
+Option: "Check"
+Lulu: "Dog food acquired. The fridge remains undefeated."
+System: "Dog Food obtained."
+Objective: "Feed the dog."
+
+DOG / DOG BOWL INTERACTION
+If hasDogFood=false:
+Lulu: "I should probably get the dog food first. I am not emotionally ready to disappoint that face."
+
+If hasDogFood=true:
+Prompt: "Feed the dog?"
+Option: "Feed"
+Dog: "..."
+Lulu: "You are welcome, tiny landlord."
+System: "Dog fed."
+Objective: "Go to the front door."
+
+EXIT DOOR — FOUNDATION-ONLY END
+Prompt: "Leave home?"
+Option: "Not yet" or "Ready"
+Foundation-only result:
+System: "Home foundation complete. Exterior content is intentionally deferred."
+
+DEFERRED DAY 1 SCRIPT
+Charles Jr., fries, bird theft, bird chase, fries recovery, and return-home bed transition are deferred until after the home foundation is stable.
+
+DEFERRED PASS 2 SCRIPT
+Night window, sword pickup, bird battle, and Day 2 wake-up are deferred until after the Day 1 daytime expansion is stable.
