@@ -1,0 +1,35 @@
+{
+  "format": "lulus_runtime_map_registry_v2",
+  "schema_version": "1.0.0",
+  "shared_world_scale": 1.0,
+  "tile_size_px": 32,
+  "camera": {
+    "logical_height_px": 360,
+    "central_safe_region_px": {
+      "width": 640,
+      "height": 360
+    },
+    "wide_landscape_behavior": "expand_horizontally_without_world_scale_change"
+  },
+  "variant_policy": "Select day or night visual config only; never swap semantic geometry.",
+  "maps": {
+    "overworld": {
+      "semantic": "./overworld/semantic.json",
+      "collision": "./overworld/collision_grid.json",
+      "day": "./overworld/visual_day.json",
+      "night": "./overworld/visual_night.json"
+    },
+    "home": {
+      "semantic": "./home/semantic.json",
+      "collision": "./home/collision_grid.json",
+      "day": "./home/visual_day.json",
+      "night": "./home/visual_night.json"
+    },
+    "charles_jr": {
+      "semantic": "./charles_jr/semantic.json",
+      "collision": "./charles_jr/collision_grid.json",
+      "day": "./charles_jr/visual_day.json",
+      "night": "./charles_jr/visual_night.json"
+    }
+  }
+}
