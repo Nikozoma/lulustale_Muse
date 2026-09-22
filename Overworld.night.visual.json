@@ -1,0 +1,160 @@
+{
+  "format": "lulus_visual_placements_v1",
+  "version": "1.1",
+  "mapFile": "Overworld.json",
+  "mapId": "Overworld",
+  "displayName": "Overworld \u2014 Night",
+  "width": 96,
+  "height": 68,
+  "gameTileSizePx": 32,
+  "visualLayerOrder": [
+    "ground",
+    "structures",
+    "objects",
+    "foreground"
+  ],
+  "placements": [
+    {
+      "id": "overworld_night_walkbehind_base",
+      "label": "Night Overworld base with walk-behind building ground",
+      "assetPath": "public/assets/maps/night/overworld/overworld_walkbehind_base_96x68_night.png",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 3072,
+        "height": 2176
+      },
+      "tile": {
+        "x": 0,
+        "y": 0
+      },
+      "draw": {
+        "widthTiles": 96,
+        "heightTiles": 68
+      },
+      "anchor": "top-left",
+      "drawLayer": "objects",
+      "order": 0,
+      "notes": "Night-specific active walk-behind base from Night.OW.ForG.zip. It preserves the daytime map coordinates and real grass/parking beneath the same four building occlusion zones."
+    },
+    {
+      "id": "apartment_north_upper_night",
+      "label": "North apartment night walk-behind foreground",
+      "assetPath": "public/assets/maps/night/overworld/foreground/overworld_building_upper_foreground_96x68_night.png",
+      "crop": {
+        "x": 1664,
+        "y": 448,
+        "width": 896,
+        "height": 128
+      },
+      "tile": {
+        "x": 52,
+        "y": 14
+      },
+      "draw": {
+        "widthTiles": 28,
+        "heightTiles": 4
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 80,
+      "playerOcclusionOpacity": 0.42,
+      "notes": "Night upper-building pixels; opaque normally and faded only while Lulu's feet are inside the same 148-tile north-apartment walk-behind zone."
+    },
+    {
+      "id": "charles_jr_upper_night",
+      "label": "Charles Jr. night walk-behind foreground",
+      "assetPath": "public/assets/maps/night/overworld/foreground/overworld_building_upper_foreground_96x68_night.png",
+      "crop": {
+        "x": 768,
+        "y": 640,
+        "width": 384,
+        "height": 128
+      },
+      "tile": {
+        "x": 24,
+        "y": 20
+      },
+      "draw": {
+        "widthTiles": 12,
+        "heightTiles": 4
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 81,
+      "playerOcclusionOpacity": 0.42,
+      "notes": "Night upper-building pixels; opaque normally and faded only while Lulu's feet are inside the same 48-tile Charles Jr. walk-behind zone."
+    },
+    {
+      "id": "lulu_apartment_upper_night",
+      "label": "Lulu's apartment night walk-behind foreground",
+      "assetPath": "public/assets/maps/night/overworld/foreground/overworld_building_upper_foreground_96x68_night.png",
+      "crop": {
+        "x": 1664,
+        "y": 896,
+        "width": 896,
+        "height": 128
+      },
+      "tile": {
+        "x": 52,
+        "y": 28
+      },
+      "draw": {
+        "widthTiles": 28,
+        "heightTiles": 4
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 82,
+      "playerOcclusionOpacity": 0.42,
+      "notes": "Night upper-building pixels; opaque normally and faded only while Lulu's feet are inside the same 148-tile Lulu-apartment walk-behind zone."
+    },
+    {
+      "id": "apartment_south_upper_night",
+      "label": "South apartment night walk-behind foreground",
+      "assetPath": "public/assets/maps/night/overworld/foreground/overworld_building_upper_foreground_96x68_night.png",
+      "crop": {
+        "x": 1664,
+        "y": 1408,
+        "width": 896,
+        "height": 128
+      },
+      "tile": {
+        "x": 52,
+        "y": 44
+      },
+      "draw": {
+        "widthTiles": 28,
+        "heightTiles": 4
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 83,
+      "playerOcclusionOpacity": 0.42,
+      "notes": "Night upper-building pixels; opaque normally and faded only while Lulu's feet are inside the same 148-tile south-apartment walk-behind zone."
+    },
+    {
+      "id": "overworld_tree_canopy_foreground_night",
+      "label": "Night Overworld transparent tree canopy foreground",
+      "assetPath": "public/assets/maps/night/overworld/foreground/overworld_tree_canopy_foreground_96x68_night.png",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 3072,
+        "height": 2176
+      },
+      "tile": {
+        "x": 0,
+        "y": 0
+      },
+      "draw": {
+        "widthTiles": 96,
+        "heightTiles": 68
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 100,
+      "notes": "Night-colored canopy overlay with the exact daytime alpha mask and coordinates, drawn after player/entities for walk-behind depth."
+    }
+  ]
+}
