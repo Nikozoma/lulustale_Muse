@@ -1,0 +1,41 @@
+{
+  "format": "lulus_visual_placements_v1",
+  "version": "1.0",
+  "mapFile": "Home.json",
+  "mapId": "Home",
+  "displayName": "Home",
+  "width": 28,
+  "height": 43,
+  "gameTileSizePx": 32,
+  "visualLayerOrder": [
+    "ground",
+    "structures",
+    "objects",
+    "foreground"
+  ],
+  "placements": [
+    {
+      "id": "home_approved_full_map",
+      "label": "Approved Home interior exact map reconstruction",
+      "assetPath": "public/assets/maps/home/home_interior_28x43.png",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 896,
+        "height": 1376
+      },
+      "tile": {
+        "x": 0,
+        "y": 0
+      },
+      "draw": {
+        "widthTiles": 28,
+        "heightTiles": 43
+      },
+      "anchor": "top-left",
+      "drawLayer": "objects",
+      "order": 0,
+      "notes": "Exact approved full-map reconstruction from real uploaded 32x32 asset pack; semantic collision/interactions remain separate."
+    }
+  ]
+}
