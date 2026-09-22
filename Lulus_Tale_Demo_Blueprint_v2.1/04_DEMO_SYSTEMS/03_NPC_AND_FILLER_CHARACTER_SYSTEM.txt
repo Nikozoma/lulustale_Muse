@@ -1,0 +1,15 @@
+NPC AND FILLER CHARACTER SYSTEM — DEFERRED
+
+NPCs, cashier, apartment residents, pedestrians, and Charles Jr. customers are not part of the first home foundation pass.
+
+Current home foundation character needs:
+- Lulu/player.
+- Dog.
+
+Later asset source:
+- SuperRetroWorld_CharacterPack_Full for cashier/filler characters if scale/style works.
+
+Rules:
+- Do not implement NPC crowds during the foundation pass.
+- Do not substitute placeholder NPCs.
+- If an NPC is later required and no suitable real asset can be used, Codex must stop/report the blocker.
