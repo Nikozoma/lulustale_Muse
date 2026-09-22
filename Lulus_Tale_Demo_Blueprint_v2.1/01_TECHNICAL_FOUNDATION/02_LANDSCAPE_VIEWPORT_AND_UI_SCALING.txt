@@ -1,0 +1,44 @@
+LANDSCAPE, VIEWPORT, AND UI SCALING
+
+Orientation:
+- The game is designed for landscape.
+- Manifest should request landscape orientation.
+- Attempt Screen Orientation API lock where possible, but do not rely on it universally.
+- Wrap orientation lock attempts in try/catch.
+- If orientation lock fails or is unsupported, show a clear rotate-device overlay when in portrait.
+
+Viewport:
+- Use a fixed internal virtual resolution.
+- Recommended starting point: 960x540, 16:9.
+- Scale uniformly to device screen.
+- Preserve aspect ratio.
+- Use letterboxing/pillarboxing rather than stretching or cropping important gameplay.
+- Touch coordinates must map from physical screen coordinates to virtual coordinates.
+
+Mobile browser sizing:
+- Avoid relying only on 100vh.
+- Prefer 100dvh where supported.
+- Use resize and visualViewport listeners to respond to browser UI changes.
+- Respect safe-area insets for notches, rounded corners, and home indicators.
+
+UI scaling:
+- HUD, objective text, dialogue, buttons, and controls should use scalable sizing.
+- Avoid giant text that covers gameplay.
+- Avoid tiny text/tap targets that are hard to use on phones.
+- Make UI scale adjustable through constants/config values so it can be tuned after testing.
+
+Recommended config variables:
+- UI_SCALE
+- HUD_SCALE
+- DIALOGUE_SCALE
+- DIALOGUE_FONT_SIZE
+- OBJECTIVE_FONT_SIZE
+- BUTTON_FONT_SIZE
+- TOUCH_CONTROL_SCALE
+- JOYSTICK_RADIUS
+- SAFE_MARGIN
+
+Implementation guidance:
+- Keep font/control size constants centralized.
+- Do not scatter hardcoded UI sizes through random files.
+- Make it easy to tune text and touch control size after real device testing.
