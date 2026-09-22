@@ -1,0 +1,627 @@
+{
+  "$schema": "../../schema/visual-config.schema.json",
+  "schema_version": "1.0.0",
+  "map_id": "overworld",
+  "semantic_geometry": "semantic.json",
+  "canvas": {
+    "width_px": 3072,
+    "height_px": 2176,
+    "tile_size_px": 32,
+    "origin_px": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "art_source": {
+    "package": "Lulus_Tale_Native_Map_Artwork_HD_v1.zip",
+    "authority": "RUNTIME_AUTHORITY_MANIFEST.json"
+  },
+  "foreground_layers": [
+    {
+      "id": "building_foreground",
+      "kind": "building_upper",
+      "z_index": 200,
+      "origin_px": {
+        "x": 0,
+        "y": 0
+      },
+      "day_asset": "production/overworld/building_foreground_day.png",
+      "night_asset": "production/overworld/building_foreground_night.png",
+      "day_sha256": "d0e71604ff5e69ce77c315ec2ff54ab30e1eef9d22f12d890117c30cc8dde17b",
+      "night_sha256": "572897f9474e578e0f677f6219ded49311d647ae0554faa63e1a665efe602b35",
+      "alpha_mask_sha256": "a6d529630014e0a16db6307cc6acfb870d7eb1151171aae3306d74526075500d",
+      "night_alpha_mask_sha256": "a6d529630014e0a16db6307cc6acfb870d7eb1151171aae3306d74526075500d",
+      "alpha_geometry_identical_day_night": true,
+      "nonzero_alpha_pixels": 630647,
+      "occlusion_rule": "draw_above_entities_when_entity_feet_are_inside_associated_trigger",
+      "occlusion_opacity": 0.1,
+      "alpha_components": [
+        {
+          "area_px": 162948,
+          "pixel_bbox": {
+            "x": 1710,
+            "y": 1437,
+            "width": 734,
+            "height": 222
+          },
+          "id": "alpha_component_01",
+          "trigger_tile_rect": {
+            "x": 52,
+            "y": 43,
+            "width": 26,
+            "height": 9
+          },
+          "trigger_pixel_rect": {
+            "x": 1664,
+            "y": 1376,
+            "width": 832,
+            "height": 288
+          }
+        },
+        {
+          "area_px": 166362,
+          "pixel_bbox": {
+            "x": 1733,
+            "y": 896,
+            "width": 714,
+            "height": 233
+          },
+          "id": "alpha_component_02",
+          "trigger_tile_rect": {
+            "x": 52,
+            "y": 26,
+            "width": 26,
+            "height": 10
+          },
+          "trigger_pixel_rect": {
+            "x": 1664,
+            "y": 832,
+            "width": 832,
+            "height": 320
+          }
+        },
+        {
+          "area_px": 167240,
+          "pixel_bbox": {
+            "x": 1707,
+            "y": 479,
+            "width": 740,
+            "height": 226
+          },
+          "id": "alpha_component_03",
+          "trigger_tile_rect": {
+            "x": 52,
+            "y": 14,
+            "width": 26,
+            "height": 9
+          },
+          "trigger_pixel_rect": {
+            "x": 1664,
+            "y": 448,
+            "width": 832,
+            "height": 288
+          }
+        },
+        {
+          "area_px": 134097,
+          "pixel_bbox": {
+            "x": 812,
+            "y": 600,
+            "width": 258,
+            "height": 525
+          },
+          "id": "alpha_component_04",
+          "trigger_tile_rect": {
+            "x": 25,
+            "y": 18,
+            "width": 9,
+            "height": 18
+          },
+          "trigger_pixel_rect": {
+            "x": 800,
+            "y": 576,
+            "width": 288,
+            "height": 576
+          }
+        }
+      ],
+      "asset": "production/overworld/building_foreground_day.png",
+      "sha256": "d0e71604ff5e69ce77c315ec2ff54ab30e1eef9d22f12d890117c30cc8dde17b"
+    },
+    {
+      "id": "tree_canopy_foreground",
+      "kind": "tree_canopy",
+      "z_index": 220,
+      "origin_px": {
+        "x": 0,
+        "y": 0
+      },
+      "day_asset": "production/overworld/tree_canopy_foreground_day.png",
+      "night_asset": "production/overworld/tree_canopy_foreground_night.png",
+      "day_sha256": "feff04299f57d3e1dad232e7fde79449fbe0f1becafdd6532e062a64caac63a8",
+      "night_sha256": "28b1979a5908bde6e315da21717ca691bf829f2c95513dc6d660eb2b71022d3a",
+      "alpha_mask_sha256": "e75f4ad430d13849c69310ed662d17a062d6a1b7f760aaed614a3a8dfd583215",
+      "night_alpha_mask_sha256": "e75f4ad430d13849c69310ed662d17a062d6a1b7f760aaed614a3a8dfd583215",
+      "alpha_geometry_identical_day_night": true,
+      "nonzero_alpha_pixels": 312170,
+      "occlusion_rule": "draw_above_entities_when_entity_feet_are_inside_associated_trigger",
+      "alpha_components": [
+        {
+          "area_px": 27899,
+          "pixel_bbox": {
+            "x": 1384,
+            "y": 1638,
+            "width": 162,
+            "height": 259
+          },
+          "id": "alpha_component_01",
+          "trigger_tile_rect": {
+            "x": 43,
+            "y": 51,
+            "width": 6,
+            "height": 9
+          },
+          "trigger_pixel_rect": {
+            "x": 1376,
+            "y": 1632,
+            "width": 192,
+            "height": 288
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 479,
+            "y": 248,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_02",
+          "trigger_tile_rect": {
+            "x": 14,
+            "y": 7,
+            "width": 6,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 448,
+            "y": 224,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 2509,
+            "y": 353,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_03",
+          "trigger_tile_rect": {
+            "x": 78,
+            "y": 11,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 2496,
+            "y": 352,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 2824,
+            "y": 498,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_04",
+          "trigger_tile_rect": {
+            "x": 88,
+            "y": 15,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 2816,
+            "y": 480,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 30,
+            "y": 558,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_05",
+          "trigger_tile_rect": {
+            "x": 0,
+            "y": 17,
+            "width": 6,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 0,
+            "y": 544,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 30,
+            "y": 833,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_06",
+          "trigger_tile_rect": {
+            "x": 0,
+            "y": 26,
+            "width": 6,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 0,
+            "y": 832,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 30,
+            "y": 1098,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_07",
+          "trigger_tile_rect": {
+            "x": 0,
+            "y": 34,
+            "width": 6,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 0,
+            "y": 1088,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 2824,
+            "y": 1158,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_08",
+          "trigger_tile_rect": {
+            "x": 88,
+            "y": 36,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 2816,
+            "y": 1152,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 30,
+            "y": 1373,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_09",
+          "trigger_tile_rect": {
+            "x": 0,
+            "y": 42,
+            "width": 6,
+            "height": 6
+          },
+          "trigger_pixel_rect": {
+            "x": 0,
+            "y": 1344,
+            "width": 192,
+            "height": 192
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 644,
+            "y": 1378,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_10",
+          "trigger_tile_rect": {
+            "x": 20,
+            "y": 43,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 640,
+            "y": 1376,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 954,
+            "y": 1393,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_11",
+          "trigger_tile_rect": {
+            "x": 29,
+            "y": 43,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 928,
+            "y": 1376,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 399,
+            "y": 1398,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_12",
+          "trigger_tile_rect": {
+            "x": 12,
+            "y": 43,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 384,
+            "y": 1376,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 2824,
+            "y": 1433,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_13",
+          "trigger_tile_rect": {
+            "x": 88,
+            "y": 44,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 2816,
+            "y": 1408,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 2519,
+            "y": 1633,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_14",
+          "trigger_tile_rect": {
+            "x": 78,
+            "y": 51,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 2496,
+            "y": 1632,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 444,
+            "y": 1663,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_15",
+          "trigger_tile_rect": {
+            "x": 13,
+            "y": 51,
+            "width": 5,
+            "height": 6
+          },
+          "trigger_pixel_rect": {
+            "x": 416,
+            "y": 1632,
+            "width": 160,
+            "height": 192
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 2824,
+            "y": 1713,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_16",
+          "trigger_tile_rect": {
+            "x": 88,
+            "y": 53,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 2816,
+            "y": 1696,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 30,
+            "y": 1873,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_17",
+          "trigger_tile_rect": {
+            "x": 0,
+            "y": 58,
+            "width": 6,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 0,
+            "y": 1856,
+            "width": 192,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 2614,
+            "y": 1943,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_18",
+          "trigger_tile_rect": {
+            "x": 81,
+            "y": 60,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 2592,
+            "y": 1920,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 1514,
+            "y": 1948,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_19",
+          "trigger_tile_rect": {
+            "x": 47,
+            "y": 60,
+            "width": 5,
+            "height": 6
+          },
+          "trigger_pixel_rect": {
+            "x": 1504,
+            "y": 1920,
+            "width": 160,
+            "height": 192
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 1224,
+            "y": 1953,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_20",
+          "trigger_tile_rect": {
+            "x": 38,
+            "y": 61,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 1216,
+            "y": 1952,
+            "width": 160,
+            "height": 160
+          }
+        },
+        {
+          "area_px": 14090,
+          "pixel_bbox": {
+            "x": 2824,
+            "y": 1988,
+            "width": 132,
+            "height": 134
+          },
+          "id": "alpha_component_21",
+          "trigger_tile_rect": {
+            "x": 88,
+            "y": 62,
+            "width": 5,
+            "height": 5
+          },
+          "trigger_pixel_rect": {
+            "x": 2816,
+            "y": 1984,
+            "width": 160,
+            "height": 160
+          }
+        }
+      ],
+      "asset": "production/overworld/tree_canopy_foreground_day.png",
+      "sha256": "feff04299f57d3e1dad232e7fde79449fbe0f1becafdd6532e062a64caac63a8"
+    }
+  ],
+  "alignment_contract": "Base and foreground layers use canvas origin (0,0); day/night share semantic.json exactly.",
+  "variant": "day",
+  "base_layer": {
+    "asset": "production/overworld/day_base.png",
+    "sha256": "22e5c4ebeca605c7abf4492a4a0d8bc593c05816a55ffdf26be24616f3cdedc1",
+    "origin_px": {
+      "x": 0,
+      "y": 0
+    },
+    "z_index": 0
+  }
+}
