@@ -1,0 +1,52 @@
+PWA INSTALL AND HOSTING REQUIREMENTS
+
+The demo must be a fully working PWA, not merely a browser page.
+
+Required PWA files/features:
+- index.html
+- app manifest, preferably manifest.webmanifest or manifest.json
+- service worker
+- app icons
+- apple-touch-icon
+- theme color / background color
+- standalone display mode
+- landscape orientation preference
+- start_url and scope configured correctly
+- versioned static cache for core assets
+
+Manifest requirements:
+- name
+- short_name
+- id if practical
+- start_url
+- scope
+- display: standalone or fullscreen if chosen
+- orientation: landscape or landscape-primary
+- background_color
+- theme_color
+- icons, including at minimum 192x192 and 512x512
+- maskable icon if practical
+
+Service worker requirements:
+- Register service worker from the app.
+- Cache core shell files.
+- Use a versioned cache name, such as lulus-tale-demo-v001.
+- Do not aggressively trap the game in stale-cache behavior during development.
+- Include an easy cache version bump path.
+- Report how to unregister/clear the service worker during testing.
+
+Important hosting warning:
+- PWA/service-worker behavior requires a secure context.
+- localhost is usually treated as secure for development.
+- A phone visiting a Vaio-hosted local LAN address such as http://192.168.x.x may not qualify as secure for service workers/install behavior.
+- If testing installation from a phone over local Wi-Fi, plan for HTTPS hosting, a trusted local certificate, a tunnel, or temporary HTTPS deployment.
+- Codex should document the local testing route it expects.
+
+PWA install validation:
+- Browser should show install option when app meets install criteria.
+- Confirm manifest is loaded.
+- Confirm service worker is registered.
+- Confirm app launches in standalone mode after install.
+- Confirm landscape behavior after installed launch.
+- Confirm no blank white screen on reload/reopen.
+- Run Lighthouse/PWA checks when practical and report results.
