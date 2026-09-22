@@ -1,0 +1,262 @@
+LULU'S TALE — NIGHT MAP IMPLEMENTATION REPORT
+===============================================
+
+STATUS
+------
+
+SUCCESSFUL.
+
+Dedicated night visuals are implemented for Home, Charles Jr., and Overworld.
+They are selected automatically by the game's existing manual night state while
+the daytime visual maps remain unchanged and available.
+
+SOURCE PACKS RECEIVED
+---------------------
+
+1. Night.OverW.zip
+   - Approved Overworld night source normalized by its pack to 1536 x 1088.
+   - 48 x 34 tiles at 32 x 32 pixels.
+   - 1,632 positional tiles.
+   - Pack reconstruction check: exact.
+
+2. Night.OW.ForG.zip
+   - Night walk-behind Overworld base.
+   - Night upper-building foreground.
+   - Night tree-canopy foreground.
+   - All three layers are 1536 x 1088.
+   - Alpha transparency and daytime coordinates are preserved.
+
+3. Night.home.zip
+   - Approved grid-aligned Home night image at 896 x 1376.
+   - 28 x 43 tiles at 32 x 32 pixels.
+   - 1,204 positional tiles.
+   - Pack reconstruction check: exact.
+
+4. Night.CJR.zip
+   - Approved grid-aligned Charles Jr. night image at 1248 x 1056.
+   - 39 x 33 tiles at 32 x 32 pixels.
+   - 1,287 positional tiles.
+   - Pack reconstruction check: exact.
+
+IMPLEMENTATION APPROACH
+-----------------------
+
+The night maps were implemented as visual variants of the three existing maps,
+not as duplicate gameplay worlds.
+
+Daytime companions:
+- Home.visual.json
+- Charles.visual.json
+- Overworld.visual.json
+
+New nighttime companions:
+- Home.night.visual.json
+- Charles.night.visual.json
+- Overworld.night.visual.json
+
+Runtime selection:
+- quest.isNight false -> daytime companion
+- quest.isNight true -> nighttime companion
+
+The same semantic files are used in both phases:
+- Home.json
+- Charles.json
+- Overworld.json
+
+This is intentional. Collision, doors, markers, interactions, NPC spawn
+anchors, transitions, and quest behavior therefore remain identical between
+day and night unless a later gameplay system explicitly adds a phase condition.
+Visual artwork never creates or changes collision.
+
+FALLBACK BEHAVIOR
+-----------------
+
+The visual selection helper safely falls back to a map's daytime visual if a
+future map does not have a night companion. Only that fallback case receives
+the old generic blue night tint.
+
+All three current maps have dedicated night companions, so their supplied night
+art is not darkened a second time.
+
+ACTIVE NIGHT ASSET DIRECTORIES
+------------------------------
+
+public/assets/maps/night/
+  README_NIGHT_MAPS.txt
+  night_map_manifest.json
+  home/
+    home_night_28x43.png
+  charles/
+    charles_jr_interior_night_39x33.png
+  overworld/
+    overworld_walkbehind_base_48x34_night.png
+    foreground/
+      overworld_building_upper_foreground_night.png
+      overworld_tree_canopy_foreground_night.png
+
+The normalized approved Overworld night image is retained for reference at:
+
+source_assets/night_map_references/
+  overworld_night_approved_reference_48x34.png
+
+The four original uploaded ZIPs are retained unchanged at:
+
+source_assets/night_map_packs/
+  Night.OverW.zip
+  Night.OW.ForG.zip
+  Night.home.zip
+  Night.CJR.zip
+
+Keeping the original source packs outside public/ preserves the complete tile
+packs without adding thousands of source/editor files to the mobile production
+bundle.
+
+OVERWORLD FOREGROUND RESULT
+---------------------------
+
+The nighttime Overworld mirrors the completed daytime six-placement structure:
+
+1. One full-map night walk-behind base on the objects layer.
+2. North apartment upper foreground, order 80.
+3. Charles Jr. upper foreground, order 81.
+4. Lulu's apartment upper foreground, order 82.
+5. South apartment upper foreground, order 83.
+6. Night tree-canopy foreground, order 100.
+
+Building behavior preserved:
+- Four building zones.
+- 96 shared walkable semantic tiles.
+- 42% player-occlusion opacity.
+- Building foregrounds remain opaque while Lulu is outside their zones.
+- Only the relevant building section fades while Lulu's feet are inside it.
+- Lower building collision remains solid.
+
+Tree behavior preserved:
+- 21 semantic tree anchors.
+- Night canopy drawn after Lulu/entities.
+- Day and night tree alpha masks are byte-for-byte identical.
+
+Alpha validation:
+- Night building foreground nontransparent pixels: 98,304.
+- Night tree foreground nontransparent pixels: 43,920.
+- Day/night building alpha masks: exact match.
+- Day/night tree alpha masks: exact match.
+
+WHY THE FOREGROUND-PACK OVERWORLD BASE IS ACTIVE
+------------------------------------------------
+
+Night.OverW.zip contains the approved normalized night reference.
+Night.OW.ForG.zip contains the dedicated runtime layers fitted to the active
+daytime map coordinates and existing foreground masks.
+
+The foreground pack's walk-behind base is used at runtime because it preserves
+exact alignment with:
+
+- the current Overworld semantic grid,
+- the four building occlusion rectangles,
+- the 96 walkable building tiles,
+- the night building foreground,
+- the night tree-canopy mask.
+
+The approved normalized Night.OverW image is still preserved as the visual
+reference for future refinement. Nothing from either source pack was discarded.
+
+CODE CHANGES
+------------
+
+src/game/visual.ts
+- Added VisualPhase: day | night.
+- Added VisualMapVariants.
+- Extended visual-companion filename resolution to support
+  *.night.visual.json.
+- Added phase-aware selection with safe daytime fallback.
+- Added a testable rule that enables generic night tint only when a dedicated
+  night companion is missing.
+
+src/game/visualRegistryNode.ts
+- Added phase-aware loading for automated tests and development validation.
+
+src/main.ts
+- Loads both day and night companions for every registered map.
+- Preloads every referenced day/night runtime image.
+- Stores day/night visual variants in each MapContext.
+- Selects the active companion from quest.isNight every render frame.
+- Prevents double-applied generic tint when a real night companion exists.
+- Reports the active visual phase and filename in debug output.
+
+TEST CHANGES
+------------
+
+src/game/visual.test.ts
+- Verifies all six day/night visual companions.
+- Verifies dedicated night selection and fallback behavior.
+- Verifies the night tree canopy remains last in foreground order.
+- Verifies dedicated night art disables the fallback tint.
+
+src/game/buildingForeground.test.ts
+- Verifies all four night building zones match the daytime tile rectangles,
+  order, and 42% opacity.
+
+src/game/nightMaps.test.ts
+- Verifies every night companion matches its semantic map dimensions.
+- Verifies every active night PNG dimension and SHA-256 hash.
+- Verifies all four source ZIPs are preserved byte-for-byte.
+- Verifies the 96-tile building and 21-tree contracts.
+
+DOCUMENTATION CHANGES
+---------------------
+
+- AGENTS.md
+- MAP_READINESS_REPORT.txt
+- Lulus_Tale_FEATURE_IMPLEMENTATION_BLUEPRINT.txt
+- Lulus_Tale_Demo_Blueprint_v2.1/02_MAP_LAYOUTS/00_MAP_LAYOUT_REFERENCE.txt
+- Lulus_Tale_Demo_Blueprint_v2.1/01_TECHNICAL_FOUNDATION/
+  07_MANUAL_DAY_NIGHT_PHASE_SYSTEM.txt
+- public/assets/maps/night/README_NIGHT_MAPS.txt
+- public/assets/maps/night/night_map_manifest.json
+- Lulus_Tale_NIGHT_MAP_IMPLEMENTATION_REPORT.txt
+
+VALIDATION RESULTS
+------------------
+
+PASS — All active night images match their declared pixel dimensions.
+PASS — Every active night image matches its recorded SHA-256 hash.
+PASS — Active runtime images are byte-exact extractions from the supplied ZIPs.
+PASS — Home pack reconstruction is exact.
+PASS — Charles Jr. pack reconstruction is exact.
+PASS — Approved Overworld source-pack reconstruction is exact.
+PASS — Night building/tree alpha masks exactly match daytime masks.
+PASS — All night visual-companion asset paths resolve.
+PASS — Production build contains every active night runtime asset.
+PASS — Source packs/reference remain outside the production runtime bundle.
+PASS — Daytime companions and semantic maps remain active and unchanged.
+PASS — Vitest: 15 test files, 68 tests.
+PASS — TypeScript no-emit check.
+PASS — Vite production build.
+
+KNOWN LIMITATION
+----------------
+
+No hands-on phone gameplay playthrough was performed. Automated validation,
+source-pack verification, visual inspection, controlled foreground inspection,
+and production build checks passed. The remaining user check is visual feel on
+the target phone while transitioning to night and walking behind the four
+Overworld buildings/trees.
+
+BLOCKERS
+--------
+
+None.
+
+GIT STATUS
+----------
+
+The authoritative local project is not a Git repository. No commits, branches,
+pushes, tags, or remote GitHub changes were made.
+
+PLACEHOLDER CONFIRMATION
+------------------------
+
+No placeholder assets, fake art, generated substitutes, mock map data, stub
+implementations, or temporary stand-ins were added. All night runtime artwork
+is taken directly from the four supplied night-map packages.
