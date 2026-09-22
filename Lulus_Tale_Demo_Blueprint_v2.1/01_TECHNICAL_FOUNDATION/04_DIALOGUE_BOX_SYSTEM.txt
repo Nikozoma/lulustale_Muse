@@ -1,0 +1,38 @@
+DIALOGUE BOX SYSTEM
+
+Dialogue boxes are required.
+
+Core rule:
+Dialogue only progresses or closes when the player presses a visible button labeled "Next".
+
+Do not allow:
+- tapping the dialogue box to advance,
+- tapping elsewhere on the screen to advance,
+- movement input to advance,
+- attack input to advance,
+- accidental screen touches to skip dialogue.
+
+Dialogue state:
+- active
+- speaker
+- lines[]
+- currentLineIndex
+- onComplete callback/event
+
+Dialogue behavior:
+- Show speaker name when relevant.
+- Show current line.
+- Show Next button.
+- Next advances to next line.
+- Final Next closes dialogue.
+- Movement/input is paused or heavily restricted while dialogue is active.
+- Quest/event logic waits for dialogue completion where needed.
+
+Button behavior:
+- Define a visible button region.
+- Only taps/clicks inside that button region advance.
+- Button should be large enough for phone use.
+- Button/font size should use centralized UI scaling constants.
+
+Reason:
+Mobile controls involve many screen touches. Dialogue must not be skipped by random movement or attack input.
