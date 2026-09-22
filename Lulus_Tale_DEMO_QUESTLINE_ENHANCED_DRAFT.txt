@@ -1,0 +1,1398 @@
+LULU'S TALE — ENHANCED DEMO QUESTLINE DRAFT
+============================================
+
+Document status
+---------------
+
+Creative design pass for review.
+This is not final dialogue and is not an implementation file.
+It strengthens the existing demo quest without replacing its core story.
+
+Working title
+-------------
+
+FRIES, FEATHERS, AND POOR DECISIONS
+
+One-line premise
+----------------
+
+Lulu leaves home for fries, gets dragged into a territorial dispute with the
+neighborhood birds, and discovers that the same parking lot follows different
+rules after dark.
+
+CORE MATERIAL PRESERVED FROM THE ORIGINAL
+=========================================
+
+The revised quest still contains the original defining sequence:
+
+1. Start at Home.
+2. Check the fridge.
+3. Feed/check on the dog.
+4. Leave Home and cross the Overworld.
+5. Enter Charles Jr.
+6. Get fries.
+7. A bird steals or attempts to steal the fries.
+8. Find the bird and recover/investigate the fries.
+9. Return home.
+10. Use the bed.
+11. Enter night through the player's bed choice.
+12. Go outside at night.
+13. Discover the bird gang threat.
+14. Find a sword/weapon in a bush.
+15. Defeat three birds.
+16. Return home.
+17. Go back to bed.
+18. End the demo with a Day 2 teaser.
+
+What this pass improves
+-----------------------
+
+- Gives the dog/fridge opening a clearer cause-and-effect chain.
+- Lets the bird incident branch without allowing the story to break.
+- Makes the recovered fries outcome believable rather than automatically edible.
+- Gives the player a clue that motivates staying up.
+- Respects the manual bed-based day/night design.
+- Introduces the night guide before the bird gang battle.
+- Uses the existing real Overworld spaces more intentionally.
+- Converts the bird fight into a turn-based tutorial encounter.
+- Makes the birds recurring comic antagonists rather than disposable enemies.
+- Provides exact quest stages, flags, items, events, and convergence rules for a
+  future data-driven quest implementation.
+
+TARGET EXPERIENCE
+=================
+
+Tone
+----
+
+- Warm everyday slice-of-life during the day.
+- Increasingly specific bird-related absurdity.
+- Quiet, surreal neighborhood atmosphere at night.
+- Comedy comes from characters treating nonsense with different levels of
+  seriousness.
+- The night is strange, not immediately apocalyptic.
+
+Estimated first-play length
+---------------------------
+
+- Day route and exploration: roughly 15-25 minutes.
+- Night route and first battle: roughly 15-25 minutes.
+- Total target: approximately 30-50 minutes depending on exploration, reading,
+  and battle pace.
+
+Player promises
+---------------
+
+- No day/night timer.
+- No permanently missed night quest for choosing sleep.
+- No hard quest failure from the fry-defense minigame.
+- No random battle before the authored bird-gang encounter.
+- Clear objective text and one active "!" marker at a time.
+- A safe retry if the tutorial battle is lost.
+
+QUEST STRUCTURE
+===============
+
+Use two linked quests rather than one enormous quest state machine.
+
+Quest A
+-------
+
+ID: quest.demo.fries_and_feathers_day
+Title: Fries and Feathers
+Role: Main demo quest, daytime half
+
+Quest B
+-------
+
+ID: quest.demo.birds_after_dark
+Title: Birds After Dark
+Role: Main demo quest, night half
+
+Why split them
+--------------
+
+- The player's bed choice is a clean boundary.
+- Quest A can complete whether the player sleeps or stays up.
+- Quest B can be unlocked but remain pending until any night phase.
+- Choosing normal sleep does not force, fail, or erase night content.
+- Save/load and journal presentation are easier to understand.
+
+ACT 1 — HOME: THE IMPORTANT BREAKFAST
+=====================================
+
+Purpose
+-------
+
+Introduce Lulu, touch movement, the objective marker, Home, the fridge, the dog,
+and the game's comedy without a long exposition scene.
+
+Opening state
+-------------
+
+- Map: Home
+- Phase: Day
+- Day: 1
+- Lulu starts at the current Home player spawn.
+- A short movement tutorial appears only on a first save.
+- First active objective: "Check the fridge."
+
+Stage A01 — Check the fridge
+----------------------------
+
+ID: check_fridge
+Objective: Check the fridge.
+Target: Home / fridge_interaction
+
+Interaction result:
+
+- Lulu finds dog food.
+- The human-food situation is technically not empty, but emotionally empty.
+- Give item.dog_food x1.
+- Set flag.demo.checked_fridge = true.
+
+Suggested dialogue beat:
+
+  LULU: Dog food, mustard, and an ice cube with seniority.
+  LULU: Breakfast has made its position clear.
+
+The dog reacts from the next room, establishing the next objective without an
+arbitrary task assignment.
+
+Stage A02 — Feed the dog
+------------------------
+
+ID: feed_dog
+Objective: Feed the dog.
+Target: Home / dog_interaction
+Required item: item.dog_food x1
+
+Interaction result:
+
+- Remove item.dog_food x1.
+- Set flag.demo.dog_fed = true.
+- The dog's enthusiasm makes Lulu more aware that she has not eaten.
+
+Suggested dialogue beat:
+
+  LULU: One of us is having breakfast.
+  DOG: [the sound of a bowl becoming somebody else's problem]
+  LULU: Great. Now I want fries.
+
+Stage A03 — Leave for Charles Jr.
+--------------------------------
+
+ID: leave_home_for_charles
+Objective: Go to Charles Jr.
+Target sequence:
+
+1. Home / entrance_exit
+2. Overworld / transition_to_charles_jr
+
+On Home exit:
+
+- Transition to the current Overworld Home spawn.
+- Keep the same objective text.
+- The Charles Jr. transition becomes the only active marker.
+
+Optional ambient interactions
+-----------------------------
+
+These add flavor but never create marker spam or block progress:
+
+- Re-check fridge: "Still dog food. Still not a fry."
+- Re-check dog after feeding: dog is already asleep or intensely satisfied.
+- Apartment sign: establishes the building as Lulu's home landmark.
+
+ACT 2 — OVERWORLD: THE WALK THERE
+=================================
+
+Purpose
+-------
+
+Let the new Overworld breathe, teach landmark navigation, and establish normal
+daytime neighborhood behavior before anything surreal happens.
+
+Main objective
+--------------
+
+"Go to Charles Jr."
+
+Presentation
+------------
+
+- No cutscene interrupts the walk.
+- Charles Jr. remains visually readable across the divider.
+- Current tree and building walk-behind effects stay purely environmental.
+- One or two optional inspectables may comment on the neighborhood, but no new
+  mandatory errands are inserted.
+
+At Charles entrance
+-------------------
+
+- Interaction uses the existing transition marker.
+- Transition to Charles interior at the current player spawn.
+- Advance to order_fries.
+
+ACT 3 — CHARLES JR.: A SIMPLE TRANSACTION
+=========================================
+
+Purpose
+-------
+
+Introduce NPC dialogue, an ordering interaction, and inventory acquisition.
+
+Stage A04 — Order fries
+-----------------------
+
+ID: order_fries
+Objective: Order fries at the counter.
+Target: Charles / order_interaction
+
+Suggested dialogue beat:
+
+  CASHIER: Welcome to Charles Jr. What can I get started for you?
+  LULU: Fries.
+  CASHIER: What size?
+  LULU: A size that makes the walk here feel like planning.
+
+Keep the cashier grounded and polite. The cashier does not foreshadow magic or
+know about the bird gang.
+
+Interaction result
+------------------
+
+- Give item.charles_fries x1.
+- Set flag.demo.ordered_fries = true.
+- Record variable.demo.fries_condition = "full".
+- Objective: "Head home with the fries."
+
+Item definition concept
+-----------------------
+
+ID: item.charles_fries
+Category: food / quest item while this stage is active
+Description: "Hot, salty, and currently undefended."
+
+The item may not be discarded while the bird incident is unresolved.
+
+Stage A05 — Leave Charles Jr.
+-----------------------------
+
+ID: leave_charles_with_fries
+Objective: Head home with the fries.
+Target: Charles / entrance_exit
+
+On transition to Overworld:
+
+- Spawn Lulu at the current Charles Jr. exterior return point.
+- Do not trigger the bird in the exact transition frame.
+- Let the player take several steps into the parking area first.
+- Activate event.demo.bird_fry_ambush once.
+
+ACT 4 — THE FRY INCIDENT
+========================
+
+Purpose
+-------
+
+Introduce the recurring fry thief, a mobile minigame, meaningful outcomes, and
+the first hint that the birds are organized.
+
+Location
+--------
+
+Accessible parking/walkway immediately south of the Charles Jr. transition.
+Suggested semantic trigger: bird_fry_ambush_trigger near tile (14,21), subject to
+final Combined View confirmation.
+
+Event A06 — Ambush setup
+------------------------
+
+ID: event.demo.bird_fry_ambush
+
+Sequence:
+
+1. Lock world input.
+2. A bird lands ahead of Lulu and looks directly at the fry bag.
+3. Lulu notices the look.
+4. The bird lunges.
+5. Start minigame.demo.defend_fries.
+
+Suggested dialogue beat:
+
+  LULU: No.
+  BIRD: ...
+  LULU: I know that look.
+
+Fry-defense minigame
+--------------------
+
+Working name: Secure the Bag
+
+Mechanic direction:
+
+- A large touch target tracks the bird's lunge direction or timing.
+- Several short reaction beats fill one defense meter.
+- It lasts only a few seconds; this is an encounter timer, not a world timer.
+- Return success, partial, or fail.
+
+Outcome matrix
+--------------
+
+SUCCESS — "Mostly secured"
+
+- Lulu saves most of the fries.
+- The bird escapes with one fry because it refuses to leave empty-beaked.
+- Keep item.charles_fries, but replace its usable state with
+  item.emergency_fry_portion x1 for the later battle.
+- Set variable.demo.fries_condition = "mostly_saved".
+- Set flag.demo.fry_defense_success = true.
+- The bird drops a glossy feather while escaping.
+
+PARTIAL — "A contested lunch"
+
+- The bag tears; Lulu keeps a small portion while the bird takes the rest.
+- Replace item.charles_fries with item.cold_fry_portion x1.
+- Set variable.demo.fries_condition = "partial".
+- Set flag.demo.fry_defense_partial = true.
+- The bird drops a glossy feather.
+
+FAIL — "Professionally robbed"
+
+- The bird steals the entire bag, preserving the original demo's central beat.
+- Remove item.charles_fries.
+- Set variable.demo.fries_condition = "stolen".
+- Set flag.demo.bird_stole_fries = true.
+- The bird drops a glossy feather only after Lulu follows it to the next event.
+
+Convergence rule
+----------------
+
+All outcomes advance to investigate_the_bird.
+The objective changes according to wording, but the destination is the same.
+
+Suggested objective text
+------------------------
+
+- Success: "Find out where that bird went."
+- Partial: "Follow the bird—and what remains of lunch."
+- Fail: "Find the bird that stole the fries."
+
+Why success still continues the plot
+------------------------------------
+
+The goal is not to punish success by pretending it failed. Lulu protects most
+of the food, gains a useful battle consumable, and pursues the bird because it
+deliberately targeted her and dropped something strange. The original conflict
+continues, but success remains materially better.
+
+ACT 5 — THE BIRD'S DAYTIME HIDEOUT
+==================================
+
+Purpose
+-------
+
+Resolve the daytime chase, recover what can be recovered, establish the clue,
+and guide the player naturally back toward Home.
+
+Location
+--------
+
+Use the accessible grassy area south of Charles Jr., entered through the hedge
+gap. The current Overworld npc_spawn near tile (11,24) is a suitable real anchor.
+Do not place the objective inside the closed dirt-lot fence.
+
+Stage A07 — Investigate the bird
+--------------------------------
+
+ID: investigate_the_bird
+Target: Overworld / day_bird_spawn at or near current npc_spawn (11,24)
+
+Approach behavior
+-----------------
+
+- The bird appears with branch-appropriate fry evidence.
+- It does not speak in plain human language during daytime.
+- It understands Lulu perfectly well and weaponizes eye contact.
+
+Suggested event beats
+---------------------
+
+1. Lulu approaches.
+2. The bird backs toward the hedge, guarding the bag/one stolen fry.
+3. Lulu has a short choice:
+   - "Give those back."
+   - "What is your problem?"
+   - "I walked all the way over here."
+4. Choice changes only the exchange, not the branch outcome.
+5. A second bird chirps from off-screen.
+6. The fry thief immediately changes posture, drops a glossy black feather, and
+   retreats.
+
+Branch resolution
+-----------------
+
+SUCCESS:
+
+- Lulu already has her surviving portion.
+- The bird leaves behind the feather and one tiny paper band from the fry bag,
+  arranged like a warning.
+
+PARTIAL:
+
+- Lulu retrieves the torn outer bag but not the missing food.
+- Her cold fry portion remains usable.
+- The feather is tucked deliberately under the bag.
+
+FAIL:
+
+- Lulu recovers the stolen bag, but it has been dragged through a parking lot and
+  is no longer food.
+- Do not return item.charles_fries as an edible item.
+- This still fulfills the original "retrieve the fries" beat emotionally and
+  visibly without asking the player to eat parking-lot fries.
+- The glossy feather lies beneath the bag.
+
+Shared result
+-------------
+
+- Give item.glossy_black_feather x1.
+- Set flag.demo.day_bird_event_resolved = true.
+- Set flag.demo.night_bird_thread_unlocked = true.
+- Despawn the daytime fry thief.
+- Objective: "Go home."
+
+Clue item concept
+-----------------
+
+ID: item.glossy_black_feather
+Category: key / weird
+Description: "Too clean for something found under a stolen bag of fries. It
+looks ordinary until the light moves."
+
+Subtle night setup
+------------------
+
+On the walk home, the feather occasionally catches a color not otherwise used
+in the daytime scene. This should be a small real-time tint/notification effect,
+not a major hallucination sequence.
+
+ACT 6 — HOME AND THE BED CHOICE
+===============================
+
+Purpose
+-------
+
+Close the daytime errand, introduce the bed as a reusable hub, and preserve real
+player agency over night entry.
+
+Stage A08 — Return home
+-----------------------
+
+ID: return_home_after_bird
+Objective: Go home.
+Target: Overworld / transition_to_home
+
+On transition:
+
+- Enter Home at the current safe spawn.
+- The dog notices the feather before Lulu mentions it.
+- Set the bed as the current objective.
+
+Suggested dialogue beat
+-----------------------
+
+  LULU: I got lunch.
+  [branch-specific pause]
+  LULU: The definition of "got" is doing some work there.
+  DOG: [stares at the feather]
+
+Stage A09 — Decide how to end the day
+-------------------------------------
+
+ID: choose_day_end
+Objective: Decide what to do tonight.
+Target: Home / bed_interaction
+
+Before the choice, Lulu places the glossy feather somewhere visible near the
+bed. The feather gives one quiet tap against the surface by itself.
+
+Bed choices
+-----------
+
+1. Stay Up Tonight
+2. Sleep Until Tomorrow
+3. Cancel
+
+Stay Up Tonight result
+----------------------
+
+- Complete Quest A.
+- Set calendar.phase = night without changing calendar.day.
+- Set flag.demo.stayed_up_for_birds = true.
+- Start Quest B immediately at leave_home_at_night.
+- Run a short night transition.
+
+Sleep Until Tomorrow result
+---------------------------
+
+- Complete Quest A.
+- Set flag.demo.slept_after_bird_day = true.
+- Advance to Day 2 daytime normally.
+- Recover Lulu and reduce insanity according to the central sleep rule.
+- Quest B stays unlocked/pending.
+- The next bed interaction on any later day can still offer Stay Up Tonight.
+- The journal may show: "The feather can wait. If Lulu wants answers, she can
+  stay up another night."
+
+This is not a bad ending and does not permanently miss demo content.
+
+Cancel result
+-------------
+
+- Close the bed menu.
+- No state change.
+- Keep the bed as the active objective until Quest A completes through one of
+  the two real choices.
+
+Optional soft demo checkpoint after normal sleep
+------------------------------------------------
+
+If the build needs a short-session stopping point, show "DAY 1 COMPLETE" after
+waking. Do not show "END OF DEMO" while the night quest remains unfinished.
+
+ACT 7 — NIGHT: THE NEIGHBORHOOD REGULAR
+=======================================
+
+Purpose
+-------
+
+Introduce night as a different layer of the same neighborhood, explain only
+enough to motivate the next steps, and establish a recurring guide character.
+
+Quest B start conditions
+------------------------
+
+- flag.demo.night_bird_thread_unlocked = true
+- calendar.phase = night
+- Quest B not completed
+
+Stage B01 — Go outside
+----------------------
+
+ID: leave_home_at_night
+Objective: Check outside.
+Target: Home / entrance_exit
+
+Night transition presentation
+-----------------------------
+
+- Use the current night tint.
+- Change ambient NPC/event availability through conditions.
+- Do not darken the map so much that mobile navigation becomes unclear.
+- The bird feather gives another small visual pulse.
+
+Night guide character concept
+-----------------------------
+
+Working role ID: npc.neighborhood_regular
+Night variant role: The Night Guide
+Final personal name: intentionally left for the user's writing pass
+
+Day presentation:
+
+- An ordinary neighborhood regular who may sometimes sit near the apartments.
+- If encountered during a later daytime expansion, he is dry, observant, and not
+  interested in explaining himself.
+
+Night presentation:
+
+- Same person, same clothes and real sprite, completely different authority.
+- He treats bird politics as municipal infrastructure.
+- He may call himself an "independent consultant" to the Department of Avian
+  Affairs, though no such department is confirmed to exist.
+- He is helpful, but every answer creates one smaller question.
+
+Location
+--------
+
+Spawn on an accessible tile just outside Lulu's apartment, offset from the
+player spawn and transition. Suggested target area: around tile (31,20), subject
+to final collision/Combined View confirmation.
+
+Stage B02 — Talk to the night guide
+-----------------------------------
+
+ID: meet_night_guide
+Objective: Talk to the man outside.
+Target: Overworld / night_guide_spawn
+
+Suggested dialogue beats
+------------------------
+
+  GUIDE: You brought paperwork.
+  LULU: It's a feather.
+  GUIDE: That's what their paperwork looks like.
+
+  GUIDE: You took food back from a bird on Division.
+  LULU: It took food from me.
+  GUIDE: That distinction is why they sent three.
+
+Choice set
+----------
+
+- "Three what?"
+- "How do you know about the fries?"
+- "Why are we calling a feather paperwork?"
+
+Every choice gets a distinct answer, then converges.
+
+Guide information
+-----------------
+
+- The glossy feather is a challenge marker, not a random shed feather.
+- The fry thief belongs to a small local gang.
+- At night Lulu can notice things she filtered out during the day.
+- The birds are gathering in the eastern parking area.
+- Lulu should not confront them empty-handed.
+
+Perception introduction
+-----------------------
+
+The guide asks Lulu to look at the feather again. At night it carries a faint
+mark or alignment only Lulu can now perceive. This is a story introduction to
+perception, not a full mechanics tutorial or an insanity increase.
+
+Shared result
+-------------
+
+- Set flag.demo.met_night_guide = true.
+- Set flag.demo.bird_gang_location_known = true.
+- Unlock the bush weapon interaction.
+- Objective: "Find something to defend yourself."
+
+ACT 8 — THE BUSH SWORD
+======================
+
+Purpose
+-------
+
+Preserve one of the original demo's funniest unexplained beats while using the
+real inventory/equipment framework.
+
+Stage B03 — Find a weapon
+-------------------------
+
+ID: find_bush_sword
+Objective: Find something to defend yourself.
+Target: nearest existing real bush/hedge immediately east of the Home transition
+
+Use the current real bush object chosen by the existing prototype's nearest-bush
+logic. Do not add a fake glowing weapon model. The active "!" marker identifies
+the interaction point.
+
+Suggested interaction beat
+---------------------------
+
+  LULU: There is a sword in this bush.
+  GUIDE: Yes.
+  LULU: Is it yours?
+  GUIDE: It is in the bush.
+
+Item concept
+------------
+
+ID: item.bush_sword
+Name: Bush Sword
+Category: equipment / weapon
+Description: "A real sword recovered from a completely ordinary hedge. It is
+best not to establish ownership tonight."
+
+Interaction result
+------------------
+
+- Give item.bush_sword x1.
+- Equip it in the weapon slot for the tutorial.
+- Set flag.demo.first_weapon_equipped = true.
+- The guide gives one short battle hint, not a full menu tutorial.
+- Objective: "Confront the bird gang."
+
+Optional inspect after pickup
+-----------------------------
+
+The empty bush interaction becomes:
+
+  LULU: Now it is just a bush.
+
+ACT 9 — THE BIRD GANG
+======================
+
+Purpose
+-------
+
+Deliver the first surreal-night payoff and teach the turn-based battle loop.
+
+Location
+--------
+
+Use the broad accessible eastern parking area. The current Overworld npc_spawn
+near tile (42,24) is a suitable real anchor and keeps the encounter away from
+doors and narrow paths.
+
+Stage B04 — Reach the gang
+--------------------------
+
+ID: confront_bird_gang
+Objective: Confront the bird gang.
+Target: Overworld / bird_gang_spawn near current npc_spawn (42,24)
+
+Approach cutscene
+-----------------
+
+1. Lock movement at a safe distance.
+2. Spawn three birds in a readable formation.
+3. The daytime fry thief stands behind or among them.
+4. The glossy feather reacts.
+5. The guide remains outside the formation; he does not fight for Lulu.
+6. Short confrontation dialogue.
+
+Suggested confrontation
+------------------------
+
+  LULU: Are these the three?
+  GUIDE: Numerically, yes.
+
+  [The center bird pecks once at the pavement. The others spread out.]
+
+  LULU: I want it noted that they started this.
+  GUIDE: Noted by whom?
+  LULU: Me.
+
+Enemy formation concept
+-----------------------
+
+Battle ID: battle.demo.bird_gang
+
+1. Bird Lookout
+   - Lower HP.
+   - Uses Warning Cry to reduce Lulu's next attack or raise an ally's defense.
+
+2. Fry Thief
+   - The daytime recurring bird.
+   - Fastest enemy.
+   - Uses Peck and Bag Feint.
+
+3. Peck Captain
+   - Highest HP.
+   - Uses Peck and Wing Guard.
+   - Defeating the captain ends the birds' willingness to continue once all
+     active enemies are down.
+
+All three may reuse the existing real bird sprite with position/name/behavior
+distinction. Do not invent substitute enemy art.
+
+Tutorial command set
+--------------------
+
+- Attack
+- Guard
+- Item
+- Stand Your Ground
+
+Stand Your Ground concept
+-------------------------
+
+- Lulu's first simple skill.
+- Reduces incoming damage for the round and prevents one attack-reduction effect.
+- No elaborate magic animation is required.
+- It establishes that Lulu's combat identity includes composure, not only sword
+  attacks.
+
+Branch carryover into battle
+----------------------------
+
+SUCCESS at fry defense:
+
+- item.emergency_fry_portion is available once.
+- Suggested effect: restore a small amount of HP.
+- Battle intro line acknowledges Lulu saved most of the bag.
+
+PARTIAL:
+
+- item.cold_fry_portion is available once with a smaller heal.
+- Battle intro line acknowledges the torn bag.
+
+FAIL:
+
+- No fry consumable.
+- The battle remains balanced and winnable without it.
+- Guide may give a one-time pre-battle full heal, but not a substitute item.
+
+Battle teaching sequence
+------------------------
+
+- First command screen briefly highlights Attack.
+- After the first enemy action, briefly explain Guard/Stand Your Ground.
+- Explain Item only if the player has a surviving fry item.
+- Do not interrupt every turn.
+- Touch targets remain large and labels remain visible in landscape.
+
+Victory result
+--------------
+
+- Set flag.demo.bird_gang_defeated = true.
+- Set flag.demo.first_turn_battle_won = true.
+- Remove the challenge feather from active quest use, or transform it into a
+  harmless keepsake item.bird_gang_feather.
+- Birds are defeated, not killed. They retreat to remain recurring characters.
+- The fry thief gives Lulu one final deeply resentful look.
+
+Suggested victory beat
+----------------------
+
+  [The Peck Captain drops the glossy feather at Lulu's feet.]
+  GUIDE: That means the matter is settled.
+  LULU: Good.
+  GUIDE: Locally.
+  LULU: I liked the first sentence better.
+
+Reward concept
+--------------
+
+- Keep the Bush Sword.
+- Unlock Stand Your Ground permanently.
+- Keep item.bird_gang_feather as a zero-weight key/record item if the inventory
+  design supports keepsakes.
+- No money/XP economy is required for this demo.
+
+Defeat/retry result
+-------------------
+
+- Do not advance the quest.
+- Restore the pre-battle checkpoint at the edge of the encounter.
+- Restore consumables to their pre-battle quantities.
+- The guide gives a short branch-safe line:
+
+  GUIDE: They remain three.
+  LULU: I noticed.
+
+- Offer Retry / Step Away.
+- Step Away returns to world mode with the objective unchanged.
+- Sleeping remains available only if the event runner is not inside battle, but
+  the night quest remains active for a later attempt.
+
+ACT 10 — HOME BEFORE MORNING
+============================
+
+Purpose
+-------
+
+Let the player walk home after the climax, close the manual phase loop, and end
+with a small hook rather than another abrupt fight.
+
+Stage B05 — Return home
+-----------------------
+
+ID: return_home_after_battle
+Objective: Go home.
+Target: Overworld / transition_to_home
+
+Post-battle world state
+-----------------------
+
+- Bird gang encounter marker is inactive.
+- Night guide may remain for one optional conversation.
+- East parking lot is safe.
+- No additional mandatory combat.
+
+Optional guide farewell
+-----------------------
+
+  LULU: Are they going to come back?
+  GUIDE: They live here.
+  LULU: Right.
+  GUIDE: But next time they will announce themselves.
+  LULU: With paperwork?
+  GUIDE: You're learning.
+
+Stage B06 — Sleep until morning
+-------------------------------
+
+ID: sleep_after_first_night
+Objective: Get some sleep.
+Target sequence:
+
+1. Overworld / transition_to_home
+2. Home / bed_interaction
+
+Night bed menu
+--------------
+
+- Sleep Until Morning
+- Cancel
+
+Sleep result
+------------
+
+- Complete Quest B.
+- Advance calendar.day by 1.
+- Set calendar.phase = day.
+- Apply normal sleep recovery and insanity reduction.
+- Autosave.
+- Wake Lulu at the current safe Home wake position.
+- Set flag.demo.complete = true.
+
+Final scene
+-----------
+
+The dog is awake before Lulu. Near the window is a tiny strip of paper marked
+with three precise bird footprints and one grease spot.
+
+Suggested final exchange:
+
+  LULU: Is that a receipt?
+  DOG: [looks away]
+
+Final card
+----------
+
+DAY 2
+
+THE BIRDS WILL REMEMBER THIS.
+
+END OF DEMO
+
+Do not imply the whole game ends; this is a clean vertical-slice endpoint.
+
+DATA-DRIVEN STAGE INDEX
+=======================
+
+Quest A: quest.demo.fries_and_feathers_day
+------------------------------------------------
+
+A01 check_fridge
+  Objective: Check the fridge.
+  Completion event: interaction.home.fridge completed
+  Next: feed_dog
+
+A02 feed_dog
+  Objective: Feed the dog.
+  Condition: has item.dog_food
+  Completion event: interaction.home.dog_feed completed
+  Next: leave_home_for_charles
+
+A03 leave_home_for_charles
+  Objective: Go to Charles Jr.
+  Completion event: map_entered Charles
+  Next: order_fries
+
+A04 order_fries
+  Objective: Order fries at the counter.
+  Completion event: interaction.charles.order_fries completed
+  Next: leave_charles_with_fries
+
+A05 leave_charles_with_fries
+  Objective: Head home with the fries.
+  Completion event: marker_entered bird_fry_ambush_trigger
+  Next: defend_fries
+
+A06 defend_fries
+  Objective: Protect the fries.
+  Completion event: minigame.demo.defend_fries completed
+  Branch record: success / partial / fail
+  Converges: investigate_the_bird
+
+A07 investigate_the_bird
+  Objective: branch-specific bird investigation text
+  Completion event: event.demo.day_bird_hideout completed
+  Next: return_home_after_bird
+
+A08 return_home_after_bird
+  Objective: Go home.
+  Completion event: map_entered Home
+  Next: choose_day_end
+
+A09 choose_day_end
+  Objective: Decide what to do tonight.
+  Completion event: bed choice sleep or stay_up
+  Result: complete Quest A and unlock/activate Quest B according to phase
+
+Quest B: quest.demo.birds_after_dark
+-----------------------------------------
+
+B01 leave_home_at_night
+  Objective: Check outside.
+  Conditions: phase night, bird thread unlocked
+  Completion event: map_entered Overworld
+  Next: meet_night_guide
+
+B02 meet_night_guide
+  Objective: Talk to the man outside.
+  Completion event: dialogue.demo.night_guide_intro completed
+  Next: find_bush_sword
+
+B03 find_bush_sword
+  Objective: Find something to defend yourself.
+  Completion event: item.bush_sword equipped
+  Next: confront_bird_gang
+
+B04 confront_bird_gang
+  Objective: Confront the bird gang.
+  Completion event: battle.demo.bird_gang victory
+  Defeat: remain on B04 with safe retry
+  Next: return_home_after_battle
+
+B05 return_home_after_battle
+  Objective: Go home.
+  Completion event: map_entered Home
+  Next: sleep_after_first_night
+
+B06 sleep_after_first_night
+  Objective: Get some sleep.
+  Completion event: bed Sleep Until Morning transaction completed
+  Result: complete Quest B, advance day, mark demo complete
+
+CONTENT REGISTRY
+================
+
+Items
+-----
+
+- item.dog_food
+- item.charles_fries
+- item.emergency_fry_portion
+- item.cold_fry_portion
+- item.glossy_black_feather
+- item.bush_sword
+- item.bird_gang_feather (optional keepsake form)
+
+Quests
+------
+
+- quest.demo.fries_and_feathers_day
+- quest.demo.birds_after_dark
+
+Minigames
+---------
+
+- minigame.demo.defend_fries
+
+Battles
+-------
+
+- battle.demo.bird_gang
+
+Enemies
+-------
+
+- enemy.bird_lookout
+- enemy.fry_thief
+- enemy.peck_captain
+
+Skills
+------
+
+- skill.attack (engine command/basic action)
+- skill.stand_your_ground
+
+NPCs/entities
+-------------
+
+- npc.dog
+- npc.charles_cashier
+- npc.neighborhood_regular
+- npc.fry_thief_day
+- npc.bird_gang_lookout
+- npc.bird_gang_captain
+
+Dialogues
+---------
+
+- dialogue.demo.fridge_intro
+- dialogue.demo.dog_breakfast
+- dialogue.demo.charles_order
+- dialogue.demo.bird_hideout
+- dialogue.demo.bed_day_choice_setup
+- dialogue.demo.night_guide_intro
+- dialogue.demo.bush_sword
+- dialogue.demo.bird_gang_intro
+- dialogue.demo.bird_gang_victory
+- dialogue.demo.night_guide_farewell
+- dialogue.demo.day_two_teaser
+
+Flags
+-----
+
+- demo.checked_fridge
+- demo.dog_fed
+- demo.ordered_fries
+- demo.fry_defense_success
+- demo.fry_defense_partial
+- demo.bird_stole_fries
+- demo.day_bird_event_resolved
+- demo.night_bird_thread_unlocked
+- demo.stayed_up_for_birds
+- demo.slept_after_bird_day
+- demo.met_night_guide
+- demo.bird_gang_location_known
+- demo.first_weapon_equipped
+- demo.bird_gang_defeated
+- demo.first_turn_battle_won
+- demo.complete
+
+Variables
+---------
+
+- demo.fries_condition: full / mostly_saved / partial / stolen
+- demo.fry_defense_result: success / partial / fail
+
+MAP/MARKER IMPLEMENTATION NOTES
+===============================
+
+Use existing markers where possible
+-----------------------------------
+
+Home:
+
+- fridge_interaction
+- dog_interaction / dog_spawn
+- bed_interaction
+- entrance_exit
+- player_spawn
+
+Charles:
+
+- order_interaction
+- entrance_exit
+- player_spawn
+- cashier_spawn
+
+Overworld:
+
+- transition_to_home
+- transition_to_charles_jr
+- player_spawn
+- current npc_spawn near (11,24) for the daytime bird
+- current npc_spawn near (42,24) for the night bird gang
+- nearest existing real bush east of Home for the sword interaction
+
+Recommended new semantic marker IDs
+-----------------------------------
+
+- bird_fry_ambush_trigger
+- day_bird_spawn
+- night_guide_spawn
+- bush_sword_interaction
+- bird_gang_spawn
+- bird_gang_trigger
+
+These are semantic-only additions. They do not require new map art or a layout
+redesign. Validate every tile as walkable/reachable and inspect Combined View
+before committing positions.
+
+Placement rules
+---------------
+
+- Ambush trigger must not fire on the same frame as the Charles transition.
+- Day bird target must be reachable through the existing hedge gap.
+- Night guide must not overlap the Home player spawn or transition tap target.
+- Sword marker must be reachable from the path while the bush itself stays solid.
+- Bird gang formation must leave enough open parking-lot space for the approach
+  cutscene and not block the Home route after victory.
+- The closed dirt-lot fence remains closed; no quest target goes inside it.
+
+BRANCH CONSISTENCY MATRIX
+=========================
+
+Fry defense success
+-------------------
+
+- Plot continues because the bird took one fry and dropped/led to the clue.
+- Lulu keeps the best optional battle consumable.
+- Bird hideout dialogue recognizes Lulu won the struggle.
+- Night guide dialogue recognizes the unusually tidy feather challenge.
+- Bird battle remains mandatory only when the player chooses a night phase.
+
+Fry defense partial
+-------------------
+
+- Plot continues through the torn bag and clue.
+- Lulu keeps a smaller consumable.
+- Dialogue recognizes the split outcome.
+- Same night quest stages and final reward.
+
+Fry defense fail
+----------------
+
+- Preserves the original full theft/chase.
+- Lulu retrieves the bag, but not edible fries.
+- No fry consumable in battle.
+- Battle is still balanced and fully winnable.
+- Same night quest stages and final reward.
+
+Sleep after Day 1
+-----------------
+
+- Quest A completes.
+- Day advances normally.
+- Quest B remains pending, not failed.
+- On a later night, B01 begins when Lulu chooses Stay Up Tonight.
+- No special content is permanently lost.
+
+Stay up after Day 1
+-------------------
+
+- Quest A completes.
+- Day remains 1.
+- Night phase starts.
+- Quest B activates immediately.
+
+Battle defeat
+-------------
+
+- Quest remains on B04.
+- Pre-battle state/consumables restore.
+- Retry or step away.
+- No duplicate rewards or repeated quest advancement.
+
+Battle victory
+--------------
+
+- Quest advances exactly once.
+- Encounter deactivates.
+- Return-home and sleep ending become available.
+
+WRITING GUIDELINES FOR THE NEXT REVIEW
+======================================
+
+Lulu
+----
+
+- Dry, practical, and willing to argue with absurdity.
+- She notices strange details but does not instantly accept magical explanations.
+- Keep most lines short enough for a phone dialogue box.
+- Her comedy should not depend on cruelty or ignorance.
+
+Dog
+---
+
+- Nonverbal during this demo.
+- Reactions create timing and personality.
+- Do not reveal animal speech before the perception system deliberately earns it.
+
+Cashier
+-------
+
+- A normal person doing a normal shift.
+- Provides contrast with the later night material.
+- Do not make every NPC secretly aware of the supernatural.
+
+Night guide
+-----------
+
+- Speaks with calm bureaucratic certainty about impossible things.
+- Never dumps full lore.
+- Answers one question and reframes another.
+- Helpful without solving the conflict for Lulu.
+- Final name, deeper history, and daytime role should be chosen in the user's
+  later fine-tuning pass.
+
+Birds
+-----
+
+- Organized enough to be unsettling, petty enough to stay funny.
+- Day birds communicate through behavior and sound.
+- Night perception may make intent clearer without immediately giving every bird
+  full spoken dialogue.
+- They retreat after battle; they are recurring neighborhood rivals.
+
+Dialogue length
+---------------
+
+- Routine interactions: 1-3 short pages.
+- Important conversation: 4-8 short pages plus choices.
+- Pre-battle exchange: under 30 seconds on a normal read.
+- Never place a long monologue between the player and a newly updated objective.
+
+IMPLEMENTATION ACCEPTANCE CHECKLIST
+===================================
+
+Quest system
+------------
+
+- Both quests are definitions, not main.ts stage switches.
+- Every stage, objective, listener, and transition has a stable ID.
+- All content references pass validation.
+- One active objective marker appears at a time.
+- Every branch has an automated event-driven test.
+
+Day flow
+--------
+
+- Fridge gives dog food.
+- Feeding dog consumes it.
+- Charles order gives fries.
+- Bird ambush fires once and not on transition frame.
+- Minigame returns all three results.
+- Bird hideout is reachable.
+- Each result converges without contradictory inventory.
+- Glossy feather unlocks the night thread.
+
+Bed/day-night
+-------------
+
+- No timer changes phase.
+- Stay Up enters night without incrementing day.
+- Sleep advances the day and keeps Quest B available later.
+- Cancel changes nothing.
+- Night sleep completes the demo and advances to morning.
+
+Night flow
+----------
+
+- Night guide appears only under valid conditions.
+- Bush sword uses a real existing bush interaction and real project weapon art.
+- Sword enters inventory/equipment.
+- Bird gang uses the open eastern parking area.
+- Battle is turn-based.
+- Defeat safely retries.
+- Victory advances once and deactivates the encounter.
+
+Save/load
+---------
+
+- Save/load tested at every A and B stage boundary.
+- Minigame result persists after convergence.
+- Sleep/stay-up choice persists.
+- Pre-battle checkpoint cannot duplicate items/rewards.
+- Completed demo remains completed after reload.
+
+Mobile presentation
+-------------------
+
+- Dialogue choices and battle commands have large touch targets.
+- Movement input cannot leak into menus/minigame/battle.
+- Objective and marker remain readable in landscape safe areas.
+- Night tint does not obscure paths, doors, or foreground depth.
+- User performs final phone playtest.
+
+QUEST REVIEW QUESTIONS FOR NICK
+===============================
+
+These are the useful creative decisions for the next fine-tuning pass:
+
+1. What should the night guide's real name be, and is he already known to Lulu?
+2. Should birds ever speak in understandable words, or should Lulu only read
+   their intent through perception?
+3. Should the Bush Sword remain Lulu's first permanent weapon after the demo?
+4. Should normal sleep after Day 1 show a brief checkpoint card, or simply begin
+   Day 2 with the night quest still pending?
+5. How weird should the glossy feather look before night: almost ordinary, or
+   visibly impossible?
+6. Should the final bird receipt be kept as a recurring quest hook?
+7. Are the suggested enemy role names playful enough, or should the gang have a
+   more specific theme/name?
+
+END OF ENHANCED QUEST DRAFT
+===========================
