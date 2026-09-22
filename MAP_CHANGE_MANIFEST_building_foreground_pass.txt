@@ -1,0 +1,80 @@
+LULU'S TALE — BUILDING FOREGROUND MAP CHANGE MANIFEST
+======================================================
+
+Job
+---
+
+Add mobile-friendly walk-behind depth to every Overworld building while
+preserving the approved map appearance, doors, transitions, and lower-wall
+collision.
+
+Implemented result
+------------------
+
+- Converted the upper two semantic rows of all four building footprints into
+  walkable ground.
+- Used grass beneath the north apartment, Lulu's apartment, and the south
+  apartment.
+- Used parking-lot asphalt beneath Charles Jr.
+- Added four independent building foreground placements.
+- Each placement stays opaque normally and fades to 42% only while Lulu's feet
+  are inside that building's two-row walk-behind zone.
+- Kept the tree canopy foreground later in draw order so tree depth continues
+  to work alongside building depth.
+- Preserved every lower building row as solid collision.
+
+Building zones
+--------------
+
+- apartment_north_upper: x 26-39, y 7-8, 28 tiles, grass
+- charles_jr_upper: x 12-17, y 10-11, 12 tiles, parking_lot
+- lulu_apartment_upper: x 26-39, y 14-15, 28 tiles, grass
+- apartment_south_upper: x 26-39, y 22-23, 28 tiles, grass
+
+Changed runtime/data files
+--------------------------
+
+- Overworld.json
+- Overworld.visual.json
+- src/game/visual.ts
+- src/game/renderer.ts
+- src/game/visual.test.ts
+- src/game/mapRegistry.test.ts
+- src/game/buildingForeground.test.ts
+
+Added assets/documentation
+--------------------------
+
+- public/assets/maps/overworld/overworld_walkbehind_base_48x34.png
+- public/assets/maps/overworld/foreground/overworld_building_upper_foreground.png
+- public/assets/maps/overworld/foreground/building_foreground_manifest.json
+- public/assets/maps/overworld/foreground/README_BUILDING_FOREGROUND.txt
+- MAP_CHANGE_MANIFEST_building_foreground_pass.txt
+
+Technical contract
+------------------
+
+- Visual placement field playerOcclusionOpacity is optional.
+- Placements without that field remain fully opaque and render exactly as before.
+- A placement with the field fades only when the player's feet anchor is inside
+  its draw rectangle.
+- Semantic ground and structures remain the authority for walkability.
+- Visual placements do not create collision.
+
+Validation contract
+-------------------
+
+- Revised base + opaque building foreground must equal the approved source map
+  pixel-for-pixel.
+- Building foreground must be transparent outside the four authored zones.
+- All 96 released cells must have null structure values and the intended ground.
+- The first row below each released zone must retain the correct building
+  structure ID and remain solid.
+- All four building placements must use the active foreground asset and a 0.42
+  player-occlusion opacity.
+
+Asset confirmation
+------------------
+
+No fake, placeholder, generated replacement, mock, stub, or temporary map art
+was added. Every new image pixel is derived from the approved active Overworld.
