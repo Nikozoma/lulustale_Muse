@@ -1,0 +1,48 @@
+COMPANION FILES AND PROJECT FOLDER EXPECTATIONS
+
+Expected Codex project folder:
+H:\Codex Projects\LULUsTALE
+
+Expected demo blueprint folder:
+Lulus_Tale_Demo_Blueprint_v2.1
+
+Required home map source-of-truth file:
+- Home.json
+
+Expected asset folders/files:
+- Basic animal Asset Pack
+- DogMegaPackFree
+- GuttyKreum_JapaneseCity_Freev1
+- Modern_Interiors_Free_v2.2
+- nature free
+- SuperRetroWorld_CharacterPack_Full
+- The Female Adventurer - Free
+- Top-Down_Retro_Interior
+- City Prop Tileset update 2.png
+- modern pixel city tileset.png
+
+Current map files:
+- Home.json and Home.visual.json
+- Charles.json and Charles.visual.json
+- Overworld.json and Overworld.visual.json
+
+Important hierarchy:
+1. Direct current user/Codex instructions.
+2. Home.json for the home layout.
+3. This v2.1 demo blueprint.
+4. Current approved map assets under public/assets/maps/.
+
+Important:
+- The semantic home JSON is the exact layout source of truth for the indoor home foundation.
+- Current visual companion files and approved map images are the visual sources of truth.
+- Asset folders are required real art sources for core foundation assets.
+- The implementation must not invent the home layout.
+- The implementation must not replace core assets with placeholder boxes/shapes.
+
+Codex should:
+- inspect existing folders,
+- identify exact files and slicing/frame details before implementation,
+- keep original asset folders intact,
+- copy/slice only the assets needed for runtime,
+- create a clean runtime asset structure,
+- stop/report blockers if required real assets cannot be used.
