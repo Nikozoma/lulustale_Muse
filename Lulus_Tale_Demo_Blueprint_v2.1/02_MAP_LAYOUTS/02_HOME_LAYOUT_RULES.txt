@@ -1,0 +1,56 @@
+HOME INTERIOR LAYOUT RULES — v2.1
+
+Source of truth:
+Home.json
+
+Purpose:
+The home interior supports the first implementation foundation:
+- wake-up / starting position,
+- movement tutorial,
+- tap/proximity interaction tutorial,
+- fridge interaction,
+- dog/dog bowl feeding,
+- exit-door objective,
+- later bed transition/night window content after the foundation is stable.
+
+Map scale:
+- 28 tiles wide.
+- 43 tiles tall.
+- 32 game-world pixels per tile.
+- 896 x 1376 world pixels total.
+
+Semantic layers expected:
+- ground: walkable base floor tiles.
+- structures: walls, windows, doorways, entrance/exit markers as structure data.
+- objects: bed, couch, table, refrigerator, stove, sink, counters, dog bowl, furniture/appliances.
+- markers: player_spawn, dog_spawn, dog_interaction, bed_interaction, fridge_interaction, save_point, event_zone, interior_door, entrance_exit, room/kitchen zones.
+
+Required areas:
+- Bedroom.
+- Living Room.
+- Kitchen.
+- Bathroom zone if present in the semantic map.
+
+Required home foundation interactables:
+- Bed.
+- Fridge.
+- Dog or dog interaction zone.
+- Dog bowl.
+- Exit door / entrance_exit.
+
+Gameplay foundation:
+1. Start near bed in bedroom using player_spawn.
+2. Teach movement.
+3. Objective: Go to the kitchen/fridge.
+4. Fridge gives Dog Food.
+5. Objective: Feed the dog or use the dog bowl.
+6. Dog reacts happily.
+7. Objective points to exit door.
+8. The active entrance/exit transition connects Home to the current Overworld.
+
+Implementation rules:
+- Do not improvise home geometry.
+- Do not add extra rooms, staircases, or furniture not present in the semantic map.
+- Collision must be derived from semantic structures/solid objects, not guessed from art alone.
+- Interaction zones should be walkable/adjacent where possible.
+- Debug overlays may show semantic markers during development, but they are not runtime art.
