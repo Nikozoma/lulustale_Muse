@@ -1,0 +1,25 @@
+{
+  "variant": "enlarged",
+  "status": "passed",
+  "assertions": 286,
+  "overworldDimensionsTiles": [
+    96,
+    68
+  ],
+  "uniqueRuntimeMapImages": 10,
+  "mapAssetStorageBefore": {
+    "fileCount": 3657,
+    "sizeBytes": 133664620
+  },
+  "mapAssetStorageAfter": {
+    "fileCount": 40,
+    "sizeBytes": 16061092
+  },
+  "nonMapPublicAssetCount": 697,
+  "nonMapPublicAssetsByteIdentical": true,
+  "mapSemanticAndVisualJsonByteIdentical": true,
+  "runtimeMapImagesByteIdentical": true,
+  "productionBuildAssetsPresent": true,
+  "atlasCreated": false,
+  "atlasReason": "Runtime already uses completed full-map PNGs; atlasing unused reconstruction tiles would add complexity without reducing runtime requests."
+}
