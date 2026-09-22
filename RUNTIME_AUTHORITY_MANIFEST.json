@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "runtime_starting_point": "Lulus_Tale_Enlarged_Overworld_Character_Assets_Implemented.zip",
+  "map_data_source": "Lulus_Tale_Map_Data_Foundation_v1.zip",
+  "map_visual_sources": {
+    "overworld": "Lulus_Tale_Native_Map_Artwork_HD_v1.zip",
+    "home_and_charles_jr": "Lulus_Tale_Native_Map_Artwork_Full_v1_1.zip (unchanged native interiors required by the HD v1 delta package)"
+  },
+  "character_sources": {
+    "lulu": "Lulu_Overworld_Full_v1.zip",
+    "brutus": "Brutus_Companion_Assets_Full_v1.zip"
+  },
+  "scale_source": "Lulus_Tale_Master_Scale_and_Asset_Production_Specification_v1_1-1.docx",
+  "map_assets_sha256": {
+    "overworld/day_base.png": "22e5c4ebeca605c7abf4492a4a0d8bc593c05816a55ffdf26be24616f3cdedc1",
+    "overworld/night_base.png": "7bf096dec8cad4d0f57da5843cde8fca5bc405289f6665b9f888aa93803f07dc",
+    "overworld/building_foreground_day.png": "d0e71604ff5e69ce77c315ec2ff54ab30e1eef9d22f12d890117c30cc8dde17b",
+    "overworld/building_foreground_night.png": "572897f9474e578e0f677f6219ded49311d647ae0554faa63e1a665efe602b35",
+    "overworld/tree_canopy_foreground_day.png": "feff04299f57d3e1dad232e7fde79449fbe0f1becafdd6532e062a64caac63a8",
+    "overworld/tree_canopy_foreground_night.png": "28b1979a5908bde6e315da21717ca691bf829f2c95513dc6d660eb2b71022d3a",
+    "home/day_base.png": "ccad95ed6ccc4a7bab6a1ab0aef7606eeb9567ae4af19acf1e6bbfc123a8cc40",
+    "home/night_base.png": "f63b67d172ef615c8633f6ab1102a1eae2a51f738fb6860720f5d03d5d0cac49",
+    "home/high_foreground_day.png": "dd39dad3a1462164010e730a5597a5d2018c14cd9439ae042aeaa24ba2cfe9df",
+    "home/high_foreground_night.png": "1f8f3f85a6501968732a1765464535709047beabd3d590764737272671bb4cfb",
+    "charles_jr/day_base.png": "faad265cd12def23bdf5b1677809c98c8597bc041e08c08af3e8381e2ed4299d",
+    "charles_jr/night_base.png": "29d272e2d56267596928469405e7c5ba9662dcc8cfd1352a30d5adfee6a01629",
+    "charles_jr/high_foreground_day.png": "1a18d040d8a8e84c49db5e685e2365c2f0ee1213c59d15476556b11f76a5c152",
+    "charles_jr/high_foreground_night.png": "0bd2da1c032eaea2e3c04548a10df5ff865aaf7769aa939ec61aef8713de0d45"
+  }
+}
