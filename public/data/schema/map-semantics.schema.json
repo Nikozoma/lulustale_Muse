@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "map-semantics.schema.json",
+  "title": "Lulu's Tale Runtime Map Semantics",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "map_id",
+    "coordinate_system",
+    "map_dimensions",
+    "day_night_contract",
+    "movement_resolution",
+    "walkable_regions",
+    "blocked_regions",
+    "passable_overrides",
+    "structures",
+    "objects",
+    "doors",
+    "transitions",
+    "spawns",
+    "npc_spawn_markers",
+    "interactions",
+    "event_regions",
+    "foreground_occlusion_regions"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "type": "string" },
+    "map_id": { "type": "string", "minLength": 1 },
+    "coordinate_system": { "type": "object" },
+    "map_dimensions": {
+      "type": "object",
+      "required": ["tiles", "pixels", "tile_size_px", "world_scale"],
+      "properties": {
+        "tiles": { "$ref": "#/$defs/dimensions" },
+        "pixels": { "$ref": "#/$defs/dimensions" },
+        "tile_size_px": { "type": "integer", "const": 32 },
+        "world_scale": { "type": "number", "const": 1 }
+      },
+      "additionalProperties": true
+    },
+    "day_night_contract": { "const": "shared_geometry" },
+    "movement_resolution": { "type": "object" },
+    "walkable_regions": { "$ref": "#/$defs/regions" },
+    "blocked_regions": { "$ref": "#/$defs/regions" },
+    "passable_overrides": { "$ref": "#/$defs/regions" },
+    "structures": { "$ref": "#/$defs/regions" },
+    "objects": { "$ref": "#/$defs/regions" },
+    "doors": { "$ref": "#/$defs/regions" },
+    "transitions": { "$ref": "#/$defs/regions" },
+    "spawns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "pixel_point", "facing"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "pixel_point": { "$ref": "#/$defs/point" },
+          "tile_point": { "$ref": "#/$defs/point" },
+          "facing": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "npc_spawn_markers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "pixel_point"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "pixel_point": { "$ref": "#/$defs/point" },
+          "tile_point": { "$ref": "#/$defs/point" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "interactions": { "$ref": "#/$defs/regions" },
+    "event_regions": { "$ref": "#/$defs/regions" },
+    "foreground_occlusion_regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "foreground_layer_id", "pixel_bbox"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "foreground_layer_id": { "type": "string", "minLength": 1 },
+          "pixel_bbox": { "$ref": "#/$defs/pixelRect" },
+          "trigger_pixel_rect": { "$ref": "#/$defs/pixelRect" },
+          "trigger_pixel_polygon": { "$ref": "#/$defs/polygon" },
+          "trigger_tile_rect": { "$ref": "#/$defs/tileRect" }
+        },
+        "anyOf": [
+          { "required": ["trigger_pixel_rect"] },
+          { "required": ["trigger_pixel_polygon"] },
+          { "required": ["trigger_tile_rect"] }
+        ],
+        "additionalProperties": true
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "dimensions": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "point": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "pixelRect": {
+      "type": "object",
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0 },
+        "y": { "type": "number", "minimum": 0 },
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "height": { "type": "number", "exclusiveMinimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "tileRect": {
+      "type": "object",
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0 },
+        "y": { "type": "number", "minimum": 0 },
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "height": { "type": "number", "exclusiveMinimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "polygon": {
+      "type": "object",
+      "required": ["points"],
+      "properties": {
+        "points": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "$ref": "#/$defs/point" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "region": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "shape": { "enum": ["rect", "polygon"] },
+        "pixel_rect": { "$ref": "#/$defs/pixelRect" },
+        "pixel_polygon": { "$ref": "#/$defs/polygon" },
+        "tile_rect": { "$ref": "#/$defs/tileRect" }
+      },
+      "anyOf": [
+        { "required": ["pixel_rect"] },
+        { "required": ["pixel_polygon"] }
+      ],
+      "additionalProperties": true
+    },
+    "regions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/region" }
+    }
+  }
+}
