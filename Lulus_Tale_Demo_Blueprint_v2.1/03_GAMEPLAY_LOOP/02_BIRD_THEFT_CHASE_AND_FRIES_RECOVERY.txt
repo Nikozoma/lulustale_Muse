@@ -1,0 +1,18 @@
+BIRD THEFT, CHASE, AND FRIES RECOVERY — INTENTIONALLY DEFERRED
+
+This content remains part of the intended Day 1 demo, but it must not be implemented until the indoor home foundation is stable and manually approved by the user.
+
+Later intended behavior:
+- Lulu obtains fries from Charles Jr.
+- Bird steals fries on the return route.
+- Player tracks the bird.
+- Bird guards fries.
+- Player times movement/tap to recover fries while bird is not looking.
+- Lulu recovers Questionable Fries.
+- Bird reacts angrily.
+- Objective sends Lulu home.
+
+Current status:
+INTENTIONALLY DEFERRED.
+
+Do not build bird route/chase/fries recovery in the home foundation pass.
