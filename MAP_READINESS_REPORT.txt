@@ -1,0 +1,108 @@
+LULU'S TALE — DEMO MAP READINESS PASS
+======================================
+
+STATUS
+READY for gameplay-system and quest implementation.
+
+ACTIVE MAPS
+- Home: 28 x 43 tiles; exact 896 x 1376 approved visual.
+- Charles: 39 x 33 tiles; exact 1248 x 1056 approved visual.
+- Overworld: 48 x 34 tiles; exact 1536 x 1088 approved visual.
+- Every map now has a dimension-matched dedicated night visual companion.
+
+SEMANTIC VALIDATION
+- All four required layers are present and match declared dimensions.
+- Every used semantic ID exists in its layer palette.
+- Every player spawn is walkable.
+- Home spawn reaches bed, fridge, dog, and exit interactions.
+- Charles spawn reaches order and exit interactions.
+- Overworld spawn reaches Home and Charles transition markers.
+- Collision remains aligned with walls, furniture, counters, tables, lower
+  building rows, fences/hedges, bushes, and large tree anchors.
+
+TREE FOREGROUND COMPLETION
+- All 21 visible large Overworld trees have semantic tree blockers.
+- All 21 trees have matching transparent canopy assets.
+- The active full-map tree overlay is the exact union of those assets.
+- Every nontransparent tree-foreground pixel is copied from the approved
+  Overworld image.
+- Tree foreground remains last in draw order after Lulu and other entities.
+
+BUILDING FOREGROUND COMPLETION
+- All four Overworld building footprints have two walk-behind upper rows:
+  - north apartment: 28 tiles
+  - Charles Jr.: 12 tiles
+  - Lulu's apartment: 28 tiles
+  - south apartment: 28 tiles
+- Exactly 96 building tiles are now walkable.
+- Apartment walk-behind ground is real grass copied from the approved map.
+- Charles Jr. walk-behind ground is real parking-lot asphalt copied from the
+  approved map.
+- All lower building rows remain solid.
+- Doors and transitions remain unchanged and reachable.
+- Each building foreground is opaque normally and fades to 42% only while
+  Lulu's feet are inside its own two-row zone.
+- Revised base + opaque building foreground equals the approved source map
+  pixel-for-pixel.
+- The foreground PNG is fully transparent outside the four building zones.
+
+ASSET VALIDATION
+- Home image exactly reconstructs from 1,204 positional tiles.
+- Charles image exactly reconstructs from 1,287 tile placements.
+- Original Overworld image exactly reconstructs from 1,632 positional tiles.
+- Original approved Overworld source remains preserved.
+- Active revised Overworld base and both tree/building foreground assets are
+  present in source and production build output.
+- All visual companion paths and dimensions match their semantic maps.
+
+NIGHT MAP COMPLETION
+- Added Home.night.visual.json, Charles.night.visual.json, and
+  Overworld.night.visual.json.
+- The existing manual phase state selects night companions when night is active
+  and restores daytime companions when day is active.
+- Both phases share the same semantic maps, collision, markers, transitions,
+  and interactions.
+- The old generic blue night tint is disabled when a dedicated night companion
+  exists, preventing double-darkening.
+- Night Overworld preserves all four 42% building occlusion zones and the final
+  tree-canopy foreground layer.
+- Night building/tree alpha masks exactly match their daytime counterparts.
+- Uploaded source packs are retained unchanged outside the runtime public
+  bundle under source_assets/night_map_packs/.
+
+TIME SYSTEM BLUEPRINT
+- Manual bed-triggered phases remain authoritative.
+- Daytime bed choice: Sleep Until Tomorrow or Stay Up Tonight.
+- Nighttime bed use: Sleep Until Morning.
+- No automatic exploration timer or fixed phase length exists in the active
+  blueprint guidance.
+
+NEXT-PHASE DESIGN HANDOFF
+- Added Lulus_Tale_FEATURE_IMPLEMENTATION_BLUEPRINT.txt.
+- Added Lulus_Tale_DEMO_QUESTLINE_ENHANCED_DRAFT.txt.
+- The feature blueprint specifies an incremental, data-driven quest/event/
+  dialogue/item/minigame/turn-based battle architecture for Codex.
+- The quest draft preserves the original demo arc while adding branch-safe
+  pacing and manual-night integration for review.
+
+AUTOMATED CHECKS
+- Vitest: 15 test files passed; 68 tests passed.
+- TypeScript no-emit check: passed through the production build.
+- Vite production build: passed.
+- Pixel/alpha validation: passed.
+- Production build asset-presence validation: passed.
+
+KNOWN ISSUE REQUIRING USER FEEL TEST
+- The 42% building fade and exact two-row depth zones are implemented and
+  structurally verified, but final opacity/feel should be confirmed by walking
+  behind each building on the target phone. This is polish feedback, not a
+  missing implementation.
+
+LIMITATION
+- No manual phone gameplay playthrough was performed. This pass validates map
+  data, collision topology, source/build asset wiring, renderer behavior, and
+  automated contracts. The user remains the gameplay/feel tester.
+
+PLACEHOLDER CONFIRMATION
+- No placeholder, fake, generated replacement, mock, stub, or temporary map art
+  was added. New map images use only exact pixels from the approved Overworld.
