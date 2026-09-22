@@ -1,0 +1,1766 @@
+{
+  "schema": "lulus-character-runtime",
+  "version": 2,
+  "id": "wizard_night",
+  "displayName": "Wizard — Night",
+  "characterClass": "humanoid",
+  "status": "runtime_ready",
+  "collisionProfileId": "npc_standard",
+  "renderScales": {
+    "overworld": 1,
+    "home": 1,
+    "charles_jr": 1,
+    "battle": 1
+  },
+  "actions": {
+    "idle": {
+      "id": "idle",
+      "category": "idle",
+      "playback": "loop",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/npcs/wizard_night/sheets/Wizard_Night_idle.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 4,
+      "loop": [
+        0,
+        3
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    },
+    "walk": {
+      "id": "walk",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/npcs/wizard_night/sheets/Wizard_Night_walk.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 4,
+      "loop": [
+        0,
+        3
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 72,
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    },
+    "stand_pose": {
+      "id": "stand_pose",
+      "category": "idle",
+      "playback": "hold",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/npcs/wizard_night/sheets/Wizard_Night_stand_pose.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 2,
+      "loop": [
+        0,
+        1
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    },
+    "magic_gesture": {
+      "id": "magic_gesture",
+      "category": "interaction",
+      "playback": "loop",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/npcs/wizard_night/sheets/Wizard_Night_magic_gesture.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 3,
+      "loop": [
+        0,
+        2
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 180,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    }
+  },
+  "sourceProject": {
+    "path": "character-production/projects/wizard_night/project.json",
+    "revision": 1
+  }
+}
