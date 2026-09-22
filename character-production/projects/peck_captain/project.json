@@ -1,0 +1,6100 @@
+{
+  "schema": "lulus-character-project",
+  "version": 1,
+  "id": "peck_captain",
+  "displayName": "Peck Captain",
+  "characterClass": "bird",
+  "species": "American crow",
+  "identity": {
+    "canonicalApproval": "approved",
+    "locked": true,
+    "notes": [
+      "Bird-gang leader/captain and strongest overworld silhouette."
+    ],
+    "paletteReferences": []
+  },
+  "production": {
+    "status": "runtime_ready",
+    "revision": 1,
+    "warnings": [
+      "Legacy vertical pose offsets describe art already positioned inside the active sheet cells; migrated runtime visual offsets remain zero to preserve current presentation."
+    ]
+  },
+  "presentation": {
+    "nativeCell": {
+      "width": 96,
+      "height": 96
+    },
+    "renderScales": {
+      "overworld": 1,
+      "home": 1,
+      "charles_jr": 1,
+      "battle": 1
+    },
+    "resampling": "none"
+  },
+  "collisionProfileId": "bird_visual",
+  "sources": [
+    {
+      "id": "peck_captain_manifest_v1",
+      "role": "metadata",
+      "path": "public/assets/characters/birds/MANIFEST.json",
+      "sha256": "e6cf705951094cc55c7cbfc32df6d5e8e692a86fdbce15e27d117908253d978c",
+      "immutable": true,
+      "approval": "approved"
+    },
+    {
+      "id": "peck_captain_attachment_metadata",
+      "role": "metadata",
+      "path": "public/assets/characters/birds/INTERACTION_AND_ATTACHMENT_METADATA.json",
+      "sha256": "a1b7c6694623b2627a9ecae20d6d49e84dba8900f458282721089a82fca92c87",
+      "immutable": true,
+      "approval": "approved"
+    },
+    {
+      "id": "peck_captain_preview",
+      "role": "reference",
+      "path": "public/assets/characters/birds/02_american_crow_preview.png",
+      "sha256": null,
+      "immutable": true,
+      "approval": "unreviewed",
+      "notes": "Preview referenced by the active bird manifest but unavailable in the project.",
+      "missing": true
+    },
+    {
+      "id": "peck_captain_idle",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+      "sha256": "9da84b768c4b320c973e6ee204020a3d27b44d0ee7363a5c6697b4b0b5511041",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Commanding grounded idle loop."
+    },
+    {
+      "id": "peck_captain_hop",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+      "sha256": "fab3202cfdb6e94bea4abb600beb2de36b16ff7132b665d6090592ced05529ee",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Heavy but natural crow ground hop."
+    },
+    {
+      "id": "peck_captain_fly",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+      "sha256": "ed553b033f143dec74403c32be9d3ab37e275cb695ef20418ff0aa96aa3b9d33",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Powerful alternating crow flight."
+    },
+    {
+      "id": "peck_captain_takeoff",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+      "sha256": "9e910319ee1a127fbb2b63a414c598d14a0627e56fcedc8da072cebb8e16a871",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Ground-to-air transition."
+    },
+    {
+      "id": "peck_captain_land",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+      "sha256": "f2a2365f7e6a6eb72ea9dce123bfb5c9fe1b7fa9dec82a0b4fc777dfc5fc5983",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Air-to-ground transition."
+    },
+    {
+      "id": "peck_captain_command_reaction",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+      "sha256": "d17e254a559d6a90b0dfe7055065871b91729bfe333d3fc2b200db96f580e18c",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Natural wing-and-call gang signal."
+    }
+  ],
+  "actions": {
+    "idle": {
+      "id": "idle",
+      "displayName": "Idle",
+      "category": "idle",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+      "runtimeHref": "/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 54,
+                "width": 20,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 54,
+                "width": 19,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 54,
+                "width": 19,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 19,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 54,
+                "width": 38,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 54,
+                "width": 41,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 29,
+                "y": 54,
+                "width": 40,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 29,
+                "y": 54,
+                "width": 40,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 54,
+                "width": 48,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 29,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 29,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 32,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 54,
+                "width": 30,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 54,
+                "width": 30,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 54,
+                "width": 30,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 15,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 15,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 15,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 15,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 35,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 36,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 37,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 36,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 54,
+                "width": 45,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 23,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 31,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 31,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 31,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 31,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "hop": {
+      "id": "hop",
+      "displayName": "Hop",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 32,
+      "runtimeSheet": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+      "runtimeHref": "/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 54,
+                "width": 20,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 47,
+                "width": 23,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 40,
+                "width": 23,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 47,
+                "width": 23,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 54,
+                "width": 38,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 27,
+                "y": 47,
+                "width": 43,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 27,
+                "y": 40,
+                "width": 43,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 27,
+                "y": 47,
+                "width": 43,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 54,
+                "width": 48,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 47,
+                "width": 52,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 40,
+                "width": 52,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 47,
+                "width": 52,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 32,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 47,
+                "width": 33,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 40,
+                "width": 33,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 47,
+                "width": 33,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 15,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 47,
+                "width": 19,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 40,
+                "width": 19,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 47,
+                "width": 19,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 35,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 47,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 40,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 47,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 47,
+                "width": 54,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 40,
+                "width": 54,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 47,
+                "width": 54,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 31,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 47,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 40,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 47,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "fly": {
+      "id": "fly",
+      "displayName": "Fly",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 64,
+      "runtimeSheet": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+      "runtimeHref": "/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 12,
+                "width": 47,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 20,
+                "width": 82,
+                "height": 46
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 12,
+                "width": 47,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 20,
+                "width": 82,
+                "height": 46
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 12,
+                "width": 53,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 23,
+                "width": 82,
+                "height": 43
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 12,
+                "width": 53,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 23,
+                "width": 82,
+                "height": 43
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 12,
+                "width": 68,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 28,
+                "width": 82,
+                "height": 38
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 12,
+                "width": 68,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 28,
+                "width": 82,
+                "height": 38
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 21,
+                "y": 12,
+                "width": 55,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 21,
+                "width": 82,
+                "height": 45
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 21,
+                "y": 12,
+                "width": 55,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 21,
+                "width": 82,
+                "height": 45
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 21,
+                "y": 12,
+                "width": 55,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 17,
+                "width": 82,
+                "height": 49
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 21,
+                "y": 12,
+                "width": 55,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 17,
+                "width": 82,
+                "height": 49
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 12,
+                "width": 58,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 18,
+                "width": 82,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 12,
+                "width": 58,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 18,
+                "width": 82,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 12,
+                "width": 69,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 27,
+                "width": 82,
+                "height": 39
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 12,
+                "width": 69,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 27,
+                "width": 82,
+                "height": 39
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 12,
+                "width": 47,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 25,
+                "width": 82,
+                "height": 41
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 12,
+                "width": 47,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 25,
+                "width": 82,
+                "height": 41
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "takeoff": {
+      "id": "takeoff",
+      "displayName": "Takeoff",
+      "category": "transition",
+      "playback": "once",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 2
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+      "runtimeHref": "/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 54,
+                "width": 20,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 43,
+                "width": 23,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 12,
+                "width": 47,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 54,
+                "width": 38,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 27,
+                "y": 43,
+                "width": 43,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 12,
+                "width": 53,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 54,
+                "width": 48,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 43,
+                "width": 52,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 12,
+                "width": 68,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 32,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 43,
+                "width": 33,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 21,
+                "y": 12,
+                "width": 55,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 15,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 43,
+                "width": 19,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 21,
+                "y": 12,
+                "width": 55,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 35,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 43,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 12,
+                "width": 58,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 43,
+                "width": 54,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 14,
+                "y": 12,
+                "width": 69,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 31,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 43,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 12,
+                "width": 47,
+                "height": 56
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            }
+          ]
+        }
+      }
+    },
+    "land": {
+      "id": "land",
+      "displayName": "Land",
+      "category": "transition",
+      "playback": "once",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 2
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+      "runtimeHref": "/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 22,
+                "width": 82,
+                "height": 46
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 43,
+                "width": 23,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 54,
+                "width": 20,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 25,
+                "width": 82,
+                "height": 43
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 27,
+                "y": 43,
+                "width": 43,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 54,
+                "width": 38,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 30,
+                "width": 82,
+                "height": 38
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 43,
+                "width": 52,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 54,
+                "width": 48,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 23,
+                "width": 82,
+                "height": 45
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 43,
+                "width": 33,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 32,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 19,
+                "width": 82,
+                "height": 49
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 43,
+                "width": 19,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 15,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 20,
+                "width": 82,
+                "height": 48
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 43,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 35,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 29,
+                "width": 82,
+                "height": 39
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 43,
+                "width": 54,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 8,
+                "y": 27,
+                "width": 82,
+                "height": 41
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 43,
+                "width": 45,
+                "height": 36
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_land.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 31,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            }
+          ]
+        }
+      }
+    },
+    "command_reaction": {
+      "id": "command_reaction",
+      "displayName": "Command Reaction",
+      "category": "interaction",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 2
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+      "runtimeHref": "/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 54,
+                "width": 20,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 46,
+                "width": 33,
+                "height": 42
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 54,
+                "width": 20,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 54,
+                "width": 38,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 19,
+                "y": 46,
+                "width": 39,
+                "height": 42
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 54,
+                "width": 38,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 54,
+                "width": 48,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 17,
+                "y": 46,
+                "width": 42,
+                "height": 42
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 54,
+                "width": 48,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 32,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 46,
+                "width": 33,
+                "height": 42
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 32,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 15,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 46,
+                "width": 29,
+                "height": 42
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 15,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 35,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 47,
+                "width": 40,
+                "height": 41
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 54,
+                "width": 35,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 46,
+                "width": 47,
+                "height": 42
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 54,
+                "width": 46,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 31,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 46,
+                "width": 46,
+                "height": 42
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/peck_captain/sheets/peck_captain_command_reaction.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 54,
+                "width": 31,
+                "height": 34
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "portraits": [],
+  "runtime": {
+    "manifestPath": "public/assets/characters/v2/peck_captain/MANIFEST.json",
+    "generatedAssetDirectory": "public/assets/characters/generated/peck_captain/sheets",
+    "legacyPackage": "Bird_Overworld_Assets_Full_v1"
+  },
+  "updatedAt": "2026-07-25T08:06:44.509Z"
+}
