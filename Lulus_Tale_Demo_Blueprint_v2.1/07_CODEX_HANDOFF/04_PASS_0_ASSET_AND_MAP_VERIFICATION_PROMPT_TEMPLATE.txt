@@ -1,0 +1,54 @@
+PASS 0 PROMPT TEMPLATE — ASSET AND MAP VERIFICATION ONLY
+
+Recommended Codex mode: High
+
+Objective:
+Inspect the fresh Lulu's Tale project folder and produce an asset/map verification report before any gameplay implementation.
+
+Source of truth:
+- Lulus_Tale_Demo_Blueprint_v2.1
+- Home.json
+- Existing asset folders/files in the project root
+
+Scope:
+Do verification only. Do not scaffold the app yet. Do not implement gameplay yet. Do not create placeholder art, fake objects, or blockout maps.
+
+Critical rules:
+- No placeholders for core demo assets/maps.
+- If a required asset cannot be located, sliced, animated, or scaled confidently, stop/report the exact blocker.
+- Do not improvise the home layout. Use the semantic map only.
+
+Tasks:
+1. Inspect the project folder structure.
+2. Inspect Home.json and report:
+   - map name,
+   - width/height,
+   - tile size,
+   - layers,
+   - marker/object IDs found,
+   - any schema concerns.
+3. Inspect asset folders and identify exact candidate source files for:
+   - Lulu/player from The Female Adventurer - Free,
+   - dog from DogMegaPackFree,
+   - bird from Basic animal Asset Pack for later use,
+   - home floors/walls/bed/fridge/door/counters/tables/dog bowl from interior asset folders.
+4. For each selected/candidate image, report:
+   - exact path,
+   - image dimensions,
+   - likely frame/tile size,
+   - rows/columns if applicable,
+   - likely animation direction mapping if applicable,
+   - confidence level,
+   - unknowns/blockers.
+5. Create a readable manifest/report file if appropriate, but avoid changing unrelated files.
+
+Expected output:
+- Summary
+- Changed files
+- Commands run
+- Tests/builds run
+- Asset candidates and confidence levels
+- Semantic map validation
+- Blockers/unknowns
+- Suggested next implementation step
+- Git status
