@@ -1,0 +1,114 @@
+{
+  "format": "lulus_map_runtime_manifest_v1",
+  "variant": "enlarged_96x68_overworld",
+  "optimizationMethod": "retain completed full-map/foreground PNGs; exclude confirmed reconstruction-only tile packs",
+  "renderer": "existing full-map visual placement pipeline; no atlas or renderer change required",
+  "nearestNeighbor": true,
+  "runtimeAssetCount": 10,
+  "runtimeAssets": [
+    {
+      "path": "public/assets/maps/charles/charles_interior_39x33.png",
+      "sha256": "06ed78987ac5315adb38dc2b1eda2dcf65cd61f31e8de50988e2804b2222ad0e",
+      "dimensionsPixels": [
+        1248,
+        1056
+      ]
+    },
+    {
+      "path": "public/assets/maps/home/home_interior_28x43.png",
+      "sha256": "36cac5ad68785d2445b80299cb94109b195bad650e85097f6f78ad6004c8f0f6",
+      "dimensionsPixels": [
+        896,
+        1376
+      ]
+    },
+    {
+      "path": "public/assets/maps/night/charles/charles_jr_interior_night_39x33.png",
+      "sha256": "928882cfbf516ecb1ca14ce6b8cb8e857471afb6f787f66f1f4bdb39e3d5002e",
+      "dimensionsPixels": [
+        1248,
+        1056
+      ]
+    },
+    {
+      "path": "public/assets/maps/night/home/home_night_28x43.png",
+      "sha256": "611964785026a95451cfd0c70caf9ee7aa8d85a38fef95a585cbbe244215b246",
+      "dimensionsPixels": [
+        896,
+        1376
+      ]
+    },
+    {
+      "path": "public/assets/maps/night/overworld/foreground/overworld_building_upper_foreground_96x68_night.png",
+      "sha256": "90c7b0faacc7616cfa2d84ac8d00c8584e52264bf7dba0d0fd5f42060f702972",
+      "dimensionsPixels": [
+        3072,
+        2176
+      ]
+    },
+    {
+      "path": "public/assets/maps/night/overworld/foreground/overworld_tree_canopy_foreground_96x68_night.png",
+      "sha256": "b1663eee250e70010edd5988680011731b2e36a0162fd487f6068821c00d37ea",
+      "dimensionsPixels": [
+        3072,
+        2176
+      ]
+    },
+    {
+      "path": "public/assets/maps/night/overworld/overworld_walkbehind_base_96x68_night.png",
+      "sha256": "34abd1fc9a1d120e1a543cd1c5a4365fdd3fe0e35efce196194ad259b77b5cb0",
+      "dimensionsPixels": [
+        3072,
+        2176
+      ]
+    },
+    {
+      "path": "public/assets/maps/overworld/foreground/overworld_building_upper_foreground_96x68.png",
+      "sha256": "d50cbaa4b0b42675e05f68c52a5cd7008fd43659e08194929aababcd1505d059",
+      "dimensionsPixels": [
+        3072,
+        2176
+      ]
+    },
+    {
+      "path": "public/assets/maps/overworld/foreground/overworld_tree_canopy_foreground_96x68.png",
+      "sha256": "2411093a75a800551c9f6aa7ce02c2d64149430343230dcd6a1bb9b059aeb542",
+      "dimensionsPixels": [
+        3072,
+        2176
+      ]
+    },
+    {
+      "path": "public/assets/maps/overworld/overworld_walkbehind_base_96x68.png",
+      "sha256": "72771033d66277b2eddd4ae57e144d69577c803aede700ce25e92fff94446799",
+      "dimensionsPixels": [
+        3072,
+        2176
+      ]
+    }
+  ],
+  "visualCompanions": [
+    "Home.visual.json",
+    "Home.night.visual.json",
+    "Charles.visual.json",
+    "Charles.night.visual.json",
+    "Overworld.visual.json",
+    "Overworld.night.visual.json"
+  ],
+  "excludedSourcePaths": [
+    "public/assets/maps/home/pack",
+    "public/assets/maps/charles/pack",
+    "source_assets",
+    "scripts/resize_overworld_96x68.py",
+    "scripts/validate_overworld_96x68.py",
+    "src/game/overworldScale.test.ts"
+  ],
+  "assetStorageBeforeOptimization": {
+    "fileCount": 3657,
+    "sizeBytes": 133664620
+  },
+  "assetStorageAfterOptimizationBeforeThisManifest": {
+    "fileCount": 39,
+    "sizeBytes": 16057556
+  }
+}
