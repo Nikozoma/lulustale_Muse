@@ -1,0 +1,81 @@
+FILLER NPC DIALOGUE
+
+NPC: Marla
+Role:
+Apartment resident.
+
+Location:
+Near Player Apartment exterior or apartment complex area.
+
+Dialogue:
+Marla:
+"Morning, Lulu."
+"I saw a squirrel carry an entire tortilla yesterday."
+"This neighborhood is healing."
+
+NPC: Darren
+Role:
+Parking lot guy / sidewalk pedestrian.
+
+Location:
+Near Charles Jr. parking lot or sidewalk.
+
+Dialogue:
+Darren:
+"I don't trust birds."
+"People say that's irrational."
+"People haven't watched birds make eye contact."
+
+NPC: Booth Customer
+Role:
+Charles Jr. customer.
+
+Location:
+Seated inside Charles Jr.
+
+Dialogue:
+Booth Customer:
+"I came here for lunch."
+"That was forty minutes ago."
+"Now I'm emotionally invested in the fries."
+
+NPC: Nina
+Role:
+Apartment complex weirdo.
+
+Location:
+Grass area near apartment complex.
+
+Dialogue:
+Nina:
+"If you hear tapping at night, don't tap back."
+"That's how they know you're polite."
+
+NPC: Cashier
+Role:
+Charles Jr. cashier.
+
+Dialogue during quest:
+Cashier:
+"Welcome to Charles Jr."
+"What can I get started for you?"
+
+Lulu:
+"Fries. Emotionally urgent."
+
+Cashier:
+"One suspiciously fast order of fries."
+
+Repeat dialogue after purchase:
+Cashier:
+"Enjoy the fries."
+"Defend them with your life."
+"...Store policy."
+
+Optional bird flavor:
+Bird:
+"Squawk."
+
+After fries recovery:
+System:
+"The bird refuses to discuss the incident."
