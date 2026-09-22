@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "collision-grid.schema.json",
+  "title": "Lulu's Tale Runtime Collision Grid",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "map_id",
+        "width_tiles",
+        "height_tiles",
+        "tile_size_px",
+        "encoding",
+        "rows_rle"
+      ],
+      "properties": {
+        "schema_version": { "type": "string", "pattern": "^1\\." },
+        "map_id": { "type": "string" },
+        "width_tiles": { "type": "integer", "minimum": 1 },
+        "height_tiles": { "type": "integer", "minimum": 1 },
+        "tile_size_px": { "const": 32 },
+        "encoding": { "const": "row_rle_count_colon_value" },
+        "rows_rle": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[0-9]+:[01](,[0-9]+:[01])*$" }
+        }
+      },
+      "additionalProperties": true
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "map_id",
+        "cell_size_px",
+        "width_cells",
+        "height_cells",
+        "width_tiles",
+        "height_tiles",
+        "tile_size_px",
+        "encoding",
+        "rows_rle"
+      ],
+      "properties": {
+        "$schema": { "type": "string" },
+        "schema_version": { "const": "2.0.0" },
+        "map_id": { "type": "string", "minLength": 1 },
+        "cell_size_px": { "const": 4 },
+        "width_cells": { "type": "integer", "minimum": 1 },
+        "height_cells": { "type": "integer", "minimum": 1 },
+        "width_tiles": { "type": "integer", "minimum": 1 },
+        "height_tiles": { "type": "integer", "minimum": 1 },
+        "tile_size_px": { "const": 32 },
+        "encoding": { "const": "row_rle_count_colon_value" },
+        "rows_rle": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[0-9]+:[01](,[0-9]+:[01])*$" }
+        }
+      },
+      "additionalProperties": true
+    }
+  ]
+}
