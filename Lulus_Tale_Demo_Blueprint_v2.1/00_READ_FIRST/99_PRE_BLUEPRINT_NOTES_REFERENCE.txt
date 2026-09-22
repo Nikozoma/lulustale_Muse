@@ -1,0 +1,19 @@
+PRE-BLUEPRINT NOTES REFERENCE — SUPERSEDED ARCHIVE NOTICE
+
+The original v2.0 version of this file contained early planning notes and older implementation shortcuts.
+Those older notes allowed placeholder/core blockout implementation when asset integration was difficult.
+
+In v2.1, that guidance is intentionally removed from the active blueprint because it conflicts with the restart rules.
+
+SUPERSEDED:
+- Any instruction to use placeholder assets for core demo assets.
+- Any instruction to continue gameplay implementation when Lulu/dog/home/fridge/bed/door assets cannot be located or sliced.
+- Any instruction to build the full Pass 1 demo before the indoor home foundation is stable.
+
+Current rule:
+Use the active v2.1 files instead.
+If Codex needs historical context, use this summary only:
+- The previous attempt failed mainly because it created a working placeholder/blockout demo instead of proving real assets and exact layout first.
+- The restart must begin with asset/map verification.
+- The home semantic map is the source of truth for the first foundation.
+- No core placeholders are allowed.
