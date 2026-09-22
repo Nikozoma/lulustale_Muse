@@ -1,0 +1,62 @@
+HOME FOUNDATION VALIDATION CHECKLIST — v2.1
+
+Scope:
+Validate only the indoor home foundation unless the user explicitly expands scope.
+
+Project setup:
+[ ] Project runs locally.
+[ ] Build/dev command is documented.
+[ ] No unrelated files/assets were modified.
+[ ] Git status is reported.
+
+PWA / viewport:
+[ ] App opens in landscape layout.
+[ ] Virtual viewport scales uniformly.
+[ ] Canvas/touch mapping matches visual coordinates.
+[ ] HUD is not off-screen.
+[ ] Mobile controls are anchored in safe zones.
+
+Controls:
+[ ] Left side controls movement.
+[ ] Movement works with touch/mouse fallback.
+[ ] Character facing updates correctly during movement.
+[ ] Multi-touch architecture is ready, even if attack is not implemented yet.
+
+Assets:
+[ ] Lulu uses real asset from The Female Adventurer - Free.
+[ ] Lulu frame size and row/direction mapping are documented.
+[ ] Lulu animation does not flicker between wrong frames.
+[ ] Dog uses real asset from DogMegaPackFree.
+[ ] Home floor/walls/objects use real asset pack art.
+[ ] Bed uses real asset.
+[ ] Fridge uses real asset.
+[ ] Door/exit uses real asset or verified real tile/object.
+[ ] Dog bowl uses real asset if available, or blocker is reported before implementation proceeds.
+[ ] No core placeholder boxes/shapes are used as runtime assets.
+
+Semantic home map:
+[ ] Home.json is loaded.
+[ ] Map dimensions are 28 x 43.
+[ ] Tile size is 32.
+[ ] World size is 896 x 1376.
+[ ] Layers ground/structures/objects/markers are parsed.
+[ ] Player spawn is read from map markers.
+[ ] Collision follows walls/solid objects.
+[ ] Doorways/exits are walkable/triggerable as intended.
+[ ] Kitchen/bathroom zones do not accidentally block movement.
+
+Gameplay:
+[ ] Lulu starts near bed.
+[ ] Objective appears.
+[ ] Fridge interaction works only when close enough.
+[ ] Dog Food flag is set.
+[ ] Dog/dog bowl interaction works only after Dog Food.
+[ ] Dog feeding completes objective.
+[ ] Exit door/foundation complete point works.
+[ ] Dialogue uses Next-only progression.
+[ ] No exterior/bird/night/combat content is implemented during this pass.
+
+Testing:
+[ ] Codex runs build/static checks available in the project.
+[ ] Codex does not attempt full in-game playtesting.
+[ ] User performs manual phone test.
