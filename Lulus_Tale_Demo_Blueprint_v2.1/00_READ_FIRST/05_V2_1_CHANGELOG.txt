@@ -1,0 +1,19 @@
+V2.1 CHANGELOG
+
+Reason for update:
+The v2.0 blueprint still allowed placeholder/blockout implementation for core gameplay assets and maps. That conflicts with the fresh restart decision.
+
+Major changes:
+- Superseded all permissive placeholder guidance for core assets/maps.
+- Changed first implementation target from full Pass 1 to indoor home foundation only.
+- Added Home.json as the current home layout source of truth.
+- Added required Pass 0 asset + semantic map verification before gameplay implementation.
+- Added explicit asset manifest requirements.
+- Deferred overworld, Charles Jr., bird chase, night mode, and combat until home foundation is stable.
+- Replaced old pre-blueprint notes reference with a safe superseded-archive notice.
+
+Current first Codex prompt:
+Pass 0 — Asset and semantic map verification only.
+
+Current first implementation prompt after Pass 0:
+Home foundation implementation only.
