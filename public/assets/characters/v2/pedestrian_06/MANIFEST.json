@@ -1,0 +1,834 @@
+{
+  "schema": "lulus-character-runtime",
+  "version": 2,
+  "id": "pedestrian_06",
+  "displayName": "Pedestrian 06 — Vest Resident",
+  "characterClass": "humanoid",
+  "status": "runtime_ready",
+  "collisionProfileId": "npc_standard",
+  "renderScales": {
+    "overworld": 1,
+    "home": 1,
+    "charles_jr": 1,
+    "battle": 1
+  },
+  "actions": {
+    "idle": {
+      "id": "idle",
+      "category": "idle",
+      "playback": "loop",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/npcs/pedestrians/variant_06/sheets/Pedestrian_06_idle.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 2,
+      "loop": [
+        0,
+        1
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 250,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    },
+    "walk": {
+      "id": "walk",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "sheet": "/assets/characters/npcs/pedestrians/variant_06/sheets/Pedestrian_06_walk.png",
+      "cell": [
+        96,
+        96
+      ],
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "framesPerDirection": 4,
+      "loop": [
+        0,
+        3
+      ],
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 72,
+      "tracks": {
+        "Down": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Left": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Left": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Left": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Up-Right": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Right": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ],
+        "Down-Right": [
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "left",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "right",
+            "anchors": [],
+            "events": []
+          },
+          {
+            "durationMs": 125,
+            "root": [
+              48,
+              88
+            ],
+            "visualOffset": [
+              0,
+              0
+            ],
+            "grounded": true,
+            "contact": "none",
+            "anchors": [],
+            "events": []
+          }
+        ]
+      }
+    }
+  },
+  "sourceProject": {
+    "path": "character-production/projects/pedestrian_06/project.json",
+    "revision": 1
+  }
+}
