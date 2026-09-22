@@ -1,0 +1,47 @@
+HOME FOUNDATION TUTORIAL QUEST
+
+Purpose:
+Create the smallest real-asset-backed playable slice that proves Lulu's Tale can be built correctly before expanding to the rest of Day 1.
+
+Quest ID suggestion:
+home_foundation_day1
+
+Required flags:
+- hasDogFood = false/true
+- fridgeInteracted = false/true
+- dogFed = false/true
+- homeFoundationComplete = false/true
+
+Suggested objective sequence:
+1. "Move around Lulu's room."
+2. "Go to the fridge."
+3. "Get the dog food."
+4. "Feed the dog."
+5. "Go to the front door."
+6. "Foundation complete." or "Ready to leave home." depending on implementation stage.
+
+Required interactions:
+Fridge:
+- Trigger: Lulu close enough to fridge_interaction marker.
+- Action: tap/interact.
+- Result: hasDogFood = true, fridgeInteracted = true.
+
+Dog/dog bowl:
+- Trigger: Lulu close enough to dog_interaction or dog_bowl marker.
+- Requires: hasDogFood = true.
+- Result: dogFed = true.
+
+Exit door:
+- Trigger: Lulu close enough to entrance_exit marker.
+- During foundation-only build: show a message instead of transitioning outside unless explicitly requested.
+
+Dialogue tone:
+Short, readable, lightly comedic. Keep it simple for the foundation.
+
+Example text:
+- Lulu: "Alright. New day. Same apartment. Suspiciously same dog."
+- System: "Use the left side of the screen to move."
+- System: "Tap nearby things to interact."
+- Lulu: "Dog food acquired. The fridge remains undefeated."
+- Dog: "..."
+- Lulu: "You are welcome, tiny landlord."
