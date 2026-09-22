@@ -1,0 +1,21 @@
+PASS 2 NIGHT SWORD AND BATTLE FLOW — INTENTIONALLY DEFERRED
+
+This content remains part of the intended demo arc, but it must not be implemented during the home foundation milestone.
+
+Later intended behavior:
+1. During daytime, the player chooses Stay Up Into Night at Lulu's bed.
+2. Night begins on the same day with no automatic timer.
+3. Lulu hears window pecking.
+4. Lulu investigates window.
+5. Lulu goes outside.
+6. Lulu finds shiny sword in bush.
+7. Lulu confronts bird gang.
+8. Night perception/animal communication appears.
+9. Lulu fights three birds with simple sword combat.
+10. Win path requires returning to bed.
+11. Sleeping during night advances to Day 2 daytime.
+
+Current status:
+INTENTIONALLY DEFERRED.
+
+Do not build night, sword, combat, or bird battle systems in the home foundation pass.
