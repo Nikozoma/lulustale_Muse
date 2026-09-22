@@ -1,0 +1,46 @@
+LULU'S TALE — DEMO BLUEPRINT v2.1
+Demo-only source of truth for the proof-of-concept build.
+
+Purpose:
+This blueprint focuses only on the playable demo/proof-of-concept version of Lulu's Tale.
+It intentionally excludes full-game expansion planning unless a detail is directly needed to make the demo architecture safe.
+
+v2.1 restart focus:
+The actual Codex implementation is restarting fresh. The current goal is NOT the full Day 1 demo. The current goal is the INDOOR HOME FOUNDATION.
+
+Foundation milestone:
+1. Verify real asset folders and exact usable asset files.
+2. Build a simple mobile-first landscape PWA shell.
+3. Implement the responsive virtual viewport, camera, and touch input.
+4. Implement Lulu with the real player sprite sheet and directional movement animation.
+5. Import and render the home map from Home.json.
+6. Implement collision, room layout, and interactable zones from the semantic map.
+7. Implement the first tiny home tutorial/quest loop.
+8. Validate on the user's phone before expanding.
+
+Deferred until foundation succeeds:
+- Exterior overworld.
+- Charles Jr. interior.
+- Fries errand.
+- Bird theft/chase/fries recovery.
+- Optional night phase selected from Lulu's bed.
+- Sword pickup and combat.
+- Real-time or automatically advancing day/night clock.
+- Android APK wrapper.
+
+Full intended demo structure after foundation:
+1. Lulu wakes up at home.
+2. Player learns movement.
+3. Player learns tap-to-interact.
+4. Lulu gets dog food from the fridge.
+5. Lulu feeds the dog / dog bowl.
+6. Lulu leaves home.
+7. Later expansion: Charles Jr. fries errand, bird theft/chase, return home, then the player's bed choice either advances to the next day or begins the optional night phase.
+
+Core demo lesson:
+- Daytime = errands, comedy, interaction, and grounded weirdness.
+- Nighttime = perception shifts, insanity, weapons/action, combat, and surreal consequences.
+- Bed = the only normal time-advance control: during day choose next day or night; during night sleep to begin the next day.
+
+This is not the full Lulu's Tale master blueprint.
+Use it as the focused implementation reference for the demo release, with the v2.1 foundation restart rules taking priority.
