@@ -1,0 +1,89 @@
+{
+  "format": "lulus_night_map_manifest_v1",
+  "version": 1,
+  "phase": "night",
+  "selectionRule": "The runtime selects *.night.visual.json when quest.isNight is true and otherwise selects the daytime *.visual.json companion. Semantic maps are shared between phases.",
+  "maps": [
+    {
+      "mapId": "Home",
+      "semanticMap": "Home.json",
+      "visualCompanion": "Home.night.visual.json",
+      "dimensionsTiles": [
+        28,
+        43
+      ],
+      "dimensionsPixels": [
+        896,
+        1376
+      ],
+      "activeAssets": [
+        {
+          "path": "public/assets/maps/night/home/home_night_28x43.png",
+          "sha256": "611964785026a95451cfd0c70caf9ee7aa8d85a38fef95a585cbbe244215b246"
+        }
+      ]
+    },
+    {
+      "mapId": "Charles",
+      "semanticMap": "Charles.json",
+      "visualCompanion": "Charles.night.visual.json",
+      "dimensionsTiles": [
+        39,
+        33
+      ],
+      "dimensionsPixels": [
+        1248,
+        1056
+      ],
+      "activeAssets": [
+        {
+          "path": "public/assets/maps/night/charles/charles_jr_interior_night_39x33.png",
+          "sha256": "928882cfbf516ecb1ca14ce6b8cb8e857471afb6f787f66f1f4bdb39e3d5002e"
+        }
+      ]
+    },
+    {
+      "mapId": "Overworld",
+      "semanticMap": "Overworld.json",
+      "visualCompanion": "Overworld.night.visual.json",
+      "dimensionsTiles": [
+        96,
+        68
+      ],
+      "dimensionsPixels": [
+        3072,
+        2176
+      ],
+      "activeAssets": [
+        {
+          "path": "public/assets/maps/night/overworld/overworld_walkbehind_base_96x68_night.png",
+          "sha256": "34abd1fc9a1d120e1a543cd1c5a4365fdd3fe0e35efce196194ad259b77b5cb0"
+        },
+        {
+          "path": "public/assets/maps/night/overworld/foreground/overworld_building_upper_foreground_96x68_night.png",
+          "sha256": "90c7b0faacc7616cfa2d84ac8d00c8584e52264bf7dba0d0fd5f42060f702972"
+        },
+        {
+          "path": "public/assets/maps/night/overworld/foreground/overworld_tree_canopy_foreground_96x68_night.png",
+          "sha256": "b1663eee250e70010edd5988680011731b2e36a0162fd487f6068821c00d37ea"
+        }
+      ],
+      "buildingForeground": {
+        "placementCount": 4,
+        "releasedSemanticTileCount": 384,
+        "playerOcclusionOpacity": 0.42
+      },
+      "treeForeground": {
+        "semanticTreeCount": 21,
+        "order": 100,
+        "semanticTreeTileCount": 84
+      }
+    }
+  ],
+  "sourcePacks": [],
+  "optimization": {
+    "method": "completed full-map PNG runtime",
+    "sourcePacksExcluded": true,
+    "reason": "Visual companions load only active full-map and foreground PNG assets; reconstruction ZIPs are not fetched at runtime."
+  }
+}
