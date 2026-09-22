@@ -1,0 +1,38 @@
+{
+  "format": "lulus_map_audit_index_v1",
+  "sources": [
+    {
+      "id": "map_issues_categorical_audit",
+      "label": "Lulu's Tale Map Issues / Categorical Audit",
+      "original_path": "C:/Users/Nick/Desktop/LuluTales Fixes needed/Lulus_Tale_Map_Issues_Categorical_Audit.txt",
+      "sha256": "c691485aad5d4acf5ca4f2cba3d846dda4f25cd2f2db0f1902df7b3b8c4eb7ca",
+      "coordinate_specific": false,
+      "studio_use": "repair_queue_categories"
+    },
+    {
+      "id": "misc_game_issues_audit",
+      "label": "Lulu's Tale Misc / General Game Issues & Stabilization Notes",
+      "original_path": "C:/Users/Nick/Desktop/LuluTales Fixes needed/Lulus_Tale_Misc_Game_Issues_Audit.txt",
+      "sha256": "cc54e1777951c33db705b8519b0e0d678956ee1a42b4ca54e95cdc863f9a4d0c",
+      "coordinate_specific": false,
+      "studio_use": "stabilization_context_only"
+    }
+  ],
+  "map_repair_categories": [
+    { "id": "foreground_asset_alpha", "label": "Foreground asset extraction / alpha-mask quality", "status": ["known", "recently_addressed"] },
+    { "id": "foreground_occlusion", "label": "Foreground occlusion / walk-behind logic", "status": ["known", "recently_addressed"] },
+    { "id": "semantic_layout", "label": "Semantic map layout accuracy", "status": ["known", "recently_addressed"] },
+    { "id": "visual_semantic_alignment", "label": "Visual-to-semantic alignment", "status": ["known", "pipeline_risk"] },
+    { "id": "collision_fit", "label": "Collision / walkability fit", "status": ["recently_addressed", "verify"] },
+    { "id": "transition_alignment", "label": "Door / transition / spawn / marker alignment", "status": ["recently_addressed", "verify"] },
+    { "id": "art_detail_density", "label": "Map art quality / detail density", "status": ["known"] },
+    { "id": "night_art", "label": "Night map art quality", "status": ["known"] },
+    { "id": "day_night_consistency", "label": "Day / Night geometry and layer consistency", "status": ["pipeline_risk"] },
+    { "id": "scale_coherence", "label": "Upscaling / pixel-density / scale coherence", "status": ["known", "pipeline_risk"] },
+    { "id": "seams", "label": "Tile / seam / edge-transition quality", "status": ["historically_major", "pipeline_risk"] },
+    { "id": "baked_content", "label": "Baked-art content that should not be baked", "status": ["historically_addressed", "pipeline_risk"] },
+    { "id": "representation_drift", "label": "Map data duplication / drift risk", "status": ["pipeline_risk"] },
+    { "id": "overworld_variant_guard", "label": "48x34 and 96x68 Overworld variants must never mix", "status": ["critical_pipeline_rule"] }
+  ],
+  "coordinate_policy": "Audit categories never create repair geometry. A human must inspect the current build and author each repair annotation at its real map coordinates."
+}
