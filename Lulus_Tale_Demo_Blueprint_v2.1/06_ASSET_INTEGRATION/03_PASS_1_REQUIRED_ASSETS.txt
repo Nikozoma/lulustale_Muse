@@ -1,0 +1,24 @@
+FOUNDATION REQUIRED ASSETS — v2.1
+
+Current foundation required real assets:
+- Lulu/player sprite from The Female Adventurer - Free.
+- Lulu directional movement animation.
+- Dog sprite from DogMegaPackFree.
+- Home floor/wall/interior tiles from Top-Down_Retro_Interior and/or Modern_Interiors_Free_v2.2.
+- Bed.
+- Fridge.
+- Door/entrance/exit visual.
+- Dog bowl or clear dog feeding object.
+- Core home furniture represented in Home.json.
+
+Deferred assets:
+- Bird sprite.
+- Cashier/NPCs.
+- Exterior roads/sidewalks/parking.
+- Charles Jr. interior.
+- Bush/fries recovery props.
+- Sword sprite.
+- Night/combat effects.
+
+No core placeholders:
+If any current foundation asset cannot be located/sliced/implemented, Codex must stop/report the blocker rather than substituting colored rectangles or fake art.
