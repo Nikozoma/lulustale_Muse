@@ -1,0 +1,296 @@
+{
+  "schema": "lulus-character-targeted-motion-repair-report",
+  "version": 1,
+  "characterId": "lulu",
+  "revision": 6,
+  "generatedAt": "2026-07-29T06:08:07.902Z",
+  "diagnosis": {
+    "fringe": "Neutral antialias colors remained exposed around the idle/walk exterior.",
+    "profileWalk": "Revision-5 Left/Right rows mixed oversized contact poses, neutral poses, and repeated high-knee poses, so the cycle lacked stable temporal gait phases.",
+    "verticalCadence": "At default full-strength running, 240px/s over a 160px cycle produced 1.5 cycles/s and 12 frame changes/s, making Up/Down read overcranked.",
+    "roots": "Authored roots were already stable; no root or world movement-speed correction was required.",
+    "diagonals": "Diagonal silhouettes and phase order were coherent enough to preserve."
+  },
+  "scope": {
+    "changedActions": [
+      "idle",
+      "walk",
+      "run"
+    ],
+    "profileRowsReauthored": [
+      "Left",
+      "Right"
+    ],
+    "verticalRowsPreserved": [
+      "Down",
+      "Up"
+    ],
+    "diagonalRowsPreserved": [
+      "Down-Left",
+      "Up-Left",
+      "Up-Right",
+      "Down-Right"
+    ],
+    "runPixelsPreserved": true,
+    "runPlaybackAdjusted": true
+  },
+  "contract": {
+    "cell": [
+      96,
+      96
+    ],
+    "root": [
+      48,
+      88
+    ],
+    "directionOrder": [
+      "Down",
+      "Down-Left",
+      "Left",
+      "Up-Left",
+      "Up",
+      "Up-Right",
+      "Right",
+      "Down-Right"
+    ],
+    "walkCycleDistancePx": 96,
+    "runCycleDistancePx": 192,
+    "worldMovementSpeedChanged": false
+  },
+  "baseline": {
+    "idle": {
+      "path": "character-production/projects/lulu/history/revision-5-locomotion-baseline/idle.png",
+      "sha256": "a452fe1c63db84a936e8da83f97b4f563f99404d9bcafb3044e8937879649293"
+    },
+    "walk": {
+      "path": "character-production/projects/lulu/history/revision-5-locomotion-baseline/walk.png",
+      "sha256": "a8cd8ed9b2dba2111df48aa59b21a0f4979fdc8da6694b36468dd1ec3f4499db"
+    },
+    "run": {
+      "path": "character-production/projects/lulu/history/revision-5-locomotion-baseline/run.png",
+      "sha256": "023512fe50aec9f743ea7cde5dc6b4aec79009eb433e6aa3b56cec8eae5ee7ec"
+    }
+  },
+  "cleanup": {
+    "idleBrightExteriorPixelsRecolored": 1399,
+    "walkBaselineBrightExteriorPixelsRecolored": 5469,
+    "walkFinalBrightExteriorPixelsRecolored": 0
+  },
+  "profiles": [
+    {
+      "direction": "Left",
+      "baselineReference": "character-production/projects/lulu/imports/canonical-anime-r6-locomotion-engineering-repair/left-walk-r5-reference.png",
+      "input": "character-production/projects/lulu/imports/canonical-anime-r6-locomotion-engineering-repair/left-walk-r6-authored-source.png",
+      "inputSha256": "ffdddff6f3f5b44c82fee6dee9e38e20f88a0928a9677287600e8553ca4eba8d",
+      "frames": [
+        {
+          "index": 0,
+          "bounds": {
+            "x": 32,
+            "y": 20,
+            "width": 31,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.786,
+          "groundY": 88
+        },
+        {
+          "index": 1,
+          "bounds": {
+            "x": 32,
+            "y": 20,
+            "width": 32,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.754,
+          "groundY": 88
+        },
+        {
+          "index": 2,
+          "bounds": {
+            "x": 35,
+            "y": 20,
+            "width": 26,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.736,
+          "groundY": 88
+        },
+        {
+          "index": 3,
+          "bounds": {
+            "x": 34,
+            "y": 19,
+            "width": 28,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.457,
+          "groundY": 87
+        },
+        {
+          "index": 4,
+          "bounds": {
+            "x": 32,
+            "y": 21,
+            "width": 34,
+            "height": 67
+          },
+          "upperBodyCenterX": 48.112,
+          "groundY": 88
+        },
+        {
+          "index": 5,
+          "bounds": {
+            "x": 32,
+            "y": 20,
+            "width": 34,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.76,
+          "groundY": 88
+        },
+        {
+          "index": 6,
+          "bounds": {
+            "x": 36,
+            "y": 20,
+            "width": 24,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.649,
+          "groundY": 88
+        },
+        {
+          "index": 7,
+          "bounds": {
+            "x": 35,
+            "y": 18,
+            "width": 26,
+            "height": 69
+          },
+          "upperBodyCenterX": 47.863,
+          "groundY": 87
+        }
+      ]
+    },
+    {
+      "direction": "Right",
+      "baselineReference": "character-production/projects/lulu/imports/canonical-anime-r6-locomotion-engineering-repair/right-walk-r5-reference.png",
+      "input": "character-production/projects/lulu/imports/canonical-anime-r6-locomotion-engineering-repair/right-walk-r6-authored-source.png",
+      "inputSha256": "76aa2a43bd99ee79bf6c31f388662e971bbba7dc5e5ddf9146f4148c7693052a",
+      "frames": [
+        {
+          "index": 0,
+          "bounds": {
+            "x": 31,
+            "y": 20,
+            "width": 33,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.217,
+          "groundY": 88
+        },
+        {
+          "index": 1,
+          "bounds": {
+            "x": 33,
+            "y": 20,
+            "width": 29,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.582,
+          "groundY": 88
+        },
+        {
+          "index": 2,
+          "bounds": {
+            "x": 36,
+            "y": 20,
+            "width": 27,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.273,
+          "groundY": 88
+        },
+        {
+          "index": 3,
+          "bounds": {
+            "x": 33,
+            "y": 20,
+            "width": 30,
+            "height": 67
+          },
+          "upperBodyCenterX": 47.821,
+          "groundY": 87
+        },
+        {
+          "index": 4,
+          "bounds": {
+            "x": 31,
+            "y": 20,
+            "width": 32,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.84,
+          "groundY": 88
+        },
+        {
+          "index": 5,
+          "bounds": {
+            "x": 31,
+            "y": 20,
+            "width": 32,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.923,
+          "groundY": 88
+        },
+        {
+          "index": 6,
+          "bounds": {
+            "x": 36,
+            "y": 20,
+            "width": 26,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.017,
+          "groundY": 88
+        },
+        {
+          "index": 7,
+          "bounds": {
+            "x": 36,
+            "y": 19,
+            "width": 27,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.45,
+          "groundY": 87
+        }
+      ]
+    }
+  ],
+  "outputs": {
+    "idle": {
+      "path": "character-production/projects/lulu/derived/canonical-anime-r6-locomotion-engineering-repair/sheets/Lulu_idle.png",
+      "sha256": "b84346a39b1c1bb98b73f1e5ca50ae8b0cdfa745c4b06c85e3fd5a3844a0e378",
+      "dimensions": [
+        384,
+        768
+      ]
+    },
+    "walk": {
+      "path": "character-production/projects/lulu/derived/canonical-anime-r6-locomotion-engineering-repair/sheets/Lulu_walk.png",
+      "sha256": "1479783aa2ebf63ec68bcfe8cc8a104b03aa36920df176881e70f7886613e60c",
+      "dimensions": [
+        768,
+        768
+      ]
+    },
+    "run": {
+      "path": "character-production/projects/lulu/history/revision-5-locomotion-baseline/run.png",
+      "sha256": "023512fe50aec9f743ea7cde5dc6b4aec79009eb433e6aa3b56cec8eae5ee7ec",
+      "changed": false
+    }
+  }
+}
