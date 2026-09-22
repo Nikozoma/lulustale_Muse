@@ -1,0 +1,109 @@
+ASSET FOLDER ASSIGNMENTS — v2.1
+
+1. Lulu / player
+Folder: The Female Adventurer - Free
+Use:
+- Lulu/player character.
+- Directional walking animation.
+Required verification:
+- exact source file path,
+- image dimensions,
+- frame width/height,
+- row/column layout,
+- idle/walk frames,
+- directional mapping,
+- invalid/blank frames if any,
+- recommended render scale.
+Notes:
+- No run animation required.
+- Use walk animation for all movement.
+- Joystick distance controls movement speed.
+- Animation playback speed may increase with movement speed.
+
+2. Lulu's dog
+Folder: DogMegaPackFree
+Use:
+- Lulu's dog.
+- Feeding interaction.
+- Happy/idle reaction after feeding if available.
+Required verification:
+- exact source file path,
+- frame/tile dimensions,
+- usable idle frames,
+- recommended scale.
+
+3. Bird / bird gang — deferred until bird content begins
+Folder: Basic animal Asset Pack
+Use later:
+- Daytime fry-stealing bird.
+- Nighttime bird gang.
+Required verification before bird implementation:
+- exact source file path,
+- frame/tile dimensions,
+- directional/movement frames if available.
+Notes:
+- Species is not locked.
+- Does not need to be a seagull.
+- Any readable bird sprite is acceptable if it is a real asset from the pack.
+
+4. NPCs / cashier / filler pedestrians — deferred
+Folder: SuperRetroWorld_CharacterPack_Full
+Use later:
+- Cashier.
+- Apartment residents.
+- Pedestrians.
+- Charles Jr. customers.
+Rule:
+- Do not create placeholder NPCs.
+- If no suitable real NPC asset can be used when needed, stop/report blocker.
+
+5. Interiors
+Primary: Top-Down_Retro_Interior
+Secondary: Modern_Interiors_Free_v2.2
+Use:
+- Lulu home.
+- Bedroom.
+- Kitchen.
+- Living room.
+- Bathroom if represented.
+- Furniture, counters, tables, props.
+Required verification:
+- exact tile/object source files,
+- native tile size,
+- candidate tile coordinates/crop rectangles for walls/floors/bed/fridge/door/counter/sink/stove/table/couch/dog bowl.
+
+6. Exterior roads / sidewalks / parking lot — deferred
+Primary file: City Prop Tileset update 2.png
+Use later:
+- Roads.
+- Sidewalks.
+- Parking lot markings.
+- Exterior urban tiles.
+
+7. Supplemental exterior city props — deferred
+File: modern pixel city tileset.png
+Use later:
+- Building details.
+- Fences.
+- Dumpsters.
+- Utility props.
+- Darker urban textures.
+- Street clutter.
+- Night atmosphere details.
+
+8. Optional exterior decoration — deferred
+Folder: GuttyKreum_JapaneseCity_Freev1
+Use:
+- Supplemental exterior decoration only if useful.
+Notes:
+- Do not force the visual identity into Japanese city architecture.
+
+9. Bushes / landscaping / sword bush / fries recovery cover — deferred
+Folder: nature free
+Use later:
+- Grass.
+- Bushes.
+- Flowers.
+- Landscaping.
+- Fries recovery bush.
+- Shiny sword bush.
