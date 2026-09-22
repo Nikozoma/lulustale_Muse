@@ -1,0 +1,23 @@
+Tile Tool v1.6 Test Report
+==========================
+
+Checks run in a temporary project folder with Home.json, Charles.json, Overworld.json, and public/assets copied in.
+
+Passed:
+- node --check server.mjs
+- node --check src/editor.js
+- launch/API health check
+- /api/maps found current active maps: Home.json, Charles.json, Overworld.json
+- /api/assets scanned project image assets from public/assets
+- first visual save created Home.visual.json without semantic map changes
+- second visual save created tools/backups/backup1/Home.visual.json
+- semantic save created tools/backups/backup2/Home.json
+- visual save did not modify Home.json semantic layers
+
+Manual/UI-targeted fixes included:
+- Actual Asset View no longer draws the semantic color overlay.
+- Combined View is the only mode where semantic overlay/marker glyph controls apply.
+- Added auto asset preview from semantic map to make current game-rendered assets visible.
+- Added explicit Sprite Sheet Select Crop / Pan Sheet tools.
+- Added Tilemap Builder Paint / Move Tile / Erase tools.
+- Asset folder dropdown now groups and shortens folders.
