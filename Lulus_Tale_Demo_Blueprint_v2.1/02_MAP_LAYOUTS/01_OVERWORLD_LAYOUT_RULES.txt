@@ -1,0 +1,53 @@
+OVERWORLD LAYOUT RULES
+
+Sources of truth:
+- Overworld.json
+- Overworld.visual.json
+- public/assets/maps/overworld/overworld_walkbehind_base_96x68.png
+- public/assets/maps/overworld/foreground/overworld_building_upper_foreground_96x68.png
+- public/assets/maps/overworld/foreground/overworld_tree_canopy_foreground_96x68.png
+- public/assets/maps/overworld/overworld_96x68_manifest.json
+
+Map scale:
+- 96 tiles wide.
+- 68 tiles tall.
+- 32 game-world pixels per tile.
+- 3072 x 2176 world pixels total.
+- This is an exact 2x-width/2x-height nearest-neighbor enlargement of the
+  approved 48 x 34 composition; no camera, player, movement, or tile-size
+  scaling is used.
+
+Purpose:
+Supports walking from home to Charles Jr., bird theft, bird chase, fries recovery, and later night confrontation.
+
+Specific map rules:
+- Left side of Charles Jr. is a parking lot.
+- Right side of Charles Jr. is a thin drive-through lane/normal road, not a parking lot.
+- Bottom areas not used for roads/buildings should remain grass.
+- Use the top connector route between Charles Jr. and apartment complex for return path.
+- Quest events must use reachable semantic markers on open paths/parking/grass.
+- Do not place objectives inside the closed lower-right dirt-lot fence.
+
+Required zones:
+- PlayerDoorTransitionZone
+- CharlesJrEntranceTransitionZone
+- CharlesJrReturnRouteTriggerZone
+- BirdTheftTriggerZone
+- BirdChaseWaypointZones
+- FriesRecoverySpot
+- BushHideSpot
+- OptionalSwordBushSpot for Pass 2
+- ApartmentReturnZone
+- NightBirdConfrontationZone for Pass 2
+
+Foreground depth:
+- Tree canopies anchored by semantic tree objects are provided by the active transparent foreground overlay.
+- Keep tree collision in Overworld.json separate from the canopy visual layer.
+- The four enlarged rows corresponding to the original upper two rows of
+  Charles Jr. and all three apartment buildings are walk-behind zones.
+- Apartment zones use grass beneath them; Charles Jr. uses parking-lot asphalt.
+- Lower building rows remain solid.
+- Building foreground sections fade to 42% only while Lulu's feet are inside
+  that building's four-row enlarged zone.
+- The opaque normal composite must remain pixel-identical to the approved
+  Overworld source.
