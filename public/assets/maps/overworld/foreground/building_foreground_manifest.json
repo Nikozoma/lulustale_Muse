@@ -1,0 +1,303 @@
+{
+  "format": "lulus_building_foreground_manifest_v1",
+  "version": 2,
+  "mapId": "Overworld",
+  "tileSizePx": 32,
+  "sourceMapAsset": "public/assets/maps/overworld/overworld_red_roof_96x68.png",
+  "baseMapAsset": "public/assets/maps/overworld/overworld_walkbehind_base_96x68.png",
+  "foregroundAsset": "public/assets/maps/overworld/foreground/overworld_building_upper_foreground_96x68.png",
+  "playerOcclusionOpacity": 0.42,
+  "normalCompositeGuarantee": "At opacity 1, the base plus building foreground reproduces the approved source map pixel-for-pixel.",
+  "groundSourcePolicy": "Every replacement ground tile is copied from an unobstructed, low-variance tile in the approved Overworld image. No substitute or generated artwork is used.",
+  "groundSourceTiles": {
+    "grass": [
+      {
+        "x": 37,
+        "y": 49
+      },
+      {
+        "x": 47,
+        "y": 63
+      },
+      {
+        "x": 91,
+        "y": 53
+      },
+      {
+        "x": 91,
+        "y": 57
+      },
+      {
+        "x": 91,
+        "y": 59
+      },
+      {
+        "x": 47,
+        "y": 61
+      },
+      {
+        "x": 91,
+        "y": 63
+      },
+      {
+        "x": 37,
+        "y": 51
+      },
+      {
+        "x": 89,
+        "y": 63
+      },
+      {
+        "x": 55,
+        "y": 1
+      },
+      {
+        "x": 89,
+        "y": 1
+      },
+      {
+        "x": 91,
+        "y": 55
+      },
+      {
+        "x": 27,
+        "y": 49
+      },
+      {
+        "x": 35,
+        "y": 55
+      },
+      {
+        "x": 17,
+        "y": 63
+      },
+      {
+        "x": 81,
+        "y": 61
+      }
+    ],
+    "parking_lot": [
+      {
+        "x": 17,
+        "y": 41
+      },
+      {
+        "x": 19,
+        "y": 37
+      },
+      {
+        "x": 19,
+        "y": 41
+      },
+      {
+        "x": 87,
+        "y": 35
+      },
+      {
+        "x": 25,
+        "y": 41
+      },
+      {
+        "x": 17,
+        "y": 39
+      },
+      {
+        "x": 87,
+        "y": 49
+      },
+      {
+        "x": 87,
+        "y": 21
+      },
+      {
+        "x": 21,
+        "y": 37
+      },
+      {
+        "x": 19,
+        "y": 39
+      },
+      {
+        "x": 23,
+        "y": 41
+      },
+      {
+        "x": 87,
+        "y": 45
+      }
+    ]
+  },
+  "buildings": [
+    {
+      "id": "apartment_north_upper",
+      "semanticId": "apartment_building",
+      "groundId": "grass",
+      "x": 52,
+      "y": 14,
+      "widthTiles": 28,
+      "heightTiles": 4,
+      "releasedTileCount": 112,
+      "collisionRule": "walkable in these four enlarged rows; all remaining building rows stay solid"
+    },
+    {
+      "id": "charles_jr_upper",
+      "semanticId": "charles_jr_building",
+      "groundId": "parking_lot",
+      "x": 24,
+      "y": 20,
+      "widthTiles": 12,
+      "heightTiles": 4,
+      "releasedTileCount": 48,
+      "collisionRule": "walkable in these four enlarged rows; all remaining building rows stay solid"
+    },
+    {
+      "id": "lulu_apartment_upper",
+      "semanticId": "player_apartment_building",
+      "groundId": "grass",
+      "x": 52,
+      "y": 28,
+      "widthTiles": 28,
+      "heightTiles": 4,
+      "releasedTileCount": 112,
+      "collisionRule": "walkable in these four enlarged rows; all remaining building rows stay solid"
+    },
+    {
+      "id": "apartment_south_upper",
+      "semanticId": "apartment_building",
+      "groundId": "grass",
+      "x": 52,
+      "y": 44,
+      "widthTiles": 28,
+      "heightTiles": 4,
+      "releasedTileCount": 112,
+      "collisionRule": "walkable in these four enlarged rows; all remaining building rows stay solid"
+    }
+  ],
+  "totalReleasedTileCount": 384,
+  "mapSizeTiles": [
+    96,
+    68
+  ],
+  "mapSizePixels": [
+    3072,
+    2176
+  ],
+  "groundSourceTiles48x34": {
+    "grass": [
+      {
+        "x": 18,
+        "y": 24
+      },
+      {
+        "x": 23,
+        "y": 31
+      },
+      {
+        "x": 45,
+        "y": 26
+      },
+      {
+        "x": 45,
+        "y": 28
+      },
+      {
+        "x": 45,
+        "y": 29
+      },
+      {
+        "x": 23,
+        "y": 30
+      },
+      {
+        "x": 45,
+        "y": 31
+      },
+      {
+        "x": 18,
+        "y": 25
+      },
+      {
+        "x": 44,
+        "y": 31
+      },
+      {
+        "x": 27,
+        "y": 0
+      },
+      {
+        "x": 44,
+        "y": 0
+      },
+      {
+        "x": 45,
+        "y": 27
+      },
+      {
+        "x": 13,
+        "y": 24
+      },
+      {
+        "x": 17,
+        "y": 27
+      },
+      {
+        "x": 8,
+        "y": 31
+      },
+      {
+        "x": 40,
+        "y": 30
+      }
+    ],
+    "parking_lot": [
+      {
+        "x": 8,
+        "y": 20
+      },
+      {
+        "x": 9,
+        "y": 18
+      },
+      {
+        "x": 9,
+        "y": 20
+      },
+      {
+        "x": 43,
+        "y": 17
+      },
+      {
+        "x": 12,
+        "y": 20
+      },
+      {
+        "x": 8,
+        "y": 19
+      },
+      {
+        "x": 43,
+        "y": 24
+      },
+      {
+        "x": 43,
+        "y": 10
+      },
+      {
+        "x": 10,
+        "y": 18
+      },
+      {
+        "x": 9,
+        "y": 19
+      },
+      {
+        "x": 11,
+        "y": 20
+      },
+      {
+        "x": 43,
+        "y": 22
+      }
+    ]
+  }
+}
