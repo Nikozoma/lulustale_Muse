@@ -1,0 +1,92 @@
+LULU'S TALE — MAP CHANGE MANIFEST
+=================================
+
+Worker number: Unassigned / user-directed tree foreground pass
+Job: ASSETS Overworld
+Maps edited: Overworld
+
+FILES CHANGED
+- Overworld.visual.json
+- public/assets/maps/overworld/foreground/overworld_tree_canopy_foreground.png
+- public/assets/maps/overworld/foreground/tree_canopy_manifest.json
+- public/assets/maps/overworld/foreground/README_TREE_FOREGROUND.txt
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_00_x07_y06.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_01_x41_y06.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_02_x46_y07.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_03_x01_y11.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_04_x01_y15.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_05_x46_y19.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_06_x01_y21.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_07_x10_y22.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_08_x16_y22.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_09_x07_y23.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_10_x46_y23.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_11_x23_y26.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_12_x07_y27.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_13_x43_y29.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_14_x26_y30.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_15_x22_y31.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_16_x25_y31.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_17_x42_y32.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_18_x08_y01.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_19_x42_y01.png
+- public/assets/maps/overworld/foreground/tree_canopies/tree_canopy_20_x01_y31.png
+- MAP_CHANGE_MANIFEST_tree_foreground_pass.txt
+
+SUMMARY
+- Added a real foreground-layer tree canopy pass to the approved Overworld.
+- Created 21 transparent foliage-only canopy assets from exact pixels already present in the approved Overworld artwork.
+- Created one full-map transparent canopy overlay for active runtime use.
+- Added the overlay to Overworld.visual.json on drawLayer "foreground" so it renders after player/entities.
+- Kept the approved full-map base image unchanged.
+- Kept semantic collision, walkability, markers, transitions, spawns, and gameplay meaning unchanged.
+- Retained individual per-tree canopy PNGs for later Tile Tool refinement.
+
+SEMANTIC / GAMEPLAY CHANGES
+- Added tree collision anchors at (8,1), (42,1), and (1,31) for the three visible trees previously treated as ordinary walkable ground.
+
+VISUAL / ASSET CHANGES
+- Added active full-map transparent canopy overlay:
+  public/assets/maps/overworld/foreground/overworld_tree_canopy_foreground.png
+- Added 21 individual transparent canopy crops under:
+  public/assets/maps/overworld/foreground/tree_canopies/
+- Added one new Overworld.visual.json placement:
+  id: overworld_tree_canopy_foreground
+  drawLayer: foreground
+  order: 100
+- Foreground pixels are copied from the approved Overworld image; no replacement style or new art was invented.
+- Masks are intentionally conservative and foliage-only to avoid carrying nearby road, sidewalk, hedge, fence, trunk, or grass rectangles into the foreground layer.
+
+ASSETS USED
+- public/assets/maps/overworld/overworld_red_roof_48x34.png
+- Exact foliage pixels sampled from the approved active Overworld artwork.
+- Semantic tree locations in Overworld.json are the extraction anchors and now cover all 21 visible large trees.
+
+VALIDATION PERFORMED
+PASS
+- Parsed Home.json, Charles.json, Overworld.json.
+- Parsed Home.visual.json, Charles.visual.json, Overworld.visual.json.
+- Confirmed active maps remain at project root.
+- Confirmed map IDs/display names remain Home, Charles, Overworld.
+- Confirmed Home.json and Charles.json remain unchanged; Overworld.json changes are limited to the three added tree collision anchors.
+- Confirmed Home.visual.json and Charles.visual.json are byte-for-byte unchanged from the uploaded source ZIP.
+- Confirmed the approved base Overworld image is byte-for-byte unchanged from the uploaded source ZIP.
+- Confirmed foreground overlay size is 1536 x 1088 px and contains both transparent and opaque pixels.
+- Confirmed 21 individual canopy PNGs exist and each contains real alpha transparency.
+- Confirmed Overworld.visual.json references the new overlay on drawLayer "foreground".
+- Tile Tool v1.6 dry-run visual validation passed with 0 warnings and 2 total Overworld visual placements.
+- TypeScript check passed: node node_modules/typescript/bin/tsc --noEmit.
+- Renderer order was inspected: foreground visual layer draws after dog, cashier, birds, interactable marker, and player.
+
+KNOWN ISSUES / FOLLOW-UP
+- No full gameplay playthrough was performed.
+- The canopy masks are deliberately conservative. They may benefit from tiny per-tree edge refinements after live runtime inspection, but they avoid the larger failure mode of carrying sidewalk/road/background rectangles into the foreground.
+- This pass activates one full-map foreground placement for runtime simplicity; the 18 individual assets are retained for future Tile Tool edits or replacement.
+- Semantic tree collision remains the existing best-effort map pass and was not retuned here.
+- Final phone/runtime feel should be checked around trees closest to sidewalks and narrow walkable lanes.
+
+CONFIRMATIONS
+- No fake assets or placeholders were added.
+- No internet assets were used.
+- No map renames were performed.
+- No engine, server, deployment, Git configuration/history, APK, or combat changes were made.
