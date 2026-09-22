@@ -1,0 +1,586 @@
+{
+  "package": "Brutus_Companion_Assets_Full_v1",
+  "specification": "Lulu's Tale Master Scale and Asset Production Specification v1.1",
+  "format": "PNG RGBA, native 1x, binary alpha, transparent RGB cleared",
+  "frame_cell": [
+    96,
+    96
+  ],
+  "direction_order": [
+    "Down",
+    "Down-Left",
+    "Left",
+    "Up-Left",
+    "Up",
+    "Up-Right",
+    "Right",
+    "Down-Right"
+  ],
+  "brutus_master_scale": {
+    "standing_height": 38,
+    "side_length": 60,
+    "front_back_width": 40,
+    "ground_root_anchor": [
+      48,
+      88
+    ]
+  },
+  "brutus_design_authority": "Approved real-dog-derived Brutus preview: black/tan/cream/gray markings, floppy ears, compact canine body, short-medium tail, red collar, round silver tag.",
+  "lulu_baseline": "Lulu_Overworld_Full_v1; all existing sheets unchanged. Existing Lulu_pet_dog remains authoritative.",
+  "brutus_animations": {
+    "idle_stand": {
+      "filename": "brutus/sheets/Brutus_idle_stand.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Subtle daytime companion standing loop.",
+      "directional_exception": null
+    },
+    "walk": {
+      "filename": "brutus/sheets/Brutus_walk.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Natural normal-speed canine follow cycle.",
+      "directional_exception": null
+    },
+    "run": {
+      "filename": "brutus/sheets/Brutus_run.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Energetic canine catch-up/fetch cycle distinct from walk.",
+      "directional_exception": null
+    },
+    "sit": {
+      "filename": "brutus/sheets/Brutus_sit.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        192,
+        768
+      ],
+      "frames_per_direction": 2,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Held seated companion state.",
+      "directional_exception": null
+    },
+    "lay_rest": {
+      "filename": "brutus/sheets/Brutus_lay_rest.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        192,
+        768
+      ],
+      "frames_per_direction": 2,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Low resting companion state.",
+      "directional_exception": null
+    },
+    "happy_excited": {
+      "filename": "brutus/sheets/Brutus_happy_excited.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Happy reaction with attentive posture and tail energy.",
+      "directional_exception": null
+    },
+    "sniff": {
+      "filename": "brutus/sheets/Brutus_sniff.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Ground-focused sniffing behavior.",
+      "directional_exception": null
+    },
+    "being_petted": {
+      "filename": "brutus/sheets/Brutus_being_petted.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Relaxed synchronized response to Lulu_pet_dog.",
+      "directional_exception": null
+    },
+    "eating": {
+      "filename": "brutus/sheets/Brutus_eating.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Food-anchor-aligned eating response; no food baked in.",
+      "directional_exception": null
+    },
+    "play_ready": {
+      "filename": "brutus/sheets/Brutus_play_ready.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Play bow aligned for fetch preparation; no toy baked in.",
+      "directional_exception": null
+    },
+    "carry_pose": {
+      "filename": "brutus/sheets/Brutus_carry_pose.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Carry-compatible state with documented mouth anchor; no toy baked in.",
+      "directional_exception": null
+    },
+    "stand_to_sit": {
+      "filename": "brutus/sheets/Brutus_stand_to_sit.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        288,
+        768
+      ],
+      "frames_per_direction": 3,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Brief transition from idle_stand to sit.",
+      "directional_exception": null,
+      "transition_relationship": "idle_stand -> sit"
+    },
+    "sit_to_stand": {
+      "filename": "brutus/sheets/Brutus_sit_to_stand.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        288,
+        768
+      ],
+      "frames_per_direction": 3,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Brief transition from sit to idle_stand.",
+      "directional_exception": null,
+      "transition_relationship": "sit -> idle_stand"
+    },
+    "stand_to_lay": {
+      "filename": "brutus/sheets/Brutus_stand_to_lay.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        288,
+        768
+      ],
+      "frames_per_direction": 3,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Brief transition from idle_stand through sit to lay_rest.",
+      "directional_exception": null,
+      "transition_relationship": "idle_stand -> sit -> lay_rest"
+    },
+    "lay_to_stand": {
+      "filename": "brutus/sheets/Brutus_lay_to_stand.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        288,
+        768
+      ],
+      "frames_per_direction": 3,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "bbox_center",
+      "action_purpose": "Brief transition from lay_rest through sit to idle_stand.",
+      "directional_exception": null,
+      "transition_relationship": "lay_rest -> sit -> idle_stand"
+    }
+  },
+  "lulu_interaction_animations": {
+    "feed_dog": {
+      "filename": "lulu_interactions/sheets/Lulu_feed_dog.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "contact_midpoint",
+      "action_purpose": "Empty-hand feeding gesture aligned to separate food prop.",
+      "directional_exception": null
+    },
+    "throw_toy": {
+      "filename": "lulu_interactions/sheets/Lulu_throw_toy.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "contact_midpoint",
+      "action_purpose": "Throw/release gesture aligned to separate toy prop.",
+      "directional_exception": null
+    },
+    "companion_command": {
+      "filename": "lulu_interactions/sheets/Lulu_companion_command.png",
+      "frame_cell": [
+        96,
+        96
+      ],
+      "sheet_dimensions": [
+        384,
+        768
+      ],
+      "frames_per_direction": 4,
+      "direction_order": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "ground_root_anchor": [
+        48,
+        88
+      ],
+      "last_opaque_row": 87,
+      "root_mode": "contact_midpoint",
+      "action_purpose": "Reusable hand command suitable for sit/stay/future commands.",
+      "directional_exception": null
+    }
+  },
+  "individual_frames": "Key frame 2 for pet/eat/play/carry and all three Lulu interaction actions, exported per direction.",
+  "qa": {
+    "black": "qa/black",
+    "white": "qa/white",
+    "nearest_neighbor": "qa/nearest_2x"
+  },
+  "interaction_metadata": "INTERACTIONS.json",
+  "validator": "validate_companion_assets.py"
+}
