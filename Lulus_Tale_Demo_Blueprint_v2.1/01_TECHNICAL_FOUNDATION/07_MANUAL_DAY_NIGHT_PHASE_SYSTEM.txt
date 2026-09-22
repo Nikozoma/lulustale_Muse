@@ -1,0 +1,36 @@
+MANUAL DAY / NIGHT PHASE SYSTEM — CURRENT RULE
+
+This file supersedes any earlier blueprint wording that implies a real-time
+clock, automatic day/night timer, fixed day length, or forced night transition.
+
+Core rule:
+- Time does not advance automatically while the player explores.
+- Day and night are discrete gameplay phases controlled from Lulu's bed.
+- The player has unlimited real-world time within either phase.
+
+Using the bed during daytime:
+1. Present two choices:
+   - Sleep until the next day.
+   - Stay up into the night.
+2. Sleep until the next day advances dayNumber by one and begins daytime.
+3. Stay up into the night keeps the same dayNumber and changes the phase to night.
+
+Using the bed during nighttime:
+- Sleeping advances dayNumber by one and begins the next daytime phase.
+
+Implementation state:
+- dayNumber: positive integer.
+- timePhase: "day" or "night".
+- No continuously running world clock is required.
+- No automatic phase deadline is allowed.
+- `timePhase` selects each map's visual companion without changing its semantic
+  map: day uses `*.visual.json`; night uses `*.night.visual.json`.
+- Dedicated night artwork must not receive the old generic night tint a second
+  time. The tint is fallback-only for future maps without a night companion.
+- Quests may unlock bed choices or react to the selected phase, but they must
+  not silently force the phase to change because a timer expired.
+
+Design purpose:
+- Preserve the relaxed pacing of a casual RPG.
+- Let players explore and finish daytime or nighttime activities without time pressure.
+- Make the bed the clear, predictable control point for advancing time.
