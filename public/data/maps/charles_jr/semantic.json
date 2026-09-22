@@ -1,0 +1,896 @@
+{
+  "$schema": "../../schema/map-semantics.schema.json",
+  "schema_version": "1.0.0",
+  "map_id": "charles_jr",
+  "coordinate_system": {
+    "origin": "top_left",
+    "x_direction": "right",
+    "y_direction": "down",
+    "units": "pixels_with_tile_companions",
+    "rectangle_rule": "left/top inclusive; right/bottom exclusive"
+  },
+  "map_dimensions": {
+    "tiles": {
+      "width": 39,
+      "height": 33
+    },
+    "pixels": {
+      "width": 1248,
+      "height": 1056
+    },
+    "tile_size_px": 32,
+    "world_scale": 1
+  },
+  "day_night_contract": "shared_geometry",
+  "movement_resolution": {
+    "rule": "walkable_regions union, minus blocked_regions, then passable_overrides",
+    "tile_grid_companion": "collision_grid.json",
+    "runtime_note": "Vector regions are authoritative; the grid is a deterministic 32px implementation companion."
+  },
+  "walkable_regions": [
+    {
+      "id": "walk_customer_floor",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 4,
+        "y": 11,
+        "width": 32,
+        "height": 18
+      },
+      "pixel_rect": {
+        "x": 128,
+        "y": 352,
+        "width": 1024,
+        "height": 576
+      },
+      "surface": "tile_floor"
+    },
+    {
+      "id": "walk_staff_aisle",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 9,
+        "y": 4,
+        "width": 22,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 288,
+        "y": 128,
+        "width": 704,
+        "height": 160
+      },
+      "surface": "service_floor",
+      "access": "staff_only"
+    },
+    {
+      "id": "walk_counter_approach",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 9,
+        "y": 9,
+        "width": 20,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 288,
+        "y": 288,
+        "width": 640,
+        "height": 128
+      },
+      "surface": "tile_floor"
+    },
+    {
+      "id": "walk_bottom_entry",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 17,
+        "y": 29,
+        "width": 6,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 544,
+        "y": 928,
+        "width": 192,
+        "height": 96
+      },
+      "surface": "threshold"
+    }
+  ],
+  "blocked_regions": [
+    {
+      "id": "service_equipment_line",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 9,
+        "y": 4,
+        "width": 22,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 288,
+        "y": 128,
+        "width": 704,
+        "height": 96
+      },
+      "category": "service_equipment"
+    },
+    {
+      "id": "service_counter",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 9,
+        "y": 8,
+        "width": 17,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 288,
+        "y": 256,
+        "width": 544,
+        "height": 128
+      },
+      "category": "counter",
+      "object_id": "object_service_counter"
+    },
+    {
+      "id": "left_booth_north",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 4,
+        "y": 6,
+        "width": 3,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 128,
+        "y": 192,
+        "width": 96,
+        "height": 128
+      },
+      "category": "booth"
+    },
+    {
+      "id": "left_booth_middle",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 4,
+        "y": 12,
+        "width": 3,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 128,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "category": "booth"
+    },
+    {
+      "id": "left_booth_south",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 4,
+        "y": 18,
+        "width": 3,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 128,
+        "y": 576,
+        "width": 96,
+        "height": 128
+      },
+      "category": "booth"
+    },
+    {
+      "id": "left_service_door",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 4,
+        "y": 22,
+        "width": 3,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 128,
+        "y": 704,
+        "width": 96,
+        "height": 128
+      },
+      "category": "structure"
+    },
+    {
+      "id": "trash_can",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 4,
+        "y": 26,
+        "width": 2,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 128,
+        "y": 832,
+        "width": 64,
+        "height": 96
+      },
+      "category": "object"
+    },
+    {
+      "id": "table_north_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 12,
+        "y": 13,
+        "width": 4,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 384,
+        "y": 416,
+        "width": 128,
+        "height": 128
+      },
+      "category": "table_and_chairs"
+    },
+    {
+      "id": "table_north_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 20,
+        "y": 13,
+        "width": 4,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 640,
+        "y": 416,
+        "width": 128,
+        "height": 128
+      },
+      "category": "table_and_chairs"
+    },
+    {
+      "id": "table_south_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 12,
+        "y": 18,
+        "width": 4,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 384,
+        "y": 576,
+        "width": 128,
+        "height": 128
+      },
+      "category": "table_and_chairs"
+    },
+    {
+      "id": "table_south_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 20,
+        "y": 18,
+        "width": 4,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 640,
+        "y": 576,
+        "width": 128,
+        "height": 128
+      },
+      "category": "table_and_chairs"
+    },
+    {
+      "id": "right_seating_row_1",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 29,
+        "y": 13,
+        "width": 6,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 928,
+        "y": 416,
+        "width": 192,
+        "height": 96
+      },
+      "category": "table_and_chairs"
+    },
+    {
+      "id": "right_seating_row_2",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 29,
+        "y": 17,
+        "width": 6,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 928,
+        "y": 544,
+        "width": 192,
+        "height": 96
+      },
+      "category": "table_and_chairs"
+    },
+    {
+      "id": "right_seating_row_3",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 29,
+        "y": 21,
+        "width": 6,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 928,
+        "y": 672,
+        "width": 192,
+        "height": 96
+      },
+      "category": "table_and_chairs"
+    },
+    {
+      "id": "right_seating_row_4",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 29,
+        "y": 25,
+        "width": 6,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 928,
+        "y": 800,
+        "width": 192,
+        "height": 96
+      },
+      "category": "table_and_chairs"
+    },
+    {
+      "id": "upper_right_service_rooms",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 29,
+        "y": 3,
+        "width": 7,
+        "height": 9
+      },
+      "pixel_rect": {
+        "x": 928,
+        "y": 96,
+        "width": 224,
+        "height": 288
+      },
+      "category": "structure",
+      "access": "restricted"
+    },
+    {
+      "id": "entry_left_planter",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 14,
+        "y": 28,
+        "width": 3,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 448,
+        "y": 896,
+        "width": 96,
+        "height": 96
+      },
+      "category": "plant"
+    },
+    {
+      "id": "entry_right_planter",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 23,
+        "y": 28,
+        "width": 3,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 736,
+        "y": 896,
+        "width": 96,
+        "height": 96
+      },
+      "category": "plant"
+    }
+  ],
+  "passable_overrides": [
+    {
+      "id": "bottom_entry_clear",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 18,
+        "y": 29,
+        "width": 4,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 576,
+        "y": 928,
+        "width": 128,
+        "height": 96
+      },
+      "purpose": "door_threshold"
+    },
+    {
+      "id": "customer_counter_aisle",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 10,
+        "y": 11,
+        "width": 17,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 320,
+        "y": 352,
+        "width": 544,
+        "height": 64
+      },
+      "purpose": "customer_aisle"
+    }
+  ],
+  "structures": [
+    {
+      "id": "structure_charles_jr_interior",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 3,
+        "y": 2,
+        "width": 34,
+        "height": 30
+      },
+      "pixel_rect": {
+        "x": 96,
+        "y": 64,
+        "width": 1088,
+        "height": 960
+      },
+      "name": "Charles Jr. interior",
+      "entry_door_id": "door_charles_jr_exit"
+    },
+    {
+      "id": "structure_kitchen_service_zone",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 9,
+        "y": 3,
+        "width": 27,
+        "height": 9
+      },
+      "pixel_rect": {
+        "x": 288,
+        "y": 96,
+        "width": 864,
+        "height": 288
+      },
+      "name": "Kitchen and service zone",
+      "access": "staff_only"
+    }
+  ],
+  "objects": [
+    {
+      "id": "object_service_counter",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 9,
+        "y": 8,
+        "width": 17,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 288,
+        "y": 256,
+        "width": 544,
+        "height": 128
+      },
+      "category": "counter",
+      "interaction_id": "interaction_service_counter"
+    },
+    {
+      "id": "object_central_tables",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 12,
+        "y": 13,
+        "width": 12,
+        "height": 9
+      },
+      "pixel_rect": {
+        "x": 384,
+        "y": 416,
+        "width": 384,
+        "height": 288
+      },
+      "category": "seating_group"
+    },
+    {
+      "id": "object_left_booths",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 4,
+        "y": 6,
+        "width": 3,
+        "height": 16
+      },
+      "pixel_rect": {
+        "x": 128,
+        "y": 192,
+        "width": 96,
+        "height": 512
+      },
+      "category": "booth_group"
+    },
+    {
+      "id": "object_right_seating",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 29,
+        "y": 13,
+        "width": 6,
+        "height": 15
+      },
+      "pixel_rect": {
+        "x": 928,
+        "y": 416,
+        "width": 192,
+        "height": 480
+      },
+      "category": "seating_group"
+    }
+  ],
+  "doors": [
+    {
+      "id": "door_charles_jr_exit",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 18,
+        "y": 30,
+        "width": 4,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 576,
+        "y": 960,
+        "width": 128,
+        "height": 64
+      },
+      "structure_id": "structure_charles_jr_interior",
+      "clear_width_px": 128,
+      "transition_id": "transition_charles_jr_to_overworld"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "transition_charles_jr_to_overworld",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 18,
+        "y": 30,
+        "width": 4,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 576,
+        "y": 960,
+        "width": 128,
+        "height": 64
+      },
+      "target_map": "overworld",
+      "target_transition_id": "transition_overworld_to_charles_jr",
+      "target_spawn_id": "spawn_overworld_from_charles_jr",
+      "activation": "player_enter"
+    }
+  ],
+  "spawns": [
+    {
+      "id": "spawn_charles_jr_entry",
+      "tile_point": {
+        "x": 20,
+        "y": 28
+      },
+      "pixel_point": {
+        "x": 640,
+        "y": 896
+      },
+      "kind": "player",
+      "facing": "north",
+      "source_transition_id": "transition_overworld_to_charles_jr"
+    },
+    {
+      "id": "spawn_charles_jr_player_default",
+      "tile_point": {
+        "x": 20,
+        "y": 28
+      },
+      "pixel_point": {
+        "x": 640,
+        "y": 896
+      },
+      "kind": "player",
+      "facing": "north"
+    }
+  ],
+  "npc_spawn_markers": [
+    {
+      "id": "npc_anchor_cashier_left",
+      "tile_point": {
+        "x": 13.5,
+        "y": 7.5
+      },
+      "pixel_point": {
+        "x": 432,
+        "y": 240
+      },
+      "kind": "staff_anchor",
+      "enabled_by_default": false,
+      "facing": "south"
+    },
+    {
+      "id": "npc_anchor_cashier_right",
+      "tile_point": {
+        "x": 22.5,
+        "y": 7.5
+      },
+      "pixel_point": {
+        "x": 720,
+        "y": 240
+      },
+      "kind": "staff_anchor",
+      "enabled_by_default": false,
+      "facing": "south"
+    },
+    {
+      "id": "npc_anchor_kitchen",
+      "tile_point": {
+        "x": 18.5,
+        "y": 6.5
+      },
+      "pixel_point": {
+        "x": 592,
+        "y": 208
+      },
+      "kind": "staff_anchor",
+      "enabled_by_default": false,
+      "facing": "south"
+    },
+    {
+      "id": "npc_anchor_customer_center",
+      "tile_point": {
+        "x": 18,
+        "y": 24.5
+      },
+      "pixel_point": {
+        "x": 576,
+        "y": 784
+      },
+      "kind": "customer_anchor",
+      "enabled_by_default": false,
+      "facing": "north"
+    }
+  ],
+  "interactions": [
+    {
+      "id": "interaction_service_counter",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 10,
+        "y": 11,
+        "width": 16,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 320,
+        "y": 352,
+        "width": 512,
+        "height": 64
+      },
+      "target_object_id": "object_service_counter",
+      "action": "service_counter",
+      "approach": "south",
+      "facing": "north"
+    }
+  ],
+  "event_regions": [
+    {
+      "id": "restriction_kitchen_service_zone",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 9,
+        "y": 3,
+        "width": 27,
+        "height": 9
+      },
+      "pixel_rect": {
+        "x": 288,
+        "y": 96,
+        "width": 864,
+        "height": 288
+      },
+      "capability": "access_restriction",
+      "enabled": true,
+      "rule": "staff_only_until_gameplay_overrides"
+    }
+  ],
+  "foreground_occlusion_regions": [
+    {
+      "id": "high_foreground::alpha_component_02",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 104,
+        "y": 86,
+        "width": 941,
+        "height": 41
+      },
+      "trigger_tile_rect": {
+        "x": 3,
+        "y": 2,
+        "width": 30,
+        "height": 2
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 96,
+        "y": 64,
+        "width": 960,
+        "height": 64
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_03",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 1019,
+        "y": 291,
+        "width": 157,
+        "height": 155
+      },
+      "trigger_tile_rect": {
+        "x": 31,
+        "y": 9,
+        "width": 6,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 992,
+        "y": 288,
+        "width": 192,
+        "height": 160
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_04",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 931,
+        "y": 291,
+        "width": 87,
+        "height": 127
+      },
+      "trigger_tile_rect": {
+        "x": 29,
+        "y": 9,
+        "width": 3,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 928,
+        "y": 288,
+        "width": 96,
+        "height": 160
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_05",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 173,
+        "y": 331,
+        "width": 88,
+        "height": 100
+      },
+      "trigger_tile_rect": {
+        "x": 5,
+        "y": 10,
+        "width": 4,
+        "height": 4
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 160,
+        "y": 320,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_06",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 173,
+        "y": 176,
+        "width": 88,
+        "height": 98
+      },
+      "trigger_tile_rect": {
+        "x": 5,
+        "y": 5,
+        "width": 4,
+        "height": 4
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 160,
+        "y": 160,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_07",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 1090,
+        "y": 762,
+        "width": 87,
+        "height": 89
+      },
+      "trigger_tile_rect": {
+        "x": 34,
+        "y": 23,
+        "width": 3,
+        "height": 4
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 1088,
+        "y": 736,
+        "width": 96,
+        "height": 128
+      }
+    },
+    {
+      "id": "high_foreground::alpha_component_08",
+      "foreground_layer_id": "high_foreground",
+      "pixel_bbox": {
+        "x": 931,
+        "y": 291,
+        "width": 25,
+        "height": 32
+      },
+      "trigger_tile_rect": {
+        "x": 29,
+        "y": 9,
+        "width": 1,
+        "height": 2
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 928,
+        "y": 288,
+        "width": 32,
+        "height": 64
+      }
+    }
+  ],
+  "notes": [
+    "Customer floor and staff aisle are represented separately.",
+    "Kitchen restriction and counter interaction are data markers; no restaurant logic is authored."
+  ]
+}
