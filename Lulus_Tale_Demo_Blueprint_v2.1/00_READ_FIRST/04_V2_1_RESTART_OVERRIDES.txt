@@ -1,0 +1,40 @@
+V2.1 RESTART OVERRIDES — READ BEFORE IMPLEMENTING
+
+This file exists to prevent old v2.0 instructions from causing another placeholder-heavy implementation.
+
+SUPERSEDED:
+Any older blueprint language that allowed placeholder assets, blockout maps, fake objects, improvised home geometry, or asset hunting shortcuts for core demo assets is superseded.
+
+Current rule:
+No placeholders for core Lulu's Tale demo assets or maps.
+
+Required real assets from the start:
+- Lulu/player sprite and directional movement animation.
+- Lulu's dog.
+- Fry-stealing bird, when bird content is later reached.
+- Home layout.
+- Doors.
+- Fridge.
+- Bed.
+- Dog bowl/dog interaction.
+- Core map objects.
+- Interactables.
+- Room collision/walkable layout.
+
+If Codex cannot locate, slice, animate, scale, or implement a required real asset, it must stop and report the exact blocker. It must not substitute a placeholder or fake object.
+
+Important lesson from failed attempt:
+The first build wasted credits because Codex was allowed to create a working placeholder/blockout demo instead of correctly implementing the real assets and exact map layouts first.
+
+New restart order:
+1. Verify real Lulu sprite sheet and directional animations.
+2. Verify real dog and bird assets.
+3. Verify real home/interior tiles and objects.
+4. Use Semantic Tilemap Builder exports as exact map/layout source-of-truth.
+5. Build the home map only from the semantic export.
+6. Add home gameplay only after home layout and player sprite are correct.
+7. Expand to overworld and Charles Jr. only after the home foundation is stable.
+
+Do not start with the full Pass 1 flow.
+Do not let Codex improvise the home layout.
+Do not let Codex add random objects, staircases, furniture, or map structures that are not in the semantic map/export.
