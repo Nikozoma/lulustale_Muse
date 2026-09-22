@@ -1,0 +1,42 @@
+CHARLES JR INTERIOR LAYOUT RULES
+
+Sources of truth:
+- Charles.json
+- Charles.visual.json
+- public/assets/maps/charles/charles_interior_39x33.png
+
+Map scale:
+- 39 tiles wide.
+- 33 tiles tall.
+- 32 game-world pixels per tile.
+- 1248 x 1056 world pixels total.
+
+Purpose:
+Supports the Day 1 fries errand.
+
+Color meaning:
+- Blue = walls / room boundary.
+- Black/dark openings = doorways.
+- Red = booth/bench seating.
+- Brown wood = tables.
+- Yellow = cashier counter.
+- Light floor = walkable space.
+
+Required elements:
+- Entrance/exit doorway.
+- Cashier counter/order point.
+- Seating/tables as filler.
+- Open walkable floor from entrance to counter.
+
+Gameplay:
+1. Lulu enters Charles Jr. from overworld.
+2. Objective: Get fries.
+3. Player walks near cashier counter.
+4. Player taps cashier/order point.
+5. Dialogue uses the current dialogue framework; future choices and conditions
+   follow Lulus_Tale_FEATURE_IMPLEMENTATION_BLUEPRINT.txt.
+6. Fries are added as key item/flag.
+7. Objective updates to Head home.
+8. Player exits to overworld.
+
+No full shop/economy system required.
