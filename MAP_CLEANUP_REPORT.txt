@@ -1,0 +1,22 @@
+LULU'S TALE — OLD MAP LAYOUT CLEANUP
+=====================================
+
+Removed:
+- docs/ and all pre-overhaul QA screenshots, logs, checkpoint data, and reports.
+- Obsolete Tile Tool v1.3 and v1.4 historical reports that referenced superseded map filenames.
+
+Updated:
+- Active map, registry, visual companion, and quest marker tests now target the approved Home 28x43, Charles 39x33, and Overworld 48x34 layouts.
+- Blueprint map references now use Home.json, Charles.json, and Overworld.json.
+- Blueprint map dimensions and visual-companion examples now match the active overhaul.
+
+Preserved intentionally:
+- General-purpose semantic fallback asset sheets still referenced by the runtime and Tile Tool.
+- Tile Tool legacy import aliases; these are compatibility logic, not bundled old map data.
+- Non-map gameplay, source, tools, assets, and blueprint content.
+
+Current active map assets:
+- public/assets/maps/home/home_interior_28x43.png
+- public/assets/maps/charles/charles_interior_39x33.png
+- public/assets/maps/overworld/overworld_red_roof_48x34.png
+- public/assets/maps/overworld/foreground/overworld_tree_canopy_foreground.png
