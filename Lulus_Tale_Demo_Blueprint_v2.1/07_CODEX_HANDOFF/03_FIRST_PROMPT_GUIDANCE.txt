@@ -1,0 +1,31 @@
+FIRST CODEX PROMPT GUIDANCE — v2.1
+
+Recommended Codex mode for first prompt:
+High.
+
+First prompt should be:
+PASS 0 — Asset and semantic map verification only.
+
+Use High because the first step is not just a quick file list. Codex must inspect many asset folders, identify exact usable source files, determine likely frame/tile sizes, and inspect the semantic map without accidentally beginning implementation.
+
+The first prompt should:
+- reference Demo Blueprint v2.1,
+- reference Home.json,
+- reference the asset folders/files,
+- request an asset manifest/report,
+- request exact file paths, image dimensions, frame/tile sizes, and uncertainty labels,
+- request semantic map schema validation,
+- forbid gameplay implementation during Pass 0,
+- forbid placeholders for core assets,
+- instruct Codex to stop/report blockers if required assets are missing or ambiguous,
+- request changed files, commands run, tests/builds, validation, risks, next step, and git status.
+
+Do not:
+- ask for the full game,
+- ask for full Day 1,
+- ask for overworld/Charles Jr./bird content,
+- ask for a real-time day/night clock; the approved design uses manual bed-triggered phases,
+- ask for APK wrapper,
+- ask for traffic/car system,
+- ask for final art polish,
+- ask Codex to do full in-game playtesting.
