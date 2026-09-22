@@ -1,0 +1,37 @@
+ASSET READ FIRST — v2.1 NO-PLACEHOLDER RESTART
+
+The Codex project folder already contains extracted assets.
+
+Current asset priority:
+1. Verify exact real asset files and dimensions.
+2. Verify Lulu sprite sheet slicing/directional animations.
+3. Verify dog asset.
+4. Verify home/interior tiles and core objects.
+5. Only then implement gameplay.
+
+Critical rule:
+Do not let asset uncertainty turn into placeholder implementation.
+
+If a required asset is hard to locate, slice, scale, or match:
+- stop,
+- report the exact blocker,
+- list candidate files inspected,
+- list what information is missing,
+- suggest what the user should provide or decide.
+
+Do NOT:
+- use colored rectangles as Lulu/dog/bed/fridge/door/home tiles,
+- use fake/improvised map objects,
+- use a generic blockout as the real home map,
+- continue as if the asset is implemented when it is not.
+
+Allowed:
+- dev-only debug overlays,
+- collision outlines,
+- coordinate labels,
+- temporary diagnostic canvases/screenshots,
+- semantic colors from the map JSON as data, not final runtime art.
+
+Preserve original asset folders.
+Copy/slice only the needed runtime assets into a clean public/runtime structure.
+Codex must produce an asset manifest before the first gameplay implementation pass.
