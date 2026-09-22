@@ -1,0 +1,28 @@
+DIALOGUE STYLE AND SYSTEM TEXT
+
+Tone:
+- Personal.
+- Funny.
+- Slightly absurd.
+- Grounded during daytime.
+- Stranger and more dramatic at night.
+
+Dialogue mechanics:
+- All dialogue uses Next-button-only progression.
+- Speaker names should display when relevant.
+- System messages may use speaker "System".
+
+Common system messages:
+- "Got Dog Food."
+- "Got Charles Jr. Fries."
+- "Got Questionable Fries."
+- "Got Sword."
+- "Night Perception Awakened."
+- "Insanity +10."
+
+Tutorial popups:
+- "Drag on the left side to move."
+- "Tap nearby objects to interact."
+- "Follow the bird."
+- "Wait until the bird looks away, then tap the fries."
+- "Swipe on the right side to swing." [Pass 2]
