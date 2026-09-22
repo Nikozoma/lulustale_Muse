@@ -1,0 +1,38 @@
+{
+  "name": "lulus-tale-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "character-studio": "tsx tools/character-studio/server.ts",
+    "character-studio:migrate": "tsx tools/character-studio/scripts/migrate-current-assets.ts",
+    "character-studio:lulu-r3:produce": "tsx tools/character-studio/scripts/produce-canonical-lulu.ts",
+    "character-studio:lulu-r3:apply": "tsx tools/character-studio/scripts/apply-canonical-lulu-revision.ts",
+    "character-studio:lulu-r4:repair": "tsx tools/character-studio/scripts/repair-lulu-motion-r4.ts",
+    "character-studio:lulu-r4:apply": "tsx tools/character-studio/scripts/apply-lulu-motion-r4.ts",
+    "character-studio:lulu-r5:repair": "tsx tools/character-studio/scripts/repair-lulu-r5-fringe-sidewalk.ts",
+    "character-studio:lulu-r5:apply": "tsx tools/character-studio/scripts/apply-lulu-r5-fringe-sidewalk.ts",
+    "character-studio:lulu-r6:repair": "tsx tools/character-studio/scripts/repair-lulu-r6-locomotion.ts",
+    "character-studio:lulu-r6:apply": "tsx tools/character-studio/scripts/apply-lulu-r6-locomotion.ts",
+    "character-studio:lulu-r8:repair": "tsx tools/character-studio/scripts/repair-lulu-r8-six-direction.ts",
+    "character-studio:lulu-r8:apply": "tsx tools/character-studio/scripts/apply-lulu-r8-six-direction.ts",
+    "character-studio:check": "tsc -p tools/character-studio/tsconfig.json --noEmit && vitest run src/game/characterContract.test.ts && vitest run --config tools/character-studio/vitest.config.ts",
+    "map-studio:build": "tsc -p tools/map-editor/tsconfig.json",
+    "map-studio:test": "vitest run --config tools/map-editor/vitest.config.ts",
+    "map-studio": "npm run map-studio:build && node tools/map-editor/server.mjs",
+    "maps:overworld-collision": "node tools/generate-overworld-collision.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "ajv": "^8.17.1",
+    "sharp": "^0.34.3",
+    "tsx": "^4.20.6",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.11",
+    "vite-plugin-pwa": "^1.3.0",
+    "vitest": "^2.1.5"
+  }
+}
