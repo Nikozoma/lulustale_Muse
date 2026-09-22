@@ -1,0 +1,47 @@
+CANONICAL DEMO FLOW — v2.1
+
+CURRENT IMPLEMENTATION TARGET: HOME FOUNDATION ONLY
+
+HOME FOUNDATION LOOP
+1. Lulu starts near the bed using the semantic player_spawn marker.
+2. Objective: learn movement.
+3. Player moves around the bedroom/living area.
+4. Objective: go to the kitchen/fridge.
+5. Player approaches fridge.
+6. Player taps/interacts with fridge while close enough.
+7. Lulu receives Dog Food.
+8. Objective: feed the dog / use dog bowl.
+9. Player approaches dog/dog bowl interaction zone.
+10. Player taps/interacts while close enough.
+11. Dog reacts happily.
+12. Objective: go to the exit door.
+13. Player approaches exit/entrance marker.
+14. For the foundation milestone, the game may stop at a clear "foundation complete" message or keep Lulu inside home until exterior is implemented.
+
+AFTER HOME FOUNDATION SUCCEEDS — DEFERRED DAYTIME EXPANSION
+15. Lulu exits home.
+16. Player walks from Player Apartment to Charles Jr.
+17. Player enters Charles Jr.
+18. Player approaches cashier counter.
+19. Dialogue/order interaction occurs.
+20. Lulu gets Charles Jr. Fries.
+21. Objective: head home.
+22. Bird theft triggers automatically on return route.
+23. Player tracks bird.
+24. Lulu recovers fries.
+25. Lulu returns home.
+26. Lulu uses the bed.
+27. Player chooses either Sleep Until Next Day or Stay Up Into Night.
+
+PASS 2 NIGHT EXTENSION — DEFERRED, PLAYER-OPT-IN
+28. If the player selected Stay Up Into Night, the night hook begins without advancing the day.
+29. Lulu hears window pecking.
+30. Lulu investigates window.
+31. Lulu goes outside.
+32. Lulu finds shiny sword in bush.
+33. Lulu confronts bird gang.
+34. Night perception/animal understanding introduced.
+35. Sword battle.
+36. Win path returns to bed manually and advances to Day 2.
+37. Loss handling may return Lulu home, but must not advance time from an automatic world timer.
+38. Demo ends at Day 2 wake-up.
