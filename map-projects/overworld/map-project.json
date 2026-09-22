@@ -1,0 +1,128 @@
+{
+  "$schema": "../tools/map-editor/schema/map-project.schema.json",
+  "format": "lulus_map_project_v1",
+  "version": "1.0.0",
+  "mapId": "overworld",
+  "displayName": "Overworld",
+  "dimensions": {
+    "widthTiles": 96,
+    "heightTiles": 68,
+    "widthPx": 3072,
+    "heightPx": 2176,
+    "tileSizePx": 32,
+    "collisionCellSizePx": 4
+  },
+  "runtime": {
+    "semantic": "public/data/maps/overworld/semantic.json",
+    "collision": "public/data/maps/overworld/collision_grid.json",
+    "dayVisual": "public/data/maps/overworld/visual_day.json",
+    "nightVisual": "public/data/maps/overworld/visual_night.json",
+    "assetRoot": "public/assets/maps/native/overworld"
+  },
+  "art": {
+    "day": {
+      "layers": [
+        {
+          "id": "base",
+          "kind": "base",
+          "path": "public/assets/maps/native/overworld/day_base.png",
+          "runtimeAsset": "production/overworld/day_base.png",
+          "locked": false,
+          "visible": true,
+          "zIndex": 0
+        },
+        {
+          "id": "building_foreground",
+          "kind": "foreground",
+          "path": "public/assets/maps/native/overworld/building_foreground_day.png",
+          "runtimeAsset": "production/overworld/building_foreground_day.png",
+          "foregroundLayerId": "building_foreground",
+          "locked": false,
+          "visible": true,
+          "sharedAlpha": true,
+          "phase": "day",
+          "zIndex": 200
+        },
+        {
+          "id": "tree_canopy_foreground",
+          "kind": "foreground",
+          "path": "public/assets/maps/native/overworld/tree_canopy_foreground_day.png",
+          "runtimeAsset": "production/overworld/tree_canopy_foreground_day.png",
+          "foregroundLayerId": "tree_canopy_foreground",
+          "locked": false,
+          "visible": true,
+          "sharedAlpha": true,
+          "phase": "day",
+          "zIndex": 220
+        }
+      ]
+    },
+    "night": {
+      "layers": [
+        {
+          "id": "base",
+          "kind": "base",
+          "path": "public/assets/maps/native/overworld/night_base.png",
+          "runtimeAsset": "production/overworld/night_base.png",
+          "locked": false,
+          "visible": true,
+          "zIndex": 0
+        },
+        {
+          "id": "building_foreground",
+          "kind": "foreground",
+          "path": "public/assets/maps/native/overworld/building_foreground_night.png",
+          "runtimeAsset": "production/overworld/building_foreground_night.png",
+          "foregroundLayerId": "building_foreground",
+          "locked": false,
+          "visible": true,
+          "sharedAlpha": true,
+          "phase": "night",
+          "zIndex": 200
+        },
+        {
+          "id": "tree_canopy_foreground",
+          "kind": "foreground",
+          "path": "public/assets/maps/native/overworld/tree_canopy_foreground_night.png",
+          "runtimeAsset": "production/overworld/tree_canopy_foreground_night.png",
+          "foregroundLayerId": "tree_canopy_foreground",
+          "locked": false,
+          "visible": true,
+          "sharedAlpha": true,
+          "phase": "night",
+          "zIndex": 220
+        }
+      ]
+    }
+  },
+  "sourceHashes": {
+    "public/data/maps/overworld/semantic.json": "b7ffade95741251db8f98b902494e12304c00d0f9572660e51da055a56155eb7",
+    "public/data/maps/overworld/collision_grid.json": "a46729e2fba9635d2d44a69c5f849302d9abf3d942dd9e1f379338d1c25db561",
+    "public/data/maps/overworld/visual_day.json": "3b14367d74168a3eaf2b4bb6a5c4b2dbb6bd2504a2ee635367b4c17d8718e8c9",
+    "public/data/maps/overworld/visual_night.json": "9d2048a37e25cd6fc76435a5c7088fa568606a438a97409e39cb8a52a6f9bb5d",
+    "public/assets/maps/native/overworld/day_base.png": "22e5c4ebeca605c7abf4492a4a0d8bc593c05816a55ffdf26be24616f3cdedc1",
+    "public/assets/maps/native/overworld/building_foreground_day.png": "d0e71604ff5e69ce77c315ec2ff54ab30e1eef9d22f12d890117c30cc8dde17b",
+    "public/assets/maps/native/overworld/tree_canopy_foreground_day.png": "feff04299f57d3e1dad232e7fde79449fbe0f1becafdd6532e062a64caac63a8",
+    "public/assets/maps/native/overworld/night_base.png": "7bf096dec8cad4d0f57da5843cde8fca5bc405289f6665b9f888aa93803f07dc",
+    "public/assets/maps/native/overworld/building_foreground_night.png": "572897f9474e578e0f677f6219ded49311d647ae0554faa63e1a665efe602b35",
+    "public/assets/maps/native/overworld/tree_canopy_foreground_night.png": "28b1979a5908bde6e315da21717ca691bf829f2c95513dc6d660eb2b71022d3a"
+  },
+  "lastExportHashes": {
+    "public/data/maps/overworld/semantic.json": "b7ffade95741251db8f98b902494e12304c00d0f9572660e51da055a56155eb7",
+    "public/data/maps/overworld/collision_grid.json": "a46729e2fba9635d2d44a69c5f849302d9abf3d942dd9e1f379338d1c25db561",
+    "public/data/maps/overworld/visual_day.json": "3b14367d74168a3eaf2b4bb6a5c4b2dbb6bd2504a2ee635367b4c17d8718e8c9",
+    "public/data/maps/overworld/visual_night.json": "9d2048a37e25cd6fc76435a5c7088fa568606a438a97409e39cb8a52a6f9bb5d",
+    "RUNTIME_AUTHORITY_MANIFEST.json": "c34ac808715160f61205a5ecbfcc11ead5e7d04413bfa4de8aed8e8fd8a57141"
+  },
+  "auditSources": [
+    "map-projects/audits/index.json"
+  ],
+  "repairAnnotations": [],
+  "approval": {
+    "calibrationAreaApproved": false,
+    "approvedAt": null
+  },
+  "lastPublishedAt": "2026-07-25T07:54:31.737Z",
+  "baselineMigrationPublishedAt": "2026-07-25T07:54:31.737Z",
+  "savedAt": "2026-07-26T04:35:33.209Z"
+}
