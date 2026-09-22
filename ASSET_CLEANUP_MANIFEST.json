@@ -1,0 +1,3531 @@
+{
+  "format": "lulus_character_asset_cleanup_v1",
+  "variant": "enlarged_96x68",
+  "before": {
+    "fileCount": 737,
+    "sizeBytes": 17536391
+  },
+  "after": {
+    "fileCount": 83,
+    "sizeBytes": 43661438
+  },
+  "mapAssets": {
+    "before": {
+      "fileCount": 40,
+      "sizeBytes": 16061092
+    },
+    "after": {
+      "fileCount": 40,
+      "sizeBytes": 16061092
+    },
+    "byteIdentical": true
+  },
+  "newCharacterAssets": {
+    "fileCount": 34,
+    "sizeBytes": 27279980
+  },
+  "removedAssets": {
+    "fileCount": 688,
+    "sizeBytes": 1154933
+  },
+  "removedByDirectory": {
+    "Character_Packs": {
+      "fileCount": 42,
+      "sizeBytes": 205889
+    },
+    "Japanese_City": {
+      "fileCount": 384,
+      "sizeBytes": 281179
+    },
+    "basic-animal": {
+      "fileCount": 48,
+      "sizeBytes": 50468
+    },
+    "dog-mega-pack": {
+      "fileCount": 2,
+      "sizeBytes": 9825
+    },
+    "female-adventurer": {
+      "fileCount": 58,
+      "sizeBytes": 144683
+    },
+    "nature": {
+      "fileCount": 1,
+      "sizeBytes": 1588
+    },
+    "super-retro-world": {
+      "fileCount": 137,
+      "sizeBytes": 363549
+    },
+    "modern-interiors": {
+      "fileCount": 15,
+      "sizeBytes": 97014
+    },
+    "top-down-retro-interior": {
+      "fileCount": 1,
+      "sizeBytes": 738
+    }
+  },
+  "removedFiles": [
+    {
+      "path": "Character_Packs/Adam_16x16.png",
+      "sizeBytes": 16831,
+      "sha256": "8d1ccf23d03481bd31d5d861b110ecbcc249e5a8c5fe87c98acc485c63598bab"
+    },
+    {
+      "path": "Character_Packs/Adam_idle_16x16.png",
+      "sizeBytes": 1993,
+      "sha256": "5c0056274a0adfc836b03299b448a019a9b2f6021d29b09030f3e454729cf74b"
+    },
+    {
+      "path": "Character_Packs/Adam_idle_anim_16x16.png",
+      "sizeBytes": 4076,
+      "sha256": "486089994cfec9b927fac08e6e3f1af38c6b581d029c63509badfaa24e0a13fc"
+    },
+    {
+      "path": "Character_Packs/Adam_phone_16x16.png",
+      "sizeBytes": 1798,
+      "sha256": "4afc34e2a0edbaaa58349c7682e5390c06d6926323a8d38e0e04166f3049cfc5"
+    },
+    {
+      "path": "Character_Packs/Adam_run_16x16.png",
+      "sizeBytes": 5765,
+      "sha256": "11b20f6be9df55e16956750817f9fd3ac19d159b93080cbf4d6a87b640ff16c0"
+    },
+    {
+      "path": "Character_Packs/Adam_sit2_16x16.png",
+      "sizeBytes": 2456,
+      "sha256": "d8a3a90afa5627b6ec94a996c1fa56ee9ad0cdfe58e79584faca7669301cd310"
+    },
+    {
+      "path": "Character_Packs/Adam_sit3_16x16.png",
+      "sizeBytes": 2224,
+      "sha256": "57040f8c1a17af8d2450b23e44d76ec9860408422e79f283ef3436993f8b3c15"
+    },
+    {
+      "path": "Character_Packs/Adam_sit_16x16.png",
+      "sizeBytes": 2420,
+      "sha256": "eac1744a9203f73544c0096dc1db7f335ae4efc23ca5f11d3be31db51a5f3e0c"
+    },
+    {
+      "path": "Character_Packs/Alex_16x16.png",
+      "sizeBytes": 18938,
+      "sha256": "3db9c01ac6db47abfefe381d33f1c0a9bf22930b9b25187fc213a723333f0212"
+    },
+    {
+      "path": "Character_Packs/Alex_idle_16x16.png",
+      "sizeBytes": 1812,
+      "sha256": "e12c14572e498a0bb30db6416cffa421fb6b57a361c8fed0448b4f04bcee6523"
+    },
+    {
+      "path": "Character_Packs/Alex_idle_anim_16x16.png",
+      "sizeBytes": 3537,
+      "sha256": "78a0031a37b3d518eee542923ee3d89cf668381e7fceead71206565e6b93e7e7"
+    },
+    {
+      "path": "Character_Packs/Alex_phone_16x16.png",
+      "sizeBytes": 1390,
+      "sha256": "feff00c8cf84b989ad1f64330586ef2a789ab7352f08d2a87713f474bcdea910"
+    },
+    {
+      "path": "Character_Packs/Alex_run_16x16.png",
+      "sizeBytes": 5392,
+      "sha256": "009f3c614856c8b7982022775824fac9234f3d49cf533b4b5d449b9edc69df21"
+    },
+    {
+      "path": "Character_Packs/Alex_sit2_16x16.png",
+      "sizeBytes": 2375,
+      "sha256": "f161f8895506daa9cdb54a17f716b1da68729b82f4d995c02fb35f7e7bcd87ac"
+    },
+    {
+      "path": "Character_Packs/Alex_sit3_16x16.png",
+      "sizeBytes": 2080,
+      "sha256": "cf9fc90b4e66749f7b7fb4899a8c1c56aae2a46687f8b6f45c8511fe7ca39b6f"
+    },
+    {
+      "path": "Character_Packs/Alex_sit_16x16.png",
+      "sizeBytes": 1863,
+      "sha256": "b3fe12b70fbb3246ab677aee1b84593b4affb04d0d958518b42b15a6dc7a8ccd"
+    },
+    {
+      "path": "Character_Packs/Amelia_16x16.png",
+      "sizeBytes": 15282,
+      "sha256": "f4249d27d3853d7dc5e1027b0316e554dc97e1d0d31940f5cf61fe1d0ab14b8f"
+    },
+    {
+      "path": "Character_Packs/Amelia_idle_16x16.png",
+      "sizeBytes": 1871,
+      "sha256": "8a61bd3f607ab7fb61e692458d2b7982d32bb417c844a5c18156260bddfe581b"
+    },
+    {
+      "path": "Character_Packs/Amelia_idle_anim_16x16.png",
+      "sizeBytes": 3764,
+      "sha256": "fc72fda0247dba8d71a54e0018a79cc4ff831c164402d922c8e137d93c450bc5"
+    },
+    {
+      "path": "Character_Packs/Amelia_phone_16x16.png",
+      "sizeBytes": 1610,
+      "sha256": "83fb6ac1b033f54a669b820fcdb52bd9a2dfd3b6473fe7c2603c655fbd8c2b14"
+    },
+    {
+      "path": "Character_Packs/Amelia_run_16x16.png",
+      "sizeBytes": 5356,
+      "sha256": "95211e599b42c04367e42d026f345b8bc5e438a72d9964da54b4e4a9bf8ee902"
+    },
+    {
+      "path": "Character_Packs/Amelia_sit2_16x16.png",
+      "sizeBytes": 2206,
+      "sha256": "301b9263e7f77c0062f8502f1b99688d0118cdd32f82331da7173f014a93ac40"
+    },
+    {
+      "path": "Character_Packs/Amelia_sit3_16x16.png",
+      "sizeBytes": 2130,
+      "sha256": "969adbe5a546f2d46f28973971e53bcc1272a18d2546cef4ef73d5b186ba4ada"
+    },
+    {
+      "path": "Character_Packs/Amelia_sit_16x16.png",
+      "sizeBytes": 2103,
+      "sha256": "63c1f9f983a6d7855d52ebbed658fdf78b1feda9f55ed908aed21fe602d93f2f"
+    },
+    {
+      "path": "Character_Packs/Bob_16x16.png",
+      "sizeBytes": 17760,
+      "sha256": "772510a978b4800492d4dd7d34bc4c448243a428f0d4c8f55de07db33d8302b6"
+    },
+    {
+      "path": "Character_Packs/Bob_idle_16x16.png",
+      "sizeBytes": 1700,
+      "sha256": "a7b3d6f61042f47871557700fcb963979de6a602f5f778d78eb109316c1411b4"
+    },
+    {
+      "path": "Character_Packs/Bob_idle_anim_16x16.png",
+      "sizeBytes": 3327,
+      "sha256": "7a339499a5c5f3cdce8a65f926fa0c30d1e27d451ffc4f99693cbfc0a84e0c50"
+    },
+    {
+      "path": "Character_Packs/Bob_phone_16x16.png",
+      "sizeBytes": 1504,
+      "sha256": "30388da16c042ea2bb4472fbcb344e548f977313ff7bddf2550b5111c724307a"
+    },
+    {
+      "path": "Character_Packs/Bob_run_16x16.png",
+      "sizeBytes": 5070,
+      "sha256": "43cadb17d009be9224e381cdea4923fb88e4df9d243ba2320eff23dfcfb88f97"
+    },
+    {
+      "path": "Character_Packs/Bob_sit2_16x16.png",
+      "sizeBytes": 2153,
+      "sha256": "8c852792ae76bf032d111ea37193ff37313bd35df96a9a7a6c27c2fae7d22b65"
+    },
+    {
+      "path": "Character_Packs/Bob_sit3_16x16.png",
+      "sizeBytes": 1877,
+      "sha256": "2ee54a3c15ad85abcd72774611cc92dddef56bad9c55b0ffe7c638a0072b70ce"
+    },
+    {
+      "path": "Character_Packs/Bob_sit_16x16.png",
+      "sizeBytes": 2205,
+      "sha256": "d62d508e4f84792cdacf477305b261799e54bdb3473287bb0373d656891615cc"
+    },
+    {
+      "path": "Character_Packs/Character_2_16x16_RPGMAKER.png",
+      "sizeBytes": 3495,
+      "sha256": "c0f102ff32fcdea48d1d6c25e3e44bacc8d4e6a9b2c10a530f231b63b1dcdcc0"
+    },
+    {
+      "path": "Character_Packs/Character_2_32x32_RPGMAKER.png",
+      "sizeBytes": 4519,
+      "sha256": "f0afad0906c65ca03a6fbcf2999bd33051266a0a3bdb2a3265cdb822cdafb435"
+    },
+    {
+      "path": "Character_Packs/Character_2_48x48_RPGMAKER.png",
+      "sizeBytes": 5900,
+      "sha256": "6f2e41a92059c0901d6f0b6ec89f88d76659f8b0106091d702240784b4159304"
+    },
+    {
+      "path": "Character_Packs/Characters_MV.png",
+      "sizeBytes": 21818,
+      "sha256": "2883f284ac66f969f81dd18a33448780655016e810a78a63e0982412d681d851"
+    },
+    {
+      "path": "Character_Packs/idle_16x16_2.png",
+      "sizeBytes": 1315,
+      "sha256": "4014227842bb194fa2c59452ae4eb4597f510d61228f0f56eaf8e1e8c4d58982"
+    },
+    {
+      "path": "Character_Packs/idle_32x32_2.png",
+      "sizeBytes": 2016,
+      "sha256": "d264f3303e94c72205fe8df2c5bfef493fe728391b421d246759107868c507b8"
+    },
+    {
+      "path": "Character_Packs/idle_48x48_2.png",
+      "sizeBytes": 2223,
+      "sha256": "bb7e82e3e78b742ef05ec15fab2c5a6ca327f42dfe3ba9f41bf6ce6470ec40c0"
+    },
+    {
+      "path": "Character_Packs/run_horizontal_16x16_2.png",
+      "sizeBytes": 5725,
+      "sha256": "db3a1e05c9d068ac74c7ebda99f62a08daa5f807d759caab3f27b784756a1af9"
+    },
+    {
+      "path": "Character_Packs/run_horizontal_32x32_2.png",
+      "sizeBytes": 6572,
+      "sha256": "c7451ab77ed014302631a0fc9e20c2be4e650982b8de5358babcadf7e648f694"
+    },
+    {
+      "path": "Character_Packs/run_horizontal_48x48_2.png",
+      "sizeBytes": 7438,
+      "sha256": "a167f9821a98133a5dc0bf1f9355ca05b2379003af9e83ed956277dc2ba84a00"
+    },
+    {
+      "path": "Japanese_City/RPGMakerVXAce/GK_A2_JC_autotile_1.png",
+      "sizeBytes": 18154,
+      "sha256": "fcfd030f3fe11396cd5f37d377674861378dfefc6d9a63fa8703b9c135a7c770"
+    },
+    {
+      "path": "Japanese_City/RPGMakerVXAce/GK_JC_A5_2.png",
+      "sizeBytes": 15845,
+      "sha256": "7189bf8ae166400a9d3ee87ccd794b971ed7b089fe49fcef297bc8227cf5c39b"
+    },
+    {
+      "path": "Japanese_City/RPGMakerVXAce/GK_JC_B_2.png",
+      "sizeBytes": 31293,
+      "sha256": "848b00055702937d77ac253b2c2a1770f3df21142a9052c8140aa4e47282e7ae"
+    },
+    {
+      "path": "Japanese_City/RPGMakerVXAce/GK_JC_C_2.png",
+      "sizeBytes": 14313,
+      "sha256": "e92109cce4af22ad1e512f8b143badc0de58d1a0a098513f2b3092c5001a7a4d"
+    },
+    {
+      "path": "Japanese_City/Tilemap/Tilemap.png",
+      "sizeBytes": 94689,
+      "sha256": "2b57f857269a1270884b702ba3fbf15a2105994587222953f6bd93bc09a889b6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_001.png",
+      "sizeBytes": 194,
+      "sha256": "23fe710a4ef90d7bdedcee419e72a54c16bc08f526e9c03865fca0a806fd05b7"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_002.png",
+      "sizeBytes": 197,
+      "sha256": "27c81d562d4e3f3ad1e9b0201383c947d0de5bffaa392f1757d5730b300fe95b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_003.png",
+      "sizeBytes": 196,
+      "sha256": "be537050bbba0f76f1c70b357316a3828ef1b82086b72c1086114d9ed44261b5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_004.png",
+      "sizeBytes": 195,
+      "sha256": "d7cf75d32a80d4540fb463f4dc5588e9551c871483fb7d89a9eca63d12e88fcf"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_005.png",
+      "sizeBytes": 379,
+      "sha256": "4874d546e1eaed3ccb89f4a32ed9d5188b67227ec24b1ae29d7ecb181c8a1c21"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_006.png",
+      "sizeBytes": 197,
+      "sha256": "ec459cbe6c540573ef7d4d994755b1e191e120409d1a4063db5bda8bac43fb88"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_007.png",
+      "sizeBytes": 203,
+      "sha256": "01287619076cf6cb622eae385bde3a43ee89d69ab90a534f76ea586e840fabd7"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_008.png",
+      "sizeBytes": 164,
+      "sha256": "22ea787b477f2adc54506ee0b8788978499acc3ce85b292326d876fb8d89bbe5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_009.png",
+      "sizeBytes": 159,
+      "sha256": "be8bf9df569a89eefb0afb5dfe4c1ed11f46635b9e347cf4ae1b6dca1c69a0c5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_010.png",
+      "sizeBytes": 165,
+      "sha256": "e1853428bf6bf60832fe04f67048cd3d3e1fa60b13c819f64ddb166135b47b09"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_011.png",
+      "sizeBytes": 259,
+      "sha256": "ef23454fe2919e6d06af50b530056f0aaf400cbe34c9a84f8c75a1e6bf61725c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_012.png",
+      "sizeBytes": 257,
+      "sha256": "7088441c80f5f6baf142068adb09f4d69e397b47af32bf15d29a8828a795955a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_013.png",
+      "sizeBytes": 234,
+      "sha256": "a67ce867a00e100c0f842695187d56413607ea44c0d612c88b4267ae3362023d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_014.png",
+      "sizeBytes": 225,
+      "sha256": "1409f2594be9595318da78b9ffc56a7aace6f1c25b6c95dd4c9faafc73d26543"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_015.png",
+      "sizeBytes": 220,
+      "sha256": "6ab2c3678039940b7d6f65ae84141fc69730d4103663c6ded4fe2da0e2588b9c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_016.png",
+      "sizeBytes": 215,
+      "sha256": "e446aae2929658fbbe81e0ad1df09cdf9c43b21104765ae7a95f13cb0bcc7010"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_017.png",
+      "sizeBytes": 231,
+      "sha256": "64faaa7aabfd80fd16818b66281c7b916c0fa42e1a738937c19f978289a5b74c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_018.png",
+      "sizeBytes": 412,
+      "sha256": "86286255c3cb88338fe6fefa51847519320d5479096b3bb0ad2c10298aa9bf20"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_019.png",
+      "sizeBytes": 380,
+      "sha256": "fc935760cba2e3e2150d80744eff6b90046b912f4120e99fd90ac216cb4d269f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_020.png",
+      "sizeBytes": 440,
+      "sha256": "d8aed1c21edfeb88f4f8d0a9eb44afe82eeb1bb4d31c87fef69f66bb54a84f02"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_021.png",
+      "sizeBytes": 402,
+      "sha256": "cbaf33a304ed9156f6ba68f9e62374ee671113bfbae5eba66a5568a944eebdc7"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_022.png",
+      "sizeBytes": 386,
+      "sha256": "3be22fbaa07de2aa1124d6a3b9c096c3a9fa65676011b96121d4e1dc2ec7d422"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_023.png",
+      "sizeBytes": 392,
+      "sha256": "54ae6e1c3586e394a8fd346ac7886ff56897db2b238677b54de631ae8c93f586"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_024.png",
+      "sizeBytes": 389,
+      "sha256": "677512ac5dcc1498836c8ad51cd24627c36930ad7a75d3d64ba0616d8934e4bd"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_025.png",
+      "sizeBytes": 133,
+      "sha256": "0c4830d81117a6aa5bb2921555d296f1b75d015d5b92fefd640b373a8c636075"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_026.png",
+      "sizeBytes": 130,
+      "sha256": "d82fdc10c05b84b5382430f5fb12b2909316e89095db52a3a7b3c8c9b2674ba7"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_027.png",
+      "sizeBytes": 128,
+      "sha256": "97a9930830f3f198cc3ede1ccbbe0f3f25f71469e57a4060d50dd373283f1265"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_028.png",
+      "sizeBytes": 132,
+      "sha256": "4068a28796ac3cdb7b7f6800b9354bf117656fbed35bc26ff1cb6624c8ba9720"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_029.png",
+      "sizeBytes": 332,
+      "sha256": "15dbd86920164cf65cd3ff00f0ea780d6776b437a84510d276b44bd899a5081d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_030.png",
+      "sizeBytes": 214,
+      "sha256": "93121e4a77554dcb4adc884eea1448031e741b6bb0068cb76240f6dbae2e11e2"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_031.png",
+      "sizeBytes": 206,
+      "sha256": "116228dc573b05b7ede5b5f50b2ec8e0381ef9de7b2b419d77d3208188b97050"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_032.png",
+      "sizeBytes": 187,
+      "sha256": "95b76bf21de2eafef8edf3622d059fb2efa7ee8108933f1a275e1fe89a7f5eaf"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_033.png",
+      "sizeBytes": 184,
+      "sha256": "739ccbfd819b6b4a6892e57b6d1919ffe3b7add1ec55ac10f7789ba57b0e8e43"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_034.png",
+      "sizeBytes": 201,
+      "sha256": "1adec4004bea5b4aa70a758592127ec2922fadac9f68574586006a93d0d16485"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_035.png",
+      "sizeBytes": 149,
+      "sha256": "d9554dc47fa448a62b32b858701005ac32a335c8f4434b46c3b48da44414db61"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_036.png",
+      "sizeBytes": 270,
+      "sha256": "0bfb31b783f0f87beec62aed81d12281f887524ac6a66a17eea6690313a31504"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_037.png",
+      "sizeBytes": 234,
+      "sha256": "37a5d61273f32e9ca44ed81847282658468557c8de4a89dad6e794029f1f8453"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_038.png",
+      "sizeBytes": 265,
+      "sha256": "951a879511e531b68a9f6b66cf5d1d73bf08e90020af28c66d9b0fb8244deb61"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_039.png",
+      "sizeBytes": 257,
+      "sha256": "3af4f393988587dade1466629bd88a09be90c4a983ebd174b4ba3d1339a8a686"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_040.png",
+      "sizeBytes": 246,
+      "sha256": "d43fa7800dbab9cab29b548f0c7298a2ba520c35e5d68fefac44ba782b11701f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_041.png",
+      "sizeBytes": 231,
+      "sha256": "8f9026affbd15b429c79197e2a1ce704a19e2d5869ff1b75ffe7e564c58a12a8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_042.png",
+      "sizeBytes": 221,
+      "sha256": "426a644c52063a496a2a1d4d0eb0924425160943e35458d6f0736e9149ab1914"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_043.png",
+      "sizeBytes": 215,
+      "sha256": "ad776ac715947958303b9cec412a46ff1a521202f66165fb7d2d7772b12eec9f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_044.png",
+      "sizeBytes": 272,
+      "sha256": "0b6d06120b3fbca5637dda5c8c132bbddf455a357f8b998bb908b1d57bcab6e8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_045.png",
+      "sizeBytes": 247,
+      "sha256": "b99e7b72c72220b8a8600f8e92434009baa3702001d66d3403adc0e2c6e59cae"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_046.png",
+      "sizeBytes": 232,
+      "sha256": "4dd433ee417ad2c17883b7b792dee0eece30c162c53cdfaa8f6d527a6e2a481f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_047.png",
+      "sizeBytes": 388,
+      "sha256": "072bd1d1fd0d9bffe84733d9b4ba440a21e50dbda75e1ef05a9b20319880fb9f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_048.png",
+      "sizeBytes": 459,
+      "sha256": "9d5ad15dec5851bb31acf9a51971f59e2e6fcba789c57fa2dcb21f648fc811c6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_049.png",
+      "sizeBytes": 443,
+      "sha256": "682f1cddd7699dc844d1268f7ee771ec05588c66336cdff26ba86e6d12d4d7a4"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_050.png",
+      "sizeBytes": 466,
+      "sha256": "72931be6c4aef7eaae4b1087477541f3f3190000620c6781823577d591e1abde"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_051.png",
+      "sizeBytes": 450,
+      "sha256": "5c56b6aa98d67179654e4b0ccea50ee2392f59a18b90472cc1213dd252e2e791"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_052.png",
+      "sizeBytes": 412,
+      "sha256": "44988dac3cbaa1ff2b8eac5250efb6cbce2cce6c99c18f6e132d6fb22a5d170c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_053.png",
+      "sizeBytes": 441,
+      "sha256": "4952ef0b04c451874ff0cb4dc684f85ad8bf639642519963a44af608d6909135"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_054.png",
+      "sizeBytes": 471,
+      "sha256": "0f01ade332502ec4b65cfae0ba64c73fad772810b5a0d40adfd9827f24ef9fbb"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_055.png",
+      "sizeBytes": 454,
+      "sha256": "d3c1aa07797df30585daed1a1fd144eeb24863335191f063b4da9ea05531d21c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_056.png",
+      "sizeBytes": 452,
+      "sha256": "899aadd7adedc5ee210f296c1fcb7831539c4f2a404b099772341e55d322c669"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_057.png",
+      "sizeBytes": 251,
+      "sha256": "b3698e6dd885c36c33a7ba108a070b3dc15114368447d2f5bbc9121e236919eb"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_058.png",
+      "sizeBytes": 269,
+      "sha256": "95dbce24feb6020e226eaa3ae0d27d693a45a817e10b89b668ff08405f7ecf4c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_059.png",
+      "sizeBytes": 273,
+      "sha256": "6ae8325f299397a8804d2817e658a156dd7be64172c04661af98716ee9ce389d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_060.png",
+      "sizeBytes": 250,
+      "sha256": "a5dee7ba4644da2cb75e816307cb14b5c8e802f4079e0b73a359ff9ec5161beb"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_061.png",
+      "sizeBytes": 324,
+      "sha256": "ce5cd9a020b1528b85ceac72172674256c76e3c580bdcb94ffecc0dd5db56eca"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_062.png",
+      "sizeBytes": 332,
+      "sha256": "3cb24e29236eb4d755faa3b80321134c13881f5bc1f14e4a4eb92d6f2ec77626"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_063.png",
+      "sizeBytes": 225,
+      "sha256": "5fe426b7d1c0b9977c0dbf47fb0f73b3f9f3a785cb578e74f364504354ab82a9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_064.png",
+      "sizeBytes": 270,
+      "sha256": "55e6f3510022b9eed1b402cc45034024c1c8ae395cc099cf09e7461895c1544c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_065.png",
+      "sizeBytes": 196,
+      "sha256": "e3eaae0e9031a02cdb6d23609b1c7272d3d8d55d4756ac363aee9c9c50d57e79"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_066.png",
+      "sizeBytes": 148,
+      "sha256": "3726be9fa4feb16cba2b0ea4de0ead11fdcf0c44d7eef5b1ffd57872b90a4888"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_067.png",
+      "sizeBytes": 267,
+      "sha256": "ac267a223c2f9a9763f3796109791cf8ccc78c1fefc57be8bfbbd16b5ce1da3a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_068.png",
+      "sizeBytes": 480,
+      "sha256": "109436a8f537e397d183f9d225b665ef8c3c88bd3e750b72de737cf0db4687da"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_069.png",
+      "sizeBytes": 214,
+      "sha256": "9db967415a0b8ff488f7e8bda7b1e8ed7fb5c1bd279437c7f1a2e1ca986b4123"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_070.png",
+      "sizeBytes": 231,
+      "sha256": "41783253cbdbb0a0c7481263ab14ff6cf4e73df47b4abc0285f391a97d28eb66"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_071.png",
+      "sizeBytes": 200,
+      "sha256": "9bee293579dc69d7f2d9058e7d77d11c2a58e6294c06d40b1628a544ad6996f7"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_072.png",
+      "sizeBytes": 205,
+      "sha256": "12d6a2edd505ab7a55e6a0fec1c926c9fedd1b82a2994ac14e9d8e3f4f45b940"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_073.png",
+      "sizeBytes": 231,
+      "sha256": "25e2684b7f025a95a137011128017fcfacda67f5571b61c989994cb3785a1f76"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_074.png",
+      "sizeBytes": 180,
+      "sha256": "7322c2f94dac2f1e1c2741e62aada7e427293d8a1cc8b9557d9389d58c1ad6a9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_075.png",
+      "sizeBytes": 220,
+      "sha256": "7b66f378d6766f3066df05f3225ac246a919895896394ed6d97d2232070823b9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_076.png",
+      "sizeBytes": 403,
+      "sha256": "ee33ef317c65cfbe875b30668527bc02b631ba8a320e28d8db577b1b075f799c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_077.png",
+      "sizeBytes": 470,
+      "sha256": "ed38bf0339eaa38ef1b7e855347d314353129e26b4803456b64ccc40786b3963"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_078.png",
+      "sizeBytes": 342,
+      "sha256": "95704d8e2aef4ab4d29a1b11403191768cc6796949b383e1607f501552c084e3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_079.png",
+      "sizeBytes": 358,
+      "sha256": "043b876dd024a001df3f9570798545ae710cefd6bc9cf18086dde11fda17fab3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_080.png",
+      "sizeBytes": 409,
+      "sha256": "f26943c8f3d31f35be365b84c5fd6f764ae47083f030f25821cd380924375256"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_081.png",
+      "sizeBytes": 379,
+      "sha256": "8c8e687c11d563fca2922ccf5cff161312b497f70a5523e7a0af820b226cc6f7"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_082.png",
+      "sizeBytes": 367,
+      "sha256": "c8e207a6172bfb38cdefb8ceb6e4d1ffc2e6ffe8cbf626f8a2c599f4157d41c7"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_083.png",
+      "sizeBytes": 156,
+      "sha256": "d5586bf55dfe433eaf3bdcbb24442d57bda1dc8cd52e3229c75249e79020d6b1"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_084.png",
+      "sizeBytes": 454,
+      "sha256": "285b8e4db73fecf6bbd76b75abb101674506fc5442181ef988fca0d86f31f5ad"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_085.png",
+      "sizeBytes": 140,
+      "sha256": "f493c2470b58f21e3ebdcf527bf1ca78fa8aa9f4008180c249583aa827075547"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_086.png",
+      "sizeBytes": 222,
+      "sha256": "cd10e6b3b125a5d8fd84cc9b155d5b9fac995e8322ef860d2f21bc6812eaf79d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_087.png",
+      "sizeBytes": 124,
+      "sha256": "dbfc37d7a184e33b16561ef8021f24344ee86e1bd76d04d57517132477128525"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_088.png",
+      "sizeBytes": 151,
+      "sha256": "444ef5e30d50352a11c61bec63bb6ab6b800938d0e23a2f67bc877c3d7fe9db6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_089.png",
+      "sizeBytes": 148,
+      "sha256": "8725869c1a02d7176564f1726667b810ce04d247ab839edec6dcd433f9689c3d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_090.png",
+      "sizeBytes": 195,
+      "sha256": "1fd88ccfae0a5618f99e5947f58ef19afeef6b76adb72d6d6841bb68c48ee2ab"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_091.png",
+      "sizeBytes": 225,
+      "sha256": "27956c06a8269ebd7637689195d5089e1482c038957ac00f6c6d38549574c8d3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_092.png",
+      "sizeBytes": 289,
+      "sha256": "1e8ad9a80de105157857f0cbc34d8eb7840ebbaf11d91a67dd5f859718e9e23f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_093.png",
+      "sizeBytes": 254,
+      "sha256": "a8738eb7e8f0493492b74abbf962cbacb2a3202725ea579fb3328b90f493f294"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_094.png",
+      "sizeBytes": 208,
+      "sha256": "8d1c9e4d595171e9d0c5c1cf03f93a9db8ecb2235a72ded0b2eeab054154d2ce"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_095.png",
+      "sizeBytes": 247,
+      "sha256": "7fea89f502214f3018bd75f643d5ba8cd850594c1149651acd123eca9aa60938"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_096.png",
+      "sizeBytes": 224,
+      "sha256": "c8dc60874fb62d465aaa64a517e710a1c78b492ff2c929db06a7ce1120153277"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_097.png",
+      "sizeBytes": 234,
+      "sha256": "8acb58f995118f2c7645e50548e40fea0ee57e14102234f1de64f57d102896db"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_098.png",
+      "sizeBytes": 230,
+      "sha256": "c51f73b8fb4cb0f7ef03ba1310aac74c6f6907a27a6bfe8103da9da1f4b83d18"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_099.png",
+      "sizeBytes": 230,
+      "sha256": "835217597209da0fc37f142f2f77e587578a394caf4e3413281f8c5e94ba9a2a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_100.png",
+      "sizeBytes": 203,
+      "sha256": "72e0fc6677fde80f6a0457b61172ab0b361a3978d6712b8f18a13c3bfee3bd3b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_101.png",
+      "sizeBytes": 135,
+      "sha256": "963efe16f6557cd0ca425047c5aeaf66baba0aeb8341552c5be8ef5a48b9e002"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_102.png",
+      "sizeBytes": 194,
+      "sha256": "e390d9322614e049c7c8ad51cf0008b105e431121c022f80ff8d91c1b8b7fc81"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_103.png",
+      "sizeBytes": 397,
+      "sha256": "c421b1e29de04add46f8281366f85139bbda53a0e6cf9a4f2924e88d73e4bf78"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_104.png",
+      "sizeBytes": 410,
+      "sha256": "bc591e5b7e267b3161e7154824df8a982d074fb3f59db374d6b4b8b332fe215b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_105.png",
+      "sizeBytes": 476,
+      "sha256": "7dd42ae017151e6e351c9aeab768107165df7eeee1f502fd6ff5c0ac25230d33"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_106.png",
+      "sizeBytes": 445,
+      "sha256": "129ebf562c020e5c5c15d0b2bec5f8b9cd92a1f771c9c602205a2410b439b5b5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_107.png",
+      "sizeBytes": 462,
+      "sha256": "348f22f8de9aa8f0859b29330541f9e6f3d3bddf7350ac707f1ff4e72a116a3e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_108.png",
+      "sizeBytes": 432,
+      "sha256": "6d9bcad86f1f9f893f9465d19158e0122a7606eeb43dac951ca58c0e347c115e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_109.png",
+      "sizeBytes": 385,
+      "sha256": "633377e7bf77027d4cc0184b52d3fd2cfd621d2f2f4dac85775bd1ca89f8a818"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_110.png",
+      "sizeBytes": 387,
+      "sha256": "e0ab281befaea7905dc2e2ab5d5d2f2a97b05db9e4bf8e0f5f0707662a5312c4"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_111.png",
+      "sizeBytes": 156,
+      "sha256": "1b56e494853079b90f8cd47e032f9a13d7e12da6dc4e7f1d1fb2ca4a5ab5ed17"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_112.png",
+      "sizeBytes": 320,
+      "sha256": "992578ca84e467196424ba8f81f3247a46512363bc6f9786c1655ed8d32e03a3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_113.png",
+      "sizeBytes": 146,
+      "sha256": "bb3c5355355be9c49087b925fc5764481484dccf633b601a10c89b410743262b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_114.png",
+      "sizeBytes": 161,
+      "sha256": "2e1a8acc925e17cd8faccb38a44042d4d3bda6d33800e29b74e8c658be7e1af8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_115.png",
+      "sizeBytes": 344,
+      "sha256": "c6a438e14747b1ec86b8cda5b7e92e9f99e1092c3ccfa822db0afdf4821406a8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_116.png",
+      "sizeBytes": 362,
+      "sha256": "4cf5fcb6d7873329304a358fb3906f4c41469268788836fa683f258e85385e6d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_117.png",
+      "sizeBytes": 133,
+      "sha256": "dcfebacb1c7a9d60826ae18ba4def528d2245e77403a694c13c10883647e5b59"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_118.png",
+      "sizeBytes": 224,
+      "sha256": "e4b5519593917f22309c81919bfe3d6c422181d5971650cafd36a54f3c13563f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_119.png",
+      "sizeBytes": 233,
+      "sha256": "3bac3f86a9b8ad0df04fcb243991c2b9cc5ed827de7a83cb7118f5ab968234b9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_120.png",
+      "sizeBytes": 161,
+      "sha256": "c3b0021ea0fdbb0c826657b128cbca101e56d2d59e5dc8bde6013426dfb50b94"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_121.png",
+      "sizeBytes": 236,
+      "sha256": "29f12af63e92450428da55adb4c32f4dac40b298a8533dfa9556dfa86382fce2"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_122.png",
+      "sizeBytes": 206,
+      "sha256": "38ea2ecc870384239826b86a51a4d4421a69c7269bd6cccf5d8241228df84cfc"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_123.png",
+      "sizeBytes": 204,
+      "sha256": "59e2522c36c94b5935551cf62d794b568f84ecd22cef6a33d945fad978f0916e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_124.png",
+      "sizeBytes": 205,
+      "sha256": "412b4c75e6cd1c41c50acf854e55154a4f5b04aef188364bbc5f1e9ad6a3ef56"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_125.png",
+      "sizeBytes": 203,
+      "sha256": "3789a46dcd883ed7467165b39a9e15e6262329d920e23fb1188bcd8a99c50f6a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_126.png",
+      "sizeBytes": 229,
+      "sha256": "3ce505ec71673fcad277340e0ace3d481960147fbd5f3269f74b745ca1be64d0"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_127.png",
+      "sizeBytes": 190,
+      "sha256": "6fc14325c552c752c891af0d75c5bbc5e5ec67568936e59ebfd60557e8272b25"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_128.png",
+      "sizeBytes": 220,
+      "sha256": "47aa4857ac1f0beda225ee008a2d79fa2a0a9add75069e3d6486f026cdc1e815"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_129.png",
+      "sizeBytes": 435,
+      "sha256": "d009d7c82db06e520900c00417c872570afd15d9a32711b2de6145101ac8c4a5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_130.png",
+      "sizeBytes": 468,
+      "sha256": "49a5296ba526435a320c33e8507406ca30abeb643cff5d863e3c1e1d2b340fde"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_131.png",
+      "sizeBytes": 439,
+      "sha256": "b81978dbf41d6d56f987686506f5ddae41e9bd05e10e80562fa2eaa730c32e27"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_132.png",
+      "sizeBytes": 414,
+      "sha256": "7a91f7d761cd816515e6f2b622ea83173371364fa38aec355dfeb19e61445760"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_133.png",
+      "sizeBytes": 466,
+      "sha256": "f650c89dbea18eab0ca450ae1f2f256ecc281104f7b38ffcd84a85d5ba61eaa0"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_134.png",
+      "sizeBytes": 441,
+      "sha256": "cc2cb276f66556b3d3d0e6b1fb4a1986cb682947423f7daffc3afb2c0688637a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_135.png",
+      "sizeBytes": 382,
+      "sha256": "4bc7811820062a86604a2ff144a7ac5ffc4c6358b6286217ecb10f40ee6767b6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_136.png",
+      "sizeBytes": 397,
+      "sha256": "9657608d4747ddaf16620fe0bf86360f4efa8b57ab4b4128bac9a05921d18e6b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_137.png",
+      "sizeBytes": 164,
+      "sha256": "43e3abd3740a0c3fe905c1d272811e954034147ffe47895f6adaaddb6222948a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_138.png",
+      "sizeBytes": 214,
+      "sha256": "31b2eb38cf8c76c562588deac178bcdf46091e3e7a5534da8db0f083a0196c8d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_139.png",
+      "sizeBytes": 272,
+      "sha256": "a97337c47c9c794c46357ee29d3afe45a5770016337590616d2f3b534713a3c7"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_140.png",
+      "sizeBytes": 371,
+      "sha256": "cbac49612b796e9441bd062edc8b2b80a041e8aa0da34b64bfebd23df6f17c27"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_141.png",
+      "sizeBytes": 201,
+      "sha256": "75503f939f38856f13c71968b03cd61a452df1b519089abe39e7052598248de8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_142.png",
+      "sizeBytes": 242,
+      "sha256": "007f1e7f306dcaa6411f5c453b3794418884f8284e74176a261c9edc05db2055"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_143.png",
+      "sizeBytes": 183,
+      "sha256": "8553123489be1ce98823aeeb4c336b5b2beb53e43aeba2c4f1140573956fe96f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_144.png",
+      "sizeBytes": 291,
+      "sha256": "6092ebfd65d15361b1ab2933d4ad68ffed94650a367afa3361e448ef2c78c8e9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_145.png",
+      "sizeBytes": 214,
+      "sha256": "ebe33b753e4b2d57006d178d9f42fee7390fa2a5fad1b7e372901d5821867e09"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_146.png",
+      "sizeBytes": 215,
+      "sha256": "b883616a7ad7248a3b3636cc582557a00515e829ad861524a40f6fd513599de5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_147.png",
+      "sizeBytes": 186,
+      "sha256": "5d36150f958f21496ea5fafd807dbef7fb36a9766e712a745395c408c8074a79"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_148.png",
+      "sizeBytes": 191,
+      "sha256": "7b56b72da798e3449367691ec6193683c1633fc0a45654fd92132f2f03ccdccf"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_149.png",
+      "sizeBytes": 183,
+      "sha256": "af66ddbb2f9f391e48e7024eee2f18ac1f167492d651b1751431d938617ba3f4"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_150.png",
+      "sizeBytes": 183,
+      "sha256": "378eced30c4cf9f21b6c2ce951435bfe15de7a6cc8a16c963611d4e97c319131"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_151.png",
+      "sizeBytes": 466,
+      "sha256": "f6421c71139e58a864ed85802df79067aa677bbcd58b779516a6262ebe06cef8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_152.png",
+      "sizeBytes": 448,
+      "sha256": "384c5ec0920940adeeea27bb4fe8a7320eab11227d4ee2b0fd133ed1255693ab"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_153.png",
+      "sizeBytes": 455,
+      "sha256": "879c7965ea8948cb14a415b630c45d4a99a3ddefc05cbbe5b43b5a61a7248da6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_154.png",
+      "sizeBytes": 430,
+      "sha256": "33c7bd3855dfce7cecd74abdebd0765ab6767977b49565b003161735eeed4fb9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_155.png",
+      "sizeBytes": 408,
+      "sha256": "34cb83dd6c20beed59eed81804ad66e085478f3fa326289db3c20df4682d6178"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_156.png",
+      "sizeBytes": 422,
+      "sha256": "118e71f35ba6e8758512eab6ce4660f9eb9782f14114d954c6c35d655775ca2b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_157.png",
+      "sizeBytes": 217,
+      "sha256": "7412c52ac75cbcb0dcd7fe93a72a8eb57dd1b0aadb25db77585d9c208d01b734"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_158.png",
+      "sizeBytes": 134,
+      "sha256": "7414855b55f8a9fac0acaa571843dc3478af43d6b7a44e77d9f39ea2525c6d5b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_159.png",
+      "sizeBytes": 142,
+      "sha256": "805072a78435fcd1f8041692ae990940f4aa63aad50ec20624e0f5ef65d7eb70"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_160.png",
+      "sizeBytes": 138,
+      "sha256": "f28d3d7538741fd0a5503ac5ced896c873fbf1a45b3bd488dbc4860065557e56"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_161.png",
+      "sizeBytes": 347,
+      "sha256": "ce995d42a11a945a68f58500791cea86c17dbdc4d6e3cfbbd69b42195497137f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_162.png",
+      "sizeBytes": 217,
+      "sha256": "0ae2d0115731ccda363f0eb6ef2b8c3941ffdf37c95db6379d4d819c7be5b89b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_163.png",
+      "sizeBytes": 325,
+      "sha256": "1e29f4afacb489a94ea975465fba925fc95008d00f19ca9a27913180b5d28e34"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_164.png",
+      "sizeBytes": 334,
+      "sha256": "a47e093f7cb5ac502ddee88bc45e8bdbdbaa3c8bb700badacdea54251f26ad9e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_165.png",
+      "sizeBytes": 350,
+      "sha256": "85234cd235b895b8088919482d0295ff85c7a5cf943d8495d5823cff0791e9da"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_166.png",
+      "sizeBytes": 403,
+      "sha256": "3e5d26649fa230a75aeea1f533001208d5768dd5a127cc82c8d46d6b72e4454e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_167.png",
+      "sizeBytes": 411,
+      "sha256": "6078992907b5edd5199f14f6417072a716fada46de37e859278f89079ff67c5e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_168.png",
+      "sizeBytes": 350,
+      "sha256": "d16fc220b9ea16771d77893cb5eb3e48ff9acb72cf8b27f68c6879bf91c655ae"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_169.png",
+      "sizeBytes": 352,
+      "sha256": "e75cce4f619eb029295499bd1af930e5f3f64da818cfc0e799d3d014fb6f9ebd"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_170.png",
+      "sizeBytes": 321,
+      "sha256": "8d39105b34c1e2d6e70f5cbaecb6214979574ebaac930129dcdaf9bd8b3b9456"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_171.png",
+      "sizeBytes": 326,
+      "sha256": "580f5a55e9bf22240156a1130528afb4364dccfd9d1c59a8c0df87766445b196"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_172.png",
+      "sizeBytes": 356,
+      "sha256": "bf7fb654cb05222329857c82e549ca9690810348c2e82d2ce37ed133cc827f58"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_173.png",
+      "sizeBytes": 222,
+      "sha256": "a8e1c5b50515152c1c33c76e6e3c81dffc4ad18f6dd93464d0b67913092cbcd6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_174.png",
+      "sizeBytes": 287,
+      "sha256": "9988221db2b987b2b59060bef5ecffe1cd4c687db1387afd6006f21c797c1186"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_175.png",
+      "sizeBytes": 189,
+      "sha256": "68ffddded80e7c086de7f77362fa9a971467dbb2bfbedddf32da053f9ca270cf"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_176.png",
+      "sizeBytes": 284,
+      "sha256": "58784c5a3dcfe51619e8f4e9f3b480eff65fbb14f030d5adf1e6cd9ca37d5d4f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_177.png",
+      "sizeBytes": 291,
+      "sha256": "38a0a6b77029a3e34d599f66ced873566af8e2801c08e3f3bb5d4b4410436cea"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_178.png",
+      "sizeBytes": 109,
+      "sha256": "8396ba4918afe4e18844ede9f508c6320bd5ec7613986b5ef55b55cfaa8110f6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_179.png",
+      "sizeBytes": 111,
+      "sha256": "8e9d46a3238c16f276b41bad47c0524a97132d17d00c447843273a1db05b7fe6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_180.png",
+      "sizeBytes": 108,
+      "sha256": "259f0668278da1c97c087e2ca09f77e43c78702d637ef25e2ffa2b36542c9f60"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_181.png",
+      "sizeBytes": 103,
+      "sha256": "894bf4d525f76c2252d0599eeb8ba844b3d92bf3edf71d1f7da6f6192e83d18e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_182.png",
+      "sizeBytes": 107,
+      "sha256": "7681426db10a16705a6305d1d31cc6560cc40f05684fb45c3692d401eee8a217"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_183.png",
+      "sizeBytes": 105,
+      "sha256": "a8320da0ce41c35beb2db357a5d930350a950520672bc9f23f2272690f282726"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_184.png",
+      "sizeBytes": 117,
+      "sha256": "d755490da9e544e6f6e4325dff4bbbf6221dee8ee2773406a4975b95cbc8d729"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_185.png",
+      "sizeBytes": 107,
+      "sha256": "cb0079f0b898e7a77b3d08ab1a9ed1b0f92bb5e384735be43db2817b293a113a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_186.png",
+      "sizeBytes": 430,
+      "sha256": "c92e1734c07d4dce434c4d956d79229384cdb3526b401a8f514bd79a4e6bd260"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_187.png",
+      "sizeBytes": 422,
+      "sha256": "83831524b640bcefd8539d74c87a46e63aac498e25bc12693fc865a363166068"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_188.png",
+      "sizeBytes": 421,
+      "sha256": "66ab0c204ca21df2807cad1ec3c35ae052ac59ca41e47fabc0a4dfdd4189dd31"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_189.png",
+      "sizeBytes": 351,
+      "sha256": "220ec8ccc63412208852f391513daa2ceb334bef9a2dc5b207bc22c807bee8e3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_190.png",
+      "sizeBytes": 363,
+      "sha256": "b6a571defdd4fc740fc7ad3b15a69474c7a9a8c138ee7eaef36d296cac10f090"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_191.png",
+      "sizeBytes": 329,
+      "sha256": "a6cbef89c42e1b92c0706733fdd5bc84879a47ef56fd63a8d3179531566fa123"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_192.png",
+      "sizeBytes": 335,
+      "sha256": "6885979570f2ce902d9bd92f43f0c4f28a5adbbc372866907674d36faeeb9ccf"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_193.png",
+      "sizeBytes": 381,
+      "sha256": "1822a652683640fe6bc6d3214517c60d41736f41e42cabd96fd98a0ac7c75624"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_194.png",
+      "sizeBytes": 366,
+      "sha256": "44b2707256df12f443f5b2ad8c072884c54fd44f8bc89932e2e8cbc3cf334984"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_195.png",
+      "sizeBytes": 369,
+      "sha256": "ab7533451facd8274db4a3a27abce1eda2283c8e8a6b4b2ca3882dec0810c673"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_196.png",
+      "sizeBytes": 219,
+      "sha256": "9b459c4f0bca48bf3309e1d317d4758ab404fc4f0bd485c6fbf0bc53dcca5b5a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_197.png",
+      "sizeBytes": 164,
+      "sha256": "3adeac07eb85bfe3d96ae7cfdd9c6451624fe46f8be9641a9990d1d3f0f6f657"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_198.png",
+      "sizeBytes": 238,
+      "sha256": "053b76153665a2d50f4079f04c63f8142871caec8836444f200c5487d006161a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_199.png",
+      "sizeBytes": 158,
+      "sha256": "f01556bbde272d4417bac43b81b5c1bf0567f1699178b1866c453d4f29f6c82f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_200.png",
+      "sizeBytes": 161,
+      "sha256": "c720dad9b7c1914f642598763493ec035376958a06a5aa8a280f250c9421c6be"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_201.png",
+      "sizeBytes": 350,
+      "sha256": "4483c81bc1b1ba085dc288ad1bd7f7444f0e66b42f26eb9ed287c9ed3f3d9beb"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_202.png",
+      "sizeBytes": 313,
+      "sha256": "4ffb2e46e455eb752ea372461a04ea344b43567d9e8b4800676ceacbec46df97"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_203.png",
+      "sizeBytes": 291,
+      "sha256": "9d2cbeaa1a3780e5d2dd2a0fc74f63bf186a5364d64a14a57eabb03ad3a997db"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_204.png",
+      "sizeBytes": 361,
+      "sha256": "8d931592c8a12029e0ab974bda8a953f716a16cb8ac31369f772ecad0ef27ce2"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_205.png",
+      "sizeBytes": 372,
+      "sha256": "1f19cc1d595ec921d6d196553567d2ea7b0dc4e2e2b783bb2f4e7c71904927fd"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_206.png",
+      "sizeBytes": 280,
+      "sha256": "ea9e444c7d8b3cbe6cbaad59513e1b8cd7fc5dbe5826e6a52205ccd0f79adfaa"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_207.png",
+      "sizeBytes": 380,
+      "sha256": "09822ae89465f88821afd06862fd3e5766e0f210ea1565e6f51cfb6d050aaf25"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_208.png",
+      "sizeBytes": 188,
+      "sha256": "1f7c72a081b43a8125e8786999f0e45d49a64224366204c73885fad3f1a58849"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_209.png",
+      "sizeBytes": 249,
+      "sha256": "68480165b3c3815aa3e44fdfd231ac973242c0094d1bf847fcaefa030de1026f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_210.png",
+      "sizeBytes": 183,
+      "sha256": "e0754cf3cfa7709a1e14f62644e527f16bb282884ad69c2212481b123d62a14e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_211.png",
+      "sizeBytes": 357,
+      "sha256": "414fb0dc23ca99a7a26e187bb2031005001870354bf4ea06a6f31f73496eaf9f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_212.png",
+      "sizeBytes": 351,
+      "sha256": "43602dd5d5c36d93b7e0ad90cc4677351665391a0bb446f39fd33d0e4c5d795e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_213.png",
+      "sizeBytes": 419,
+      "sha256": "567af976209de4559125a845786f306a31b777f91e31c82bc4855663054dbf94"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_214.png",
+      "sizeBytes": 372,
+      "sha256": "dd5e01c466c9c31922e4143bbf311101673d77c509386f7022715421d5c41129"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_215.png",
+      "sizeBytes": 316,
+      "sha256": "92c7af9a3b5130c94b679f87611db081514fc2ff43beb9b0c7b2405bc71f1750"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_216.png",
+      "sizeBytes": 310,
+      "sha256": "003ebb61298d24f34cc954f01eb6dbc1ed08a604b11e90a8446262371a37762b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_217.png",
+      "sizeBytes": 312,
+      "sha256": "077b77c46b73a84f0cffcc98027038fcad4ee582daea11a88931af5ecf1aac9a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_218.png",
+      "sizeBytes": 317,
+      "sha256": "528f6dbbf51a437e3f8a5274672dd16bef81eca1e8449199c901d2e842d3d887"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_219.png",
+      "sizeBytes": 294,
+      "sha256": "fac5da8de47ffafcf859aaeb375d3adc506f12222bdd7988b5ae737159837386"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_220.png",
+      "sizeBytes": 195,
+      "sha256": "cb5b337bd92598f687d49d5ef20a7278fbc188ccf03cd23742d5fee8450161ca"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_221.png",
+      "sizeBytes": 305,
+      "sha256": "0f919c636bb026cc5665eaa39b41e5681433f62a4979f9963cf05d53081f565d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_222.png",
+      "sizeBytes": 438,
+      "sha256": "9eea419d35ed6b61a6f0413452dc1b9f359340df0b005251e551446d3c0ca2de"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_223.png",
+      "sizeBytes": 174,
+      "sha256": "7bce0a119f9d7e6a6fe69a212afe7fb057dd540806f64fce16d91d9231ed0db8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_224.png",
+      "sizeBytes": 425,
+      "sha256": "b589a00cd38b42a3cd72e8d1d8ada04a5ececa04728c5011588bfa4f4c8f459e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_225.png",
+      "sizeBytes": 303,
+      "sha256": "b9ff36b126e68ca268dd74ef4900ede60b27ba186761a25a45e25082dad10f27"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_226.png",
+      "sizeBytes": 440,
+      "sha256": "9dd8d91d6c1f3f2fcd9f34100d037ac1ce98c54524214c4a459a72657c19ceab"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_227.png",
+      "sizeBytes": 200,
+      "sha256": "943ffb6e706f7fb7d97b9e8797b580ad7546900c93fabff0dd25ee0b4c7a75e0"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_228.png",
+      "sizeBytes": 213,
+      "sha256": "04fcd2567950a0568f8d5fe8b53c7f39b07fb0249fdf880e82849dd67134c5a5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_229.png",
+      "sizeBytes": 343,
+      "sha256": "ea6c3f6c52eae9471552bfbd262097986c23a70b514fb8a36bd941616ddc03d0"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_230.png",
+      "sizeBytes": 290,
+      "sha256": "19196a99b32db78f4de97b220c1005590c102ea269e449d6b83183c4a2ab7992"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_231.png",
+      "sizeBytes": 343,
+      "sha256": "6d7e1982bb082e0fa0e6d7e27bf93b89ab0cb657df42cc26deecb5d2893735fb"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_232.png",
+      "sizeBytes": 228,
+      "sha256": "05ab027ca4dc71d42dd9a359f73b2087dcab3731d7ef6d019fe17bc026b46482"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_233.png",
+      "sizeBytes": 244,
+      "sha256": "188bb337047d12b4e3ea9e665a1a92d12dbb8757f1254114bda1b06cfad5619f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_234.png",
+      "sizeBytes": 227,
+      "sha256": "e257f5ce621c8dc86b601c0c6915bd5941ab6701298771d35e93703565d1497b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_235.png",
+      "sizeBytes": 244,
+      "sha256": "450acdc0405832aeb1d110848f8648bf15ff26453d628b161f39c5dd4e728ddb"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_236.png",
+      "sizeBytes": 431,
+      "sha256": "46f24f7deff2c105a2e93118a67f789240f2f01eefbfdaa32a20db621d600000"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_237.png",
+      "sizeBytes": 285,
+      "sha256": "b591b8795b3f5ef0a3ab37e092e26dd72044f8a2c78ad8b4902993acb8ce082b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_238.png",
+      "sizeBytes": 269,
+      "sha256": "9c5c15d5b1a28d9531b247f9544301f303576ee99c9c0cf8d50a90fa70e92d35"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_239.png",
+      "sizeBytes": 282,
+      "sha256": "722a17eaac7be775b89ecf4a99fa41d833c237357a0d0547a24850e8ae90c3ae"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_240.png",
+      "sizeBytes": 275,
+      "sha256": "f26a33f98fb03687a27e7408de6dc9793e57567e190f3e6de4e0e60069d2438a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_241.png",
+      "sizeBytes": 373,
+      "sha256": "7d1e06eb5d2e6e0aaa246be7d85ad11880d0b3d7cf65a45a0c6ae3bcf249ade6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_242.png",
+      "sizeBytes": 291,
+      "sha256": "06fd05ba8d4de05734a3fc4cb16a796c5f516e18a7e33e02cf8dafef81bcdc2e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_243.png",
+      "sizeBytes": 380,
+      "sha256": "e948b74ac4af14311b491e3c71432d41e33227939b6fd53d334b127ab9ad0d31"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_244.png",
+      "sizeBytes": 350,
+      "sha256": "39a5a356477d55339e94b4ee6e0f93ed6dc43f773769d7ef472e64e025de434a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_245.png",
+      "sizeBytes": 207,
+      "sha256": "3d5c59608f104765a1d9ec33682339e046ff068678b59ef2f05564f3d8356552"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_246.png",
+      "sizeBytes": 181,
+      "sha256": "48988540e9ba97e39a4bc5c473695aab2e90add376ce5c81922978d7b64e44f7"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_247.png",
+      "sizeBytes": 251,
+      "sha256": "1e08210e9579b85d180642f6a205ed18597147ce2667c0e2a6489ff4bd6c6022"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_248.png",
+      "sizeBytes": 325,
+      "sha256": "c6b9e4d0c9db3398737ffac18dc2b5f469b91f26a6ff7d05413344473464a954"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_249.png",
+      "sizeBytes": 366,
+      "sha256": "e0c8f7210ebcf89af7d4f57bcdd9bd023bba643020a5b869e05e737226040073"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_250.png",
+      "sizeBytes": 326,
+      "sha256": "0d258d54bc93389d15e2027d770b7e15cd4772e7fe5446bbd75ff4eadcfb7ce8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_251.png",
+      "sizeBytes": 273,
+      "sha256": "188ba4a80fc1b0a27499886a3d6e9bdb3583c2adb5f539ffecaf00208f1133ac"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_252.png",
+      "sizeBytes": 326,
+      "sha256": "481ab6c387a5a048d7700a0a6bc95289ba4d8b49d5460292d434816805aafa9e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_253.png",
+      "sizeBytes": 117,
+      "sha256": "13afa21b80ed3610d088caf9ac66908f703c34735a290c40d55bbe7494068b55"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_254.png",
+      "sizeBytes": 118,
+      "sha256": "f6fb4e861d5b04f12fd2d1b9afc75ad35e17424980a3117b8a6fb85579b3fa8e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_255.png",
+      "sizeBytes": 338,
+      "sha256": "df1cd0a29ed3a6ea3713478ec4373d2779d743556bd5278cd60fa944bd6ded02"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_256.png",
+      "sizeBytes": 292,
+      "sha256": "bd7eafee7d0a12ca33c14f144354969c574d5ede473611e460a83ed523645d4f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_257.png",
+      "sizeBytes": 288,
+      "sha256": "f1b9c090eb14a17e63aa1cd4b2ba3cc5b4fc731b033c606b0c816574ece2de46"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_258.png",
+      "sizeBytes": 249,
+      "sha256": "4e5433f54321910b8f614673e99d2426e5564fc3030578e3775df9330401a58e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_259.png",
+      "sizeBytes": 243,
+      "sha256": "a8dd10725d94aeb63f86701118a29a2e074047669e3ffee6e1775bb575eddbfd"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_260.png",
+      "sizeBytes": 247,
+      "sha256": "1f66165f3e0fbfd4603804f36bee426d2d1a62dd8cbb67f6c86cc31e59267c01"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_261.png",
+      "sizeBytes": 251,
+      "sha256": "6f78951912afb0bc3292d8e423a917b33cdd33e2e124bd1b6725a75cb8d6776d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_262.png",
+      "sizeBytes": 434,
+      "sha256": "2a5eb2980b3ee7edbb70bfba3ce3666d7addaa998eb6e9a97f93fb6062c871f3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_263.png",
+      "sizeBytes": 348,
+      "sha256": "3e07c34b86b478c355fd725223e854729a52b039bac3b5f3fa5dd6035614d987"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_264.png",
+      "sizeBytes": 346,
+      "sha256": "d282103fff35ce0c50b6287de0cc70aedc9657e17cee69a49cb1007c5abac470"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_265.png",
+      "sizeBytes": 438,
+      "sha256": "4af9d03bd122cb22518484ac1eb20bbc05b2ed54a6ab0ca4586a397da6dfe01b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_266.png",
+      "sizeBytes": 317,
+      "sha256": "834f7b42a5d235d3dac9b06f992bd6b3261bce532bb67d531244516427a2dfd9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_267.png",
+      "sizeBytes": 352,
+      "sha256": "df3d005e14ae52e041bfcdcfcc77a73c8faaf365e6b8396b436e9e53546dc647"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_268.png",
+      "sizeBytes": 475,
+      "sha256": "1db40da5d7ac392597bdafda46c795e69a1eabd39fa3bc1713da4d5d64b87fd4"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_269.png",
+      "sizeBytes": 156,
+      "sha256": "60d8d03b2e24980a1ed631869f9940bcfaba7cf63a2fef8d3464c624fc4b5990"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_270.png",
+      "sizeBytes": 159,
+      "sha256": "91d2eeecca6ac3fcb011537882648bbd2371faea9f9ca4a8eee42d2ff3a36cc8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_271.png",
+      "sizeBytes": 160,
+      "sha256": "edf71975c87d4d9b6c2e02d25868a0a5fadf7eb47c605c668cbe722bb9755d26"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_272.png",
+      "sizeBytes": 156,
+      "sha256": "d6300609df2d6184f60ef9cab3fa178cac505c884c1dd2202d96641efddd4c0d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_273.png",
+      "sizeBytes": 159,
+      "sha256": "cc4c2ff3b40d7628a8f8104ffd5f5d5f16c1c1a155acf1561221bd69101d2c41"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_274.png",
+      "sizeBytes": 160,
+      "sha256": "72d0ebfc1477a99e3ac9940a472bdcc6f712d31715cff1d33cee2bef027eb10a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_275.png",
+      "sizeBytes": 324,
+      "sha256": "80ae4bcaa558893d1c9367a03419461baf959f10261ead4de78b913ca18515c3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_276.png",
+      "sizeBytes": 321,
+      "sha256": "13355b32d407e61a5df6657a25bc627d4d81c969e8a1b6a69f20767332461bd8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_277.png",
+      "sizeBytes": 333,
+      "sha256": "646ce7142a6aa03c48dafca086344ab14d3eaa8c97b06a12af6a55dc8172d118"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_278.png",
+      "sizeBytes": 424,
+      "sha256": "e5d49593016721e5f3c4d1633703bc54983932e143b0f0fffbc3158a6f304f73"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_279.png",
+      "sizeBytes": 401,
+      "sha256": "854555742d96eed2043113f9f097755a97b056376bcbdca1ac34eee2b6ad94f5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_280.png",
+      "sizeBytes": 290,
+      "sha256": "c9261d3bdd29c3ae218780f82c74c5cc23ee8fb9e171c407ff69d59b54859b4f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_281.png",
+      "sizeBytes": 240,
+      "sha256": "91052423e45a76253f486e8943c7b506c7d5054f9efe46fb3663cd1eb5bfcdee"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_282.png",
+      "sizeBytes": 352,
+      "sha256": "0d7803318b6c4f5d6ff204f0856bc0a358570266e72332809d243615dffbc137"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_283.png",
+      "sizeBytes": 317,
+      "sha256": "cd3b4fe19d78b3d36b854aa238de827006d7f6927e3a4ed14d31ce1c55fd5b8c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_284.png",
+      "sizeBytes": 283,
+      "sha256": "2afbfda77d89c6853ee1a8cbe8ffcd45f4fe28ab2128018c212f27c0ada43fc0"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_285.png",
+      "sizeBytes": 310,
+      "sha256": "7eb46c548f8ad20d10f4e9ee8da678b132868e58fa8d252214ea779deed99822"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_286.png",
+      "sizeBytes": 277,
+      "sha256": "8ca038547c67e795a72cac9b1e631f24459ebb957d52933a065a810daea33b29"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_287.png",
+      "sizeBytes": 306,
+      "sha256": "a9d1dc5eb20161bc38bc7a4490dfbbcec37e100a8b7e1fe6edc18928b6120bd5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_288.png",
+      "sizeBytes": 323,
+      "sha256": "ab6965b0f493df3d05969eddeab3ef0cdcbe816b8029b25495733d0f8b9c32c5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_289.png",
+      "sizeBytes": 232,
+      "sha256": "f4b6a481d5343f8c9dfc330d9061d227a3e7139492577ca059dc6f71b15de012"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_290.png",
+      "sizeBytes": 339,
+      "sha256": "de43596ccfa5a879c2b8e2aebc2fe8a2d385a53e22b0c83dedf46183431a9425"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_291.png",
+      "sizeBytes": 346,
+      "sha256": "5c1200797a1dd72c8520d505950080a4467df0dfe094df5b665646c6c6371468"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_292.png",
+      "sizeBytes": 362,
+      "sha256": "03f64d66a9dd0334bc9e3720785bbff98d1d36d0208ecee4091412f674d04a3c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_293.png",
+      "sizeBytes": 322,
+      "sha256": "e2035f2bd1003b3e2f62cbdd8cde204cb0135a175b87b93f81c032a8bd567bb4"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_294.png",
+      "sizeBytes": 232,
+      "sha256": "e86d978ca37b2e75a6d1aaaeb7fe1df69df6de1b623307b34101efba3f0e9a6e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_295.png",
+      "sizeBytes": 338,
+      "sha256": "930448de446de6253bf0e04575ea051d4618ac3813f4b52fa87f4faa6a584c81"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_296.png",
+      "sizeBytes": 345,
+      "sha256": "96d74fb0a87bcb992591fe32e86a18f6d7048c1b942f468ef852a48b6bd70fcd"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_297.png",
+      "sizeBytes": 362,
+      "sha256": "076903f2232cbecbceacb8c73aaa243738748d4178a10c7206b96d5a7bfdcc34"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_298.png",
+      "sizeBytes": 369,
+      "sha256": "276e496dde51b96dfc82815ff5ccc85236af7903cb4b9419008ca4da4ae029aa"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_299.png",
+      "sizeBytes": 350,
+      "sha256": "c8a18954bd3ac8b7634904a0f1b2045f8144eb57831a109f65f0fe7d0da61e01"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_300.png",
+      "sizeBytes": 261,
+      "sha256": "83144a275c6847d1b2de1d2e267c9b3a169b39c3ad1af139900b0d500adde39a"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_301.png",
+      "sizeBytes": 340,
+      "sha256": "ceeea776c9b927023e912c16779a38228ec1396a01dbe29700c2406faec8f632"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_302.png",
+      "sizeBytes": 306,
+      "sha256": "54089e5da0807a1ea0f1a567c4f4fd019a820c5b756e13d219692bd99f877e78"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_303.png",
+      "sizeBytes": 281,
+      "sha256": "2306f25430b2922455d4724aeafa9fd5a7d894a412344cb3e36c0e59805b5385"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_304.png",
+      "sizeBytes": 302,
+      "sha256": "66db825ad2a3ade1192816cf571e5c6a12359dc4c821c4c8437544f3c7e86053"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_305.png",
+      "sizeBytes": 264,
+      "sha256": "26b22ddc51c920b4464eb6799cb5f8ee84106e50ae6346618146c90fd949671c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_306.png",
+      "sizeBytes": 120,
+      "sha256": "0ed993743d33d259353d5a1b853c9f39ec2136039a5b267df8e998e9167f3c15"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_307.png",
+      "sizeBytes": 269,
+      "sha256": "44e42bebf29c68ca409dc93b5211d9f33e150263ca09566cd751e019bfcd8fcb"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_308.png",
+      "sizeBytes": 285,
+      "sha256": "ce8794b93583025685ce3cb44ba38786f9c378863ac515ca4a7ca90d7689fbce"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_309.png",
+      "sizeBytes": 289,
+      "sha256": "dfc026f3f5717bb1855f7db90698118043c2c213b90678da9bf63019ebe421a1"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_310.png",
+      "sizeBytes": 271,
+      "sha256": "bb6ee853d36f22cb3bfc19a0493755cec450ec2d5d5c5dc49540fcaf367e0e81"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_311.png",
+      "sizeBytes": 221,
+      "sha256": "d16b7ccbe24b4816f8d8ed0bd429a48cd8f633414eaab54c863b6a3ae796b985"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_312.png",
+      "sizeBytes": 273,
+      "sha256": "d027913b597305ffff8dbe4e3c410c4374d4d59a69fc5a696751b7bc2a94ab9f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_313.png",
+      "sizeBytes": 271,
+      "sha256": "3f02de88b1f53803053cfb76bb4ea0774da5ff999854f61470e451fb7eab41f3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_314.png",
+      "sizeBytes": 371,
+      "sha256": "eca7dc59508402948afe310f30c12b27b1348a5179a6374da021c5a2fc811c8b"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_315.png",
+      "sizeBytes": 271,
+      "sha256": "2c04573e570df47be9b3f91a7eca9a4ed9fe1ec01ac43383604ec490bb6e2f83"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_316.png",
+      "sizeBytes": 309,
+      "sha256": "6b04212b5c44fd8fd5c9981812d3cbaf0ede53d5d7a9b4faf1d0eed1a935afba"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_317.png",
+      "sizeBytes": 343,
+      "sha256": "ed898c53dca4afdcc4ce02a1378a9dc7236f49b053a7ca0eec2b17f394791d59"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_318.png",
+      "sizeBytes": 230,
+      "sha256": "431959f90f1a8349c03ee9dd23b1d63d3729227fb457edda7937f9f431250384"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_319.png",
+      "sizeBytes": 306,
+      "sha256": "624f9baa8802aa56714b7f7a9a8408be4f3e298b0f3f7dc8c921223e14578da6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_320.png",
+      "sizeBytes": 244,
+      "sha256": "2a766875ccb98b8b8aa2f272399abf98483d0ca3f020fe6265a24589a3bec7cd"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_321.png",
+      "sizeBytes": 305,
+      "sha256": "5f1e870b2e53e9b58e25ebeeea70904ff61cd8a743c8652ba946e98e10cd487e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_322.png",
+      "sizeBytes": 344,
+      "sha256": "4dc5d88b0d532425a1dfcf13c3c10bae0353dbbc3459d2dab1685fe470b59869"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_323.png",
+      "sizeBytes": 375,
+      "sha256": "a30c315e785d19bdeb42cf5e963abff674ee356d11e5a5237c9fc21beb360037"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_324.png",
+      "sizeBytes": 333,
+      "sha256": "7f5023857fa3e971f0abcb4727420670e6c93b6c8a1621d53b8d988315160825"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_325.png",
+      "sizeBytes": 307,
+      "sha256": "15e04925f738d96b05831a0bb33436cf244b4e22db892e67cd2a24c75d25ed78"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_326.png",
+      "sizeBytes": 298,
+      "sha256": "905faf1437525ea3ec0ead01c66e9f9f868ff7107484f24934bb247a1ea63da3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_327.png",
+      "sizeBytes": 301,
+      "sha256": "0e8624158c924b9ef6431736c0be3d30b0e475a087eb76292547a8581e02fd02"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_328.png",
+      "sizeBytes": 232,
+      "sha256": "5cca9934f5f4dd92f7627a38162b9581656308825f7a3cea847c925f9eb5bb9f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_329.png",
+      "sizeBytes": 430,
+      "sha256": "ce9b037e01b185086a1ec35e31e33f5211ee9faeb97a46fdd25e51e432338e33"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_330.png",
+      "sizeBytes": 493,
+      "sha256": "f36a9cca29a65b0c6ba28986902338268581616aa00882400880c941890da74d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_331.png",
+      "sizeBytes": 412,
+      "sha256": "60de3b89cb3c4d198f9941a813efa756bc05a1d72c36922c059522daf2046fe9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_332.png",
+      "sizeBytes": 328,
+      "sha256": "0d2b2a00d4949181ee0adc89a2ed2b14cb2bcad85e302fd66b60e329ec39bfd2"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_333.png",
+      "sizeBytes": 185,
+      "sha256": "6b53a4d5e9903c78c3ea8df0be30ae71ac4e7ab8c4af7474faf34248fef177f5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_334.png",
+      "sizeBytes": 239,
+      "sha256": "2a5f65b2308994df00e16c04b6da48d54c9220146c5e4a603b2fc46436476565"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_335.png",
+      "sizeBytes": 285,
+      "sha256": "5705c0207e1a98d34fb6c0463887d9454ee98054e1ccab7290d10a5db23cb580"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_336.png",
+      "sizeBytes": 216,
+      "sha256": "70568d1c957397b2ae08ffe89cb4a622a6e011958d7d7d13039d7cee6f03cdbe"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_337.png",
+      "sizeBytes": 286,
+      "sha256": "ff2632e39f99a61090183df5ff267dbf8d8e32ec0709e94ed83ba1a6951b59a8"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_338.png",
+      "sizeBytes": 121,
+      "sha256": "14219cd1eb6dc9451380449a3e1f091498b0f12ae92602048746bb8ba19d61a0"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_339.png",
+      "sizeBytes": 243,
+      "sha256": "f70c6acec11385553a4fbc7ba751a0d6a6e4b19b44a174af0c62fdf7a1471535"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_340.png",
+      "sizeBytes": 182,
+      "sha256": "6ae4e5437d1a08068136b4225bc11687ac62e53c14c900d7397c7007cc03a13f"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_341.png",
+      "sizeBytes": 193,
+      "sha256": "e7b416cc7d159127365519666e3f0c38c33182c7fe7854ea88697bdc5956e84e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_342.png",
+      "sizeBytes": 164,
+      "sha256": "4d3e976a9c4fdd4fdc21703e9cb09e3269ad7b1b744634501d1015151f08c583"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_343.png",
+      "sizeBytes": 232,
+      "sha256": "a26bfcee2fbe7cbecf419c818dac493cb505cc5f7cf33972f76553e8400ce303"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_344.png",
+      "sizeBytes": 164,
+      "sha256": "78aabc24091c7d6f601c4ed2dd14ce6ab3f18dc028ff687937d48b0cf80bc08e"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_345.png",
+      "sizeBytes": 290,
+      "sha256": "f5c3b48459ac5b05ce51cc11f4e5722cd8f3791ab8095e628de65b4bf1ddde7c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_346.png",
+      "sizeBytes": 305,
+      "sha256": "b8ea2e8c6bac37f9572f2335c45243831ec5cf7c58a738d0c6646318271ab1ad"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_347.png",
+      "sizeBytes": 299,
+      "sha256": "925eab0af788ded7b0c13395683419e18085cada7373b9fb4286194886854a62"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_348.png",
+      "sizeBytes": 324,
+      "sha256": "8e36c4d8c7c9d8186a2508a028c846ed0fa143299cd4d858c8da8f7718187916"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_349.png",
+      "sizeBytes": 285,
+      "sha256": "8bcda6f586f3ed81eb6e44979982c7da3d1db617943228d65e5bdc9f6b5fe392"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_350.png",
+      "sizeBytes": 280,
+      "sha256": "e6dc4e8b911c53ec8b1ad207c1f6084164e58ad20c6e9e0b046a2ccf6ddb5129"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_351.png",
+      "sizeBytes": 279,
+      "sha256": "42c4acbd5ff95282bb65aecf9a412517feb4afd7c3d256055263cbca85f0acdd"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_352.png",
+      "sizeBytes": 159,
+      "sha256": "acd11f1ddafbe905bddaf977c1bb468e1db98c0c85dee1ee811fa4692ed3f604"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_353.png",
+      "sizeBytes": 130,
+      "sha256": "8d63fb8c55ce541ee9a0dd25834ac5310af64a0c317d542f65418ed51f613323"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_354.png",
+      "sizeBytes": 161,
+      "sha256": "bcebc1d4411b0a4d1600f23442914073474c9314f249ebcbf9f6c3b474761efa"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_355.png",
+      "sizeBytes": 570,
+      "sha256": "2ad97fef2e8a562fec7bd3be6b9c03add6f52232ee551b3c871fa8f851c5cde2"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_356.png",
+      "sizeBytes": 198,
+      "sha256": "3343d250aa2fb3dd1992dcd2b6fc89ccda701f254fdeed770e054916e3c3dca2"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_357.png",
+      "sizeBytes": 557,
+      "sha256": "5642e197efe3c7fa38c6acf0840e5c16dbc40fb6bfec7b773f9f2d92f42ebff3"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_358.png",
+      "sizeBytes": 712,
+      "sha256": "a74f0487a62e968b9c8cb42b2e3a86a1845f6ffdb3a465fb3bd8b0c8c3de7f3c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_359.png",
+      "sizeBytes": 695,
+      "sha256": "e8a482c9232d3927b743f266aa29e030fc6189e873ef9396e61f842039fdb6ea"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_360.png",
+      "sizeBytes": 233,
+      "sha256": "c6764c3fcfc1c0fbee4f93863cae9822d3a492a80e7e3e822ab326a138f73790"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_361.png",
+      "sizeBytes": 289,
+      "sha256": "8abda3632dbffe12d5452159ad437d99064841482f2845673b48ba9c8640b735"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_362.png",
+      "sizeBytes": 177,
+      "sha256": "cfddf88e3a0779ee93f090a3a6a0ec6c169d92aba418377f4271d6779bb1a5c9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_363.png",
+      "sizeBytes": 160,
+      "sha256": "710c6798c5dcaa9666749bf465e349bd191cb33c74815633626205b47ae8468c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_364.png",
+      "sizeBytes": 121,
+      "sha256": "0d6f77ebcd6323541d3c7543c6dc4ea9de1572d6dd4012ee73f47bdb841e4e93"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_365.png",
+      "sizeBytes": 276,
+      "sha256": "073949952a0c85b94506526e20e2ac75a3927f275d7813f6c105745ef2552a93"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_366.png",
+      "sizeBytes": 123,
+      "sha256": "7f092f2e75c0fcbcaa83f83b4c8a2e1ca7d6045e692cd69829ff1735d228b63c"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_367.png",
+      "sizeBytes": 104,
+      "sha256": "7dd8d4db346a0ffbf3c0860d4389eaee8e63620236331f65d20cd215f7e482d5"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_368.png",
+      "sizeBytes": 209,
+      "sha256": "e36ea397918f225a0d5baaaf7cd11a6219c96791b9f7c1d4bec5a812f76eae97"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_369.png",
+      "sizeBytes": 274,
+      "sha256": "e4f58564c0e9510a2d5506012f7d007bf7eac1e0f3637d0684c310a4527e029d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_370.png",
+      "sizeBytes": 277,
+      "sha256": "6ef3327617ea239285945c054a5cad5da081fba7294715841ba2e4d5077e2661"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_371.png",
+      "sizeBytes": 225,
+      "sha256": "1a9c8971110efc1d7bba6a56dd2d6cec3faf222f8e3323c022df5745e3c45341"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_372.png",
+      "sizeBytes": 214,
+      "sha256": "ab187c36236d8550ddcbe8dd6565e33f0c040b207c9b1086ed55938af389986d"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_373.png",
+      "sizeBytes": 161,
+      "sha256": "63b7779198830227bb947797b80f3ee1937a34cb920dc9f0293f76108dd0fac6"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_374.png",
+      "sizeBytes": 124,
+      "sha256": "bbbb9d0d747f3f0600cbb10aa8961f180acb4916055199b1b30bf665b843f1bd"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_375.png",
+      "sizeBytes": 160,
+      "sha256": "8900f40c08c03099d0355a4b3306c17ae0c0a43b007a8bc07c297f3aa2cf8c54"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_376.png",
+      "sizeBytes": 174,
+      "sha256": "cd61c4b08d2c0cb76bed468067fdcbdf2bd4eb37ee86ecfd2447723e773e1273"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_377.png",
+      "sizeBytes": 138,
+      "sha256": "584846184b5cc4f9d3c9c2489f27eedc5a080c8620f020fdb8f1a213d8dc1e86"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_378.png",
+      "sizeBytes": 270,
+      "sha256": "fda9a66caaf4513c9e7bcd55e59978ea2358c1db53f1c5f3b605cba79e61b5b9"
+    },
+    {
+      "path": "Japanese_City/Tiles/GK_JC_Free_379.png",
+      "sizeBytes": 270,
+      "sha256": "d088232a5c19982c55c2687809958ef014b43f123e0dde2f605d5ab694aa2be4"
+    },
+    {
+      "path": "basic-animal/Basic Animal Sprites/Basic Sprites 1x.png",
+      "sizeBytes": 4287,
+      "sha256": "6c5e55a6efa317a2ceef499108f9503e15477dd7815042d55f3a6f63067cf2a6"
+    },
+    {
+      "path": "basic-animal/Basic Animal Sprites/Basic Sprites 2x.png",
+      "sizeBytes": 4747,
+      "sha256": "56ed3b09f1df18c7d31e883ce81a8442361287546ff602a0c8483c5ad74e1eef"
+    },
+    {
+      "path": "basic-animal/Basic Animal Sprites/Basic Sprites 4x.png",
+      "sizeBytes": 5851,
+      "sha256": "73029c45584b686fa8eb8e6eb38f8f4efe23108cf2c2338ff22f8c55c8fc86fc"
+    },
+    {
+      "path": "basic-animal/Clucking Chicken/CluckingChicken.aseprite",
+      "sizeBytes": 1209,
+      "sha256": "e4a7379679c3fe5bd86a137564b204e743286171d5e3b5aecb01931c835b3510"
+    },
+    {
+      "path": "basic-animal/Clucking Chicken/CluckingChicken.gif",
+      "sizeBytes": 852,
+      "sha256": "abd69682cc68dbecbb8a93cb3be343639067f48522366c96aa389e554c668365"
+    },
+    {
+      "path": "basic-animal/Clucking Chicken/CluckingChicken.png",
+      "sizeBytes": 502,
+      "sha256": "348bde6b8cd2d9c7749ca1b06682619d213ecc4412be9044491fe49652cad9cf"
+    },
+    {
+      "path": "basic-animal/Coral Crab/CoralCrab.aseprite",
+      "sizeBytes": 1096,
+      "sha256": "225bd8de03e72f86f4e301ae740c70e3f2c4856141d0f1678cdf6d4b63fc164d"
+    },
+    {
+      "path": "basic-animal/Coral Crab/CoralCrab.gif",
+      "sizeBytes": 647,
+      "sha256": "ef730f250e612f4fef997f630578af56ab3b5ba643b1c912c1f7617d4e37fd6c"
+    },
+    {
+      "path": "basic-animal/Coral Crab/CoralCrab.png",
+      "sizeBytes": 599,
+      "sha256": "4d0391167694d2c387432fbbebf6100feb16ed393c12518300d653fbb579e936"
+    },
+    {
+      "path": "basic-animal/Croaking Toad/CroakingToad.aseprite",
+      "sizeBytes": 1058,
+      "sha256": "b03aaa6500c3f7b445f426b9a3e6a05d4d324a7cbd55e7c62138bf85ccb3c9ea"
+    },
+    {
+      "path": "basic-animal/Croaking Toad/CroakingToad.gif",
+      "sizeBytes": 520,
+      "sha256": "9fb611ca2f243f55b163f94a4cf8c8765f2329d322e099c7aa5361854819440f"
+    },
+    {
+      "path": "basic-animal/Croaking Toad/CroakingToad.png",
+      "sizeBytes": 504,
+      "sha256": "4c85bb7a63a9b9aeb1388ffdc09610bb425ed562e10e431cee953d3d6b62f5d9"
+    },
+    {
+      "path": "basic-animal/Dainty Pig/DaintyPig.aseprite",
+      "sizeBytes": 1237,
+      "sha256": "bb4962ed8ace1210dd8bab5499353bc8cf895dd582f49c59714699780472c3e7"
+    },
+    {
+      "path": "basic-animal/Dainty Pig/DaintyPig.gif",
+      "sizeBytes": 634,
+      "sha256": "347d7618308472b09d7ca86d85877b3fc33ff7c77620abfc96771d00335dea7b"
+    },
+    {
+      "path": "basic-animal/Dainty Pig/DaintyPig.png",
+      "sizeBytes": 572,
+      "sha256": "0e18f0ffedd16710c572ab94b501116adadb3cb849064bf593e000b9960b088d"
+    },
+    {
+      "path": "basic-animal/Honking Goose/HonkingGoose.aseprite",
+      "sizeBytes": 1088,
+      "sha256": "196a0e97a506fc37a9b6820ed38ce0072829f0869746c3fa9c40ece97e925669"
+    },
+    {
+      "path": "basic-animal/Honking Goose/HonkingGoose.gif",
+      "sizeBytes": 615,
+      "sha256": "5ec13ae5f3374563c98741cd5e5a351e2e95a9121ada368939eb543d12b4b014"
+    },
+    {
+      "path": "basic-animal/Honking Goose/HonkingGoose.png",
+      "sizeBytes": 503,
+      "sha256": "84ac436c7bc7d000977e00e7794664f29e40680cf6e87d63e81686f652aa377a"
+    },
+    {
+      "path": "basic-animal/Leaping Frog/LeapingFrog.aseprite",
+      "sizeBytes": 1016,
+      "sha256": "049318a7ab6b407213e73cb76d04a16829f29e6babee2cc11ad52b3b63433d4a"
+    },
+    {
+      "path": "basic-animal/Leaping Frog/LeapingFrog.gif",
+      "sizeBytes": 589,
+      "sha256": "d64027fcbf5250aeca8e27c3536a675ff8056194b2dfd108208bf16587a26eec"
+    },
+    {
+      "path": "basic-animal/Leaping Frog/LeapingFrog.png",
+      "sizeBytes": 619,
+      "sha256": "f8fc1da7666deb03dfc82c55bf1ab816ae15f8b05d74f83f75ccd65d520cf9c9"
+    },
+    {
+      "path": "basic-animal/Mad Boar/MadBoar.aseprite",
+      "sizeBytes": 1222,
+      "sha256": "55360cb9efb90469fb674ada44373c72a7de5aacca1650885c376dcd5b2ee490"
+    },
+    {
+      "path": "basic-animal/Mad Boar/MadBoar.gif",
+      "sizeBytes": 873,
+      "sha256": "179be51c349f3f973a9b90e15665c6e4d676cd08355ad026b200faf5a27e9005"
+    },
+    {
+      "path": "basic-animal/Mad Boar/MadBoar.png",
+      "sizeBytes": 775,
+      "sha256": "1aeecab94afdf79524802fa3264fbfa20b54aff20017661dd1934dbedd2f5cfd"
+    },
+    {
+      "path": "basic-animal/Meowing Cat/MeowingCat.aseprite",
+      "sizeBytes": 1202,
+      "sha256": "69630c6be539af735ae9537de71b6f47ea8cd28611f4d48771b2b15b064bc56e"
+    },
+    {
+      "path": "basic-animal/Meowing Cat/MeowingCat.gif",
+      "sizeBytes": 679,
+      "sha256": "1846c4c6d6fc80e39d4b5bcd25566f4196e077a41677de688a687cbd9643a515"
+    },
+    {
+      "path": "basic-animal/Meowing Cat/MeowingCat.png",
+      "sizeBytes": 673,
+      "sha256": "c8b0e644b6582048544973d7ea8d3bd2bb2afac2e14dccc47f792a8557b7b7e1"
+    },
+    {
+      "path": "basic-animal/Pasturing Sheep/PasturingSheep.aseprite",
+      "sizeBytes": 1072,
+      "sha256": "addb587c6fea001c8d1fdeefaeeff2e83b28459bb989e04a64a79ebfb5347bd4"
+    },
+    {
+      "path": "basic-animal/Pasturing Sheep/PasturingSheep.gif",
+      "sizeBytes": 611,
+      "sha256": "46794e0cffe58f51ec48ba61589d12f0479974b3170374c7b921a60a785e5624"
+    },
+    {
+      "path": "basic-animal/Pasturing Sheep/PasturingSheep.png",
+      "sizeBytes": 589,
+      "sha256": "9d161b49a671b576482bc88e76ef120bcd885a9498cb61d69d134b207dad04d0"
+    },
+    {
+      "path": "basic-animal/Slow Turtle/SlowTurtle.aseprite",
+      "sizeBytes": 1087,
+      "sha256": "2e48aa034d5ce09093a661b05d0df181d23507d3aba174f81ab0d9234a6a434f"
+    },
+    {
+      "path": "basic-animal/Slow Turtle/SlowTurtle.gif",
+      "sizeBytes": 811,
+      "sha256": "66826423f5455c3805151df4fe845ee5181b59d0b31515eb3e29423e11b3b0ed"
+    },
+    {
+      "path": "basic-animal/Slow Turtle/SlowTurtle.png",
+      "sizeBytes": 634,
+      "sha256": "921a5543a3be3f27731601c5e2333118606cfab8a90400f3ecf413b3d7ff00ea"
+    },
+    {
+      "path": "basic-animal/Snow Fox/SnowFox.aseprite",
+      "sizeBytes": 1082,
+      "sha256": "ea1a635ec02568c0f10f985fa50dd66f6bc0f5aa97e9f09b30681d7d26725540"
+    },
+    {
+      "path": "basic-animal/Snow Fox/SnowFox.gif",
+      "sizeBytes": 638,
+      "sha256": "59165e4e2fd9f04559514f86ecde0864008fac5c574396a859be440ddc8fba55"
+    },
+    {
+      "path": "basic-animal/Snow Fox/SnowFox.png",
+      "sizeBytes": 651,
+      "sha256": "de03b2ba64b0c580086ff669b9d866db4f46b8d6a9fa13d5a5e908ee7ad790a4"
+    },
+    {
+      "path": "basic-animal/Spikey Porcupine/SpikeyPorcupine.aseprite",
+      "sizeBytes": 1087,
+      "sha256": "641a8aba1b03d842cdea406933ad4e70ab310f4d220b8a8eab3a6fe876bf19c7"
+    },
+    {
+      "path": "basic-animal/Spikey Porcupine/SpikeyPorcupine.gif",
+      "sizeBytes": 651,
+      "sha256": "8c7e571b69bcfc297502b0fb6377226776da4097efaafd5acc85ebcdcbe18898"
+    },
+    {
+      "path": "basic-animal/Spikey Porcupine/SpikeyPorcupine.png",
+      "sizeBytes": 627,
+      "sha256": "ed5e36adf8c16df21289b188ab3089567aeef6fa53fac99e00a993dd7056c12f"
+    },
+    {
+      "path": "basic-animal/Stinky Skunk/StinkySkunk.aseprite",
+      "sizeBytes": 1054,
+      "sha256": "3c498ad410f15f0f8346c13418df0987293b17fed79bac4d57b75b2f779380f9"
+    },
+    {
+      "path": "basic-animal/Stinky Skunk/StinkySkunk.gif",
+      "sizeBytes": 641,
+      "sha256": "176d3157eada608f70f9f9e1c5dac7205f738cedea95d024fb0d0f9bdd8fdcb5"
+    },
+    {
+      "path": "basic-animal/Stinky Skunk/StinkySkunk.png",
+      "sizeBytes": 513,
+      "sha256": "3930c68b34582691fdced296cb3ea5de81ec992a5005989a232bf096892b4e95"
+    },
+    {
+      "path": "basic-animal/Timber Wolf/TimberWolf.aseprite",
+      "sizeBytes": 1171,
+      "sha256": "43eb9f15b19871a4c19f53cc325bb4f359da63eece21010f08bfd0c6157e3bd9"
+    },
+    {
+      "path": "basic-animal/Timber Wolf/TimberWolf.gif",
+      "sizeBytes": 677,
+      "sha256": "181c3ddcb7f0962d811dc1dc65edfc3ddbc506e6fea8fbfc88a936fb84961a8d"
+    },
+    {
+      "path": "basic-animal/Timber Wolf/TimberWolf.png",
+      "sizeBytes": 699,
+      "sha256": "ae916d4c4a02f46368d5e5871bb628685e5b3a47a9dd850cbdbf16645c3d7099"
+    },
+    {
+      "path": "basic-animal/tiny-chick/TinyChick.aseprite",
+      "sizeBytes": 1055,
+      "sha256": "ab091bc963098a3f2b81dc02c07bf45a4c385b65fc0ca948bc106cc647dc896f"
+    },
+    {
+      "path": "basic-animal/tiny-chick/TinyChick.gif",
+      "sizeBytes": 549,
+      "sha256": "365ff1475bb55a2c97a426cbafa59f5a5cf245653c144cafa7a4bd6ac0f4c1e1"
+    },
+    {
+      "path": "basic-animal/tiny-chick/TinyChick.png",
+      "sizeBytes": 400,
+      "sha256": "45888faa789e54100e1430e4e6be7d059d5294413e6720ffb7efa481ca47e825"
+    },
+    {
+      "path": "dog-mega-pack/DogItems.png",
+      "sizeBytes": 4052,
+      "sha256": "5020ddd5fbe27496e4837ec8039512ae942f65de8441731ddfe28fd977106047"
+    },
+    {
+      "path": "dog-mega-pack/Dogs.png",
+      "sizeBytes": 5773,
+      "sha256": "86cebdc62f1559dd89ee2d5e507f777dee99068a1b88619eb6e1805bf3e71131"
+    },
+    {
+      "path": "female-adventurer/Dash/Dash.png",
+      "sizeBytes": 12816,
+      "sha256": "19bc864253617782bc2bc166e43bf2e6ad09b2ced7dbd7668401b16d58ad6c9c"
+    },
+    {
+      "path": "female-adventurer/Dash/Dash_Down.png",
+      "sizeBytes": 2149,
+      "sha256": "ccdd40a513cfd36842961045e8dbe72c9e69ce373d6e5b07e271c73599a7a130"
+    },
+    {
+      "path": "female-adventurer/Dash/Dash_Left_Down.png",
+      "sizeBytes": 2458,
+      "sha256": "124b134ce42546478bb88166a8f7cffc4a80d0f947aaaf160fb2167dd1a10c8d"
+    },
+    {
+      "path": "female-adventurer/Dash/Dash_Left_Up.png",
+      "sizeBytes": 2314,
+      "sha256": "95f4c7d3a0aa78d74b0455132b5eaceb06bc40e5762638fa626b31244ab00b25"
+    },
+    {
+      "path": "female-adventurer/Dash/Dash_Right_Down.png",
+      "sizeBytes": 2543,
+      "sha256": "d196256ad65f0ad7074449298b7b560e6bb7682fba195e5f744b5d3dda635a07"
+    },
+    {
+      "path": "female-adventurer/Dash/Dash_Right_Up.png",
+      "sizeBytes": 2357,
+      "sha256": "e8938626fdb4afc1f019c866c16351214e9e3cbfc049e6f571fc87764f5c68ea"
+    },
+    {
+      "path": "female-adventurer/Dash/Dash_Up.png",
+      "sizeBytes": 1760,
+      "sha256": "59d51cbcbdd4bc0bc2cb15c8b84b3b83910674e284d80a86d05f9be0aff99724"
+    },
+    {
+      "path": "female-adventurer/Dash/Dust/Dash_Dust.png",
+      "sizeBytes": 1350,
+      "sha256": "01be367a2a16f5dd5bc26b8b08b0731f43e13ab717f48939a02a70fabe57d277"
+    },
+    {
+      "path": "female-adventurer/Dash/Dust/Dash_Dust_Down.png",
+      "sizeBytes": 317,
+      "sha256": "3831036b0eabc334c8108474d1e4e4d32cd29c634ec7591303c29d10d61f48ee"
+    },
+    {
+      "path": "female-adventurer/Dash/Dust/Dash_Dust_Up.png",
+      "sizeBytes": 303,
+      "sha256": "878be1210ba91d94c4ae8ccf22f2ddda3c2ba331ee952d4effd810135e20e7b9"
+    },
+    {
+      "path": "female-adventurer/Dash/Dust/Dash_Dust_left_Down.png",
+      "sizeBytes": 316,
+      "sha256": "b5af3a4b902367c49af65510167d3ace8142f6ca61d51632a714e3aeec152a1b"
+    },
+    {
+      "path": "female-adventurer/Dash/Dust/Dash_Dust_left_Up.png",
+      "sizeBytes": 339,
+      "sha256": "b2bfc28a4455d9b12bb6784eb256b429fef7484ad250db9156eaaafcefd0cdd7"
+    },
+    {
+      "path": "female-adventurer/Dash/Dust/Dash_Dust_right_Down.png",
+      "sizeBytes": 311,
+      "sha256": "09235fe68d777b99a9277dbc39369c15c58d9979454994be47a3ccc5577f8352"
+    },
+    {
+      "path": "female-adventurer/Dash/Dust/Dash_Dust_right_Up.png",
+      "sizeBytes": 332,
+      "sha256": "092128d2c362d8ea350de755c4c504be462b56c1644b4b45cea1d449e1782b88"
+    },
+    {
+      "path": "female-adventurer/Death/death.png",
+      "sizeBytes": 14582,
+      "sha256": "becad0376830fd4d4d8d16136b4dd4847b36f09292c62362b9ff56f69dc64a32"
+    },
+    {
+      "path": "female-adventurer/Death/death_Down.png",
+      "sizeBytes": 2404,
+      "sha256": "360d1a04f4df0b6a8ca97d987710de2ec13e005bbb5aa0f6140ac0d8d026222f"
+    },
+    {
+      "path": "female-adventurer/Death/death_Left_Down.png",
+      "sizeBytes": 2850,
+      "sha256": "1b76528e527e85b3e063ad2072957a89caade514820b44de0b3fd9d6f39eb77b"
+    },
+    {
+      "path": "female-adventurer/Death/death_Left_Up.png",
+      "sizeBytes": 2466,
+      "sha256": "262fb3a997e8e661b7d47e8a5929568522ee730327e52ea84c19bf0d80f1e4e0"
+    },
+    {
+      "path": "female-adventurer/Death/death_Right_Down.png",
+      "sizeBytes": 2870,
+      "sha256": "fb94fd1c68389ef3e905a13644b29ed50e4e259970dfe6ea41e98a07af92ae2d"
+    },
+    {
+      "path": "female-adventurer/Death/death_Right_Up.png",
+      "sizeBytes": 2577,
+      "sha256": "d8997fe7b68b098c261893476ab49d899715df9fac5d818081776326c4fe3088"
+    },
+    {
+      "path": "female-adventurer/Death/death_Up.png",
+      "sizeBytes": 2191,
+      "sha256": "0e59ae152f3b0c9693fd40e173a72ce26f4e88633ee3b7b565d2470d7946b6fc"
+    },
+    {
+      "path": "female-adventurer/Death_Shadow/death_normal.png",
+      "sizeBytes": 1955,
+      "sha256": "01a20c10582818f57a29e2f4796bf62eec866248fe712e5461e76762206a99a1"
+    },
+    {
+      "path": "female-adventurer/Death_Shadow/death_normal_down.png",
+      "sizeBytes": 461,
+      "sha256": "278ab5ab54b99812b76dc1cde9463f435d3d8c3b71fa7cceed5e5deaeac8c62f"
+    },
+    {
+      "path": "female-adventurer/Death_Shadow/death_normal_left_down.png",
+      "sizeBytes": 407,
+      "sha256": "672dcb280272a8ddf1a0d454363324dfa963cbe218ad69a18e4df0ec98781d34"
+    },
+    {
+      "path": "female-adventurer/Death_Shadow/death_normal_left_up.png",
+      "sizeBytes": 391,
+      "sha256": "e6ec4db9d319f8bc4de5510697d220133408594fb69118a950757267031a004d"
+    },
+    {
+      "path": "female-adventurer/Death_Shadow/death_normal_right_down.png",
+      "sizeBytes": 405,
+      "sha256": "086c172ef9ce20b9b65007117eb9ac10228f92e285cea2b6f8d5d1b147305b87"
+    },
+    {
+      "path": "female-adventurer/Death_Shadow/death_normal_right_up.png",
+      "sizeBytes": 397,
+      "sha256": "0f680e65edba9893713cedbfd2c6265d4b8591f39a9c89390394387edc07933e"
+    },
+    {
+      "path": "female-adventurer/Death_Shadow/death_normal_up.png",
+      "sizeBytes": 431,
+      "sha256": "17c3be6c9dd2712c13875417c2ccafd5ff21d748b46a3478a6a674c3554dd42d"
+    },
+    {
+      "path": "female-adventurer/Idle/Idle.png",
+      "sizeBytes": 9845,
+      "sha256": "19c6045a0d78995cf94f55542b1371233ceb0e3edf6a3c8f5143f8a6b2ad7ecc"
+    },
+    {
+      "path": "female-adventurer/Idle/Idle_Down.png",
+      "sizeBytes": 1534,
+      "sha256": "bbee1a5bbb798574830b16d65b998ca95929d6f17773e3c4141468ed7270f832"
+    },
+    {
+      "path": "female-adventurer/Idle/Idle_Left_Down.png",
+      "sizeBytes": 1927,
+      "sha256": "9495209c11a5a96862fff81135555a2cf5d1a4c9be93689b1ca50f18a9b14ff9"
+    },
+    {
+      "path": "female-adventurer/Idle/Idle_Left_Up.png",
+      "sizeBytes": 1697,
+      "sha256": "4a2db230b4cc5b21ae82788d9215dccfe783724f88434317ea6268fd361d6ec8"
+    },
+    {
+      "path": "female-adventurer/Idle/Idle_Right_Down.png",
+      "sizeBytes": 2000,
+      "sha256": "c254a624e03aa04a062defd1dead29754b8e3e999b5ee635b8e25014e740ecf0"
+    },
+    {
+      "path": "female-adventurer/Idle/Idle_Right_Up.png",
+      "sizeBytes": 1687,
+      "sha256": "62be15035d72caf1bd3b63467e451f30f29413deb7080b15daa7ea41a2ca1430"
+    },
+    {
+      "path": "female-adventurer/Idle/Idle_Up.png",
+      "sizeBytes": 1753,
+      "sha256": "0b33b4530035ea855e6af8ecb7884f408426e0ff5112d71a02ba35f0a17530b0"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Dust/Jump_Dust.png",
+      "sizeBytes": 1472,
+      "sha256": "618bb0cb910f5b8ab0a4a59e83038ce2d44cfd4a5aed83ee1f3d61181baa29c6"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Dust/Jump_Dust_Down.png",
+      "sizeBytes": 306,
+      "sha256": "7c5833a5cf4ff724d8de71598272d671e9919c240401baf2877568b2d9dcb2a0"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Dust/Jump_Dust_Left_Down.png",
+      "sizeBytes": 347,
+      "sha256": "ff5b37e20b9e826b9fff1f27c6868161341c7139636a1d290857a7d0ee2693b9"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Dust/Jump_Dust_Left_Up.png",
+      "sizeBytes": 346,
+      "sha256": "b1581bdbf0963cc507fdc31dd7ce68d69c1ffe2bd37e0682f1b8e4208eaa06ed"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Dust/Jump_Dust_Right_Down.png",
+      "sizeBytes": 352,
+      "sha256": "66625df2784169c81004ed944b6d20a4af4a2797866b8e7e38c2185eb7d35679"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Dust/Jump_Dust_Right_Up.png",
+      "sizeBytes": 343,
+      "sha256": "e2a2b016390d3f1833dbb46e4b5fa2ce956db75ed890f31756b46ba709427844"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Dust/Jump_Dust_Up.png",
+      "sizeBytes": 351,
+      "sha256": "c93a9da36298b334ed887cfb8f3f1b736e6fd2b0ac3a2633c8c4b281307bc9db"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Jump_Shadow.png",
+      "sizeBytes": 342,
+      "sha256": "b8525a5552313907771b57d3bba63c17d33e4d013d01307801a160e69d3ab1af"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Normal/Jump.png",
+      "sizeBytes": 15725,
+      "sha256": "702e4d37dee24f46a5401682822f557f9718e49166768ba0d1339fc028f3f473"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Normal/Jump_Down.png",
+      "sizeBytes": 2432,
+      "sha256": "8c459c8b19cfe33ad1c4b327aeb35c0a3798d6f00849525d63ad8220eca3bd52"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Normal/Jump_Left_Down.png",
+      "sizeBytes": 3248,
+      "sha256": "ec79b4509ebe81af63a002661a37918ffa6d9caeb8ab4b4af2b4116bbc3947ab"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Normal/Jump_Left_Up.png",
+      "sizeBytes": 2792,
+      "sha256": "69392d52404f5b9b4253cb416e71749554356b2276e0b3a61e67fe00a854a27e"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Normal/Jump_Right_Down.png",
+      "sizeBytes": 2911,
+      "sha256": "806147aa76f10c34c1b9973f2f041dfd048a7e4666fc33759cf19b7e0dcb84e7"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Normal/Jump_Right_Up.png",
+      "sizeBytes": 2721,
+      "sha256": "532d855b692c15a9624daaee37150b50f2698c70c584e0523b9728f29ff1dc61"
+    },
+    {
+      "path": "female-adventurer/Jump - NEW/Normal/Jump_up.png",
+      "sizeBytes": 2412,
+      "sha256": "93db0518d4308ad723c98da05cb27722eb5fa765874e9c77009e1fc1040855d7"
+    },
+    {
+      "path": "female-adventurer/Shadow.png",
+      "sizeBytes": 165,
+      "sha256": "595a9edbd844b88c8483ba7e5b76cc7fa7e66fb0d8fa3947ee18148dfb441e9a"
+    },
+    {
+      "path": "female-adventurer/walk/walk.png",
+      "sizeBytes": 11575,
+      "sha256": "c3d37ec017da4838bf2d8dc6600e9a6d8beaf8809d31c8f21749997551290321"
+    },
+    {
+      "path": "female-adventurer/walk/walk_Down.png",
+      "sizeBytes": 1819,
+      "sha256": "cefb1ef7200276ea7ac172e861624584ee874c37eb470e3bd9ab303b8e69deed"
+    },
+    {
+      "path": "female-adventurer/walk/walk_Left_Down.png",
+      "sizeBytes": 2139,
+      "sha256": "19282271cef4c0f7d25a2e3956050f525f2dbc6c075f7af38c232b2b11f61e01"
+    },
+    {
+      "path": "female-adventurer/walk/walk_Left_Up.png",
+      "sizeBytes": 2093,
+      "sha256": "aa5b24ee154ab95ff0b1378358ee293ed82fe97d5d043abb47d83915a939e6c5"
+    },
+    {
+      "path": "female-adventurer/walk/walk_Right_Down.png",
+      "sizeBytes": 2236,
+      "sha256": "ed7e9b1be1caa37b6be5c46fc7cdb076b8b90e02c50fa21f0f9aded32aaa869d"
+    },
+    {
+      "path": "female-adventurer/walk/walk_Right_Up.png",
+      "sizeBytes": 2172,
+      "sha256": "2052a9dc51e620e412e28b83ad470aff2d4ab178e620700e0cef8d03d53ad78e"
+    },
+    {
+      "path": "female-adventurer/walk/walk_Up.png",
+      "sizeBytes": 1889,
+      "sha256": "c7012bc1b8be5b445a95ad97fc89f747b3c3ca5b2d788100b8cbee3044ede54b"
+    },
+    {
+      "path": "nature/global.png",
+      "sizeBytes": 1588,
+      "sha256": "141aeec4419833841ef9e7a6f76ffab037c158c69187f23224be9fb7efe25c22"
+    },
+    {
+      "path": "super-retro-world/character_9_frame32x32.png",
+      "sizeBytes": 1483,
+      "sha256": "395fe9de619f16759d646c63fafb8e32914561ab2d64a8d2ab12234ac9139898"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/$_srw_free_campfire.png",
+      "sizeBytes": 1045,
+      "sha256": "96ed25f9bb3360e02bed077cf154eb406902aaa9cd3e1d393015bea5251770c6"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/$_srw_free_character_nude.png",
+      "sizeBytes": 1476,
+      "sha256": "5f0aa17eb3c7480fbea34b841539ca007a1775edf4ea5be7e7d12454f4ee881b"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/$_srw_free_icons1.png",
+      "sizeBytes": 1769,
+      "sha256": "45d59ab6c7c04e94eb02ce0bdce78bb113f3436ab57be72e1a7b1c2aced704b4"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/$_srw_free_icons2.png",
+      "sizeBytes": 1432,
+      "sha256": "77cae81cfcc75f2910ff94f30d2b6ccfbe53b083a467dfb96bd67f65bee43751"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/_srw_character_1-8.png",
+      "sizeBytes": 11494,
+      "sha256": "30859c8fcf2fc6d0f740b616a1e924675a5d03f710ece48bcd19123fe08139f5"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/_srw_character_17-24.png",
+      "sizeBytes": 11633,
+      "sha256": "fa6b7800c7b5d7ebe37dc7f3474cc8015a78a330b01783cf8deae0bfce7afe4e"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/_srw_character_25-32.png",
+      "sizeBytes": 9652,
+      "sha256": "71ae885b762eb68cacc8488c87e9fbfaebbf14fce0fd81c0b90d102c5966420f"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/_srw_character_9-16.png",
+      "sizeBytes": 11033,
+      "sha256": "c52b2d0506c6d73e028b6be258e3e42c8c2bf3b5b16dcf4f44ce7d9d9bf5e1ba"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/_srw_free_character_1-3.png",
+      "sizeBytes": 5226,
+      "sha256": "ed37fc74e3a89d784902ce54cee656dc41e2b9a8201f836f9a395e66acc87929"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MV/characters/_srw_free_chests.png",
+      "sizeBytes": 8108,
+      "sha256": "02604fd77802b5e35120d17aa0d76c383d9899629be341af2167af2b82291d49"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/$_srw_free_campfire.png",
+      "sizeBytes": 1045,
+      "sha256": "96ed25f9bb3360e02bed077cf154eb406902aaa9cd3e1d393015bea5251770c6"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/$_srw_free_character_nude.png",
+      "sizeBytes": 1476,
+      "sha256": "5f0aa17eb3c7480fbea34b841539ca007a1775edf4ea5be7e7d12454f4ee881b"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/$_srw_free_icons1.png",
+      "sizeBytes": 1769,
+      "sha256": "45d59ab6c7c04e94eb02ce0bdce78bb113f3436ab57be72e1a7b1c2aced704b4"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/$_srw_free_icons2.png",
+      "sizeBytes": 1432,
+      "sha256": "77cae81cfcc75f2910ff94f30d2b6ccfbe53b083a467dfb96bd67f65bee43751"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/_srw_character_1-8.png",
+      "sizeBytes": 11494,
+      "sha256": "30859c8fcf2fc6d0f740b616a1e924675a5d03f710ece48bcd19123fe08139f5"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/_srw_character_17-24.png",
+      "sizeBytes": 11633,
+      "sha256": "fa6b7800c7b5d7ebe37dc7f3474cc8015a78a330b01783cf8deae0bfce7afe4e"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/_srw_character_25-32.png",
+      "sizeBytes": 9652,
+      "sha256": "71ae885b762eb68cacc8488c87e9fbfaebbf14fce0fd81c0b90d102c5966420f"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/_srw_character_9-16.png",
+      "sizeBytes": 11033,
+      "sha256": "c52b2d0506c6d73e028b6be258e3e42c8c2bf3b5b16dcf4f44ce7d9d9bf5e1ba"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/_srw_free_character_1-3.png",
+      "sizeBytes": 5226,
+      "sha256": "ed37fc74e3a89d784902ce54cee656dc41e2b9a8201f836f9a395e66acc87929"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/MZ/characters/_srw_free_chests.png",
+      "sizeBytes": 8108,
+      "sha256": "02604fd77802b5e35120d17aa0d76c383d9899629be341af2167af2b82291d49"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/$_srw_free_campfire.png",
+      "sizeBytes": 775,
+      "sha256": "c062a27cf464145e1f3df9a3acde5cbb7813e833861f53226ed55646d52296a7"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/$_srw_free_character_nude.png",
+      "sizeBytes": 1095,
+      "sha256": "e1b9fb6ae20a801d8739ccd6c575b71c01a19f97c583221202a97f8f0511ac05"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/$_srw_free_icons1.png",
+      "sizeBytes": 1588,
+      "sha256": "d9801ebcb9da90b5468b0a1a5848e660ad757c5ada320537e2d4d14472562ecd"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/$_srw_free_icons2.png",
+      "sizeBytes": 1303,
+      "sha256": "aced0a65fd3400eb9924bde7c7f9f56ce9beeadccbc56214a3c75fa98c3c64b2"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/_srw_character_1-8.png",
+      "sizeBytes": 9611,
+      "sha256": "a6afbb1024170f24095821576c6df6c8754cc6fa70fe0fb8409ee0d2d201d6d2"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/_srw_character_17-24.png",
+      "sizeBytes": 9750,
+      "sha256": "46ff2e83b6070904a669241f8872b095ef4759c7f2c0dc622ed34fa53bee71f9"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/_srw_character_25-32.png",
+      "sizeBytes": 7798,
+      "sha256": "a06c1bd7333deec73d88b8321e3c160cc20470ab28cfc690c4d8f548314461a6"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/_srw_character_9-16.png",
+      "sizeBytes": 9091,
+      "sha256": "0d8b3eeab63761c5cc8610fc68de23417cc88f6d823b2614f5c6369f61209b08"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/_srw_free_character_1-3.png",
+      "sizeBytes": 4234,
+      "sha256": "6132fe5b5eabc343d770647dce57893d6b08813428ccf914c8d8b0fd7be52e26"
+    },
+    {
+      "path": "super-retro-world/rpgmaker/VXace/characters/_srw_free_chests.png",
+      "sizeBytes": 5486,
+      "sha256": "5358c1a4f841c72405c68d87d2c953ddf63afb427a63a210702ddac9191262dd"
+    },
+    {
+      "path": "super-retro-world/sprite/character_1-8.png",
+      "sizeBytes": 19366,
+      "sha256": "f87b6320be5af57b7690fc4617fedca29899a2f418546844ef4abe77e808b1e4"
+    },
+    {
+      "path": "super-retro-world/sprite/character_17-24.png",
+      "sizeBytes": 19620,
+      "sha256": "ca8a827937090c38d81c62a4d1caeb83b44ad4d72a289913d8a744761bbc7a33"
+    },
+    {
+      "path": "super-retro-world/sprite/character_25-32.png",
+      "sizeBytes": 14664,
+      "sha256": "cec207805ac2d959bb8520b8a77f3e64e5b7b5e72d9470901cd5d4709edae5f6"
+    },
+    {
+      "path": "super-retro-world/sprite/character_9-16.png",
+      "sizeBytes": 18902,
+      "sha256": "112d647f7fcb86271c7f3ff8e7fce5494e013aa3a1c6994358cd2b51fb798e44"
+    },
+    {
+      "path": "super-retro-world/sprite/free_campfire.png",
+      "sizeBytes": 1144,
+      "sha256": "c0a5f60eeb5f902dc0483028981e1d47884cfc84b97d421078f07fb4e6e64d67"
+    },
+    {
+      "path": "super-retro-world/sprite/free_character_1-3.png",
+      "sizeBytes": 3276,
+      "sha256": "6fb42ca8fc9c654b38f8dec6d3801bcde73c8214d6f550c0a77a694c4af8de61"
+    },
+    {
+      "path": "super-retro-world/sprite/free_character_nude.png",
+      "sizeBytes": 1890,
+      "sha256": "b2891fdff055821c79996121b32f47bdcc500231fea7fe82f28cde3d9e253baa"
+    },
+    {
+      "path": "super-retro-world/sprite/free_chests.png",
+      "sizeBytes": 8523,
+      "sha256": "b22c2e12265f71c7b4841d0ba2f7ee7d3bbe70f65018dff799e907816f3d9960"
+    },
+    {
+      "path": "super-retro-world/sprite/free_icons1.png",
+      "sizeBytes": 2562,
+      "sha256": "c1f5d5ed542adff9ba16f38bcc915dcedd98e4e3bc070be43343f7a1eaaeeed7"
+    },
+    {
+      "path": "super-retro-world/sprite/free_icons2.png",
+      "sizeBytes": 2055,
+      "sha256": "6c30adddf4dd810bd405f4beea79f3823cce1ff27485ee33b09eef89418718ff"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_1/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_1/character_1_frame16x20.png",
+      "sizeBytes": 1279,
+      "sha256": "656ac7e95d2e6ff5576ade95375c1fe22e49ee2868429c6985c19a29c9c3e944"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_1/character_1_frame32x32.png",
+      "sizeBytes": 1452,
+      "sha256": "371720222dff5fab856389e5911deaea5fe9e8612d215bc5e63461526ad7cba8"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_10/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_10/character_10_frame16x20.png",
+      "sizeBytes": 1366,
+      "sha256": "d1d758cd53a4f2966da278e4f5e13f85886c06b73e5ec6986bf2c6e3cb6e9f2e"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_10/character_10_frame32x32.png",
+      "sizeBytes": 1511,
+      "sha256": "98a84cee0ed0201b5f098475b59642289514fe9203f8d54a292ecc69fe849ef3"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_11/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_11/character_11_frame16x20.png",
+      "sizeBytes": 1256,
+      "sha256": "35d3fed8a668e9096554a37789ad8cb1266ad627255f5291fc962830144b2117"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_11/character_11_frame32x32.png",
+      "sizeBytes": 1435,
+      "sha256": "13615bb6c3f0a8b6c0b3f40effbaadeab9822d2317c0a42b0d4d7009d72a784a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_12/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_12/character_12_frame16x20.png",
+      "sizeBytes": 1401,
+      "sha256": "c6118fa3091531dd07c251291ed167b6caa5e2e92d3c788d8536c77c785e4601"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_12/character_12_frame32x32.png",
+      "sizeBytes": 1571,
+      "sha256": "24928b1d944e931a497f94c3aa0925a904ccd72bb0226273e8fe8f10f3ca7c27"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_13/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_13/character_13_frame16x20.png",
+      "sizeBytes": 1371,
+      "sha256": "292321c9328b5dbb790982fd8a40e27b4779f0cbd0137dab0e3435b06e0db33d"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_13/character_13_frame32x32.png",
+      "sizeBytes": 1520,
+      "sha256": "259d068ad3fd8dfb8265757a89c200bd462fa9479afbbc07fca4ff9586f871ed"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_14/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_14/character_14_frame16x20.png",
+      "sizeBytes": 1330,
+      "sha256": "44aa675f78602ddaf8a1cd18657adf07da6796b5d717284485c9dd67e2c2b5e1"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_14/character_14_frame32x32.png",
+      "sizeBytes": 1475,
+      "sha256": "b5fcff060550a17de5405ab6bc26ec2a8f7dcd5a8e19f7b32283022ab65c2a08"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_15/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_15/character_15_frame16x20.png",
+      "sizeBytes": 1260,
+      "sha256": "a8cd7587d662589bfdc7656ce783996a10076424ffecfc30f46607a822207e34"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_15/character_15_frame32x32.png",
+      "sizeBytes": 1439,
+      "sha256": "730238d242f10923cbcec498b73a4f41714fa34e29f2dd8ebf1faa47b3c62c10"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_16/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_16/character_16_frame16x20.png",
+      "sizeBytes": 1261,
+      "sha256": "c0058a1ff73815d2872be238d8993a7370c95bb1655f762832967adb579ae55d"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_16/character_16_frame32x32.png",
+      "sizeBytes": 1419,
+      "sha256": "d7dcdb3f7bc82ec99ecf1cdae44f1380c3cfe2737578d227d51150fb7a2d110f"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_17/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_17/character_17_frame16x20.png",
+      "sizeBytes": 1306,
+      "sha256": "275555710bd78b80df46d9aab08a7f49d9cdcba1a1aaaac1a4950d6b1d604964"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_17/character_17_frame32x32.png",
+      "sizeBytes": 1475,
+      "sha256": "19c5a1a4cc29e2309ae51005146c25f72b33b35cc4dc535f98ce5a1a0c262787"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_18/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_18/character_18_frame16x20.png",
+      "sizeBytes": 1337,
+      "sha256": "674756ebb631f8c54de04a283ff886eb8710918bc4310230bc927a1161962779"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_18/character_18_frame32x32.png",
+      "sizeBytes": 1497,
+      "sha256": "d26dc33d1579d56defa545640303251937276289284069a313e95a4239eb7813"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_19/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_19/character_19_frame16x20.png",
+      "sizeBytes": 1425,
+      "sha256": "3999edb61a98219493d7b17b301fabf51ac463da24a89d335d33a5ebe1fc02db"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_19/character_19_frame32x32.png",
+      "sizeBytes": 1584,
+      "sha256": "15c311c6454e8463d8ca983aa51b25bbf931833003230021a5864b5de38a3dae"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_2/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_2/character_2_frame16x20.png",
+      "sizeBytes": 1333,
+      "sha256": "727994cd250735dd516bdcd0e2c3398e9f3eb3eddf47caa7415854c5c2285a65"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_2/character_2_frame32x32.png",
+      "sizeBytes": 1491,
+      "sha256": "d66ea8501063f6d9dc51077fc6d272038678f90ceefd3d46eee2d736c3317a73"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_20/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_20/character_20_frame16x20.png",
+      "sizeBytes": 1308,
+      "sha256": "2a3f5dd394c4eb9c76fd0821fa4c663b1253bec531c51e36c04e22d9419788ea"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_20/character_20_frame32x32.png",
+      "sizeBytes": 1463,
+      "sha256": "c19f5e8b2009c8baa78f06f64c36c101b7aeff58364723b3d8e3cb48a177c6f6"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_21/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_21/character_21_frame16x20.png",
+      "sizeBytes": 1152,
+      "sha256": "5fb882dd950e683cac45db0227756484d8b85dc87cd0371bed586a2c270a44f3"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_21/character_21_frame32x32.png",
+      "sizeBytes": 1372,
+      "sha256": "00c534903e49a822594c994bc0d2ecaf7c81bc217b5869d267480cdbe982ec7f"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_22/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_22/character_22_frame16x20.png",
+      "sizeBytes": 1166,
+      "sha256": "281b1debfc21c2e6fae66abe4938b9b12ef1a54b5bf6ba3e767a056535eed08d"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_22/character_22_frame32x32.png",
+      "sizeBytes": 1395,
+      "sha256": "d1fb6cc2ef02d53f3061ac1adf3a4b4daaaeb05a7caa9ba071d64940d1d2fdce"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_23/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_23/character_23_frame16x20.png",
+      "sizeBytes": 1304,
+      "sha256": "cbee98a6094b2ec9feffd0ffe66602a80b28ef4784d775dbc5455afddf2ca2c3"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_23/character_23_frame32x32.png",
+      "sizeBytes": 1526,
+      "sha256": "cfe4f3c5c5617858ecb84c3a4999c1925d3bb2b52aa71503a2959a663685398f"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_24/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_24/character_24_frame16x20.png",
+      "sizeBytes": 1230,
+      "sha256": "3e7b9d948840d97e1b3e4c15d0568bd9693edd933d34a7c1f1a3f3e57047d385"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_24/character_24_frame32x32.png",
+      "sizeBytes": 1395,
+      "sha256": "ed1ada428f28d43050f3fa8698bd72d3fdce237bbaf2393f8490065c10bc029c"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_25/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_25/character_25_frame16x20.png",
+      "sizeBytes": 1236,
+      "sha256": "decafbab0b44cce189e3dfa9908752814c8b1a1e558648763fa051153d8003bc"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_25/character_25_frame32x32.png",
+      "sizeBytes": 1488,
+      "sha256": "83a46afd6f6738578c6586afa8339055fac20639278cb4a067b693108870f582"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_26/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_26/character_26_frame16x20.png",
+      "sizeBytes": 1159,
+      "sha256": "262a7fb87b7e12d000310ec0cf8ef0256f12c6f809c2818e723b37198ff5ed9a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_26/character_26_frame32x32.png",
+      "sizeBytes": 1383,
+      "sha256": "bb55cd081976930998cbcf189acefa282fe3a3e1bfb921da236dade4578c7ab7"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_27/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_27/character_27_frame16x20.png",
+      "sizeBytes": 1155,
+      "sha256": "80ffe5c5777494ab8ea5181cf3fffe1768a7da1d7fbc31a3f7536348b6c6ad46"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_27/character_27_frame32x32.png",
+      "sizeBytes": 1416,
+      "sha256": "044c4b1c75de4367d655c2fde0ea57e7de9c557d7ca8999ad5761cadaa043e6a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_28/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_28/character_28_frame16x20.png",
+      "sizeBytes": 1200,
+      "sha256": "d04e19b631eb484a3806025207377e0ed9f9579e8552bc997e4719221ef8d2b3"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_28/character_28_frame32x32.png",
+      "sizeBytes": 1425,
+      "sha256": "2eb8f9a4356b529a1da82a6de4c6612af382012cccf6a225f2287e5bf0d4194f"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_29/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_29/character_29_frame16x20.png",
+      "sizeBytes": 1189,
+      "sha256": "809ba547e77bffdd63d036f943060afe1f8229960ca3d27b29688ae35d12d0c5"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_29/character_29_frame32x32.png",
+      "sizeBytes": 1424,
+      "sha256": "3fbe236510fb648e837d197dd7199bce49fe4668418f753deabf07a6e4a2ae64"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_3/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_3/character_3_frame16x20.png",
+      "sizeBytes": 1399,
+      "sha256": "bd1cefda9a75790914fa8443c222d1fa4f0baf52f2d4d089c673b25f160430b8"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_3/character_3_frame32x32.png",
+      "sizeBytes": 1566,
+      "sha256": "2c1ad83c2f9dfd1ea25effe22b28c0094f9992cc1bc612fdf620b6754128ca1d"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_30/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_30/character_30_frame16x20.png",
+      "sizeBytes": 1155,
+      "sha256": "c43d8b5415b42fffdac674852d5687f53c02e7e2341acf037b6c3e6fa02269c6"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_30/character_30_frame32x32.png",
+      "sizeBytes": 1402,
+      "sha256": "0656de4fea526a939281fd5f0604b0d86dd461ac414ce1cef65da26cb0ed6a90"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_31/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_31/character_31_frame16x20.png",
+      "sizeBytes": 1155,
+      "sha256": "35dc3ff269aa3cbd2b65f022324a086d03fc4cd7bb19998101962d0425c0f36e"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_31/character_31_frame32x32.png",
+      "sizeBytes": 1416,
+      "sha256": "9b0499bc7e88ceaeab99a896dd8b88ccf4b67626b577cbe5d80ccd1298334e29"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_32/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_32/character_32_frame16x20.png",
+      "sizeBytes": 1200,
+      "sha256": "9e935c2eeebf9ca65df26813c637ce0414a7eae153e5f2ac6ff91d818062d3a4"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_32/character_32_frame32x32.png",
+      "sizeBytes": 1425,
+      "sha256": "8a62b9ce1f018fec11df96515a666b5ebd8e98f90c79f5d5a1c910c5d83ddc30"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_4/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_4/character_4_frame16x20.png",
+      "sizeBytes": 1303,
+      "sha256": "2e1275252391ca8263d02c93110e341a121e0f3b6d8b639d763be7ebb3e0c6b2"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_4/character_4_frame32x32.png",
+      "sizeBytes": 1458,
+      "sha256": "c874d52508905e6eaca60aee3f74e0658637220c474fd40a19bb72c07d5982c1"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_5/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_5/character_5_frame16x20.png",
+      "sizeBytes": 1151,
+      "sha256": "c9ae584c34bb7d621d1dee661259b6f344af4818da537be3dadc5d104f7cf6d4"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_5/character_5_frame32x32.png",
+      "sizeBytes": 1371,
+      "sha256": "6e619f237d32230d2104c0edc3fdad31dd564636c4952715005da7d0ba5b570f"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_6/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_6/character_6_frame16x20.png",
+      "sizeBytes": 1150,
+      "sha256": "57520623abd4c58c20372a6c448bf6ac5f8662714b6e052555bec7e3067db073"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_6/character_6_frame32x32.png",
+      "sizeBytes": 1376,
+      "sha256": "11623e4af585e222ec5acda663035134e1c75849ff8833dbaac0400cd2b6b2f9"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_7/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_7/character_7_frame16x20.png",
+      "sizeBytes": 1303,
+      "sha256": "29101b58e0f52ee1f527e6e08bf088cccc916f9a752bb0d1726c05fb5fa08e7c"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_7/character_7_frame32x32.png",
+      "sizeBytes": 1525,
+      "sha256": "9f2038f5b7a48997031115f319beca38748d32494716ba44bd742e0ac3840575"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_8/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_8/character_8_frame16x20.png",
+      "sizeBytes": 1229,
+      "sha256": "b70e759ea28e9b5bcbc625f03f4a5ac232232558bc95d4a086c4b2cb91b990fa"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_8/character_8_frame32x32.png",
+      "sizeBytes": 1394,
+      "sha256": "6a0d73d76b11d231e0d7cdb2d001f4d5023470285e02270116a1fc5fd862fe1c"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_9/Note.txt",
+      "sizeBytes": 207,
+      "sha256": "0009d1261fb7d08614f197fecc43476c342a6247b2a90e0c752f0677a883776a"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_9/character_9_frame16x20.png",
+      "sizeBytes": 1332,
+      "sha256": "7b41b5eacb1eac5408303b86c8216e34a188dd703dff0256ccb2c286b09961e0"
+    },
+    {
+      "path": "super-retro-world/sprite_split/character_9/character_9_frame32x32.png",
+      "sizeBytes": 1483,
+      "sha256": "395fe9de619f16759d646c63fafb8e32914561ab2d64a8d2ab12234ac9139898"
+    },
+    {
+      "path": "modern-interiors/Tileset_16x16_1.png",
+      "sizeBytes": 2246,
+      "sha256": "d7742bfd06b99d42f7cd197ba48d812a28fb384cc3d1dc7150bdc730f88c9e5f"
+    },
+    {
+      "path": "modern-interiors/Tileset_16x16_16.png",
+      "sizeBytes": 6510,
+      "sha256": "adad3dfbf2bccd5e8da127baeba03ec00c1b68d91db275900c0fab357802a449"
+    },
+    {
+      "path": "modern-interiors/Tileset_16x16_2.png",
+      "sizeBytes": 2562,
+      "sha256": "9174495a6a30da9e520a2ed9eab4503c58fa6e8610c1e42aa0d98f89a2f8b638"
+    },
+    {
+      "path": "modern-interiors/Tileset_16x16_3.png",
+      "sizeBytes": 3174,
+      "sha256": "649ec8c75f0feae311e7740a4361306c1ca27ec1c55037ed2b87671db86e56b4"
+    },
+    {
+      "path": "modern-interiors/Tileset_16x16_9.png",
+      "sizeBytes": 5773,
+      "sha256": "bbb6c7ed6c1a6b6bbda61c65d34b282af80a3c9258ccc9f0d6ba6a1140726ec1"
+    },
+    {
+      "path": "modern-interiors/Tileset_32x32_1.png",
+      "sizeBytes": 4702,
+      "sha256": "5f766f5d7711a36b3ccbacad82f2e4c91c3687647c1be67d756c7ed2225703de"
+    },
+    {
+      "path": "modern-interiors/Tileset_32x32_16.png",
+      "sizeBytes": 10176,
+      "sha256": "2fc29901f8db9beb7e1c7d753b4006580561dc97db12d861f8bef4b88a6e726b"
+    },
+    {
+      "path": "modern-interiors/Tileset_32x32_2.png",
+      "sizeBytes": 4954,
+      "sha256": "256283058ce28f5a828b3b8724889c54e33ff475dca63a208f20ba129cd1993f"
+    },
+    {
+      "path": "modern-interiors/Tileset_32x32_3.png",
+      "sizeBytes": 4556,
+      "sha256": "3a44df7e2e1cc2fbe61883a9f1507bf0e05e545e0533524b9e7bbf82b82ab369"
+    },
+    {
+      "path": "modern-interiors/Tileset_32x32_9.png",
+      "sizeBytes": 9608,
+      "sha256": "b1842be6f06496137be4d9c1a5c9df6aa3c9a89842cdb50933a4af5d93e07913"
+    },
+    {
+      "path": "modern-interiors/Tileset_48x48_1.png",
+      "sizeBytes": 5995,
+      "sha256": "55713278e92e126f45c982970fa2955300087f77dd63f611297670554ea8c7a0"
+    },
+    {
+      "path": "modern-interiors/Tileset_48x48_16.png",
+      "sizeBytes": 13066,
+      "sha256": "8fb5f0415055976f3f3ba8c3ae91c0eb7aa8c2c7ab5f57c043ef58110c27643f"
+    },
+    {
+      "path": "modern-interiors/Tileset_48x48_2.png",
+      "sizeBytes": 6248,
+      "sha256": "9ef95687568721ec9bacc156bfea49c65311b38d978bc1ba5b466a700b8c5466"
+    },
+    {
+      "path": "modern-interiors/Tileset_48x48_3.png",
+      "sizeBytes": 5845,
+      "sha256": "c2ee062c7837939d9269988164ccc0ad4a461231d957bac6d4f62fcce5ad9d88"
+    },
+    {
+      "path": "modern-interiors/Tileset_48x48_9.png",
+      "sizeBytes": 11599,
+      "sha256": "556fb42c6ee781d39bac01603a80b5fd1f1dbe28b739dee5a9dca1845e3f10ef"
+    },
+    {
+      "path": "top-down-retro-interior/TopDownHouse_FloorsAndWalls_OpenDoors.png",
+      "sizeBytes": 738,
+      "sha256": "b59bd56390c2d658718f1fa1e0f314d941fac0059b2476bf587b7573de48e39a"
+    }
+  ],
+  "retainedRuntimeMapFallbackAssets": [
+    "city/City Prop Tileset update 2.png",
+    "city/modern pixel city tileset.png",
+    "modern-interiors/Interiors_free_32x32.png",
+    "modern-interiors/Room_Builder_free_32x32.png",
+    "top-down-retro-interior/TopDownHouse_DoorsAndWindows.png",
+    "top-down-retro-interior/TopDownHouse_FloorsAndWalls.png",
+    "top-down-retro-interior/TopDownHouse_FurnitureState1.png",
+    "top-down-retro-interior/TopDownHouse_FurnitureState2.png",
+    "top-down-retro-interior/TopDownHouse_SmallItems.png"
+  ],
+  "intentionalRuntimeReferenceChanges": [
+    "old female-adventurer strips replaced by supplied normalized Lulu idle/walk sheets",
+    "old dog, cashier, and bird placeholder render references removed",
+    "new Brutus and NPC assets organized but not placed in the world"
+  ],
+  "interactionMarkerArtwork": {
+    "removedFileCount": 0,
+    "note": "No interaction/exclamation image file existed; the current objective marker is canvas-drawn gameplay UI and was retained."
+  }
+}
