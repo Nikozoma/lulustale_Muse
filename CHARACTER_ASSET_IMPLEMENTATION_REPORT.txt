@@ -1,0 +1,257 @@
+LULU'S TALE - CHARACTER ASSET IMPLEMENTATION AND CLEANUP REPORT
+Date: 2026-07-13
+
+RESULT
+------
+PASS. The same character implementation and cleanup was applied independently to:
+
+1. Lulus_Tale_Optimized_Original_Overworld (48x34 Overworld)
+2. Lulus_Tale_Optimized_Enlarged_Overworld (96x68 Overworld)
+
+Both projects pass all 70 automated tests, pass TypeScript and Vite production builds,
+serve their clean production builds successfully, and retain their correct Overworld size.
+
+
+SUMMARY
+-------
+- Replaced the temporary player artwork with the supplied Lulu idle and walk sheets.
+- Added eight-direction idle and movement animation support while retaining the existing
+  movement speed, input controls, collision radius, camera behavior, and map behavior.
+- Organized the supplied Lulu, Brutus, homeless-man, and Charles Jr. worker assets under:
+    public/assets/character-assets/
+- Did not place Brutus or any supplied NPC into the world.
+- Removed old player, dog, NPC, animal, prototype, and unused placeholder asset packs.
+- Removed stale rendering and asset-manifest references to the deleted dog, cashier,
+  bird, and temporary-player artwork.
+- Retained every required map image, day/night image, foreground, map manifest, and
+  runtime map fallback sheet.
+- Regenerated both production output folders from empty directories so deleted assets
+  are not accidentally shipped in dist/.
+
+
+CHARACTER ASSETS ADDED
+----------------------
+Each variant contains 34 new files (29 PNG sheets, four source notes, one manifest),
+totaling 27,279,980 bytes.
+
+Runtime-ready normalized sheets (22):
+- Lulu: idle, walk, run, jump, dash, sit, hit reaction (7)
+- Brutus: idle stand, walk, run, sit, lay, sniff, happy (7)
+- Homeless man: daytime idle/walk/run/sit and nighttime idle/walk/run/sit (8)
+
+The game currently loads only Lulu idle and walk. The remaining technically usable
+sheets are organized for later implementation, as requested.
+
+Reference-only supplied sheets (7):
+- Lulu pet-dog action
+- Lulu knocked-down action
+- Lulu shadow presentation sheet
+- Four combined Charles Jr. worker idle/walk sheets
+
+The reference-only files are kept under:
+  public/assets/character-assets/references/not_runtime_ready/
+
+They are deliberately not loaded at runtime. Their README/manifest entries explain
+the source limitation and prevent a future developer from mistaking them for ready
+fixed-grid sheets.
+
+
+TECHNICAL REPAIRS
+-----------------
+The supplied primary PNG exports were 887x1774 RGB files with a visibly baked-in
+checkerboard instead of real transparency. Runtime-ready sheets were repaired by:
+
+- removing the connected baked checkerboard and neutral export halo;
+- exporting genuine RGBA transparency;
+- normalizing the canvas to 888x1776;
+- dividing it into a consistent 4-column x 8-direction grid;
+- using 222x222 frame cells and four frames per direction;
+- preserving character pixels without image resampling or redesign;
+- re-centering frames on a stable bottom-center foot anchor.
+
+Direction order is:
+  down, down-left, left, up-left, up, up-right, right, down-right
+
+Clear source problems not inventively repaired:
+- Lulu pet-dog and knocked-down contain only seven direction rows; down-right is absent.
+- Each Charles Jr. worker sheet compresses 16 idle/walk direction rows into an
+  eight-row-size canvas. Adjacent poses overlap fixed cells and cannot be safely split
+  without cutting or recreating artwork.
+- The shadow image is a labeled presentation/reference board, not a regular animation
+  sheet.
+
+These seven files received safe transparency/canvas repair only and need corrected
+source exports before gameplay use.
+
+
+ASSETS REMOVED (PER VARIANT)
+----------------------------
+688 old or unused public source asset files were removed, totaling 1,154,933 bytes:
+
+- Character_Packs: 42 files
+- Japanese_City: 384 files
+- basic-animal: 48 files
+- dog-mega-pack: 2 files
+- female-adventurer: 58 files
+- nature: 1 file
+- super-retro-world: 137 files
+- unused modern-interiors files: 15 files
+- unused top-down-retro open-door sheet: 1 file
+
+The exact path and SHA-256 hash of every removed file is recorded in each project's:
+  ASSET_CLEANUP_MANIFEST.json
+
+Public asset counts:
+- Before: 737 files
+- After: 83 files
+- New character package: 34 files
+- Map assets retained: 40 files
+- Runtime fallback map sheets retained: 9 files
+
+The total byte count is larger after cleanup because the new supplied high-resolution
+character sheets are substantially larger than the temporary pixel-art packs removed.
+
+
+DELETED REFERENCES REQUIRING CODE CHANGES
+-----------------------------------------
+- Removed temporary female-adventurer player-strip references.
+- Removed old dog mega-pack runtime references and dog drawing routine.
+- Removed old cashier sprite reference and drawing routine.
+- Removed old bird/tiny-chick references and bird drawing routines.
+- Added Lulu idle/walk asset entries and eight-direction frame-row selection.
+- Updated player facing types and combat facing-vector handling for eight directions.
+- Idle animation time now advances so the supplied idle animation plays.
+
+The interaction/exclamation marker was not backed by an image asset; it is drawn by
+canvas code. It was retained because deleting it would change gameplay UI rather than
+remove obsolete artwork.
+
+
+MAP AND GAMEPLAY PRESERVATION
+-----------------------------
+- All 40 map files in each project are byte-for-byte identical to that variant's
+  pre-pass project.
+- Original variant remains 48x34.
+- Enlarged variant remains 96x68.
+- Day/night visuals, foregrounds, walk-behind configuration, semantics, collision,
+  markers, doors, transitions, and spawn data were not modified.
+- PLAYER.speedPxPerSecond remains 168.
+- PLAYER.collisionRadiusPx remains 11.
+- Camera and per-map zoom behavior were not changed.
+- Canvas image smoothing remains disabled for pixel-accurate rendering.
+
+
+CHANGED CODE FILES (BOTH VARIANTS)
+----------------------------------
+- src/game/assets.ts
+- src/game/constants.ts
+- src/game/player.ts
+- src/game/combat.ts
+- src/game/playerRender.ts
+- src/game/renderer.ts
+- src/game/assets.test.ts
+- src/game/player.test.ts
+- src/game/playerRender.test.ts
+
+Added project records:
+- ASSET_CLEANUP_MANIFEST.json
+- CHARACTER_ASSET_IMPLEMENTATION_REPORT.txt
+- public/assets/character-assets/**
+
+
+COMMANDS / CHECKS RUN
+---------------------
+- ZIP listing, nested archive extraction, file inventory, and PNG inspection
+- deterministic Pillow/NumPy/SciPy sprite normalization
+- SHA-256 manifest generation and verification
+- stale deleted-path search with rg
+- npm test (independently in both variants)
+- npm run build (independently in both variants)
+- clean Vite preview launch plus HTTP/canvas-shell check (both variants)
+- custom character/map validation: validate_character_implementation.py
+- clean production-folder scan for deleted asset directories
+- git status / repository check
+
+
+TEST AND VALIDATION RESULTS
+---------------------------
+Original 48x34 variant:
+- Vitest: PASS - 15 test files, 70 tests
+- TypeScript + Vite production build: PASS
+- Clean production preview launch: PASS
+- Character asset validator: PASS
+- 29/29 supplied PNGs present and hash-verified
+- 22 runtime-ready / 7 reference-only sheets correctly classified
+- 40/40 map files byte-identical
+- Obsolete source and production asset directories absent
+
+Enlarged 96x68 variant:
+- Vitest: PASS - 15 test files, 70 tests
+- TypeScript + Vite production build: PASS
+- Clean production preview launch: PASS
+- Character asset validator: PASS
+- 29/29 supplied PNGs present and hash-verified
+- 22 runtime-ready / 7 reference-only sheets correctly classified
+- 40/40 map files byte-identical
+- Obsolete source and production asset directories absent
+
+
+KNOWN ISSUES / RUNTIME CONCERNS
+------------------------------
+1. Brutus and supplied NPCs are intentionally not placed or rendered yet.
+2. Because the old dog, cashier, and bird art was intentionally removed, existing
+   prototype mechanics may still track their logical positions, but those temporary
+   characters are no longer visible. Future implementation should connect the new
+   sheets when those characters are formally added.
+3. The seven reference-only sheets need corrected source exports before runtime use.
+4. The original exports were flattened against a checkerboard. The repair restores
+   functional transparency, but a true original-alpha export will always provide the
+   cleanest possible anti-aliased edges.
+
+
+MANUAL BROWSER / MOBILE TESTS RECOMMENDED
+-----------------------------------------
+- Walk and idle in all eight directions on Home, Charles Jr., and Overworld.
+- Confirm Lulu's visual size and foot alignment feel right on a real phone screen.
+- Walk beside walls, trees, and building foregrounds to confirm the visual sprite does
+  not alter collision or walk-behind behavior.
+- Switch day/night and traverse every map transition in both variants.
+- Verify touch controls, diagonal movement, and camera tracking on the target devices.
+- Confirm that intentionally invisible prototype dog/cashier/bird encounters do not
+  block the desired next gameplay-development workflow.
+
+
+GIT STATUS
+----------
+Neither delivered project is a Git worktree, so there is no branch or Git status to
+report. No commit or push was performed.
+
+
+PLACEHOLDER CONFIRMATION
+------------------------
+No new placeholder artwork was introduced. The old placeholder artwork was removed.
+The seven technically incomplete supplied images were preserved as explicitly labeled,
+non-runtime reference files rather than silently treated as usable placeholders.
+
+
+BLOCKERS
+--------
+None for the requested player replacement, organization, cleanup, build, or packaging.
+Corrected source exports are required only before implementing the seven reference-only
+actions/characters.
+
+
+ASSUMPTIONS
+-----------
+- The supplied character ZIP is the authoritative replacement character package.
+- "Do not place the dog or other NPCs" means their old temporary renderers should be
+  removed along with their obsolete assets, while their gameplay systems remain intact.
+- Completed map images and the nine still-referenced map fallback sheets are strictly
+  required and therefore must be retained.
+
+
+SUGGESTED NEXT STEP
+-------------------
+Manually test Lulu's size and foot alignment on a phone. If approved, the next character
+task should integrate Brutus/NPCs deliberately using their organized manifest entries,
+after obtaining corrected Charles Jr. worker and missing-direction exports.
