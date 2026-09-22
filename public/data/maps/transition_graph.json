@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "pairs": [
+    {
+      "pair_id": "overworld_home",
+      "a": {
+        "map": "overworld",
+        "transition": "transition_overworld_to_home",
+        "arrival_spawn": "spawn_home_entry"
+      },
+      "b": {
+        "map": "home",
+        "transition": "transition_home_to_overworld",
+        "arrival_spawn": "spawn_overworld_from_home"
+      }
+    },
+    {
+      "pair_id": "overworld_charles_jr",
+      "a": {
+        "map": "overworld",
+        "transition": "transition_overworld_to_charles_jr",
+        "arrival_spawn": "spawn_charles_jr_entry"
+      },
+      "b": {
+        "map": "charles_jr",
+        "transition": "transition_charles_jr_to_overworld",
+        "arrival_spawn": "spawn_overworld_from_charles_jr"
+      }
+    }
+  ],
+  "spawn_policy": "Arrival spawns are outside their paired transition activation rectangles and face into the destination map.",
+  "scope": "Markers and links only; no runtime transition code is included."
+}
