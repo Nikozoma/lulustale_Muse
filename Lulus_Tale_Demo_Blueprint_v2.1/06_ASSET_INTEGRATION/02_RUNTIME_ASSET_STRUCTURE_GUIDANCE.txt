@@ -1,0 +1,37 @@
+RUNTIME ASSET STRUCTURE GUIDANCE — v2.1
+
+Preserve original downloaded/extracted asset folders.
+Do not edit originals directly.
+
+Recommended runtime structure after asset verification:
+public/assets/runtime/
+  lulu/
+  dog/
+  home/
+  ui/
+  manifests/
+
+Required manifest output before implementation:
+public/assets/runtime/manifests/asset_manifest.json
+or a documented equivalent.
+
+The manifest should record:
+- source asset folder,
+- exact source file path,
+- copied runtime file path,
+- native image dimensions,
+- frame/tile width and height,
+- crop rectangles / tile coordinates,
+- animation rows/columns,
+- direction mapping,
+- render scale recommendations,
+- any uncertainty.
+
+Codex report should include:
+- which asset folders were inspected,
+- which files were selected,
+- which required assets are verified,
+- any required assets still blocked,
+- exact blockers and candidate files.
+
+Do not report core required assets as implemented unless they are real project assets and are actually wired into the runtime.
