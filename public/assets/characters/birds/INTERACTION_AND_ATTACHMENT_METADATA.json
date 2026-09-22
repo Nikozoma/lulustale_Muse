@@ -1,0 +1,144 @@
+{
+  "coordinate_space": "96x96 cell pixels; origin top-left",
+  "root_anchor": [
+    48,
+    88
+  ],
+  "fries_theft": {
+    "bird_id": "primary_fries_thief",
+    "attempt_animation": "theft_attempt",
+    "carry_animation": "carry_fly",
+    "fries_rendering": "separate prop/effect; never baked into bird sheets",
+    "ground_grab_contact_by_direction": {
+      "Down": [
+        48,
+        70
+      ],
+      "Down-Left": [
+        34,
+        72
+      ],
+      "Left": [
+        27,
+        72
+      ],
+      "Up-Left": [
+        35,
+        66
+      ],
+      "Up": [
+        48,
+        62
+      ],
+      "Up-Right": [
+        61,
+        66
+      ],
+      "Right": [
+        69,
+        72
+      ],
+      "Down-Right": [
+        62,
+        72
+      ]
+    },
+    "airborne_item_attachment_by_direction": {
+      "Down": [
+        48,
+        49
+      ],
+      "Down-Left": [
+        31,
+        54
+      ],
+      "Left": [
+        23,
+        55
+      ],
+      "Up-Left": [
+        31,
+        51
+      ],
+      "Up": [
+        48,
+        46
+      ],
+      "Up-Right": [
+        65,
+        51
+      ],
+      "Right": [
+        73,
+        55
+      ],
+      "Down-Right": [
+        65,
+        54
+      ]
+    },
+    "transition_points": {
+      "theft_contact_frame": 2,
+      "carry_state_begins_after_contact": true,
+      "failure_reaction": "startled_failure"
+    },
+    "item_orientation_rule": "Rotate or mirror the prop to align its long axis with the beak-facing vector; keep prop root centered on the attachment point."
+  },
+  "flying_and_landing": {
+    "root_anchor": [
+      48,
+      88
+    ],
+    "root_behavior": "World root remains fixed; art moves upward by the per-frame visual offset in MANIFEST.json.",
+    "takeoff": {
+      "frames": 3,
+      "visual_offsets_y": [
+        0,
+        -9,
+        -20
+      ],
+      "airborne_on_frame": 2
+    },
+    "landing": {
+      "frames": 3,
+      "visual_offsets_y": [
+        -20,
+        -9,
+        0
+      ],
+      "grounded_on_frame": 2
+    },
+    "small_bird_offsets": {
+      "bird_lookout": [
+        0,
+        -8,
+        -18
+      ],
+      "ambient_robin": [
+        0,
+        -8,
+        -19
+      ]
+    }
+  },
+  "bird_gang_grouping": {
+    "formation_root": "center bird root",
+    "recommended_overworld_offsets": {
+      "peck_captain": [
+        0,
+        0
+      ],
+      "bird_lookout": [
+        -48,
+        10
+      ],
+      "primary_fries_thief": [
+        48,
+        10
+      ]
+    },
+    "minimum_root_spacing_px": 44,
+    "preferred_story_spacing_px": 48,
+    "leader_facing": "Toward Lulu or scene focus; flank birds angle inward using compatible diagonal rows."
+  }
+}
