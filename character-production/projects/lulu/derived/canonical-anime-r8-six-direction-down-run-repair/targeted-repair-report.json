@@ -1,0 +1,71 @@
+{
+  "schema": "lulus-lulu-targeted-repair",
+  "version": 1,
+  "createdAt": "2026-07-29T18:20:55.213Z",
+  "scope": {
+    "visualDirections": [
+      "Down",
+      "Down-Left",
+      "Up-Left",
+      "Up",
+      "Up-Right",
+      "Down-Right"
+    ],
+    "removedProductionDirections": [
+      "Left",
+      "Right"
+    ],
+    "calibrationTracks": [
+      "walk/Down",
+      "walk/Down-Left",
+      "run/Down",
+      "run/Down-Left"
+    ],
+    "remainingVisualDirectionsChanged": false,
+    "movementGeometryChanged": false,
+    "movementSpeedChanged": false,
+    "cycleDistanceChanged": false
+  },
+  "downRunReconstruction": {
+    "displayedFrame": 4,
+    "sourceFrameIndex": 3,
+    "donorDisplayedFrame": 8,
+    "donorFrameIndex": 7,
+    "donorTransform": "horizontal reflection of the opposite flight phase",
+    "seamY": 59,
+    "method": "Replace the malformed lower-body chain with the existing opposite half-cycle flight mechanics while preserving the target frame upper body, root, palette, and registration.",
+    "approval": "unreviewed_pending_in_game_visual_test"
+  },
+  "outputs": [
+    {
+      "id": "idle",
+      "inputPath": "character-production/projects/lulu/derived/canonical-anime-r6-locomotion-engineering-repair/sheets/Lulu_idle.png",
+      "inputSha256": "b84346a39b1c1bb98b73f1e5ca50ae8b0cdfa745c4b06c85e3fd5a3844a0e378",
+      "outputPath": "character-production/projects/lulu/derived/canonical-anime-r8-six-direction-down-run-repair/sheets/Lulu_idle.png",
+      "outputSha256": "71571f761181a635534017825d4acd33241cd848a5e6b84c1032ca003ff34de9",
+      "width": 384,
+      "height": 576,
+      "changedPixels": 0
+    },
+    {
+      "id": "walk",
+      "inputPath": "character-production/projects/lulu/derived/canonical-anime-r6-locomotion-engineering-repair/sheets/Lulu_walk.png",
+      "inputSha256": "1479783aa2ebf63ec68bcfe8cc8a104b03aa36920df176881e70f7886613e60c",
+      "outputPath": "character-production/projects/lulu/derived/canonical-anime-r8-six-direction-down-run-repair/sheets/Lulu_walk.png",
+      "outputSha256": "9ba24a36db6595c9b5c5371ba8522c9a86c73968653bdc1777dd98487dd10059",
+      "width": 768,
+      "height": 576,
+      "changedPixels": 0
+    },
+    {
+      "id": "run",
+      "inputPath": "character-production/projects/lulu/history/revision-5-locomotion-baseline/run.png",
+      "inputSha256": "023512fe50aec9f743ea7cde5dc6b4aec79009eb433e6aa3b56cec8eae5ee7ec",
+      "outputPath": "character-production/projects/lulu/derived/canonical-anime-r8-six-direction-down-run-repair/sheets/Lulu_run.png",
+      "outputSha256": "7375b6d70178bb713ed38eae5d47d7f20776cfc9fd4678c44051ba927d6809e8",
+      "width": 768,
+      "height": 576,
+      "changedPixels": 431
+    }
+  ]
+}
