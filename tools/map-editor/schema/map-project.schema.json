@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lulus-map-project.schema.json",
+  "title": "Lulu's Tale Map Studio Project",
+  "type": "object",
+  "required": [
+    "format",
+    "version",
+    "mapId",
+    "displayName",
+    "dimensions",
+    "runtime",
+    "art",
+    "sourceHashes",
+    "repairAnnotations"
+  ],
+  "properties": {
+    "format": { "const": "lulus_map_project_v1" },
+    "version": { "const": "1.0.0" },
+    "mapId": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+    "displayName": { "type": "string", "minLength": 1 },
+    "dimensions": {
+      "type": "object",
+      "required": ["widthTiles", "heightTiles", "widthPx", "heightPx", "tileSizePx", "collisionCellSizePx"],
+      "properties": {
+        "widthTiles": { "type": "integer", "minimum": 1 },
+        "heightTiles": { "type": "integer", "minimum": 1 },
+        "widthPx": { "type": "integer", "minimum": 1 },
+        "heightPx": { "type": "integer", "minimum": 1 },
+        "tileSizePx": { "const": 32 },
+        "collisionCellSizePx": { "const": 4 }
+      },
+      "additionalProperties": false
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["semantic", "collision", "dayVisual", "nightVisual", "assetRoot"],
+      "properties": {
+        "semantic": { "type": "string", "minLength": 1 },
+        "collision": { "type": "string", "minLength": 1 },
+        "dayVisual": { "type": "string", "minLength": 1 },
+        "nightVisual": { "type": "string", "minLength": 1 },
+        "assetRoot": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "art": {
+      "type": "object",
+      "required": ["day", "night"],
+      "properties": {
+        "day": { "$ref": "#/$defs/artVariant" },
+        "night": { "$ref": "#/$defs/artVariant" }
+      },
+      "additionalProperties": false
+    },
+    "sourceHashes": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+    },
+    "lastExportHashes": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+    },
+    "auditSources": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "repairAnnotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "status", "geometry"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "category": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["open", "in_progress", "ready_for_review", "approved"] },
+          "geometry": { "type": "object" },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "approval": {
+      "type": "object",
+      "properties": {
+        "calibrationAreaApproved": { "type": "boolean" },
+        "approvedAt": { "type": ["string", "null"] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "artLayer": {
+      "type": "object",
+      "required": ["id", "kind", "path", "runtimeAsset", "locked"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["base", "detail", "foreground", "mask", "reference"] },
+        "path": { "type": "string", "minLength": 1 },
+        "runtimeAsset": { "type": "string", "minLength": 1 },
+        "locked": { "type": "boolean" },
+        "visible": { "type": "boolean" },
+        "zIndex": { "type": "number" },
+        "foregroundLayerId": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "artVariant": {
+      "type": "object",
+      "required": ["layers"],
+      "properties": {
+        "layers": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/artLayer" }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
