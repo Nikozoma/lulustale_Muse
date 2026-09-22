@@ -1,0 +1,1010 @@
+{
+  "schema_version": 1,
+  "coordinate_conventions": {
+    "frame_cell": [
+      96,
+      96
+    ],
+    "root_anchor": [
+      48,
+      88
+    ],
+    "relative_offsets": "[x,y] added to Lulu world root to obtain Brutus world root",
+    "local_anchors": "[x,y] relative to the owning entity root; +x right, +y down",
+    "direction_order": [
+      "Down",
+      "Down-Left",
+      "Left",
+      "Up-Left",
+      "Up",
+      "Up-Right",
+      "Right",
+      "Down-Right"
+    ],
+    "food_and_toy_policy": "Separate runtime prop/effect entities; never baked into character sheets."
+  },
+  "interactions": {
+    "petting": {
+      "initiator": "Lulu",
+      "target": "Brutus",
+      "lulu_animation": "pet_dog",
+      "brutus_animation": "being_petted",
+      "movement_lock": "both",
+      "completion": "restore control; Brutus may enter happy_excited",
+      "failure": "cancel before lock when range/alignment is invalid",
+      "synchronization": {
+        "frame_ms": 180,
+        "contact_frames_zero_based": [
+          1,
+          2
+        ],
+        "total_frames": 4
+      },
+      "per_direction": {
+        "Down": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            0,
+            34
+          ],
+          "lulu_facing": "Down",
+          "brutus_facing": "Up",
+          "brutus_pet_contact_local": [
+            0,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            0,
+            -29
+          ]
+        },
+        "Down-Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -24,
+            24
+          ],
+          "lulu_facing": "Down-Left",
+          "brutus_facing": "Up-Right",
+          "brutus_pet_contact_local": [
+            16,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -29
+          ]
+        },
+        "Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -34,
+            0
+          ],
+          "lulu_facing": "Left",
+          "brutus_facing": "Right",
+          "brutus_pet_contact_local": [
+            16,
+            -29
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -25
+          ]
+        },
+        "Up-Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -24,
+            -24
+          ],
+          "lulu_facing": "Up-Left",
+          "brutus_facing": "Down-Right",
+          "brutus_pet_contact_local": [
+            16,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -21
+          ]
+        },
+        "Up": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            0,
+            -34
+          ],
+          "lulu_facing": "Up",
+          "brutus_facing": "Down",
+          "brutus_pet_contact_local": [
+            0,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            0,
+            -21
+          ]
+        },
+        "Up-Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            24,
+            -24
+          ],
+          "lulu_facing": "Up-Right",
+          "brutus_facing": "Down-Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -21
+          ]
+        },
+        "Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            34,
+            0
+          ],
+          "lulu_facing": "Right",
+          "brutus_facing": "Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -29
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -25
+          ]
+        },
+        "Down-Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            24,
+            24
+          ],
+          "lulu_facing": "Down-Right",
+          "brutus_facing": "Up-Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -29
+          ]
+        }
+      }
+    },
+    "feeding": {
+      "initiator": "Lulu",
+      "target": "Brutus",
+      "lulu_animation": "feed_dog",
+      "brutus_animation": "eating",
+      "event_ids": {
+        "lulu_food_spawn": "feed_dog_food_spawn_frame"
+      },
+      "movement_lock": "both",
+      "completion": "remove food prop and restore control",
+      "failure": "remove unconsumed prop and restore prior companion state",
+      "synchronization": {
+        "frame_ms": 190,
+        "food_spawn_frame": 1,
+        "mouth_contact_frame": 2,
+        "total_frames": 4
+      },
+      "per_direction": {
+        "Down": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            0,
+            38
+          ],
+          "lulu_facing": "Down",
+          "brutus_facing": "Up",
+          "brutus_pet_contact_local": [
+            0,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            0,
+            -29
+          ],
+          "food_placement_relative_to_lulu_root": [
+            0,
+            29
+          ]
+        },
+        "Down-Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -27,
+            27
+          ],
+          "lulu_facing": "Down-Left",
+          "brutus_facing": "Up-Right",
+          "brutus_pet_contact_local": [
+            16,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -29
+          ],
+          "food_placement_relative_to_lulu_root": [
+            -21,
+            21
+          ]
+        },
+        "Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -38,
+            0
+          ],
+          "lulu_facing": "Left",
+          "brutus_facing": "Right",
+          "brutus_pet_contact_local": [
+            16,
+            -29
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -25
+          ],
+          "food_placement_relative_to_lulu_root": [
+            -29,
+            0
+          ]
+        },
+        "Up-Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -27,
+            -27
+          ],
+          "lulu_facing": "Up-Left",
+          "brutus_facing": "Down-Right",
+          "brutus_pet_contact_local": [
+            16,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -21
+          ],
+          "food_placement_relative_to_lulu_root": [
+            -21,
+            -21
+          ]
+        },
+        "Up": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            0,
+            -38
+          ],
+          "lulu_facing": "Up",
+          "brutus_facing": "Down",
+          "brutus_pet_contact_local": [
+            0,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            0,
+            -21
+          ],
+          "food_placement_relative_to_lulu_root": [
+            0,
+            -29
+          ]
+        },
+        "Up-Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            27,
+            -27
+          ],
+          "lulu_facing": "Up-Right",
+          "brutus_facing": "Down-Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -21
+          ],
+          "food_placement_relative_to_lulu_root": [
+            21,
+            -21
+          ]
+        },
+        "Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            38,
+            0
+          ],
+          "lulu_facing": "Right",
+          "brutus_facing": "Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -29
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -25
+          ],
+          "food_placement_relative_to_lulu_root": [
+            29,
+            0
+          ]
+        },
+        "Down-Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            27,
+            27
+          ],
+          "lulu_facing": "Down-Right",
+          "brutus_facing": "Up-Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -29
+          ],
+          "food_placement_relative_to_lulu_root": [
+            21,
+            21
+          ]
+        }
+      }
+    },
+    "play_fetch_preparation": {
+      "initiator": "Lulu",
+      "target": "Brutus",
+      "lulu_animation": "throw_toy",
+      "brutus_animation": "play_ready",
+      "event_ids": {
+        "lulu_throw_release": "throw_toy_throw_release_frame"
+      },
+      "anchor_ids": {
+        "lulu_throw_origin": "lulu_throw_origin_local",
+        "brutus_mouth": "brutus_mouth_anchor_local"
+      },
+      "movement_lock": "Lulu during throw; Brutus until release",
+      "completion": "release Brutus to run/carry/return state machine; toy remains separate",
+      "failure": "cancel throw before release or recover toy and return Brutus to follow",
+      "synchronization": {
+        "frame_ms": 150,
+        "throw_release_frame": 2,
+        "brutus_depart_sync": "after_release",
+        "carry_anchor_action": "carry_pose"
+      },
+      "per_direction": {
+        "Down": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            0,
+            44
+          ],
+          "lulu_facing": "Down",
+          "brutus_facing": "Up",
+          "brutus_pet_contact_local": [
+            0,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            0,
+            -29
+          ],
+          "lulu_throw_origin_local": [
+            0,
+            -41
+          ],
+          "brutus_play_ready_relative_offset": [
+            0,
+            52
+          ]
+        },
+        "Down-Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -31,
+            31
+          ],
+          "lulu_facing": "Down-Left",
+          "brutus_facing": "Up-Right",
+          "brutus_pet_contact_local": [
+            16,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -29
+          ],
+          "lulu_throw_origin_local": [
+            -14,
+            -41
+          ],
+          "brutus_play_ready_relative_offset": [
+            -37,
+            37
+          ]
+        },
+        "Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -44,
+            0
+          ],
+          "lulu_facing": "Left",
+          "brutus_facing": "Right",
+          "brutus_pet_contact_local": [
+            16,
+            -29
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -25
+          ],
+          "lulu_throw_origin_local": [
+            -14,
+            -43
+          ],
+          "brutus_play_ready_relative_offset": [
+            -52,
+            0
+          ]
+        },
+        "Up-Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -31,
+            -31
+          ],
+          "lulu_facing": "Up-Left",
+          "brutus_facing": "Down-Right",
+          "brutus_pet_contact_local": [
+            16,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -21
+          ],
+          "lulu_throw_origin_local": [
+            -14,
+            -45
+          ],
+          "brutus_play_ready_relative_offset": [
+            -37,
+            -37
+          ]
+        },
+        "Up": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            0,
+            -44
+          ],
+          "lulu_facing": "Up",
+          "brutus_facing": "Down",
+          "brutus_pet_contact_local": [
+            0,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            0,
+            -21
+          ],
+          "lulu_throw_origin_local": [
+            0,
+            -45
+          ],
+          "brutus_play_ready_relative_offset": [
+            0,
+            -52
+          ]
+        },
+        "Up-Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            31,
+            -31
+          ],
+          "lulu_facing": "Up-Right",
+          "brutus_facing": "Down-Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -21
+          ],
+          "lulu_throw_origin_local": [
+            14,
+            -45
+          ],
+          "brutus_play_ready_relative_offset": [
+            37,
+            -37
+          ]
+        },
+        "Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            44,
+            0
+          ],
+          "lulu_facing": "Right",
+          "brutus_facing": "Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -29
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -25
+          ],
+          "lulu_throw_origin_local": [
+            14,
+            -43
+          ],
+          "brutus_play_ready_relative_offset": [
+            52,
+            0
+          ]
+        },
+        "Down-Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            31,
+            31
+          ],
+          "lulu_facing": "Down-Right",
+          "brutus_facing": "Up-Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -29
+          ],
+          "lulu_throw_origin_local": [
+            14,
+            -41
+          ],
+          "brutus_play_ready_relative_offset": [
+            37,
+            37
+          ]
+        }
+      }
+    },
+    "companion_command": {
+      "initiator": "Lulu",
+      "target": "Brutus",
+      "lulu_animation": "companion_command",
+      "brutus_animation": "idle_stand",
+      "event_ids": {
+        "lulu_command_cue": "companion_command_command_cue_frame",
+        "lulu_response": "companion_command_response_frame",
+        "brutus_command_cue": "idle_stand_command_cue_frame",
+        "brutus_response": "idle_stand_response_frame"
+      },
+      "movement_lock": "Lulu; Brutus listens in place",
+      "completion": "branch to stand_to_sit or another later command transition",
+      "failure": "return both entities to prior states",
+      "synchronization": {
+        "frame_ms": 170,
+        "command_cue_frame": 1,
+        "response_frame": 2,
+        "sit_transition": "stand_to_sit"
+      },
+      "per_direction": {
+        "Down": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            0,
+            42
+          ],
+          "lulu_facing": "Down",
+          "brutus_facing": "Up",
+          "brutus_pet_contact_local": [
+            0,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            0,
+            -29
+          ],
+          "brutus_listening_relative_offset": [
+            0,
+            42
+          ]
+        },
+        "Down-Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -30,
+            30
+          ],
+          "lulu_facing": "Down-Left",
+          "brutus_facing": "Up-Right",
+          "brutus_pet_contact_local": [
+            16,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -29
+          ],
+          "brutus_listening_relative_offset": [
+            -30,
+            30
+          ]
+        },
+        "Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -42,
+            0
+          ],
+          "lulu_facing": "Left",
+          "brutus_facing": "Right",
+          "brutus_pet_contact_local": [
+            16,
+            -29
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -25
+          ],
+          "brutus_listening_relative_offset": [
+            -42,
+            0
+          ]
+        },
+        "Up-Left": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            -30,
+            -30
+          ],
+          "lulu_facing": "Up-Left",
+          "brutus_facing": "Down-Right",
+          "brutus_pet_contact_local": [
+            16,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            22,
+            -21
+          ],
+          "brutus_listening_relative_offset": [
+            -30,
+            -30
+          ]
+        },
+        "Up": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            0,
+            -42
+          ],
+          "lulu_facing": "Up",
+          "brutus_facing": "Down",
+          "brutus_pet_contact_local": [
+            0,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            0,
+            -21
+          ],
+          "brutus_listening_relative_offset": [
+            0,
+            -42
+          ]
+        },
+        "Up-Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            30,
+            -30
+          ],
+          "lulu_facing": "Up-Right",
+          "brutus_facing": "Down-Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -26
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -21
+          ],
+          "brutus_listening_relative_offset": [
+            30,
+            -30
+          ]
+        },
+        "Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            42,
+            0
+          ],
+          "lulu_facing": "Right",
+          "brutus_facing": "Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -29
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -25
+          ],
+          "brutus_listening_relative_offset": [
+            42,
+            0
+          ]
+        },
+        "Down-Right": {
+          "lulu_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_root_anchor": [
+            48,
+            88
+          ],
+          "brutus_relative_offset": [
+            30,
+            30
+          ],
+          "lulu_facing": "Down-Right",
+          "brutus_facing": "Up-Left",
+          "brutus_pet_contact_local": [
+            -16,
+            -32
+          ],
+          "brutus_mouth_anchor_local": [
+            -22,
+            -29
+          ],
+          "brutus_listening_relative_offset": [
+            30,
+            30
+          ]
+        }
+      }
+    }
+  }
+}
