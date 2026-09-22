@@ -1,0 +1,58 @@
+{
+  "format": "lulus_overworld_96x68_manifest_v1",
+  "version": 1,
+  "mapId": "Overworld",
+  "dimensionsTiles": [
+    96,
+    68
+  ],
+  "dimensionsPixels": [
+    3072,
+    2176
+  ],
+  "tileSizePx": 32,
+  "scaleMethod": "exact 2x nearest-neighbor visual enlargement; exact 2x2 semantic expansion; single point markers moved to (2x+1, 2y+1)",
+  "day": {
+    "visualCompanion": "Overworld.visual.json",
+    "assets": [
+      {
+        "path": "public/assets/maps/overworld/overworld_red_roof_96x68.png",
+        "sha256": "f9199f8cd4c96fa4c891dd91271b5ace639ab893e9e97ec9b032be2fd7daeffe"
+      },
+      {
+        "path": "public/assets/maps/overworld/overworld_walkbehind_base_96x68.png",
+        "sha256": "72771033d66277b2eddd4ae57e144d69577c803aede700ce25e92fff94446799"
+      },
+      {
+        "path": "public/assets/maps/overworld/foreground/overworld_building_upper_foreground_96x68.png",
+        "sha256": "d50cbaa4b0b42675e05f68c52a5cd7008fd43659e08194929aababcd1505d059"
+      },
+      {
+        "path": "public/assets/maps/overworld/foreground/overworld_tree_canopy_foreground_96x68.png",
+        "sha256": "2411093a75a800551c9f6aa7ce02c2d64149430343230dcd6a1bb9b059aeb542"
+      }
+    ]
+  },
+  "night": {
+    "visualCompanion": "Overworld.night.visual.json",
+    "assets": [
+      {
+        "path": "public/assets/maps/night/overworld/overworld_walkbehind_base_96x68_night.png",
+        "sha256": "34abd1fc9a1d120e1a543cd1c5a4365fdd3fe0e35efce196194ad259b77b5cb0"
+      },
+      {
+        "path": "public/assets/maps/night/overworld/foreground/overworld_building_upper_foreground_96x68_night.png",
+        "sha256": "90c7b0faacc7616cfa2d84ac8d00c8584e52264bf7dba0d0fd5f42060f702972"
+      },
+      {
+        "path": "public/assets/maps/night/overworld/foreground/overworld_tree_canopy_foreground_96x68_night.png",
+        "sha256": "b1663eee250e70010edd5988680011731b2e36a0162fd487f6068821c00d37ea"
+      }
+    ]
+  },
+  "semanticMap": "Overworld.json",
+  "optimization": {
+    "runtimeUsesCompletedPngs": true,
+    "reconstructionTilePacksExcluded": true
+  }
+}
