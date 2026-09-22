@@ -1,0 +1,281 @@
+{
+  "schema": "lulus-character-targeted-motion-repair-report",
+  "version": 1,
+  "characterId": "lulu",
+  "revision": 5,
+  "generatedAt": "2026-07-27T15:38:56.997Z",
+  "scope": {
+    "changedActions": [
+      "idle",
+      "walk"
+    ],
+    "profileRowsReauthored": [
+      "Left",
+      "Right"
+    ],
+    "diagonalRowsPreserved": [
+      "Down-Left",
+      "Up-Left",
+      "Up-Right",
+      "Down-Right"
+    ],
+    "runPreserved": true
+  },
+  "contract": {
+    "cell": [
+      96,
+      96
+    ],
+    "root": [
+      48,
+      88
+    ],
+    "directionOrder": [
+      "Down",
+      "Down-Left",
+      "Left",
+      "Up-Left",
+      "Up",
+      "Up-Right",
+      "Right",
+      "Down-Right"
+    ],
+    "walkCycleDistancePx": 96,
+    "runCycleDistancePx": 160,
+    "worldMovementSpeedChanged": false
+  },
+  "baseline": {
+    "idle": {
+      "path": "character-production/projects/lulu/history/revision-4-targeted-repair-baseline/idle.png",
+      "sha256": "b423de646612838d912b5d303892be8ef85db754a5bb4c04aeee6bee8e64ade0"
+    },
+    "walk": {
+      "path": "character-production/projects/lulu/history/revision-4-targeted-repair-baseline/walk.png",
+      "sha256": "eb13bd5822878b3369860a71426e8e7021d7416487681490832c1757110048ac"
+    },
+    "run": {
+      "path": "character-production/projects/lulu/history/revision-4-targeted-repair-baseline/run.png",
+      "sha256": "023512fe50aec9f743ea7cde5dc6b4aec79009eb433e6aa3b56cec8eae5ee7ec"
+    }
+  },
+  "cleanup": {
+    "idleBrightExteriorPixelsRecolored": 2381,
+    "walkBaselineBrightExteriorPixelsRecolored": 10185,
+    "walkFinalBrightExteriorPixelsRecolored": 235
+  },
+  "profiles": [
+    {
+      "direction": "Left",
+      "input": "character-production/projects/lulu/imports/canonical-anime-r5-fringe-sidewalk-repair/left-walk-repaired-source.png",
+      "inputSha256": "919586ae0e5373dbb0c5ec2328877021862a90db6b418d51233774903a194303",
+      "frames": [
+        {
+          "index": 0,
+          "bounds": {
+            "x": 30,
+            "y": 20,
+            "width": 35,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.951,
+          "groundY": 88
+        },
+        {
+          "index": 1,
+          "bounds": {
+            "x": 35,
+            "y": 20,
+            "width": 27,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.331,
+          "groundY": 88
+        },
+        {
+          "index": 2,
+          "bounds": {
+            "x": 34,
+            "y": 21,
+            "width": 29,
+            "height": 67
+          },
+          "upperBodyCenterX": 48.48,
+          "groundY": 88
+        },
+        {
+          "index": 3,
+          "bounds": {
+            "x": 30,
+            "y": 19,
+            "width": 32,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.283,
+          "groundY": 87
+        },
+        {
+          "index": 4,
+          "bounds": {
+            "x": 29,
+            "y": 20,
+            "width": 38,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.813,
+          "groundY": 88
+        },
+        {
+          "index": 5,
+          "bounds": {
+            "x": 35,
+            "y": 20,
+            "width": 27,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.21,
+          "groundY": 88
+        },
+        {
+          "index": 6,
+          "bounds": {
+            "x": 35,
+            "y": 19,
+            "width": 27,
+            "height": 69
+          },
+          "upperBodyCenterX": 48.261,
+          "groundY": 88
+        },
+        {
+          "index": 7,
+          "bounds": {
+            "x": 28,
+            "y": 18,
+            "width": 34,
+            "height": 69
+          },
+          "upperBodyCenterX": 48.355,
+          "groundY": 87
+        }
+      ]
+    },
+    {
+      "direction": "Right",
+      "input": "character-production/projects/lulu/imports/canonical-anime-r5-fringe-sidewalk-repair/right-walk-repaired-source.png",
+      "inputSha256": "5defe97fe8a7ddb736eec61aeaa7bcbafa8f0a5743cc715ce062ee7875c88a7f",
+      "frames": [
+        {
+          "index": 0,
+          "bounds": {
+            "x": 32,
+            "y": 20,
+            "width": 37,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.233,
+          "groundY": 88
+        },
+        {
+          "index": 1,
+          "bounds": {
+            "x": 36,
+            "y": 20,
+            "width": 24,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.341,
+          "groundY": 88
+        },
+        {
+          "index": 2,
+          "bounds": {
+            "x": 35,
+            "y": 20,
+            "width": 24,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.58,
+          "groundY": 88
+        },
+        {
+          "index": 3,
+          "bounds": {
+            "x": 31,
+            "y": 21,
+            "width": 44,
+            "height": 66
+          },
+          "upperBodyCenterX": 48.217,
+          "groundY": 87
+        },
+        {
+          "index": 4,
+          "bounds": {
+            "x": 32,
+            "y": 20,
+            "width": 41,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.436,
+          "groundY": 88
+        },
+        {
+          "index": 5,
+          "bounds": {
+            "x": 36,
+            "y": 20,
+            "width": 24,
+            "height": 68
+          },
+          "upperBodyCenterX": 48.328,
+          "groundY": 88
+        },
+        {
+          "index": 6,
+          "bounds": {
+            "x": 35,
+            "y": 20,
+            "width": 24,
+            "height": 68
+          },
+          "upperBodyCenterX": 47.609,
+          "groundY": 88
+        },
+        {
+          "index": 7,
+          "bounds": {
+            "x": 31,
+            "y": 21,
+            "width": 44,
+            "height": 66
+          },
+          "upperBodyCenterX": 48.251,
+          "groundY": 87
+        }
+      ]
+    }
+  ],
+  "outputs": {
+    "idle": {
+      "path": "character-production/projects/lulu/derived/canonical-anime-r5-fringe-sidewalk-repair/sheets/Lulu_idle.png",
+      "sha256": "a452fe1c63db84a936e8da83f97b4f563f99404d9bcafb3044e8937879649293",
+      "dimensions": [
+        384,
+        768
+      ]
+    },
+    "walk": {
+      "path": "character-production/projects/lulu/derived/canonical-anime-r5-fringe-sidewalk-repair/sheets/Lulu_walk.png",
+      "sha256": "a8cd8ed9b2dba2111df48aa59b21a0f4979fdc8da6694b36468dd1ec3f4499db",
+      "dimensions": [
+        768,
+        768
+      ]
+    },
+    "run": {
+      "path": "character-production/projects/lulu/history/revision-4-targeted-repair-baseline/run.png",
+      "sha256": "023512fe50aec9f743ea7cde5dc6b4aec79009eb433e6aa3b56cec8eae5ee7ec",
+      "changed": false
+    }
+  }
+}
