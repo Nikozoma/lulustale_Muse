@@ -1,0 +1,81 @@
+IMPLEMENTATION PASSES — v2.1 FOUNDATION RESTART
+
+PASS 0 — Asset and semantic map verification
+Recommended mode: High.
+
+Inspect only / manifest only:
+- project structure,
+- asset folders,
+- exact Lulu sprite source and frame layout,
+- exact dog asset source and frame layout,
+- candidate bird asset for later,
+- home/interior tiles and object assets,
+- Home.json structure,
+- blockers/uncertainties.
+
+Output:
+- asset manifest / report,
+- map schema report,
+- exact blockers if any,
+- no gameplay implementation unless explicitly requested.
+
+PASS 1 — Home foundation implementation
+Recommended mode: High.
+
+Build only after Pass 0 is approved:
+- PWA shell and install basics.
+- Landscape orientation/rotate fallback.
+- Responsive viewport and virtual coordinate mapping.
+- Camera.
+- Mobile movement.
+- Real Lulu sprite directional movement.
+- Home map import from Home.json.
+- Real home asset rendering from selected assets.
+- Collision based on semantic map and object solidity.
+- Tap/proximity interaction.
+- Dialogue box with Next button only.
+- Objective tracker.
+- Fridge -> Dog Food.
+- Dog/dog bowl feeding.
+- Exit-door foundation complete state.
+
+PASS 2 — Exterior Day 1 expansion
+Recommended mode: High.
+
+Build only after user manually approves the home foundation:
+- overworld map,
+- Charles Jr. map,
+- Charles Jr. fries interaction,
+- return route,
+- bird theft,
+- bird chase waypoints,
+- fries recovery timing event,
+- return home,
+- bed sleep prompt/fade,
+- night hook.
+
+PASS 3 — Night event and sword battle
+Recommended mode: High.
+
+Build only after Day 1 expansion is stable:
+- player-selected night phase from the bed,
+- window investigation,
+- night exterior state,
+- shiny bush sword pickup,
+- bird gang dialogue,
+- night perception/insanity popup,
+- right-side sword attack,
+- three-bird battle,
+- win/loss handling,
+- return to bed,
+- Day 2 wake-up/demo end.
+
+PASS 4 — Readability and polish
+Recommended mode: Medium or High depending on scope.
+
+Build later:
+- visibility/foreground refinements,
+- dialogue pacing,
+- animation polish,
+- UI scaling tuning,
+- PWA install testing fixes.
