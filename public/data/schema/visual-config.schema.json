@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "visual-config.schema.json",
+  "title": "Lulu's Tale Runtime Visual Configuration",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "map_id",
+    "semantic_geometry",
+    "canvas",
+    "variant",
+    "base_layer",
+    "foreground_layers"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "type": "string" },
+    "map_id": { "type": "string", "minLength": 1 },
+    "semantic_geometry": { "type": "string", "minLength": 1 },
+    "variant": { "enum": ["day", "night"] },
+    "canvas": {
+      "type": "object",
+      "required": ["width_px", "height_px", "tile_size_px", "origin_px"],
+      "properties": {
+        "width_px": { "type": "integer", "minimum": 1 },
+        "height_px": { "type": "integer", "minimum": 1 },
+        "tile_size_px": { "type": "integer", "const": 32 },
+        "origin_px": { "$ref": "#/$defs/point" }
+      },
+      "additionalProperties": true
+    },
+    "base_layer": { "$ref": "#/$defs/imageLayer" },
+    "detail_layers": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/imageLayer" }
+    },
+    "foreground_layers": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/imageLayer" },
+          {
+            "type": "object",
+            "required": ["id", "alpha_components"],
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "alpha_components": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["id", "pixel_bbox"],
+                  "properties": {
+                    "id": { "type": "string", "minLength": 1 },
+                    "pixel_bbox": { "$ref": "#/$defs/rect" },
+                    "trigger_pixel_rect": { "$ref": "#/$defs/rect" },
+                    "trigger_pixel_polygon": { "$ref": "#/$defs/polygon" },
+                    "trigger_tile_rect": { "$ref": "#/$defs/rect" }
+                  },
+                  "anyOf": [
+                    { "required": ["trigger_pixel_rect"] },
+                    { "required": ["trigger_pixel_polygon"] },
+                    { "required": ["trigger_tile_rect"] }
+                  ],
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "point": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "rect": {
+      "type": "object",
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0 },
+        "y": { "type": "number", "minimum": 0 },
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "height": { "type": "number", "exclusiveMinimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "polygon": {
+      "type": "object",
+      "required": ["points"],
+      "properties": {
+        "points": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "$ref": "#/$defs/point" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "imageLayer": {
+      "type": "object",
+      "required": ["asset", "origin_px", "z_index"],
+      "properties": {
+        "asset": { "type": "string", "minLength": 1 },
+        "origin_px": { "$ref": "#/$defs/point" },
+        "z_index": { "type": "number" },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      },
+      "additionalProperties": true
+    }
+  }
+}
