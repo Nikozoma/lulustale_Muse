@@ -1,0 +1,37 @@
+QUEST IDS AND OBJECTIVES — v2.1
+
+Current required quest:
+home_foundation_day1
+
+Objective sequence:
+1. learn_movement
+   Text: "Move around Lulu's room."
+2. go_to_fridge
+   Text: "Go to the fridge."
+3. get_dog_food
+   Text: "Get the dog food."
+4. feed_dog
+   Text: "Feed the dog."
+5. go_to_exit
+   Text: "Go to the front door."
+6. foundation_complete
+   Text: "Home foundation complete."
+
+Deferred Day 1 quest IDs:
+- go_to_charles_jr
+- order_fries
+- return_home_with_fries
+- track_bird
+- recover_fries
+- return_home_after_bird
+- go_to_bed
+
+Deferred Pass 2 quest IDs:
+- investigate_window
+- find_sword
+- confront_birds
+- return_to_bed_night
+
+Rules:
+- Only implement home_foundation_day1 during the first foundation implementation pass.
+- Do not create exterior/bird/night quest logic yet.
