@@ -1,0 +1,2825 @@
+{
+  "$schema": "../../schema/map-semantics.schema.json",
+  "schema_version": "1.0.0",
+  "map_id": "overworld",
+  "coordinate_system": {
+    "origin": "top_left",
+    "x_direction": "right",
+    "y_direction": "down",
+    "units": "pixels_with_tile_companions",
+    "rectangle_rule": "left/top inclusive; right/bottom exclusive"
+  },
+  "map_dimensions": {
+    "tiles": {
+      "width": 96,
+      "height": 68
+    },
+    "pixels": {
+      "width": 3072,
+      "height": 2176
+    },
+    "tile_size_px": 32,
+    "world_scale": 1
+  },
+  "day_night_contract": "shared_geometry",
+  "movement_resolution": {
+    "rule": "walkable_regions union, minus blocked_regions, then passable_overrides",
+    "tile_grid_companion": "collision_grid.json",
+    "runtime_note": "Vector regions are authoritative; the grid is a deterministic 32px implementation companion."
+  },
+  "walkable_regions": [
+    {
+      "id": "walk_north_of_division",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 96,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 3072,
+        "height": 160
+      },
+      "surface": "grass_and_sidewalk"
+    },
+    {
+      "id": "walk_division_south_sidewalk",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 0,
+        "y": 12,
+        "width": 96,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 0,
+        "y": 384,
+        "width": 3072,
+        "height": 96
+      },
+      "surface": "sidewalk"
+    },
+    {
+      "id": "walk_148th_west_verge_and_sidewalk",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 5,
+        "height": 68
+      },
+      "pixel_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 160,
+        "height": 2176
+      },
+      "surface": "grass_and_sidewalk"
+    },
+    {
+      "id": "walk_148th_east_sidewalk",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 11,
+        "y": 0,
+        "width": 4,
+        "height": 68
+      },
+      "pixel_rect": {
+        "x": 352,
+        "y": 0,
+        "width": 128,
+        "height": 2176
+      },
+      "surface": "sidewalk"
+    },
+    {
+      "id": "walk_charles_parking_and_drive_through",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 17,
+        "y": 15,
+        "width": 23,
+        "height": 31
+      },
+      "pixel_rect": {
+        "x": 544,
+        "y": 480,
+        "width": 736,
+        "height": 992
+      },
+      "surface": "parking_and_drive_through"
+    },
+    {
+      "id": "walk_charles_green",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 15,
+        "y": 46,
+        "width": 28,
+        "height": 22
+      },
+      "pixel_rect": {
+        "x": 480,
+        "y": 1472,
+        "width": 896,
+        "height": 704
+      },
+      "surface": "grass_and_paths"
+    },
+    {
+      "id": "walk_apartment_west_parking",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 43,
+        "y": 13,
+        "width": 10,
+        "height": 55
+      },
+      "pixel_rect": {
+        "x": 1376,
+        "y": 416,
+        "width": 320,
+        "height": 1760
+      },
+      "surface": "parking"
+    },
+    {
+      "id": "walk_apartment_east_parking",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 78,
+        "y": 13,
+        "width": 15,
+        "height": 55
+      },
+      "pixel_rect": {
+        "x": 2496,
+        "y": 416,
+        "width": 480,
+        "height": 1760
+      },
+      "surface": "parking_and_sidewalk"
+    },
+    {
+      "id": "walk_apartment_north_front_paths",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 50,
+        "y": 23,
+        "width": 32,
+        "height": 6
+      },
+      "pixel_rect": {
+        "x": 1600,
+        "y": 736,
+        "width": 1024,
+        "height": 192
+      },
+      "surface": "sidewalk_and_paths"
+    },
+    {
+      "id": "walk_apartment_courtyard_paths",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 50,
+        "y": 36,
+        "width": 32,
+        "height": 9
+      },
+      "pixel_rect": {
+        "x": 1600,
+        "y": 1152,
+        "width": 1024,
+        "height": 288
+      },
+      "surface": "sidewalk_and_paths"
+    },
+    {
+      "id": "walk_apartment_south_front_paths",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 50,
+        "y": 52,
+        "width": 32,
+        "height": 8
+      },
+      "pixel_rect": {
+        "x": 1600,
+        "y": 1664,
+        "width": 1024,
+        "height": 256
+      },
+      "surface": "sidewalk_and_paths"
+    },
+    {
+      "id": "walk_apartment_pedestrian_spine",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 63,
+        "y": 23,
+        "width": 5,
+        "height": 45
+      },
+      "pixel_rect": {
+        "x": 2016,
+        "y": 736,
+        "width": 160,
+        "height": 1440
+      },
+      "surface": "sidewalk"
+    },
+    {
+      "id": "walk_apartment_north_walkbehind",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 14,
+        "width": 28,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 448,
+        "width": 896,
+        "height": 128
+      },
+      "surface": "foreground_walkbehind_grass"
+    },
+    {
+      "id": "walk_apartment_middle_walkbehind",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 28,
+        "width": 28,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 896,
+        "width": 896,
+        "height": 128
+      },
+      "surface": "foreground_walkbehind_grass"
+    },
+    {
+      "id": "walk_apartment_south_walkbehind",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 44,
+        "width": 28,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 1408,
+        "width": 896,
+        "height": 128
+      },
+      "surface": "foreground_walkbehind_grass"
+    },
+    {
+      "id": "walk_charles_walkbehind",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 24,
+        "y": 20,
+        "width": 12,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 768,
+        "y": 640,
+        "width": 384,
+        "height": 128
+      },
+      "surface": "foreground_walkbehind_parking"
+    },
+    {
+      "id": "walk_lower_nature_corridor",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 43,
+        "y": 46,
+        "width": 11,
+        "height": 22
+      },
+      "pixel_rect": {
+        "x": 1376,
+        "y": 1472,
+        "width": 352,
+        "height": 704
+      },
+      "surface": "grass"
+    },
+    {
+      "id": "walk_lower_event_area",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 55,
+        "y": 60,
+        "width": 21,
+        "height": 8
+      },
+      "pixel_rect": {
+        "x": 1760,
+        "y": 1920,
+        "width": 672,
+        "height": 256
+      },
+      "surface": "dirt_event_area"
+    },
+    {
+      "id": "walk_southeast_nature",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 77,
+        "y": 58,
+        "width": 19,
+        "height": 10
+      },
+      "pixel_rect": {
+        "x": 2464,
+        "y": 1856,
+        "width": 608,
+        "height": 320
+      },
+      "surface": "grass"
+    },
+    {
+      "id": "walk_east_edge_sidewalk",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 90,
+        "y": 0,
+        "width": 2,
+        "height": 68
+      },
+      "pixel_rect": {
+        "x": 2880,
+        "y": 0,
+        "width": 64,
+        "height": 2176
+      },
+      "surface": "sidewalk"
+    }
+  ],
+  "blocked_regions": [
+    {
+      "id": "traffic_division",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 0,
+        "y": 5,
+        "width": 96,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 0,
+        "y": 160,
+        "width": 3072,
+        "height": 224
+      },
+      "category": "road_edge",
+      "collision": "blocked_except_crosswalks"
+    },
+    {
+      "id": "traffic_148th",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 5,
+        "y": 0,
+        "width": 6,
+        "height": 68
+      },
+      "pixel_rect": {
+        "x": 160,
+        "y": 0,
+        "width": 192,
+        "height": 2176
+      },
+      "category": "road_edge",
+      "collision": "blocked_except_crosswalks"
+    },
+    {
+      "id": "charles_building",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 25,
+        "y": 24,
+        "width": 10,
+        "height": 14
+      },
+      "pixel_rect": {
+        "x": 800,
+        "y": 768,
+        "width": 320,
+        "height": 448
+      },
+      "category": "structure",
+      "structure_id": "structure_charles_jr"
+    },
+    {
+      "id": "charles_west_hedge",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 15,
+        "y": 15,
+        "width": 2,
+        "height": 31
+      },
+      "pixel_rect": {
+        "x": 480,
+        "y": 480,
+        "width": 64,
+        "height": 992
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "charles_north_hedge",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 17,
+        "y": 14,
+        "width": 8,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 544,
+        "y": 448,
+        "width": 256,
+        "height": 96
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "charles_north_east_hedge",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 35,
+        "y": 14,
+        "width": 7,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 1120,
+        "y": 448,
+        "width": 224,
+        "height": 96
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "charles_east_hedge",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 40,
+        "y": 14,
+        "width": 3,
+        "height": 54
+      },
+      "pixel_rect": {
+        "x": 1280,
+        "y": 448,
+        "width": 96,
+        "height": 1728
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "charles_south_hedge",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 16,
+        "y": 45,
+        "width": 24,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 512,
+        "y": 1440,
+        "width": 768,
+        "height": 96
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "charles_park_sign",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 19,
+        "y": 52,
+        "width": 8,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 608,
+        "y": 1664,
+        "width": 256,
+        "height": 160
+      },
+      "category": "object",
+      "object_id": "object_charles_road_sign"
+    },
+    {
+      "id": "apartment_top",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 18,
+        "width": 28,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 576,
+        "width": 896,
+        "height": 224
+      },
+      "category": "structure",
+      "structure_id": "structure_apartment_north"
+    },
+    {
+      "id": "apartment_middle",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 32,
+        "width": 28,
+        "height": 6
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 1024,
+        "width": 896,
+        "height": 192
+      },
+      "category": "structure",
+      "structure_id": "structure_lulu_apartment"
+    },
+    {
+      "id": "apartment_south",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 48,
+        "width": 28,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 1536,
+        "width": 896,
+        "height": 224
+      },
+      "category": "structure",
+      "structure_id": "structure_apartment_south"
+    },
+    {
+      "id": "apartment_north_front_landscaping_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 25,
+        "width": 12,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 800,
+        "width": 384,
+        "height": 32
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "apartment_north_front_landscaping_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 68,
+        "y": 25,
+        "width": 12,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 2176,
+        "y": 800,
+        "width": 384,
+        "height": 32
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "apartment_middle_front_landscaping_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 38,
+        "width": 8,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 1216,
+        "width": 256,
+        "height": 32
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "apartment_middle_front_landscaping_center_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 61,
+        "y": 38,
+        "width": 4,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 1952,
+        "y": 1216,
+        "width": 128,
+        "height": 32
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "apartment_middle_front_landscaping_center_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 67,
+        "y": 38,
+        "width": 4,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 2144,
+        "y": 1216,
+        "width": 128,
+        "height": 32
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "apartment_courtyard_planter_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 64,
+        "y": 41,
+        "width": 7,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 2048,
+        "y": 1312,
+        "width": 224,
+        "height": 128
+      },
+      "category": "landscaping"
+    },
+    {
+      "id": "apartment_middle_front_landscaping_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 73,
+        "y": 38,
+        "width": 7,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 2336,
+        "y": 1216,
+        "width": 224,
+        "height": 32
+      },
+      "category": "landscaping"
+    },
+    {
+      "id": "charles_building_landscape_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 23,
+        "y": 23,
+        "width": 2,
+        "height": 16
+      },
+      "pixel_rect": {
+        "x": 736,
+        "y": 736,
+        "width": 64,
+        "height": 512
+      },
+      "category": "curb_and_landscaping"
+    },
+    {
+      "id": "charles_building_landscape_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 34,
+        "y": 22,
+        "width": 2,
+        "height": 17
+      },
+      "pixel_rect": {
+        "x": 1088,
+        "y": 704,
+        "width": 64,
+        "height": 544
+      },
+      "category": "curb_and_landscaping"
+    },
+    {
+      "id": "charles_building_landscape_south",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 23,
+        "y": 36,
+        "width": 12,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 736,
+        "y": 1152,
+        "width": 384,
+        "height": 96
+      },
+      "category": "curb_and_landscaping"
+    },
+    {
+      "id": "charles_parked_cars_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 17,
+        "y": 24,
+        "width": 3,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 544,
+        "y": 768,
+        "width": 96,
+        "height": 224
+      },
+      "category": "vehicle"
+    },
+    {
+      "id": "charles_parked_car_north",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 35,
+        "y": 17,
+        "width": 3,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 1120,
+        "y": 544,
+        "width": 96,
+        "height": 160
+      },
+      "category": "vehicle"
+    },
+    {
+      "id": "charles_service_carts",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 32,
+        "y": 39,
+        "width": 3,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 1024,
+        "y": 1248,
+        "width": 96,
+        "height": 160
+      },
+      "category": "object"
+    },
+    {
+      "id": "apartment_parked_car_west_north",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 48,
+        "y": 29,
+        "width": 3,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 1536,
+        "y": 928,
+        "width": 96,
+        "height": 128
+      },
+      "category": "vehicle"
+    },
+    {
+      "id": "apartment_parked_car_west_middle",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 48,
+        "y": 35,
+        "width": 3,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 1536,
+        "y": 1120,
+        "width": 96,
+        "height": 128
+      },
+      "category": "vehicle"
+    },
+    {
+      "id": "apartment_parked_car_east_north",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 82,
+        "y": 31,
+        "width": 3,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 2624,
+        "y": 992,
+        "width": 96,
+        "height": 128
+      },
+      "category": "vehicle"
+    },
+    {
+      "id": "apartment_parked_car_east_middle",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 82,
+        "y": 37,
+        "width": 3,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 2624,
+        "y": 1184,
+        "width": 96,
+        "height": 128
+      },
+      "category": "vehicle"
+    },
+    {
+      "id": "apartment_parked_car_east_south",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 82,
+        "y": 47,
+        "width": 3,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 2624,
+        "y": 1504,
+        "width": 96,
+        "height": 128
+      },
+      "category": "vehicle"
+    },
+    {
+      "id": "division_traffic_light",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 4,
+        "y": 10,
+        "width": 1,
+        "height": 4
+      },
+      "pixel_rect": {
+        "x": 128,
+        "y": 320,
+        "width": 32,
+        "height": 128
+      },
+      "category": "street_furniture"
+    },
+    {
+      "id": "north_lawn_tree",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 16,
+        "y": 3,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 512,
+        "y": 96,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "north_lawn_bench",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 56,
+        "y": 2,
+        "width": 3,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 1792,
+        "y": 64,
+        "width": 96,
+        "height": 64
+      },
+      "category": "street_furniture"
+    },
+    {
+      "id": "north_lawn_bin",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 63,
+        "y": 2,
+        "width": 3,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2016,
+        "y": 64,
+        "width": 96,
+        "height": 64
+      },
+      "category": "street_furniture"
+    },
+    {
+      "id": "north_lawn_east_tree",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 84,
+        "y": 3,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2688,
+        "y": 96,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "lower_event_fence_north",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 55,
+        "y": 59,
+        "width": 21,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 1760,
+        "y": 1888,
+        "width": 672,
+        "height": 32
+      },
+      "category": "fence"
+    },
+    {
+      "id": "lower_event_fence_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 54,
+        "y": 60,
+        "width": 1,
+        "height": 8
+      },
+      "pixel_rect": {
+        "x": 1728,
+        "y": 1920,
+        "width": 32,
+        "height": 256
+      },
+      "category": "fence"
+    },
+    {
+      "id": "lower_event_fence_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 76,
+        "y": 60,
+        "width": 1,
+        "height": 8
+      },
+      "pixel_rect": {
+        "x": 2432,
+        "y": 1920,
+        "width": 32,
+        "height": 256
+      },
+      "category": "fence"
+    },
+    {
+      "id": "tree_trunk_east_01",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 90,
+        "y": 66,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2880,
+        "y": 2112,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_east_02",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 90,
+        "y": 57,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2880,
+        "y": 1824,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_east_03",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 90,
+        "y": 49,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2880,
+        "y": 1568,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_east_04",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 90,
+        "y": 40,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2880,
+        "y": 1280,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_east_05",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 90,
+        "y": 19,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2880,
+        "y": 608,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_south_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 83,
+        "y": 65,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2656,
+        "y": 2080,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_apartment_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 80,
+        "y": 55,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2560,
+        "y": 1760,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_division_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 83,
+        "y": 18,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2656,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_south_mid",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 49,
+        "y": 65,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 1568,
+        "y": 2080,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_south_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 40,
+        "y": 65,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 1280,
+        "y": 2080,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_charles_south",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 31,
+        "y": 48,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 992,
+        "y": 1536,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_charles_north_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 16,
+        "y": 17,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 512,
+        "y": 544,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_park_south",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 15,
+        "y": 57,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 480,
+        "y": 1824,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_park_north_01",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 14,
+        "y": 48,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 448,
+        "y": 1536,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_park_north_02",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 21,
+        "y": 48,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 672,
+        "y": 1536,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_west_01",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 65,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 2080,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_west_02",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 48,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 1536,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_west_04",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 35,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 1120,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_west_05",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 26,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "tree_trunk_courtyard_cluster",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 46,
+        "y": 59,
+        "width": 2,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 1472,
+        "y": 1888,
+        "width": 64,
+        "height": 64
+      },
+      "category": "tree_trunk"
+    },
+    {
+      "id": "north_lawn_shrub_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 26,
+        "y": 3,
+        "width": 1,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 832,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      },
+      "category": "shrub"
+    },
+    {
+      "id": "north_lawn_shrub_center",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 78,
+        "y": 3,
+        "width": 1,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 2496,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      },
+      "category": "shrub"
+    },
+    {
+      "id": "north_lawn_shrub_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 95,
+        "y": 3,
+        "width": 1,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 3040,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      },
+      "category": "shrub"
+    },
+    {
+      "id": "charles_sign_hedge_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 16,
+        "y": 52,
+        "width": 3,
+        "height": 8
+      },
+      "pixel_rect": {
+        "x": 512,
+        "y": 1664,
+        "width": 96,
+        "height": 256
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "charles_sign_hedge_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 27,
+        "y": 52,
+        "width": 3,
+        "height": 8
+      },
+      "pixel_rect": {
+        "x": 864,
+        "y": 1664,
+        "width": 96,
+        "height": 256
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "charles_sign_hedge_south",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 19,
+        "y": 57,
+        "width": 8,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 608,
+        "y": 1824,
+        "width": 256,
+        "height": 96
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "lower_park_shrub_west",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 19,
+        "y": 65,
+        "width": 1,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 608,
+        "y": 2080,
+        "width": 32,
+        "height": 32
+      },
+      "category": "shrub"
+    },
+    {
+      "id": "lower_park_shrub_center",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 37,
+        "y": 56,
+        "width": 1,
+        "height": 1
+      },
+      "pixel_rect": {
+        "x": 1184,
+        "y": 1792,
+        "width": 32,
+        "height": 32
+      },
+      "category": "shrub"
+    },
+    {
+      "id": "apartment_east_boundary_hedge",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 92,
+        "y": 14,
+        "width": 4,
+        "height": 54
+      },
+      "pixel_rect": {
+        "x": 2944,
+        "y": 448,
+        "width": 128,
+        "height": 1728
+      },
+      "category": "hedge"
+    },
+    {
+      "id": "southeast_boundary_fence",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 77,
+        "y": 64,
+        "width": 19,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2464,
+        "y": 2048,
+        "width": 608,
+        "height": 64
+      },
+      "category": "fence"
+    }
+  ],
+  "passable_overrides": [
+    {
+      "id": "crosswalk_division_at_148th",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 11,
+        "y": 5,
+        "width": 4,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 352,
+        "y": 160,
+        "width": 128,
+        "height": 224
+      },
+      "purpose": "east_side_crosswalk"
+    },
+    {
+      "id": "crosswalk_division_at_148th_west_side",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 2,
+        "y": 5,
+        "width": 3,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 64,
+        "y": 160,
+        "width": 96,
+        "height": 224
+      },
+      "purpose": "west_side_crosswalk"
+    },
+    {
+      "id": "crosswalk_division_at_148th_north_side",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 5,
+        "y": 3,
+        "width": 6,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 160,
+        "y": 96,
+        "width": 192,
+        "height": 64
+      },
+      "purpose": "north_side_crosswalk"
+    },
+    {
+      "id": "crosswalk_division_at_148th_south_side",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 5,
+        "y": 12,
+        "width": 6,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 160,
+        "y": 384,
+        "width": 192,
+        "height": 96
+      },
+      "purpose": "south_side_crosswalk"
+    },
+    {
+      "id": "crosswalk_division_west_property",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 25,
+        "y": 12,
+        "width": 7,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 800,
+        "y": 384,
+        "width": 224,
+        "height": 160
+      },
+      "purpose": "crosswalk"
+    },
+    {
+      "id": "crosswalk_division_center",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 44,
+        "y": 12,
+        "width": 7,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 1408,
+        "y": 384,
+        "width": 224,
+        "height": 160
+      },
+      "purpose": "crosswalk"
+    },
+    {
+      "id": "crosswalk_division_east",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 85,
+        "y": 12,
+        "width": 5,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 2720,
+        "y": 384,
+        "width": 160,
+        "height": 160
+      },
+      "purpose": "crosswalk"
+    },
+    {
+      "id": "crosswalk_148th_charles",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 3,
+        "y": 37,
+        "width": 11,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 96,
+        "y": 1184,
+        "width": 352,
+        "height": 160
+      },
+      "purpose": "crosswalk"
+    },
+    {
+      "id": "door_threshold_charles",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 28,
+        "y": 36,
+        "width": 3,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 896,
+        "y": 1152,
+        "width": 96,
+        "height": 96
+      },
+      "purpose": "door_threshold"
+    },
+    {
+      "id": "door_threshold_home",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 64,
+        "y": 36,
+        "width": 3,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 2048,
+        "y": 1152,
+        "width": 96,
+        "height": 96
+      },
+      "purpose": "door_threshold"
+    },
+    {
+      "id": "lower_event_gate",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 64,
+        "y": 59,
+        "width": 3,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2048,
+        "y": 1888,
+        "width": 96,
+        "height": 64
+      },
+      "purpose": "event_area_access"
+    }
+  ],
+  "structures": [
+    {
+      "id": "structure_charles_jr",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 25,
+        "y": 20,
+        "width": 10,
+        "height": 18
+      },
+      "pixel_rect": {
+        "x": 800,
+        "y": 640,
+        "width": 320,
+        "height": 576
+      },
+      "name": "Charles Jr.",
+      "entry_door_id": "door_charles_jr"
+    },
+    {
+      "id": "structure_apartment_north",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 14,
+        "width": 28,
+        "height": 11
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 448,
+        "width": 896,
+        "height": 352
+      },
+      "name": "North apartment building"
+    },
+    {
+      "id": "structure_lulu_apartment",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 28,
+        "width": 28,
+        "height": 10
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 896,
+        "width": 896,
+        "height": 320
+      },
+      "name": "Lulu's apartment building",
+      "entry_door_id": "door_home"
+    },
+    {
+      "id": "structure_apartment_south",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 52,
+        "y": 44,
+        "width": 28,
+        "height": 11
+      },
+      "pixel_rect": {
+        "x": 1664,
+        "y": 1408,
+        "width": 896,
+        "height": 352
+      },
+      "name": "South apartment building"
+    }
+  ],
+  "objects": [
+    {
+      "id": "object_charles_road_sign",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 19,
+        "y": 52,
+        "width": 8,
+        "height": 5
+      },
+      "pixel_rect": {
+        "x": 608,
+        "y": 1664,
+        "width": 256,
+        "height": 160
+      },
+      "category": "sign",
+      "interaction": "none"
+    },
+    {
+      "id": "object_lower_event_fence",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 54,
+        "y": 59,
+        "width": 23,
+        "height": 9
+      },
+      "pixel_rect": {
+        "x": 1728,
+        "y": 1888,
+        "width": 736,
+        "height": 288
+      },
+      "category": "fence",
+      "collision_source": "blocked_regions"
+    }
+  ],
+  "doors": [
+    {
+      "id": "door_home",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 64,
+        "y": 36,
+        "width": 3,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 2048,
+        "y": 1152,
+        "width": 96,
+        "height": 64
+      },
+      "structure_id": "structure_lulu_apartment",
+      "clear_width_px": 96,
+      "transition_id": "transition_overworld_to_home"
+    },
+    {
+      "id": "door_charles_jr",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 28,
+        "y": 36,
+        "width": 3,
+        "height": 2
+      },
+      "pixel_rect": {
+        "x": 896,
+        "y": 1152,
+        "width": 96,
+        "height": 64
+      },
+      "structure_id": "structure_charles_jr",
+      "clear_width_px": 96,
+      "transition_id": "transition_overworld_to_charles_jr"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "transition_overworld_to_home",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 64,
+        "y": 36,
+        "width": 3,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 2048,
+        "y": 1152,
+        "width": 96,
+        "height": 96
+      },
+      "target_map": "home",
+      "target_transition_id": "transition_home_to_overworld",
+      "target_spawn_id": "spawn_home_entry",
+      "activation": "player_enter"
+    },
+    {
+      "id": "transition_overworld_to_charles_jr",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 28,
+        "y": 36,
+        "width": 3,
+        "height": 3
+      },
+      "pixel_rect": {
+        "x": 896,
+        "y": 1152,
+        "width": 96,
+        "height": 96
+      },
+      "target_map": "charles_jr",
+      "target_transition_id": "transition_charles_jr_to_overworld",
+      "target_spawn_id": "spawn_charles_jr_entry",
+      "activation": "player_enter"
+    }
+  ],
+  "spawns": [
+    {
+      "id": "spawn_overworld_player_default",
+      "tile_point": {
+        "x": 65.5,
+        "y": 40
+      },
+      "pixel_point": {
+        "x": 2096,
+        "y": 1280
+      },
+      "kind": "player",
+      "facing": "south",
+      "purpose": "default_overworld_start"
+    },
+    {
+      "id": "spawn_overworld_from_home",
+      "tile_point": {
+        "x": 65.5,
+        "y": 39.5
+      },
+      "pixel_point": {
+        "x": 2096,
+        "y": 1264
+      },
+      "kind": "player",
+      "facing": "south",
+      "source_transition_id": "transition_home_to_overworld"
+    },
+    {
+      "id": "spawn_overworld_from_charles_jr",
+      "tile_point": {
+        "x": 29.5,
+        "y": 39.5
+      },
+      "pixel_point": {
+        "x": 944,
+        "y": 1264
+      },
+      "kind": "player",
+      "facing": "south",
+      "source_transition_id": "transition_charles_jr_to_overworld"
+    }
+  ],
+  "npc_spawn_markers": [
+    {
+      "id": "npc_anchor_apartment_courtyard",
+      "tile_point": {
+        "x": 71.5,
+        "y": 42
+      },
+      "pixel_point": {
+        "x": 2288,
+        "y": 1344
+      },
+      "kind": "npc_anchor",
+      "enabled_by_default": false,
+      "facing": "south",
+      "note": "Reusable ambient anchor; no quest logic authored."
+    },
+    {
+      "id": "npc_anchor_charles_property",
+      "tile_point": {
+        "x": 23,
+        "y": 42
+      },
+      "pixel_point": {
+        "x": 736,
+        "y": 1344
+      },
+      "kind": "npc_anchor",
+      "enabled_by_default": false,
+      "facing": "east",
+      "note": "Reusable ambient anchor; no quest logic authored."
+    },
+    {
+      "id": "npc_anchor_lower_event_area",
+      "tile_point": {
+        "x": 65,
+        "y": 64
+      },
+      "pixel_point": {
+        "x": 2080,
+        "y": 2048
+      },
+      "kind": "npc_anchor",
+      "enabled_by_default": false,
+      "facing": "south",
+      "note": "Reserved for later event population."
+    },
+    {
+      "id": "npc_anchor_homeless_day",
+      "tile_point": {
+        "x": 47.5,
+        "y": 37.5
+      },
+      "pixel_point": {
+        "x": 1520,
+        "y": 1200
+      },
+      "kind": "quest_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "east",
+      "note": "Current Day 1 homeless NPC position."
+    },
+    {
+      "id": "npc_anchor_night_guide",
+      "tile_point": {
+        "x": 71.5,
+        "y": 42
+      },
+      "pixel_point": {
+        "x": 2288,
+        "y": 1344
+      },
+      "kind": "quest_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "west",
+      "note": "Current night guide position and quest approach."
+    },
+    {
+      "id": "npc_anchor_bird_hideout",
+      "tile_point": {
+        "x": 23.5,
+        "y": 48.5
+      },
+      "pixel_point": {
+        "x": 752,
+        "y": 1552
+      },
+      "kind": "quest_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "west",
+      "note": "Current fries thief hideout and investigation approach."
+    },
+    {
+      "id": "quest_anchor_bush_sword_approach",
+      "tile_point": {
+        "x": 68.5,
+        "y": 40.5
+      },
+      "pixel_point": {
+        "x": 2192,
+        "y": 1296
+      },
+      "kind": "quest_anchor",
+      "enabled_by_default": false,
+      "facing": "north",
+      "note": "Current safe approach point for the authored sword bush."
+    },
+    {
+      "id": "quest_anchor_bird_gang_center",
+      "tile_point": {
+        "x": 87.5,
+        "y": 48.5
+      },
+      "pixel_point": {
+        "x": 2800,
+        "y": 1552
+      },
+      "kind": "quest_anchor",
+      "enabled_by_default": false,
+      "facing": "south",
+      "note": "Current bird gang encounter center."
+    },
+    {
+      "id": "npc_anchor_ambient_robin",
+      "tile_point": {
+        "x": 75.25,
+        "y": 44.25
+      },
+      "pixel_point": {
+        "x": 2408,
+        "y": 1416
+      },
+      "kind": "ambient_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "west",
+      "note": "Current ambient robin position."
+    },
+    {
+      "id": "npc_anchor_pedestrian_01",
+      "tile_point": {
+        "x": 68,
+        "y": 45.75
+      },
+      "pixel_point": {
+        "x": 2176,
+        "y": 1464
+      },
+      "kind": "ambient_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "south",
+      "note": "Current pedestrian 01 position."
+    },
+    {
+      "id": "npc_anchor_pedestrian_02",
+      "tile_point": {
+        "x": 75,
+        "y": 44.25
+      },
+      "pixel_point": {
+        "x": 2400,
+        "y": 1416
+      },
+      "kind": "ambient_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "west",
+      "note": "Current pedestrian 02 position."
+    },
+    {
+      "id": "npc_anchor_pedestrian_03",
+      "tile_point": {
+        "x": 67.5,
+        "y": 40
+      },
+      "pixel_point": {
+        "x": 2160,
+        "y": 1280
+      },
+      "kind": "ambient_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "east",
+      "note": "Current pedestrian 03 position."
+    },
+    {
+      "id": "npc_anchor_pedestrian_04",
+      "tile_point": {
+        "x": 75.5,
+        "y": 40
+      },
+      "pixel_point": {
+        "x": 2416,
+        "y": 1280
+      },
+      "kind": "ambient_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "north",
+      "note": "Current pedestrian 04 position."
+    },
+    {
+      "id": "npc_anchor_pedestrian_05",
+      "tile_point": {
+        "x": 19.25,
+        "y": 44.75
+      },
+      "pixel_point": {
+        "x": 616,
+        "y": 1432
+      },
+      "kind": "ambient_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "south",
+      "note": "Current pedestrian 05 position."
+    },
+    {
+      "id": "npc_anchor_pedestrian_06",
+      "tile_point": {
+        "x": 26.75,
+        "y": 44.75
+      },
+      "pixel_point": {
+        "x": 856,
+        "y": 1432
+      },
+      "kind": "ambient_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "west",
+      "note": "Current pedestrian 06 position."
+    },
+    {
+      "id": "npc_anchor_pedestrian_07",
+      "tile_point": {
+        "x": 18.5,
+        "y": 40
+      },
+      "pixel_point": {
+        "x": 592,
+        "y": 1280
+      },
+      "kind": "ambient_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "east",
+      "note": "Current pedestrian 07 position."
+    },
+    {
+      "id": "npc_anchor_pedestrian_08",
+      "tile_point": {
+        "x": 27.5,
+        "y": 40
+      },
+      "pixel_point": {
+        "x": 880,
+        "y": 1280
+      },
+      "kind": "ambient_actor_anchor",
+      "enabled_by_default": false,
+      "facing": "north",
+      "note": "Current pedestrian 08 position."
+    }
+  ],
+  "interactions": [],
+  "event_regions": [
+    {
+      "id": "event_region_lower_dirt_area",
+      "shape": "rect",
+      "tile_rect": {
+        "x": 55,
+        "y": 60,
+        "width": 21,
+        "height": 7
+      },
+      "pixel_rect": {
+        "x": 1760,
+        "y": 1920,
+        "width": 672,
+        "height": 224
+      },
+      "capability": "future_event_host",
+      "enabled": false,
+      "note": "Geometry only; no quest or event logic is attached."
+    }
+  ],
+  "foreground_occlusion_regions": [
+    {
+      "id": "building_foreground::alpha_component_01",
+      "foreground_layer_id": "building_foreground",
+      "pixel_bbox": {
+        "x": 1710,
+        "y": 1437,
+        "width": 734,
+        "height": 222
+      },
+      "trigger_tile_rect": {
+        "x": 52,
+        "y": 43,
+        "width": 26,
+        "height": 9
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 1664,
+        "y": 1376,
+        "width": 832,
+        "height": 288
+      }
+    },
+    {
+      "id": "building_foreground::alpha_component_02",
+      "foreground_layer_id": "building_foreground",
+      "pixel_bbox": {
+        "x": 1733,
+        "y": 896,
+        "width": 714,
+        "height": 233
+      },
+      "trigger_tile_rect": {
+        "x": 52,
+        "y": 26,
+        "width": 26,
+        "height": 10
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 1664,
+        "y": 832,
+        "width": 832,
+        "height": 320
+      }
+    },
+    {
+      "id": "building_foreground::alpha_component_03",
+      "foreground_layer_id": "building_foreground",
+      "pixel_bbox": {
+        "x": 1707,
+        "y": 479,
+        "width": 740,
+        "height": 226
+      },
+      "trigger_tile_rect": {
+        "x": 52,
+        "y": 14,
+        "width": 26,
+        "height": 9
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 1664,
+        "y": 448,
+        "width": 832,
+        "height": 288
+      }
+    },
+    {
+      "id": "building_foreground::alpha_component_04",
+      "foreground_layer_id": "building_foreground",
+      "pixel_bbox": {
+        "x": 812,
+        "y": 600,
+        "width": 258,
+        "height": 525
+      },
+      "trigger_tile_rect": {
+        "x": 25,
+        "y": 18,
+        "width": 9,
+        "height": 18
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 800,
+        "y": 576,
+        "width": 288,
+        "height": 576
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_01",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 1384,
+        "y": 1638,
+        "width": 162,
+        "height": 259
+      },
+      "trigger_tile_rect": {
+        "x": 43,
+        "y": 51,
+        "width": 6,
+        "height": 9
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 1376,
+        "y": 1632,
+        "width": 192,
+        "height": 288
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_02",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 479,
+        "y": 248,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 14,
+        "y": 7,
+        "width": 6,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 448,
+        "y": 224,
+        "width": 192,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_03",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 2509,
+        "y": 353,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 78,
+        "y": 11,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 2496,
+        "y": 352,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_04",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 2824,
+        "y": 498,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 88,
+        "y": 15,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 2816,
+        "y": 480,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_05",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 30,
+        "y": 558,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 0,
+        "y": 17,
+        "width": 6,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 0,
+        "y": 544,
+        "width": 192,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_06",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 30,
+        "y": 833,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 0,
+        "y": 26,
+        "width": 6,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 0,
+        "y": 832,
+        "width": 192,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_07",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 30,
+        "y": 1098,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 0,
+        "y": 34,
+        "width": 6,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 0,
+        "y": 1088,
+        "width": 192,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_08",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 2824,
+        "y": 1158,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 88,
+        "y": 36,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 2816,
+        "y": 1152,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_09",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 30,
+        "y": 1373,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 0,
+        "y": 42,
+        "width": 6,
+        "height": 6
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 0,
+        "y": 1344,
+        "width": 192,
+        "height": 192
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_10",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 644,
+        "y": 1378,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 20,
+        "y": 43,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 640,
+        "y": 1376,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_11",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 954,
+        "y": 1393,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 29,
+        "y": 43,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 928,
+        "y": 1376,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_12",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 399,
+        "y": 1398,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 12,
+        "y": 43,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 384,
+        "y": 1376,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_13",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 2824,
+        "y": 1433,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 88,
+        "y": 44,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 2816,
+        "y": 1408,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_14",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 2519,
+        "y": 1633,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 78,
+        "y": 51,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 2496,
+        "y": 1632,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_15",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 444,
+        "y": 1663,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 13,
+        "y": 51,
+        "width": 5,
+        "height": 6
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 416,
+        "y": 1632,
+        "width": 160,
+        "height": 192
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_16",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 2824,
+        "y": 1713,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 88,
+        "y": 53,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 2816,
+        "y": 1696,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_17",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 30,
+        "y": 1873,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 0,
+        "y": 58,
+        "width": 6,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 0,
+        "y": 1856,
+        "width": 192,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_18",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 2614,
+        "y": 1943,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 81,
+        "y": 60,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 2592,
+        "y": 1920,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_19",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 1514,
+        "y": 1948,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 47,
+        "y": 60,
+        "width": 5,
+        "height": 6
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 1504,
+        "y": 1920,
+        "width": 160,
+        "height": 192
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_20",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 1224,
+        "y": 1953,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 38,
+        "y": 61,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 1216,
+        "y": 1952,
+        "width": 160,
+        "height": 160
+      }
+    },
+    {
+      "id": "tree_canopy_foreground::alpha_component_21",
+      "foreground_layer_id": "tree_canopy_foreground",
+      "pixel_bbox": {
+        "x": 2824,
+        "y": 1988,
+        "width": 132,
+        "height": 134
+      },
+      "trigger_tile_rect": {
+        "x": 88,
+        "y": 62,
+        "width": 5,
+        "height": 5
+      },
+      "source": "nonzero_alpha_connected_component",
+      "trigger_pixel_rect": {
+        "x": 2816,
+        "y": 1984,
+        "width": 160,
+        "height": 160
+      }
+    }
+  ],
+  "notes": [
+    "Traffic lanes are blocked except at explicit crosswalk overrides.",
+    "Only the middle apartment door transitions to Home.",
+    "Tree trunks remain collision objects; canopy pixels are foreground assets.",
+    "Apartment and Charles Jr. building upper rows use active foreground walk-behind geometry; lower facades remain blocked.",
+    "The lower event field is reachable through the visible center gate."
+  ]
+}
