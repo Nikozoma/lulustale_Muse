@@ -1,0 +1,26 @@
+PASS 1 DAYTIME FLOW — DEFERRED UNTIL HOME FOUNDATION PASSES
+
+The old Pass 1 daytime flow is not the first implementation target anymore.
+
+Current target:
+Implement only the indoor home foundation first.
+
+Home foundation requirements:
+1. Start near bed.
+2. Teach movement.
+3. Teach tap/proximity interaction.
+4. Fridge gives Dog Food.
+5. Dog/dog bowl interaction consumes/completes Dog Food objective.
+6. Dog reacts.
+7. Objective points to exit door.
+8. User manually tests on phone.
+
+After home foundation is approved, expand to:
+- exterior/overworld,
+- Charles Jr. fries errand,
+- bird theft/chase,
+- fries recovery,
+- return home,
+- bed sleep transition.
+
+Do not implement the exterior Pass 1 route until the home foundation is stable.
