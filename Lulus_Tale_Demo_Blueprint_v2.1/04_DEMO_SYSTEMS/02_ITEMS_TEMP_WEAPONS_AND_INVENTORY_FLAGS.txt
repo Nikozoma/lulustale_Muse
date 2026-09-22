@@ -1,0 +1,19 @@
+ITEMS, TEMP WEAPONS, AND INVENTORY FLAGS — v2.1
+
+Current home foundation item:
+Dog Food
+- Source: fridge interaction.
+- Storage: simple boolean flag hasDogFood.
+- Used by: dog/dog bowl interaction.
+- Consumed/cleared: optional; dogFed=true is the important state.
+
+Deferred items:
+- Charles Jr. Fries.
+- Questionable Fries.
+- Shiny Sword.
+- Greasy Feather or later joke/reward items.
+
+Rules:
+- Do not build full inventory UI during the home foundation pass.
+- Use simple explicit flags.
+- Do not implement sword/combat inventory until Pass 2 is intentionally started.
