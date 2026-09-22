@@ -1,0 +1,6100 @@
+{
+  "schema": "lulus-character-project",
+  "version": 1,
+  "id": "bird_lookout",
+  "displayName": "Bird Lookout",
+  "characterClass": "bird",
+  "species": "Dark-eyed junco",
+  "identity": {
+    "canonicalApproval": "approved",
+    "locked": true,
+    "notes": [
+      "Small vigilant bird-gang lookout."
+    ],
+    "paletteReferences": []
+  },
+  "production": {
+    "status": "runtime_ready",
+    "revision": 1,
+    "warnings": [
+      "Legacy vertical pose offsets describe art already positioned inside the active sheet cells; migrated runtime visual offsets remain zero to preserve current presentation."
+    ]
+  },
+  "presentation": {
+    "nativeCell": {
+      "width": 96,
+      "height": 96
+    },
+    "renderScales": {
+      "overworld": 1,
+      "home": 1,
+      "charles_jr": 1,
+      "battle": 1
+    },
+    "resampling": "none"
+  },
+  "collisionProfileId": "bird_visual",
+  "sources": [
+    {
+      "id": "bird_lookout_manifest_v1",
+      "role": "metadata",
+      "path": "public/assets/characters/birds/MANIFEST.json",
+      "sha256": "e6cf705951094cc55c7cbfc32df6d5e8e692a86fdbce15e27d117908253d978c",
+      "immutable": true,
+      "approval": "approved"
+    },
+    {
+      "id": "bird_lookout_attachment_metadata",
+      "role": "metadata",
+      "path": "public/assets/characters/birds/INTERACTION_AND_ATTACHMENT_METADATA.json",
+      "sha256": "a1b7c6694623b2627a9ecae20d6d49e84dba8900f458282721089a82fca92c87",
+      "immutable": true,
+      "approval": "approved"
+    },
+    {
+      "id": "bird_lookout_preview",
+      "role": "reference",
+      "path": "public/assets/characters/birds/04_dark_eyed_junco_preview.png",
+      "sha256": null,
+      "immutable": true,
+      "approval": "unreviewed",
+      "notes": "Preview referenced by the active bird manifest but unavailable in the project.",
+      "missing": true
+    },
+    {
+      "id": "bird_lookout_idle",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+      "sha256": "b272afa1688a52d8a1d223b556b6588ab8652bd6138d09bc92ac807de2d9183e",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Compact vigilant grounded idle."
+    },
+    {
+      "id": "bird_lookout_hop",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+      "sha256": "79d272bddc68790a9221bc6f1a022da6b7f4dd62dec139822438af423f779618",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Fast small-bird ground hop."
+    },
+    {
+      "id": "bird_lookout_fly",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+      "sha256": "b8bb385153c33af9d962e1b1b815fce7bb1123409883d113c310048add431f9d",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Quick alternating junco flight."
+    },
+    {
+      "id": "bird_lookout_takeoff",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+      "sha256": "db6e1d83a3426d3dbc7a4c8fe225704ec8aefb90c3c2685b75f2adb1d649ea48",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Ground-to-air transition."
+    },
+    {
+      "id": "bird_lookout_land",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+      "sha256": "10a88684411e13944fe4f8d2db2cb3579e086f7e0344a67b7be000ad588f8ce9",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Air-to-ground transition."
+    },
+    {
+      "id": "bird_lookout_alert_call",
+      "role": "sheet",
+      "path": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+      "sha256": "94abc67d32786f0cfbcbe2da4103a29094cfd77a9fb2d0ad83d6b7c33995f290",
+      "immutable": true,
+      "approval": "approved",
+      "notes": "Warning chirp/lookout reaction."
+    }
+  ],
+  "actions": {
+    "idle": {
+      "id": "idle",
+      "displayName": "Idle",
+      "category": "idle",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+      "runtimeHref": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 63,
+                "width": 16,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 63,
+                "width": 16,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 63,
+                "width": 16,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 63,
+                "width": 16,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 63,
+                "width": 21,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 63,
+                "width": 40,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 33,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 63,
+                "width": 21,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 63,
+                "width": 21,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 63,
+                "width": 21,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 63,
+                "width": 13,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 63,
+                "width": 12,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 63,
+                "width": 13,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 63,
+                "width": 13,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 63,
+                "width": 24,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 63,
+                "width": 24,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 63,
+                "width": 24,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 63,
+                "width": 24,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 25,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 63,
+                "width": 21,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 63,
+                "width": 21,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_idle.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 250,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 63,
+                "width": 21,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "hop": {
+      "id": "hop",
+      "displayName": "Hop",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 32,
+      "runtimeSheet": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+      "runtimeHref": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 63,
+                "width": 16,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 57,
+                "width": 18,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 51,
+                "width": 18,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 57,
+                "width": 18,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 57,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 51,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 57,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 63,
+                "width": 40,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 57,
+                "width": 38,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 51,
+                "width": 38,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 57,
+                "width": 38,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 57,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 51,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 57,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 63,
+                "width": 13,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 57,
+                "width": 14,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 51,
+                "width": 14,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 57,
+                "width": 14,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 63,
+                "width": 24,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 57,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 51,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 57,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 57,
+                "width": 40,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 51,
+                "width": 40,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 57,
+                "width": 40,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 57,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 51,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_hop.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 57,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "fly": {
+      "id": "fly",
+      "displayName": "Fly",
+      "category": "locomotion",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 3
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "cycleDistancePx": 64,
+      "runtimeSheet": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+      "runtimeHref": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 26,
+                "width": 40,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 24,
+                "width": 58,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 26,
+                "width": 40,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 24,
+                "width": 58,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 26,
+                "width": 56,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 24,
+                "width": 61,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 26,
+                "width": 56,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_left_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 24,
+                "width": 61,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 26,
+                "width": 61,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 24,
+                "width": 57,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 26,
+                "width": 61,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "left_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 24,
+                "width": 57,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 26,
+                "width": 44,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 24,
+                "width": 50,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 26,
+                "width": 44,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_left_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 24,
+                "width": 50,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 26,
+                "width": 42,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 16,
+                "y": 24,
+                "width": 66,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 26,
+                "width": 42,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 16,
+                "y": 24,
+                "width": 66,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 26,
+                "width": 46,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 24,
+                "width": 50,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 26,
+                "width": 46,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "up_right_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 24,
+                "width": 50,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 26,
+                "width": 60,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 24,
+                "width": 56,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 26,
+                "width": 60,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "right_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 24,
+                "width": 56,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 3
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 26,
+                "width": 52,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "left",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 24,
+                "width": 62,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 26,
+                "width": 52,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "right",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            },
+            {
+              "id": "down_right_3",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_fly.png",
+              "crop": {
+                "x": 288,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 24,
+                "width": 62,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 3
+              }
+            }
+          ]
+        }
+      }
+    },
+    "takeoff": {
+      "id": "takeoff",
+      "displayName": "Takeoff",
+      "category": "transition",
+      "playback": "once",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 2
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+      "runtimeHref": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 63,
+                "width": 16,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 53,
+                "width": 18,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 26,
+                "width": 40,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 53,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 26,
+                "width": 56,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 63,
+                "width": 40,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 53,
+                "width": 38,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 26,
+                "width": 61,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 53,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 26,
+                "width": 44,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 63,
+                "width": 13,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 53,
+                "width": 14,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 26,
+                "width": 42,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 63,
+                "width": 24,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 53,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 26,
+                "width": 46,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 53,
+                "width": 40,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 26,
+                "width": 60,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 53,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_takeoff.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 22,
+                "y": 26,
+                "width": 52,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            }
+          ]
+        }
+      }
+    },
+    "land": {
+      "id": "land",
+      "displayName": "Land",
+      "category": "transition",
+      "playback": "once",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 2
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+      "runtimeHref": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 26,
+                "width": 58,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 53,
+                "width": 18,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 63,
+                "width": 16,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 26,
+                "width": 61,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 53,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 26,
+                "width": 57,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 30,
+                "y": 53,
+                "width": 38,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 63,
+                "width": 40,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 26,
+                "width": 50,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 53,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 16,
+                "y": 26,
+                "width": 66,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 53,
+                "width": 14,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 63,
+                "width": 13,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 24,
+                "y": 26,
+                "width": 50,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 53,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 63,
+                "width": 24,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 20,
+                "y": 26,
+                "width": 56,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 28,
+                "y": 53,
+                "width": 40,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 18,
+                "y": 26,
+                "width": 62,
+                "height": 44
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 53,
+                "width": 34,
+                "height": 27
+              },
+              "grounded": false,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_land.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            }
+          ]
+        }
+      }
+    },
+    "alert_call": {
+      "id": "alert_call",
+      "displayName": "Alert Call",
+      "category": "interaction",
+      "playback": "loop",
+      "directionMode": "eight",
+      "directions": [
+        "Down",
+        "Down-Left",
+        "Left",
+        "Up-Left",
+        "Up",
+        "Up-Right",
+        "Right",
+        "Down-Right"
+      ],
+      "cell": {
+        "width": 96,
+        "height": 96
+      },
+      "loop": {
+        "start": 0,
+        "end": 2
+      },
+      "entryFrame": 0,
+      "stopPolicy": "idle_entry",
+      "runtimeSheet": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+      "runtimeHref": "/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+      "tracks": {
+        "Down": {
+          "direction": "Down",
+          "frames": [
+            {
+              "id": "down_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 63,
+                "width": 16,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 96,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 38,
+                "y": 61,
+                "width": 20,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 192,
+                "y": 0,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 40,
+                "y": 63,
+                "width": 16,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Left": {
+          "direction": "Down-Left",
+          "frames": [
+            {
+              "id": "down_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 0,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 96,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 61,
+                "width": 28,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 192,
+                "y": 96,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Left": {
+          "direction": "Left",
+          "frames": [
+            {
+              "id": "left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 0,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 63,
+                "width": 40,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 96,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 29,
+                "y": 61,
+                "width": 33,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 192,
+                "y": 192,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 32,
+                "y": 63,
+                "width": 40,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Left": {
+          "direction": "Up-Left",
+          "frames": [
+            {
+              "id": "up_left_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 0,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_left_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 96,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 61,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_left_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 192,
+                "y": 288,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 34,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Left",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up": {
+          "direction": "Up",
+          "frames": [
+            {
+              "id": "up_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 0,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 63,
+                "width": 13,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 96,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 41,
+                "y": 61,
+                "width": 15,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 192,
+                "y": 384,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 42,
+                "y": 63,
+                "width": 13,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Up-Right": {
+          "direction": "Up-Right",
+          "frames": [
+            {
+              "id": "up_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 0,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 63,
+                "width": 24,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "up_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 96,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 36,
+                "y": 61,
+                "width": 26,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "up_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 192,
+                "y": 480,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 39,
+                "y": 63,
+                "width": 24,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Up-Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Right": {
+          "direction": "Right",
+          "frames": [
+            {
+              "id": "right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 0,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 96,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 35,
+                "y": 61,
+                "width": 33,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 192,
+                "y": 576,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 26,
+                "y": 63,
+                "width": 39,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Right",
+                "index": 2
+              }
+            }
+          ]
+        },
+        "Down-Right": {
+          "direction": "Down-Right",
+          "frames": [
+            {
+              "id": "down_right_0",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 0,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 0
+              }
+            },
+            {
+              "id": "down_right_1",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 96,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 61,
+                "width": 28,
+                "height": 27
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 1
+              }
+            },
+            {
+              "id": "down_right_2",
+              "imagePath": "public/assets/characters/birds/birds/bird_lookout/sheets/bird_lookout_alert_call.png",
+              "crop": {
+                "x": 192,
+                "y": 672,
+                "width": 96,
+                "height": 96
+              },
+              "durationMs": 180,
+              "root": {
+                "x": 48,
+                "y": 88
+              },
+              "visualOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "bodyBounds": {
+                "x": 37,
+                "y": 63,
+                "width": 22,
+                "height": 25
+              },
+              "grounded": true,
+              "contact": "none",
+              "anchors": [],
+              "events": [],
+              "sourceFrame": {
+                "direction": "Down-Right",
+                "index": 2
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "portraits": [],
+  "runtime": {
+    "manifestPath": "public/assets/characters/v2/bird_lookout/MANIFEST.json",
+    "generatedAssetDirectory": "public/assets/characters/generated/bird_lookout/sheets",
+    "legacyPackage": "Bird_Overworld_Assets_Full_v1"
+  },
+  "updatedAt": "2026-07-25T08:06:44.512Z"
+}
