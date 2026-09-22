@@ -1,0 +1,41 @@
+{
+  "format": "lulus_visual_placements_v1",
+  "version": "1.0",
+  "mapFile": "Charles.json",
+  "mapId": "Charles",
+  "displayName": "Charles",
+  "width": 39,
+  "height": 33,
+  "gameTileSizePx": 32,
+  "visualLayerOrder": [
+    "ground",
+    "structures",
+    "objects",
+    "foreground"
+  ],
+  "placements": [
+    {
+      "id": "charles_approved_full_map",
+      "label": "Approved Charles Jr. interior exact map reconstruction",
+      "assetPath": "public/assets/maps/charles/charles_interior_39x33.png",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1248,
+        "height": 1056
+      },
+      "tile": {
+        "x": 0,
+        "y": 0
+      },
+      "draw": {
+        "widthTiles": 39,
+        "heightTiles": 33
+      },
+      "anchor": "top-left",
+      "drawLayer": "objects",
+      "order": 0,
+      "notes": "Exact approved full-map reconstruction from real uploaded 32x32 asset pack; semantic collision/interactions remain separate."
+    }
+  ]
+}
