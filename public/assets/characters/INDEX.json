@@ -1,0 +1,125 @@
+{
+  "schema": "lulus-character-index",
+  "version": 1,
+  "characters": [
+    {
+      "id": "ambient_robin",
+      "displayName": "Ambient American Robin",
+      "characterClass": "bird",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/ambient_robin/MANIFEST.json"
+    },
+    {
+      "id": "bird_lookout",
+      "displayName": "Bird Lookout",
+      "characterClass": "bird",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/bird_lookout/MANIFEST.json"
+    },
+    {
+      "id": "brutus",
+      "displayName": "Brutus",
+      "characterClass": "canine",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/brutus/MANIFEST.json"
+    },
+    {
+      "id": "charles_jr_employee",
+      "displayName": "Charles Jr. Employee",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/charles_jr_employee/MANIFEST.json"
+    },
+    {
+      "id": "homeless_man_day",
+      "displayName": "Homeless Man — Day",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/homeless_man_day/MANIFEST.json"
+    },
+    {
+      "id": "lulu",
+      "displayName": "Lulu",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/lulu/MANIFEST.json"
+    },
+    {
+      "id": "peck_captain",
+      "displayName": "Peck Captain",
+      "characterClass": "bird",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/peck_captain/MANIFEST.json"
+    },
+    {
+      "id": "pedestrian_01",
+      "displayName": "Pedestrian 01 — Commuter",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/pedestrian_01/MANIFEST.json"
+    },
+    {
+      "id": "pedestrian_02",
+      "displayName": "Pedestrian 02 — Cardigan Resident",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/pedestrian_02/MANIFEST.json"
+    },
+    {
+      "id": "pedestrian_03",
+      "displayName": "Pedestrian 03 — Hoodie Teen",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/pedestrian_03/MANIFEST.json"
+    },
+    {
+      "id": "pedestrian_04",
+      "displayName": "Pedestrian 04 — Elder Resident",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/pedestrian_04/MANIFEST.json"
+    },
+    {
+      "id": "pedestrian_05",
+      "displayName": "Pedestrian 05 — Braided Resident",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/pedestrian_05/MANIFEST.json"
+    },
+    {
+      "id": "pedestrian_06",
+      "displayName": "Pedestrian 06 — Vest Resident",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/pedestrian_06/MANIFEST.json"
+    },
+    {
+      "id": "pedestrian_07",
+      "displayName": "Pedestrian 07 — Lilac Hoodie Resident",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/pedestrian_07/MANIFEST.json"
+    },
+    {
+      "id": "pedestrian_08",
+      "displayName": "Pedestrian 08 — Plaid Resident",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/pedestrian_08/MANIFEST.json"
+    },
+    {
+      "id": "primary_fries_thief",
+      "displayName": "Primary Fries Thief Bird",
+      "characterClass": "bird",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/primary_fries_thief/MANIFEST.json"
+    },
+    {
+      "id": "wizard_night",
+      "displayName": "Wizard — Night",
+      "characterClass": "humanoid",
+      "status": "runtime_ready",
+      "manifest": "/assets/characters/v2/wizard_night/MANIFEST.json"
+    }
+  ]
+}
