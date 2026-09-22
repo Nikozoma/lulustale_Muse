@@ -1,0 +1,39 @@
+ASSET MANIFEST REQUIREMENTS
+
+Before gameplay implementation, Codex should create or report a manifest with exact real-asset findings.
+
+Required Lulu/player fields:
+- source file path
+- image width/height
+- frame width/height
+- rows/columns
+- idle down frames
+- walk down frames
+- walk left frames
+- walk right frames
+- walk up frames
+- known blank/invalid frames
+- recommended render scale
+- collision/feet footprint recommendation
+
+Required dog fields:
+- source file path
+- image width/height
+- frame/tile width/height
+- usable idle frames
+- reaction/happy frames if available
+- recommended render scale
+
+Required home fields:
+- source tileset/object file paths
+- native tile size
+- wall/floor tile/crop data
+- bed crop data
+- fridge crop data
+- door crop data
+- dog bowl crop data if available
+- couch/table/counter/sink/stove crop data where available
+- recommended asset-to-world scale for 32px map tiles
+
+If a field is uncertain, mark it UNKNOWN and explain what was inspected.
+Do not guess silently.
