@@ -1,0 +1,101 @@
+{
+  "$schema": "../tools/map-editor/schema/map-project.schema.json",
+  "format": "lulus_map_project_v1",
+  "version": "1.0.0",
+  "mapId": "charles_jr",
+  "displayName": "Charles Jr.",
+  "dimensions": {
+    "widthTiles": 39,
+    "heightTiles": 33,
+    "widthPx": 1248,
+    "heightPx": 1056,
+    "tileSizePx": 32,
+    "collisionCellSizePx": 4
+  },
+  "runtime": {
+    "semantic": "public/data/maps/charles_jr/semantic.json",
+    "collision": "public/data/maps/charles_jr/collision_grid.json",
+    "dayVisual": "public/data/maps/charles_jr/visual_day.json",
+    "nightVisual": "public/data/maps/charles_jr/visual_night.json",
+    "assetRoot": "public/assets/maps/native/charles_jr"
+  },
+  "art": {
+    "day": {
+      "layers": [
+        {
+          "id": "base",
+          "kind": "base",
+          "path": "public/assets/maps/native/charles_jr/day_base.png",
+          "runtimeAsset": "production/charles_jr/day_base.png",
+          "locked": false,
+          "visible": true,
+          "zIndex": 0
+        },
+        {
+          "id": "high_foreground",
+          "kind": "foreground",
+          "path": "public/assets/maps/native/charles_jr/high_foreground_day.png",
+          "runtimeAsset": "production/charles_jr/high_foreground_day.png",
+          "foregroundLayerId": "high_foreground",
+          "locked": false,
+          "visible": true,
+          "sharedAlpha": true,
+          "phase": "day",
+          "zIndex": 200
+        }
+      ]
+    },
+    "night": {
+      "layers": [
+        {
+          "id": "base",
+          "kind": "base",
+          "path": "public/assets/maps/native/charles_jr/night_base.png",
+          "runtimeAsset": "production/charles_jr/night_base.png",
+          "locked": false,
+          "visible": true,
+          "zIndex": 0
+        },
+        {
+          "id": "high_foreground",
+          "kind": "foreground",
+          "path": "public/assets/maps/native/charles_jr/high_foreground_night.png",
+          "runtimeAsset": "production/charles_jr/high_foreground_night.png",
+          "foregroundLayerId": "high_foreground",
+          "locked": false,
+          "visible": true,
+          "sharedAlpha": true,
+          "phase": "night",
+          "zIndex": 200
+        }
+      ]
+    }
+  },
+  "sourceHashes": {
+    "public/data/maps/charles_jr/semantic.json": "c80c0ef1d41106fbb2c597f2d2dba5bcace6fbc32dfa39f431b3a6275dee8aed",
+    "public/data/maps/charles_jr/collision_grid.json": "197736b525f8fc9e906b8758b100df3a443e842dca29db138d8399f21df5b650",
+    "public/data/maps/charles_jr/visual_day.json": "5c6951b57c7d1f04362dc02fba3f6725e69cc5c0b625168c680ad0fc1f581d35",
+    "public/data/maps/charles_jr/visual_night.json": "5dabf5dce721edfb3c8cdf5050a9086a951d9ff27ec31dbdc2a78d03a4777a23",
+    "public/assets/maps/native/charles_jr/day_base.png": "faad265cd12def23bdf5b1677809c98c8597bc041e08c08af3e8381e2ed4299d",
+    "public/assets/maps/native/charles_jr/high_foreground_day.png": "1a18d040d8a8e84c49db5e685e2365c2f0ee1213c59d15476556b11f76a5c152",
+    "public/assets/maps/native/charles_jr/night_base.png": "29d272e2d56267596928469405e7c5ba9662dcc8cfd1352a30d5adfee6a01629",
+    "public/assets/maps/native/charles_jr/high_foreground_night.png": "0bd2da1c032eaea2e3c04548a10df5ff865aaf7769aa939ec61aef8713de0d45"
+  },
+  "lastExportHashes": {
+    "public/data/maps/charles_jr/semantic.json": "c80c0ef1d41106fbb2c597f2d2dba5bcace6fbc32dfa39f431b3a6275dee8aed",
+    "public/data/maps/charles_jr/collision_grid.json": "197736b525f8fc9e906b8758b100df3a443e842dca29db138d8399f21df5b650",
+    "public/data/maps/charles_jr/visual_day.json": "5c6951b57c7d1f04362dc02fba3f6725e69cc5c0b625168c680ad0fc1f581d35",
+    "public/data/maps/charles_jr/visual_night.json": "5dabf5dce721edfb3c8cdf5050a9086a951d9ff27ec31dbdc2a78d03a4777a23",
+    "RUNTIME_AUTHORITY_MANIFEST.json": "c34ac808715160f61205a5ecbfcc11ead5e7d04413bfa4de8aed8e8fd8a57141"
+  },
+  "auditSources": [
+    "map-projects/audits/index.json"
+  ],
+  "repairAnnotations": [],
+  "approval": {
+    "calibrationAreaApproved": true,
+    "approvedAt": null
+  },
+  "lastPublishedAt": "2026-07-25T07:54:31.101Z",
+  "baselineMigrationPublishedAt": "2026-07-25T07:54:31.101Z"
+}
