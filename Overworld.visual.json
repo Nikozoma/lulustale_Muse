@@ -1,0 +1,160 @@
+{
+  "format": "lulus_visual_placements_v1",
+  "version": "1.1",
+  "mapFile": "Overworld.json",
+  "mapId": "Overworld",
+  "displayName": "Overworld",
+  "width": 96,
+  "height": 68,
+  "gameTileSizePx": 32,
+  "visualLayerOrder": [
+    "ground",
+    "structures",
+    "objects",
+    "foreground"
+  ],
+  "placements": [
+    {
+      "id": "overworld_walkbehind_base",
+      "label": "Approved Overworld with real grass and parking beneath walk-behind building rows",
+      "assetPath": "public/assets/maps/overworld/overworld_walkbehind_base_96x68.png",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 3072,
+        "height": 2176
+      },
+      "tile": {
+        "x": 0,
+        "y": 0
+      },
+      "draw": {
+        "widthTiles": 96,
+        "heightTiles": 68
+      },
+      "anchor": "top-left",
+      "drawLayer": "objects",
+      "order": 0,
+      "notes": "Current approved map base. The upper four rows of each building use real ground pixels copied from this map; opaque foreground placements reconstruct the original artwork until Lulu enters an occlusion zone."
+    },
+    {
+      "id": "apartment_north_upper",
+      "label": "Apartment North Upper walk-behind foreground",
+      "assetPath": "public/assets/maps/overworld/foreground/overworld_building_upper_foreground_96x68.png",
+      "crop": {
+        "x": 1664,
+        "y": 448,
+        "width": 896,
+        "height": 128
+      },
+      "tile": {
+        "x": 52,
+        "y": 14
+      },
+      "draw": {
+        "widthTiles": 28,
+        "heightTiles": 4
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 80,
+      "playerOcclusionOpacity": 0.42,
+      "notes": "Original approved apartment_building pixels. Opaque normally; fades to 42% opacity only while Lulu's feet are inside this four-row walk-behind zone. Ground below is grass."
+    },
+    {
+      "id": "charles_jr_upper",
+      "label": "Charles Jr Upper walk-behind foreground",
+      "assetPath": "public/assets/maps/overworld/foreground/overworld_building_upper_foreground_96x68.png",
+      "crop": {
+        "x": 768,
+        "y": 640,
+        "width": 384,
+        "height": 128
+      },
+      "tile": {
+        "x": 24,
+        "y": 20
+      },
+      "draw": {
+        "widthTiles": 12,
+        "heightTiles": 4
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 81,
+      "playerOcclusionOpacity": 0.42,
+      "notes": "Original approved charles_jr_building pixels. Opaque normally; fades to 42% opacity only while Lulu's feet are inside this four-row walk-behind zone. Ground below is parking_lot."
+    },
+    {
+      "id": "lulu_apartment_upper",
+      "label": "Lulu Apartment Upper walk-behind foreground",
+      "assetPath": "public/assets/maps/overworld/foreground/overworld_building_upper_foreground_96x68.png",
+      "crop": {
+        "x": 1664,
+        "y": 896,
+        "width": 896,
+        "height": 128
+      },
+      "tile": {
+        "x": 52,
+        "y": 28
+      },
+      "draw": {
+        "widthTiles": 28,
+        "heightTiles": 4
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 82,
+      "playerOcclusionOpacity": 0.42,
+      "notes": "Original approved player_apartment_building pixels. Opaque normally; fades to 42% opacity only while Lulu's feet are inside this four-row walk-behind zone. Ground below is grass."
+    },
+    {
+      "id": "apartment_south_upper",
+      "label": "Apartment South Upper walk-behind foreground",
+      "assetPath": "public/assets/maps/overworld/foreground/overworld_building_upper_foreground_96x68.png",
+      "crop": {
+        "x": 1664,
+        "y": 1408,
+        "width": 896,
+        "height": 128
+      },
+      "tile": {
+        "x": 52,
+        "y": 44
+      },
+      "draw": {
+        "widthTiles": 28,
+        "heightTiles": 4
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 83,
+      "playerOcclusionOpacity": 0.42,
+      "notes": "Original approved apartment_building pixels. Opaque normally; fades to 42% opacity only while Lulu's feet are inside this four-row walk-behind zone. Ground below is grass."
+    },
+    {
+      "id": "overworld_tree_canopy_foreground",
+      "label": "Overworld transparent tree canopy foreground",
+      "assetPath": "public/assets/maps/overworld/foreground/overworld_tree_canopy_foreground_96x68.png",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 3072,
+        "height": 2176
+      },
+      "tile": {
+        "x": 0,
+        "y": 0
+      },
+      "draw": {
+        "widthTiles": 96,
+        "heightTiles": 68
+      },
+      "anchor": "top-left",
+      "drawLayer": "foreground",
+      "order": 100,
+      "notes": "Transparent foliage-only canopy overlay copied from approved Overworld artwork; drawn after player/entities for walk-behind depth. Semantic collision unchanged."
+    }
+  ]
+}
